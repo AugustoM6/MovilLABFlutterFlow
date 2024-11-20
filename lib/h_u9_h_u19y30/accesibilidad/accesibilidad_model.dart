@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'info_lab_widget.dart' show InfoLabWidget;
+import 'accesibilidad_widget.dart' show AccesibilidadWidget;
 import 'package:flutter/material.dart';
 
-class InfoLabModel extends FlutterFlowModel<InfoLabWidget> {
+class AccesibilidadModel extends FlutterFlowModel<AccesibilidadWidget> {
   @override
   void initState(BuildContext context) {}
 

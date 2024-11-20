@@ -71,8 +71,8 @@ class _AppWidgetState extends State<AppWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('btnLogIn pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('Login');
                         },
                         text: 'Login',
                         icon: const Icon(
@@ -108,8 +108,8 @@ class _AppWidgetState extends State<AppWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('btnSignUp pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('CreateUser');
                         },
                         text: 'Sign up',
                         icon: const Icon(
@@ -144,8 +144,8 @@ class _AppWidgetState extends State<AppWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('btnAdmin pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('Login');
                         },
                         text: 'Administrators',
                         icon: const Icon(

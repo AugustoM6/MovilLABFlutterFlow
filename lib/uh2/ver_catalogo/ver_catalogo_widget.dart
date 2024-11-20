@@ -1,0 +1,488 @@
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
+import 'package:flutter/material.dart';
+import 'ver_catalogo_model.dart';
+export 'ver_catalogo_model.dart';
+
+class VerCatalogoWidget extends StatefulWidget {
+  const VerCatalogoWidget({super.key});
+
+  @override
+  State<VerCatalogoWidget> createState() => _VerCatalogoWidgetState();
+}
+
+class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
+  late VerCatalogoModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => VerCatalogoModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: const Color(0xFFF7F7F7),
+          automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: const EdgeInsets.all(11.0),
+            child: FlutterFlowIconButton(
+              borderRadius: 8.0,
+              buttonSize: 40.0,
+              fillColor: const Color(0xFF74ECF0),
+              icon: Icon(
+                Icons.arrow_back_outlined,
+                color: FlutterFlowTheme.of(context).info,
+                size: 24.0,
+              ),
+              onPressed: () {
+                print('IconButton pressed ...');
+              },
+            ),
+          ),
+          title: Align(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: Text(
+              'Catálogo de productos',
+              style: FlutterFlowTheme.of(context).headlineMedium.override(
+                    fontFamily: 'Inter',
+                    color: const Color(0xFF0D0000),
+                    fontSize: 22.0,
+                    letterSpacing: 0.0,
+                    fontWeight: FontWeight.w800,
+                  ),
+            ),
+          ),
+          actions: const [],
+          centerTitle: false,
+          elevation: 2.0,
+        ),
+        body: SafeArea(
+          top: true,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FlutterFlowDropDown<String>(
+                    controller: _model.dropDownValueController ??=
+                        FormFieldController<String>(null),
+                    options: const ['Option 1', 'Option 2', 'Option 3'],
+                    onChanged: (val) =>
+                        safeSetState(() => _model.dropDownValue = val),
+                    width: 200.0,
+                    height: 40.0,
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          letterSpacing: 0.0,
+                        ),
+                    hintText: 'Filtrar por categoría',
+                    icon: Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      size: 24.0,
+                    ),
+                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    elevation: 2.0,
+                    borderColor: FlutterFlowTheme.of(context).tertiary,
+                    borderWidth: 0.0,
+                    borderRadius: 8.0,
+                    margin: const EdgeInsets.all(0.0),
+                    hidesUnderline: true,
+                    isOverButton: false,
+                    isSearchable: false,
+                    isMultiSelect: false,
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90122/71758266_10156704477837810_1328068140633948160_n.jpg',
+                            width: 201.0,
+                            height: 200.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              'Blanqueamiento dental',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 13.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: FlutterFlowIconButton(
+                        borderRadius: 8.0,
+                        buttonSize: 35.0,
+                        fillColor: Colors.white,
+                        icon: const Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xFF110101),
+                          size: 24.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    ),
+                    FlutterFlowIconButton(
+                      borderRadius: 8.0,
+                      buttonSize: 40.0,
+                      fillColor: const Color(0xFFFDFDFD),
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Color(0xFF0B0000),
+                        size: 24.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90123/71026187_2740850992649064_3377029658385055744_n.jpg',
+                            width: 201.0,
+                            height: 200.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              'Corona Provisional en PMMA',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 13.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 8.0,
+                        buttonSize: 35.0,
+                        fillColor: Colors.white,
+                        icon: const Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xFF110101),
+                          size: 24.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    ),
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 8.0,
+                      buttonSize: 40.0,
+                      fillColor: const Color(0xFFFDFDFD),
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Color(0xFF0B0000),
+                        size: 24.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90124/14750587_1147163935368672_6396186535540031488_n.jpg',
+                            width: 201.0,
+                            height: 200.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              'Coronas y Carillas EMAX',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 13.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 8.0,
+                        buttonSize: 35.0,
+                        fillColor: Colors.white,
+                        icon: const Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xFF110101),
+                          size: 24.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    ),
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 8.0,
+                      buttonSize: 40.0,
+                      fillColor: const Color(0xFFFDFDFD),
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Color(0xFF0B0000),
+                        size: 24.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(
+                            'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90125/54524515_2439072759493557_6573553931652169728_n.jpg',
+                            width: 201.0,
+                            height: 200.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              'Restauraciones fijas \nartísticas y estándar',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w800,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 8.0,
+                        buttonSize: 35.0,
+                        fillColor: Colors.white,
+                        icon: const Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xFF110101),
+                          size: 24.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    ),
+                    FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 8.0,
+                      buttonSize: 40.0,
+                      fillColor: const Color(0xFFFDFDFD),
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Color(0xFF0B0000),
+                        size: 24.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Text(
+                '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
+                textAlign: TextAlign.center,
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w900,
+                      fontStyle: FontStyle.italic,
+                    ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(14.0),
+                child: FFButtonWidget(
+                  onPressed: () {
+                    print('Button pressed ...');
+                  },
+                  text: 'Eliminar',
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    iconPadding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: FlutterFlowTheme.of(context).tertiary,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Readex Pro',
+                          color: Colors.white,
+                          letterSpacing: 0.0,
+                        ),
+                    elevation: 0.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
