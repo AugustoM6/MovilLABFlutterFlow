@@ -84,8 +84,8 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('addBtn pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('agregarProducto');
                       },
                       text: 'AGREGAR',
                       options: FFButtonOptions(
@@ -202,8 +202,9 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 5.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('editBtn pressed ...');
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                    'editarProducto');
                                               },
                                               text: 'Editar',
                                               options: FFButtonOptions(

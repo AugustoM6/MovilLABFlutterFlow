@@ -19,14 +19,14 @@ export '/augusto/hu28/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
 export '/pablo/hu10/gestion_producto/index_producto/index_producto_widget.dart'
     show IndexProductoWidget;
-export '/augusto/uh1completada/inici_sesion/inici_sesion_widget.dart'
+export '/augusto/u_h1_completada/inici_sesion/inici_sesion_widget.dart'
     show IniciSesionWidget;
 export '/pablo/hu10/gestion_producto/agregar_producto/agregar_producto_widget.dart'
     show AgregarProductoWidget;
-export '/augusto/uh1completada/password_olvidado/password_olvidado_widget.dart'
+export '/augusto/u_h1_completada/password_olvidado/password_olvidado_widget.dart'
     show PasswordOlvidadoWidget;
 export '/augusto/h_u4_completada/perfil/perfil_widget.dart' show PerfilWidget;
-export '/augusto/h_u4_completada/configuracion_cuenta/configuracion_cuenta_widget.dart'
+export '/augusto/configuracion_cuenta/configuracion_cuenta_widget.dart'
     show ConfiguracionCuentaWidget;
 export '/pablo/hu10/gestion_producto/editar_producto/editar_producto_widget.dart'
     show EditarProductoWidget;
@@ -51,3 +51,5 @@ export '/pablo/hu10/gestion_servicios/editar_servicio/editar_servicio_widget.dar
 export '/pablo/hu10/gestion_servicios/eliminar_servicio/eliminar_servicio_widget.dart'
     show EliminarServicioWidget;
 export '/augusto/h_u4_completada/home/home_widget.dart' show HomeWidget;
+export '/jimena/h_u26_pendiente/notificaciones/notificaciones_widget.dart'
+    show NotificacionesWidget;

@@ -87,7 +87,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '¡Bienvenidx a la app',
+                            '¡Bienvenidx a la app!',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(

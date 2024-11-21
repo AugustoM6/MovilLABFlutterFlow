@@ -74,19 +74,23 @@ class _AccesibilidadEIdiomaWidgetState extends State<AccesibilidadEIdiomaWidget>
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 30.0,
+          leading: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+            child: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 30.0,
+              fillColor: FlutterFlowTheme.of(context).secondary,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: FlutterFlowTheme.of(context).primaryBackground,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.pop();
+              },
             ),
-            onPressed: () async {
-              context.pop();
-            },
           ),
           title: Text(
             'Accesibilidad e Idioma',
@@ -125,6 +129,7 @@ class _AccesibilidadEIdiomaWidgetState extends State<AccesibilidadEIdiomaWidget>
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
+                                  fontSize: _model.sliderValue,
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -137,9 +142,10 @@ class _AccesibilidadEIdiomaWidgetState extends State<AccesibilidadEIdiomaWidget>
                             activeColor: FlutterFlowTheme.of(context).secondary,
                             inactiveColor:
                                 FlutterFlowTheme.of(context).alternate,
-                            min: 0.0,
-                            max: 10.0,
-                            value: _model.sliderValue ??= 5.0,
+                            min: 12.0,
+                            max: 22.0,
+                            value: _model.sliderValue ??= 1.0,
+                            divisions: 10,
                             onChanged: (newValue) {
                               newValue =
                                   double.parse(newValue.toStringAsFixed(2));
@@ -424,6 +430,10 @@ class _AccesibilidadEIdiomaWidgetState extends State<AccesibilidadEIdiomaWidget>
                           print('Button pressed ...');
                         },
                         text: 'Cancelar',
+                        icon: const Icon(
+                          Icons.cancel_rounded,
+                          size: 15.0,
+                        ),
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(
@@ -447,6 +457,10 @@ class _AccesibilidadEIdiomaWidgetState extends State<AccesibilidadEIdiomaWidget>
                           print('Button pressed ...');
                         },
                         text: 'Guardar',
+                        icon: const Icon(
+                          Icons.save_rounded,
+                          size: 15.0,
+                        ),
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(

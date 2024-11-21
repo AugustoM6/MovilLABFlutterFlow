@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
 class AgregarProductoModel extends FlutterFlowModel<AgregarProductoWidget> {
   ///  State fields for stateful widgets in this page.
 
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
   // State field(s) for txtFdNombre widget.
   FocusNode? txtFdNombreFocusNode;
   TextEditingController? txtFdNombreTextController;
@@ -21,6 +26,11 @@ class AgregarProductoModel extends FlutterFlowModel<AgregarProductoWidget> {
   FocusNode? txtFdTecnicoFocusNode;
   TextEditingController? txtFdTecnicoTextController;
   String? Function(BuildContext, String?)? txtFdTecnicoTextControllerValidator;
+  // State field(s) for txtFdCategoria widget.
+  FocusNode? txtFdCategoriaFocusNode;
+  TextEditingController? txtFdCategoriaTextController;
+  String? Function(BuildContext, String?)?
+      txtFdCategoriaTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -38,5 +48,8 @@ class AgregarProductoModel extends FlutterFlowModel<AgregarProductoWidget> {
 
     txtFdTecnicoFocusNode?.dispose();
     txtFdTecnicoTextController?.dispose();
+
+    txtFdCategoriaFocusNode?.dispose();
+    txtFdCategoriaTextController?.dispose();
   }
 }
