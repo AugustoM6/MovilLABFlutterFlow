@@ -200,11 +200,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const IndexEmpleadosWidget(),
         ),
         FFRoute(
-          name: 'agregarEmpleado',
-          path: '/agregarEmpleado',
-          builder: (context, params) => const AgregarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'detallesEmpleado',
           path: '/detallesEmpleado',
           asyncParams: {
@@ -266,6 +261,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'agregarEmpleado',
+          path: '/agregarEmpleado',
+          builder: (context, params) => const AgregarEmpleadoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

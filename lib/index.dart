@@ -32,8 +32,6 @@ export '/pablo/hu10/gestion_producto/editar_producto/editar_producto_widget.dart
     show EditarProductoWidget;
 export '/pablo/hu10/gestion_empleados/index_empleados/index_empleados_widget.dart'
     show IndexEmpleadosWidget;
-export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
-    show AgregarEmpleadoWidget;
 export '/pablo/hu10/gestion_empleados/detalles_empleado/detalles_empleado_widget.dart'
     show DetallesEmpleadoWidget;
 export '/pablo/hu10/gestion_servicios/index_servicio/index_servicio_widget.dart'
@@ -50,3 +48,5 @@ export '/augusto/hu29completa/icono_chat_bot/icono_chat_bot_widget.dart'
     show IconoChatBotWidget;
 export '/pablo/hu10/gestion_empleados/editar_empleado/editar_empleado_widget.dart'
     show EditarEmpleadoWidget;
+export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
+    show AgregarEmpleadoWidget;

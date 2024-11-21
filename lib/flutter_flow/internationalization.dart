@@ -1028,17 +1028,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Home',
     },
   },
-  // agregarEmpleado
-  {
-    'ehg9x5s8': {
-      'en': 'Page Title',
-      'es': '',
-    },
-    'djrm18oh': {
-      'en': 'Home',
-      'es': 'Home',
-    },
-  },
   // detallesEmpleado
   {
     '5bmt3f5x': {
@@ -1232,6 +1221,49 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e37r9jco': {
       'en': 'Home',
       'es': '',
+    },
+  },
+  // agregarEmpleado
+  {
+    'k2fxvy29': {
+      'en': 'Cargar',
+      'es': '',
+    },
+    'gv52m4m4': {
+      'en': 'Nombre del producto',
+      'es': '',
+    },
+    'u0mt8dmy': {
+      'en': 'Descripcion',
+      'es': '',
+    },
+    '1fkt0iko': {
+      'en': 'Departamento',
+      'es': '',
+    },
+    'ubfv7ne1': {
+      'en': 'Tecnico',
+      'es': '',
+    },
+    'jckre531': {
+      'en': 'Categoria',
+      'es': '',
+    },
+    '7li1l3gd': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    'vfw99aej': {
+      'en': 'Agregar',
+      'es': 'Agregar',
+    },
+    '8zrqgja9': {
+      'en': 'Gestion de Empleado',
+      'es': 'Gestion de Productos',
+    },
+    '3qyb301l': {
+      'en': 'Home',
+      'es': 'Home',
     },
   },
   // Miscellaneous
