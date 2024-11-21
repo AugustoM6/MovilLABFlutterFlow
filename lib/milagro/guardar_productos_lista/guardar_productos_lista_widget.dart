@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'guardar_productos_lista_model.dart';
 export 'guardar_productos_lista_model.dart';
 
@@ -87,28 +88,6 @@ class _GuardarProductosListaWidgetState
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: FlutterFlowIconButton(
-                      borderRadius: 8.0,
-                      buttonSize: 40.0,
-                      fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                      icon: Icon(
-                        Icons.house,
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
-                      ),
-                      onPressed: () {
-                        print('ListWishButton pressed ...');
-                      },
-                    ),
-                  ),
-                ],
-              ),
               StreamBuilder<List<ProductoRecord>>(
                 stream: queryProductoRecord(
                   queryBuilder: (productoRecord) => productoRecord.where(
@@ -245,61 +224,125 @@ class _GuardarProductosListaWidgetState
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FFButtonWidget(
-                      onPressed: () async {
-                        await ProductoRecord.collection
-                            .doc()
-                            .set(createProductoRecordData());
-                      },
-                      text: FFLocalizations.of(context).getText(
-                        '91d6dpqw' /* Agregar */,
-                      ),
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).tertiary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                child: StreamBuilder<List<ProductoRecord>>(
+                  stream: queryProductoRecord(
+                    singleRecord: true,
+                  ),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).ultramarine,
+                            ),
+                          ),
+                        ),
+                      );
+                    }
+                    List<ProductoRecord> rowProductoRecordList = snapshot.data!;
+                    // Return an empty Container when the item does not exist.
+                    if (snapshot.data!.isEmpty) {
+                      return Container();
+                    }
+                    final rowProductoRecord = rowProductoRecordList.isNotEmpty
+                        ? rowProductoRecordList.first
+                        : null;
+
+                    return Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () async {
+                            await ProductoRecord.collection
+                                .doc()
+                                .set(createProductoRecordData(
+                                  favoritos: true,
+                                  nombre: 'Coronas y Carillas EMAX',
+                                  categoria: 'Dental',
+                                  imagen: 'https://via.placeholder.com/150',
+                                ));
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            '91d6dpqw' /* Agregar */,
+                          ),
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).tertiary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                    ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: FFLocalizations.of(context).getText(
-                        'of6dta64' /* Eliminar */,
-                      ),
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).tertiary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                            elevation: 0.0,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                        FFButtonWidget(
+                          onPressed: () async {
+                            var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return WebViewAware(
+                                      child: AlertDialog(
+                                        title: const Text('¿Estás seguro?'),
+                                        content: const Text(
+                                            '¿Deseas eliminar este producto de la lista de deseos?'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext, false),
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext, true),
+                                            child: const Text('Confirm'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                ) ??
+                                false;
+                            if (confirmDialogResponse) {
+                              await rowProductoRecord!.reference.delete();
+                            }
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            'of6dta64' /* Eliminar */,
+                          ),
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).tertiary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                    ),
-                  ],
+                            elevation: 0.0,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
                 ),
               ),
             ],

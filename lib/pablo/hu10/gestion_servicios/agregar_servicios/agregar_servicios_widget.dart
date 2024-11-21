@@ -41,7 +41,7 @@ class _AgregarServiciosWidgetState extends State<AgregarServiciosWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'g4ty03jz' /* Page Title */,
+              '5vs8ai6f' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',

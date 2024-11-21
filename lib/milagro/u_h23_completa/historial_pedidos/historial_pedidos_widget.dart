@@ -245,7 +245,15 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed('ReportePedidos');
+                        context.pushNamed(
+                          'HistorialPedidos',
+                          queryParameters: {
+                            'mes': serializeParam(
+                              widget.mes,
+                              ParamType.String,
+                            ),
+                          }.withoutNulls,
+                        );
                       },
                       text: FFLocalizations.of(context).getText(
                         'aukp8zhb' /* Consultar */,

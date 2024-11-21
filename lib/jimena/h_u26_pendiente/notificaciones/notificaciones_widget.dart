@@ -41,7 +41,7 @@ class _NotificacionesWidgetState extends State<NotificacionesWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '6uhdjly5' /* Page Title */,
+              '5772gpj1' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',

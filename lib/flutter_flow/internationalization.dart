@@ -219,18 +219,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Blanqueamiento dental',
       'es': '',
     },
-    'csgoo9vy': {
-      'en': 'Blanqueamiento dental',
-      'es': '',
-    },
-    'mvc8xmu3': {
-      'en': 'Blanqueamiento dental',
-      'es': '',
-    },
-    'uw20v7ik': {
-      'en': 'Blanqueamiento dental',
-      'es': '',
-    },
     '6y9gbat5': {
       'en': '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
       'es': '',
@@ -1019,8 +1007,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // indexEmpleados
   {
-    'ehg9x5s8': {
-      'en': 'Page Title',
+    'iv5ygj30': {
+      'en': 'AGREGAR',
+      'es': '',
+    },
+    'aldqorvp': {
+      'en': 'Editar',
+      'es': '',
+    },
+    'qd968mjz': {
+      'en': 'Eliminar',
+      'es': '',
+    },
+    'hg3vcouh': {
+      'en': 'Gestion de Empleados',
       'es': '',
     },
     'f1e2snq5': {
@@ -1030,29 +1030,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // agregarEmpleado
   {
-    '5lfkr2pw': {
+    'ehg9x5s8': {
       'en': 'Page Title',
-      'es': 'Page Title',
+      'es': '',
     },
     'djrm18oh': {
       'en': 'Home',
       'es': 'Home',
     },
   },
-  // editarEmpleado
+  // detallesEmpleado
   {
-    '5vs8ai6f': {
-      'en': 'Page Title',
-      'es': 'Page Title',
+    '5bmt3f5x': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'q6rnnt0p': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'sdcafxkz': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'm8w560qh': {
+      'en': 'TextField',
+      'es': '',
+    },
+    '7bflktpz': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'qkn93dr4': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'mvyvyvam': {
+      'en': 'Gestion de Empleados',
+      'es': '',
     },
     '2mrlgf3o': {
       'en': 'Home',
       'es': 'Home',
     },
   },
-  // detallesEmpleado
+  // indexServicio
   {
-    '9u1vy0ic': {
+    '5lfkr2pw': {
       'en': 'Page Title',
       'es': 'Page Title',
     },
@@ -1061,9 +1085,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Home',
     },
   },
-  // indexServicio
+  // agregarServicios
   {
-    '5772gpj1': {
+    '5vs8ai6f': {
       'en': 'Page Title',
       'es': 'Page Title',
     },
@@ -1072,24 +1096,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Home',
     },
   },
-  // agregarServicios
+  // editarServicio
   {
-    'g4ty03jz': {
+    '9u1vy0ic': {
       'en': 'Page Title',
       'es': 'Page Title',
     },
     '5ejx2ate': {
-      'en': 'Home',
-      'es': 'Home',
-    },
-  },
-  // editarServicio
-  {
-    '3gdd5003': {
-      'en': 'Page Title',
-      'es': 'Page Title',
-    },
-    'ihqtjn59': {
       'en': 'Home',
       'es': 'Home',
     },
@@ -1147,24 +1160,78 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Notificaciones
   {
-    '6uhdjly5': {
+    '5772gpj1': {
       'en': 'Page Title',
       'es': 'Page Title',
     },
-    'knhn7xdb': {
+    'ihqtjn59': {
       'en': 'Home',
       'es': 'Home',
     },
   },
   // ChaBot
   {
-    'snh52fdu': {
+    'xvjtcjyo': {
+      'en': 'ChatBot',
+      'es': '',
+    },
+    'knhn7xdb': {
+      'en': 'Home',
+      'es': 'Home',
+    },
+  },
+  // IconoChatBot
+  {
+    'g4ty03jz': {
       'en': 'Page Title',
       'es': 'Page Title',
     },
     'afsgyqvq': {
       'en': 'Home',
       'es': 'Home',
+    },
+  },
+  // editarEmpleado
+  {
+    'aicmdm3n': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'e62b5ca7': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'ghsjyjw0': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'coluhmyu': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'iovhfo2t': {
+      'en': 'TextField',
+      'es': '',
+    },
+    'cpiqrci4': {
+      'en': 'TextField',
+      'es': '',
+    },
+    '5deafnss': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    'ajx0bwod': {
+      'en': 'Actualizar',
+      'es': '',
+    },
+    'qkvhf8lc': {
+      'en': 'Gestion de Empleados',
+      'es': '',
+    },
+    'e37r9jco': {
+      'en': 'Home',
+      'es': '',
     },
   },
   // Miscellaneous

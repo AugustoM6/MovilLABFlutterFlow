@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'index_producto_model.dart';
 export 'index_producto_model.dart';
 
@@ -251,29 +252,31 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                         context: context,
                                                         builder:
                                                             (alertDialogContext) {
-                                                          return AlertDialog(
-                                                            title:
-                                                                const Text('Aviso'),
-                                                            content: const Text(
-                                                                '¿Seguro que desea eliminar el producto?'),
-                                                            actions: [
-                                                              TextButton(
-                                                                onPressed: () =>
-                                                                    Navigator.pop(
-                                                                        alertDialogContext,
-                                                                        false),
-                                                                child: const Text(
-                                                                    'Cancelar'),
-                                                              ),
-                                                              TextButton(
-                                                                onPressed: () =>
-                                                                    Navigator.pop(
-                                                                        alertDialogContext,
-                                                                        true),
-                                                                child: const Text(
-                                                                    'Confirmar'),
-                                                              ),
-                                                            ],
+                                                          return WebViewAware(
+                                                            child: AlertDialog(
+                                                              title:
+                                                                  const Text('Aviso'),
+                                                              content: const Text(
+                                                                  '¿Seguro que desea eliminar el producto?'),
+                                                              actions: [
+                                                                TextButton(
+                                                                  onPressed: () =>
+                                                                      Navigator.pop(
+                                                                          alertDialogContext,
+                                                                          false),
+                                                                  child: const Text(
+                                                                      'Cancelar'),
+                                                                ),
+                                                                TextButton(
+                                                                  onPressed: () =>
+                                                                      Navigator.pop(
+                                                                          alertDialogContext,
+                                                                          true),
+                                                                  child: const Text(
+                                                                      'Confirmar'),
+                                                                ),
+                                                              ],
+                                                            ),
                                                           );
                                                         },
                                                       ) ??

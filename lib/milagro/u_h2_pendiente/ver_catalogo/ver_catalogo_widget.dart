@@ -5,13 +5,17 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'ver_catalogo_model.dart';
 export 'ver_catalogo_model.dart';
 
 class VerCatalogoWidget extends StatefulWidget {
-  const VerCatalogoWidget({super.key});
+  const VerCatalogoWidget({
+    super.key,
+    required this.categoria,
+  });
+
+  final String? categoria;
 
   @override
   State<VerCatalogoWidget> createState() => _VerCatalogoWidgetState();
@@ -103,8 +107,18 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                         'nssqltnn' /* Option 3 */,
                       )
                     ],
-                    onChanged: (val) =>
-                        safeSetState(() => _model.dropDownValue = val),
+                    onChanged: (val) async {
+                      safeSetState(() => _model.dropDownValue = val);
+                      context.pushNamed(
+                        'VerCatalogo',
+                        queryParameters: {
+                          'categoria': serializeParam(
+                            widget.categoria,
+                            ParamType.String,
+                          ),
+                        }.withoutNulls,
+                      );
+                    },
                     width: 200.0,
                     height: 40.0,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -167,107 +181,88 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                           listViewProductoRecordList[listViewIndex];
                       return Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            await listViewProductoRecord.reference
-                                .update(createProductoRecordData(
-                              favoritos: listViewProductoRecord.favoritos
-                                  ? true
-                                  : true,
-                            ));
-                          },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 100.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.network(
-                                      'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90122/71758266_10156704477837810_1328068140633948160_n.jpg',
-                                      width: 201.0,
-                                      height: 200.0,
-                                      fit: BoxFit.cover,
-                                    ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 100.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90122/71758266_10156704477837810_1328068140633948160_n.jpg',
+                                    width: 201.0,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
-                              Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'w1fof9wr' /* Blanqueamiento dental */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 13.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w800,
-                                            ),
+                            ),
+                            Align(
+                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'w1fof9wr' /* Blanqueamiento dental */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 13.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w800,
+                                          ),
                                     ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(3.0),
-                                child: FlutterFlowIconButton(
-                                  borderColor: Colors.transparent,
-                                  borderRadius: 8.0,
-                                  buttonSize: 35.0,
-                                  fillColor: Colors.white,
-                                  icon: const Icon(
-                                    Icons.arrow_drop_down,
-                                    color: Color(0xFF110101),
-                                    size: 24.0,
                                   ),
-                                  onPressed: () {
-                                    print('IconButton pressed ...');
-                                  },
-                                ),
+                                ],
                               ),
-                              FlutterFlowIconButton(
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
                                 borderRadius: 8.0,
-                                buttonSize: 40.0,
-                                fillColor: const Color(0xFFFDFDFD),
+                                buttonSize: 35.0,
+                                fillColor: Colors.white,
                                 icon: const Icon(
-                                  Icons.favorite_border,
-                                  color: Color(0xFF0B0000),
+                                  Icons.arrow_drop_down,
+                                  color: Color(0xFF110101),
                                   size: 24.0,
                                 ),
-                                onPressed: () async {
-                                  await listViewProductoRecord.reference
-                                      .update(createProductoRecordData(
-                                    favoritos: listViewProductoRecord.favoritos
-                                        ? false
-                                        : false,
-                                  ));
+                                onPressed: () {
+                                  print('IconButton pressed ...');
                                 },
                               ),
-                            ],
-                          ),
+                            ),
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 8.0,
+                              buttonSize: 40.0,
+                              fillColor: const Color(0xFFFDFDFD),
+                              icon: const Icon(
+                                Icons.favorite_border,
+                                color: Color(0xFF0B0000),
+                                size: 24.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                          ],
                         ),
                       );
                     },
@@ -289,10 +284,8 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
               Padding(
                 padding: const EdgeInsets.all(14.0),
                 child: FFButtonWidget(
-                  onPressed: () async {
-                    unawaited(
-                      () async {}(),
-                    );
+                  onPressed: () {
+                    print('Button pressed ...');
                   },
                   text: FFLocalizations.of(context).getText(
                     'nqus51t3' /* Eliminar */,

@@ -1,4 +1,3 @@
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -197,7 +196,10 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  '',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Enero\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -237,13 +239,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Febrero',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Febrero\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -283,13 +286,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Marzo',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Marzo\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -329,13 +333,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Abril',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Abril\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -375,13 +380,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Mayo',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Mayo\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -421,13 +427,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Junio',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Junio\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -467,13 +474,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Julio',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Julio\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -513,13 +521,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Agosto',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Agosto\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -558,13 +567,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Setiembre',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Setiembre\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -603,13 +613,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Octubre',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Octubre\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -648,13 +659,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Noviembre',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Noviembre\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
@@ -693,13 +705,14 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Diciembre',
+                                  valueOrDefault<String>(
+                                    widget.mes,
+                                    '\"Diciembre\"',
+                                  ),
                                   ParamType.String,
                                 ),
                               }.withoutNulls,

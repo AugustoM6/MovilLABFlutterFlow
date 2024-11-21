@@ -15,11 +15,6 @@ class EmpleadosRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "id" field.
-  String? _id;
-  String get id => _id ?? '';
-  bool hasId() => _id != null;
-
   // "nombre" field.
   String? _nombre;
   String get nombre => _nombre ?? '';
@@ -56,7 +51,6 @@ class EmpleadosRecord extends FirestoreRecord {
   bool hasFechaContatacion() => _fechaContatacion != null;
 
   void _initializeFields() {
-    _id = snapshotData['id'] as String?;
     _nombre = snapshotData['nombre'] as String?;
     _email = snapshotData['email'] as String?;
     _telefono = snapshotData['telefono'] as String?;
@@ -101,7 +95,6 @@ class EmpleadosRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createEmpleadosRecordData({
-  String? id,
   String? nombre,
   String? email,
   String? telefono,
@@ -112,7 +105,6 @@ Map<String, dynamic> createEmpleadosRecordData({
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'id': id,
       'nombre': nombre,
       'email': email,
       'telefono': telefono,
@@ -131,8 +123,7 @@ class EmpleadosRecordDocumentEquality implements Equality<EmpleadosRecord> {
 
   @override
   bool equals(EmpleadosRecord? e1, EmpleadosRecord? e2) {
-    return e1?.id == e2?.id &&
-        e1?.nombre == e2?.nombre &&
+    return e1?.nombre == e2?.nombre &&
         e1?.email == e2?.email &&
         e1?.telefono == e2?.telefono &&
         e1?.departamento == e2?.departamento &&
@@ -143,7 +134,6 @@ class EmpleadosRecordDocumentEquality implements Equality<EmpleadosRecord> {
 
   @override
   int hash(EmpleadosRecord? e) => const ListEquality().hash([
-        e?.id,
         e?.nombre,
         e?.email,
         e?.telefono,

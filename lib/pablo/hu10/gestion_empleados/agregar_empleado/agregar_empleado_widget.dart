@@ -41,7 +41,7 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '5lfkr2pw' /* Page Title */,
+              'ehg9x5s8' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',

@@ -41,7 +41,7 @@ class _IndexServicioWidgetState extends State<IndexServicioWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '5772gpj1' /* Page Title */,
+              '5lfkr2pw' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',

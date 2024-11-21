@@ -89,7 +89,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'VerCatalogo',
           path: '/verCatalogo',
-          builder: (context, params) => const VerCatalogoWidget(),
+          builder: (context, params) => VerCatalogoWidget(
+            categoria: params.getParam(
+              'categoria',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'Contactenos',
@@ -200,14 +205,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AgregarEmpleadoWidget(),
         ),
         FFRoute(
-          name: 'editarEmpleado',
-          path: '/editarEmpleado',
-          builder: (context, params) => const EditarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'detallesEmpleado',
           path: '/detallesEmpleado',
-          builder: (context, params) => const DetallesEmpleadoWidget(),
+          asyncParams: {
+            'paramEmpleados':
+                getDoc(['empleados'], EmpleadosRecord.fromSnapshot),
+          },
+          builder: (context, params) => DetallesEmpleadoWidget(
+            paramEmpleados: params.getParam(
+              'paramEmpleados',
+              ParamType.Document,
+            ),
+          ),
         ),
         FFRoute(
           name: 'indexServicio',
@@ -238,6 +247,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'ChaBot',
           path: '/chaBot',
           builder: (context, params) => const ChaBotWidget(),
+        ),
+        FFRoute(
+          name: 'IconoChatBot',
+          path: '/iconoChatBot',
+          builder: (context, params) => const IconoChatBotWidget(),
+        ),
+        FFRoute(
+          name: 'editarEmpleado',
+          path: '/editarEmpleado',
+          asyncParams: {
+            'paramEmpleados':
+                getDoc(['empleados'], EmpleadosRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarEmpleadoWidget(
+            paramEmpleados: params.getParam(
+              'paramEmpleados',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

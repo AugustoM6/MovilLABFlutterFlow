@@ -41,7 +41,7 @@ class _EditarServicioWidgetState extends State<EditarServicioWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '3gdd5003' /* Page Title */,
+              '9u1vy0ic' /* Page Title */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
