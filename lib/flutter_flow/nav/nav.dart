@@ -72,13 +72,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const InfoLab1Widget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const MenuWidget() : const IniciSesionWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const InfoLab1Widget() : const LoginWidget(),
+              appStateNotifier.loggedIn ? const MenuWidget() : const IniciSesionWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -86,29 +86,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const InfoLab1Widget(),
         ),
         FFRoute(
-          name: 'App',
-          path: '/app',
-          builder: (context, params) => const AppWidget(),
-        ),
-        FFRoute(
-          name: 'CreateUser',
-          path: '/createUser',
-          builder: (context, params) => const CreateUserWidget(),
-        ),
-        FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => const LoginWidget(),
-        ),
-        FFRoute(
           name: 'VerCatalogo',
           path: '/verCatalogo',
           builder: (context, params) => const VerCatalogoWidget(),
         ),
         FFRoute(
-          name: 'VerPagContactenos',
-          path: '/verPagContactenos',
-          builder: (context, params) => const VerPagContactenosWidget(),
+          name: 'Contactenos',
+          path: '/contactenos',
+          builder: (context, params) => const ContactenosWidget(),
         ),
         FFRoute(
           name: 'GuardarProductosLista',
@@ -123,7 +108,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HistorialPedidos',
           path: '/historialPedidos',
-          builder: (context, params) => const HistorialPedidosWidget(),
+          builder: (context, params) => HistorialPedidosWidget(
+            mes: params.getParam(
+              'mes',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'InfoLab2',
@@ -136,14 +126,119 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ConozcanosWidget(),
         ),
         FFRoute(
-          name: 'Accesibilidad',
-          path: '/accesibilidad',
-          builder: (context, params) => const AccesibilidadWidget(),
+          name: 'AccesibilidadEIdioma',
+          path: '/accesibilidadEIdioma',
+          builder: (context, params) => const AccesibilidadEIdiomaWidget(),
         ),
         FFRoute(
           name: 'PedidosRecientes',
           path: '/pedidosRecientes',
           builder: (context, params) => const PedidosRecientesWidget(),
+        ),
+        FFRoute(
+          name: 'Menu',
+          path: '/menu',
+          builder: (context, params) => const MenuWidget(),
+        ),
+        FFRoute(
+          name: 'PerfilUsuario',
+          path: '/perfilUsuario',
+          builder: (context, params) => const PerfilUsuarioWidget(),
+        ),
+        FFRoute(
+          name: 'MenuAdministrador',
+          path: '/menuAdministrador',
+          builder: (context, params) => const MenuAdministradorWidget(),
+        ),
+        FFRoute(
+          name: 'IndexProducto',
+          path: '/indexProducto',
+          builder: (context, params) => const IndexProductoWidget(),
+        ),
+        FFRoute(
+          name: 'IniciSesion',
+          path: '/iniciSesion',
+          builder: (context, params) => const IniciSesionWidget(),
+        ),
+        FFRoute(
+          name: 'agregarProducto',
+          path: '/agregarProducto',
+          builder: (context, params) => const AgregarProductoWidget(),
+        ),
+        FFRoute(
+          name: 'forgot',
+          path: '/forgot',
+          builder: (context, params) => const ForgotWidget(),
+        ),
+        FFRoute(
+          name: 'Perfil',
+          path: '/perfil',
+          builder: (context, params) => const PerfilWidget(),
+        ),
+        FFRoute(
+          name: 'ConfiguracionCuenta',
+          path: '/configuracionCuenta',
+          builder: (context, params) => const ConfiguracionCuentaWidget(),
+        ),
+        FFRoute(
+          name: 'editarProducto',
+          path: '/editarProducto',
+          builder: (context, params) => const EditarProductoWidget(),
+        ),
+        FFRoute(
+          name: 'eliminarProducto',
+          path: '/eliminarProducto',
+          builder: (context, params) => const EliminarProductoWidget(),
+        ),
+        FFRoute(
+          name: 'indexEmpleados',
+          path: '/indexEmpleados',
+          builder: (context, params) => const IndexEmpleadosWidget(),
+        ),
+        FFRoute(
+          name: 'agregarEmpleado',
+          path: '/agregarEmpleado',
+          builder: (context, params) => const AgregarEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'editarEmpleado',
+          path: '/editarEmpleado',
+          builder: (context, params) => const EditarEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'detallesEmpleado',
+          path: '/detallesEmpleado',
+          builder: (context, params) => const DetallesEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'eliminarEmpleado',
+          path: '/eliminarEmpleado',
+          builder: (context, params) => const EliminarEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'indexServicio',
+          path: '/indexServicio',
+          builder: (context, params) => const IndexServicioWidget(),
+        ),
+        FFRoute(
+          name: 'agregarServicios',
+          path: '/agregarServicios',
+          builder: (context, params) => const AgregarServiciosWidget(),
+        ),
+        FFRoute(
+          name: 'editarServicio',
+          path: '/editarServicio',
+          builder: (context, params) => const EditarServicioWidget(),
+        ),
+        FFRoute(
+          name: 'eliminarServicio',
+          path: '/eliminarServicio',
+          builder: (context, params) => const EliminarServicioWidget(),
+        ),
+        FFRoute(
+          name: 'Home',
+          path: '/home',
+          builder: (context, params) => const HomeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -314,7 +409,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/login';
+            return '/iniciSesion';
           }
           return null;
         },

@@ -1,7 +1,9 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'reporte_pedidos_model.dart';
 export 'reporte_pedidos_model.dart';
@@ -165,337 +167,538 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              Expanded(
+                child: GridView(
+                  padding: EdgeInsets.zero,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 10.0,
+                    childAspectRatio: 1.0,
+                  ),
+                  scrollDirection: Axis.vertical,
                   children: [
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Enero',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(8.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Enero',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Enero',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Febrero',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(8.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Febrero',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Febrero',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  fontSize: 14.0,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Marzo',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Marzo',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Marzo',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Abril',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -5.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Abril',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Abril',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Mayo',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -5.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Mayo',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Mayo',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Junio',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -5.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Junio',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Junio',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Julio',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -9.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Julio',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Julio',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Agosto',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -9.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Agosto',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Agosto',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Setiembre',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -9.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Setiembre',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Setiembre',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Octubre',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -13.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Octubre',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Octubre',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Noviembre',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -13.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Noviembre',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Noviembre',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: 'Diciembre',
-                      options: FFButtonOptions(
-                        height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                    Align(
+                      alignment: const AlignmentDirectional(-10.0, -13.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await queryPedidosRecordOnce();
+
+                            context.pushNamed(
+                              'HistorialPedidos',
+                              queryParameters: {
+                                'mes': serializeParam(
+                                  'Diciembre',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'Diciembre',
+                          options: FFButtonOptions(
+                            width: 80.0,
+                            height: 40.0,
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   letterSpacing: 0.0,
                                 ),
-                        elevation: 0.0,
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).tertiary,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                   ],
@@ -508,8 +711,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await actions.generarPDF();
                       },
                       text: 'Generar',
                       icon: const Icon(
@@ -538,7 +741,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed('HistorialPedidos');
+                        context.pushNamed(
+                          'HistorialPedidos',
+                          queryParameters: {
+                            'mes': serializeParam(
+                              '',
+                              ParamType.String,
+                            ),
+                          }.withoutNulls,
+                        );
                       },
                       text: 'Consultar',
                       icon: const Icon(

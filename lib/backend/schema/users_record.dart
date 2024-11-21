@@ -45,6 +45,26 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
+  // "isAdmin" field.
+  bool? _isAdmin;
+  bool get isAdmin => _isAdmin ?? false;
+  bool hasIsAdmin() => _isAdmin != null;
+
+  // "edad" field.
+  int? _edad;
+  int get edad => _edad ?? 0;
+  bool hasEdad() => _edad != null;
+
+  // "direccion" field.
+  String? _direccion;
+  String get direccion => _direccion ?? '';
+  bool hasDireccion() => _direccion != null;
+
+  // "telefono" field.
+  int? _telefono;
+  int get telefono => _telefono ?? 0;
+  bool hasTelefono() => _telefono != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -52,6 +72,10 @@ class UsersRecord extends FirestoreRecord {
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
+    _isAdmin = snapshotData['isAdmin'] as bool?;
+    _edad = castToType<int>(snapshotData['edad']);
+    _direccion = snapshotData['direccion'] as String?;
+    _telefono = castToType<int>(snapshotData['telefono']);
   }
 
   static CollectionReference get collection =>
@@ -94,6 +118,10 @@ Map<String, dynamic> createUsersRecordData({
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
+  bool? isAdmin,
+  int? edad,
+  String? direccion,
+  int? telefono,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -103,6 +131,10 @@ Map<String, dynamic> createUsersRecordData({
       'uid': uid,
       'created_time': createdTime,
       'phone_number': phoneNumber,
+      'isAdmin': isAdmin,
+      'edad': edad,
+      'direccion': direccion,
+      'telefono': telefono,
     }.withoutNulls,
   );
 
@@ -119,7 +151,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.photoUrl == e2?.photoUrl &&
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.phoneNumber == e2?.phoneNumber &&
+        e1?.isAdmin == e2?.isAdmin &&
+        e1?.edad == e2?.edad &&
+        e1?.direccion == e2?.direccion &&
+        e1?.telefono == e2?.telefono;
   }
 
   @override
@@ -129,7 +165,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.photoUrl,
         e?.uid,
         e?.createdTime,
-        e?.phoneNumber
+        e?.phoneNumber,
+        e?.isAdmin,
+        e?.edad,
+        e?.direccion,
+        e?.telefono
       ]);
 
   @override

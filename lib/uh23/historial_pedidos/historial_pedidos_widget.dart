@@ -1,12 +1,19 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'historial_pedidos_model.dart';
 export 'historial_pedidos_model.dart';
 
 class HistorialPedidosWidget extends StatefulWidget {
-  const HistorialPedidosWidget({super.key});
+  const HistorialPedidosWidget({
+    super.key,
+    required this.mes,
+  });
+
+  final String? mes;
 
   @override
   State<HistorialPedidosWidget> createState() => _HistorialPedidosWidgetState();
@@ -83,299 +90,119 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Núm ',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Fecha',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Producto',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Cantidad',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Total',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
+              StreamBuilder<List<PedidosRecord>>(
+                stream: queryPedidosRecord(
+                  queryBuilder: (pedidosRecord) => pedidosRecord.where(
+                    'mes',
+                    isEqualTo: widget.mes,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '001',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: SizedBox(
+                        width: 50.0,
+                        height: 50.0,
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            FlutterFlowTheme.of(context).ultramarine,
                           ),
-                    ),
-                    Text(
-                      '16/10/2026',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Carillas',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '2',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'xxxxx',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '002',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '16/10/2026',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Puentes',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '2',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'xxxxx',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '003',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '16/10/2026',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Puentes',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '1',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'xxxxx',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '004',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '16/10/2026',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Carillas',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '3',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'xxxxx',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '005',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '16/10/2026',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'Coronas',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      '2',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                    Text(
-                      'xxxxx',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 10.0,
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ],
-                ),
+                        ),
+                      ),
+                    );
+                  }
+                  List<PedidosRecord> listViewPedidosRecordList =
+                      snapshot.data!;
+
+                  return ListView.builder(
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    itemCount: listViewPedidosRecordList.length,
+                    itemBuilder: (context, listViewIndex) {
+                      final listViewPedidosRecord =
+                          listViewPedidosRecordList[listViewIndex];
+                      return Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Text(
+                                listViewPedidosRecord.numeroPedido,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Text(
+                                valueOrDefault<String>(
+                                  listViewPedidosRecord.fecha?.toString(),
+                                  '01/01/2024',
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Text(
+                                listViewPedidosRecord.producto,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Text(
+                                listViewPedidosRecord.cantidad.toString(),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Text(
+                                listViewPedidosRecord.total.toString(),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
               ),
               Padding(
                 padding: const EdgeInsets.all(30.0),
@@ -384,8 +211,8 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await actions.generarPDF();
                       },
                       text: 'Generar',
                       icon: const Icon(
