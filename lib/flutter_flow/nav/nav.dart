@@ -72,13 +72,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const MenuWidget() : const IniciSesionWidget(),
+          appStateNotifier.loggedIn ? const HomeWidget() : const IniciSesionWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const MenuWidget() : const IniciSesionWidget(),
+              appStateNotifier.loggedIn ? const HomeWidget() : const IniciSesionWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -136,16 +136,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PedidosRecientesWidget(),
         ),
         FFRoute(
-          name: 'Menu',
-          path: '/menu',
-          builder: (context, params) => const MenuWidget(),
-        ),
-        FFRoute(
-          name: 'PerfilUsuario',
-          path: '/perfilUsuario',
-          builder: (context, params) => const PerfilUsuarioWidget(),
-        ),
-        FFRoute(
           name: 'MenuAdministrador',
           path: '/menuAdministrador',
           builder: (context, params) => const MenuAdministradorWidget(),
@@ -166,9 +156,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AgregarProductoWidget(),
         ),
         FFRoute(
-          name: 'forgot',
-          path: '/forgot',
-          builder: (context, params) => const ForgotWidget(),
+          name: 'PasswordOlvidado',
+          path: '/passwordOlvidado',
+          builder: (context, params) => const PasswordOlvidadoWidget(),
         ),
         FFRoute(
           name: 'Perfil',

@@ -4,25 +4,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'forgot_model.dart';
-export 'forgot_model.dart';
+import 'password_olvidado_model.dart';
+export 'password_olvidado_model.dart';
 
-class ForgotWidget extends StatefulWidget {
-  const ForgotWidget({super.key});
+class PasswordOlvidadoWidget extends StatefulWidget {
+  const PasswordOlvidadoWidget({super.key});
 
   @override
-  State<ForgotWidget> createState() => _ForgotWidgetState();
+  State<PasswordOlvidadoWidget> createState() => _PasswordOlvidadoWidgetState();
 }
 
-class _ForgotWidgetState extends State<ForgotWidget> {
-  late ForgotModel _model;
+class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
+  late PasswordOlvidadoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ForgotModel());
+    _model = createModel(context, () => PasswordOlvidadoModel());
 
     _model.emailAddressTextController ??= TextEditingController();
     _model.emailAddressFocusNode ??= FocusNode();

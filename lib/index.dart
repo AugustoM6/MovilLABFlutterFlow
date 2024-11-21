@@ -1,5 +1,5 @@
 // Export pages
-export '/uh3/info_lab1/info_lab1_widget.dart' show InfoLab1Widget;
+export '/jimena/uh3/info_lab1/info_lab1_widget.dart' show InfoLab1Widget;
 export '/uh2/ver_catalogo/ver_catalogo_widget.dart' show VerCatalogoWidget;
 export '/uh5/contactenos/contactenos_widget.dart' show ContactenosWidget;
 export '/uh24/guardar_productos_lista/guardar_productos_lista_widget.dart'
@@ -8,15 +8,13 @@ export '/uh23/reporte_pedidos/reporte_pedidos_widget.dart'
     show ReportePedidosWidget;
 export '/uh23/historial_pedidos/historial_pedidos_widget.dart'
     show HistorialPedidosWidget;
-export '/uh3/info_lab2/info_lab2_widget.dart' show InfoLab2Widget;
-export '/hu7/conozcanos/conozcanos_widget.dart' show ConozcanosWidget;
-export '/h_u9_h_u19y30_pendiente/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
+export '/jimena/uh3/info_lab2/info_lab2_widget.dart' show InfoLab2Widget;
+export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
+    show ConozcanosWidget;
+export '/jimena/h_u9_h_u19y30_pendiente/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
     show AccesibilidadEIdiomaWidget;
-export '/h_u25_pendiente/pedidos_recientes/pedidos_recientes_widget.dart'
+export '/jimena/h_u25_revisar_cod/pedidos_recientes/pedidos_recientes_widget.dart'
     show PedidosRecientesWidget;
-export '/paginas_duplicadssonla_his4/menu/menu_widget.dart' show MenuWidget;
-export '/paginas_duplicadssonla_his4/perfil_usuario/perfil_usuario_widget.dart'
-    show PerfilUsuarioWidget;
 export '/augusto/hu28/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
 export '/pablo/hu10/gestion_producto/index_producto/index_producto_widget.dart'
@@ -25,7 +23,8 @@ export '/augusto/uh1completada/inici_sesion/inici_sesion_widget.dart'
     show IniciSesionWidget;
 export '/pablo/hu10/gestion_producto/agregar_producto/agregar_producto_widget.dart'
     show AgregarProductoWidget;
-export '/augusto/uh1completada/forgot/forgot_widget.dart' show ForgotWidget;
+export '/augusto/uh1completada/password_olvidado/password_olvidado_widget.dart'
+    show PasswordOlvidadoWidget;
 export '/augusto/h_u4_completada/perfil/perfil_widget.dart' show PerfilWidget;
 export '/augusto/h_u4_completada/configuracion_cuenta/configuracion_cuenta_widget.dart'
     show ConfiguracionCuentaWidget;

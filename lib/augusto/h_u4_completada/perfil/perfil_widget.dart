@@ -77,23 +77,15 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       AuthUserStreamWidget(
-                        builder: (context) => InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {},
-                          child: Text(
-                            currentUserDisplayName,
-                            style: FlutterFlowTheme.of(context)
-                                .headlineMedium
-                                .override(
-                                  fontFamily: 'Inter',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  letterSpacing: 0.0,
-                                ),
-                          ),
+                        builder: (context) => Text(
+                          currentUserDisplayName,
+                          style: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .override(
+                                fontFamily: 'Inter',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                letterSpacing: 0.0,
+                              ),
                         ),
                       ),
                       InkWell(
@@ -356,7 +348,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               onTap: () async {
                                 await authManager.deleteUser(context);
 
-                                context.goNamedAuth('Menu', context.mounted);
+                                context.goNamedAuth('Home', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,

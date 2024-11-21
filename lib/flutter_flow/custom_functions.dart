@@ -13,17 +13,33 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '/auth/firebase_auth/auth_util.dart';
 
 List<DocumentReference> getListaPedidos(
-  int minRango,
-  int maxRango,
+  int rangoMin,
+  int rangoMax,
   List<DocumentReference> lista,
 ) {
   List<DocumentReference> listaPedidos = <DocumentReference<Object?>>[];
 
   for (int i = 0; i < lista.length; i++) {
-    if (i >= minRango && i <= maxRango) {
-      listaPedidos.add(value: lista[i]);
+    if (lista[i] >= rangoMin && lista[i] <= rangoMax) {
+      listaPedidos.add(lista[i]);
     }
   }
 
   return listaPedidos;
+}
+
+int paginaActual(
+  int rangoMax,
+  int pagina,
+) {
+  int paginaActual = (rangoMax - 1) ~/ pagina + 1;
+  return paginaActual;
+}
+
+int numeroPagina(
+  int total,
+  int pagina,
+) {
+  int totalPaginas = (total + pagina - 1) ~/ pagina;
+  return totalPaginas;
 }

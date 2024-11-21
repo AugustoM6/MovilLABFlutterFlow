@@ -629,7 +629,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       return;
                                                     }
 
-                                                    context.goNamedAuth('Menu',
+                                                    context.goNamedAuth('Home',
                                                         context.mounted);
                                                   },
                                                   text: 'Crear Cuenta',
@@ -751,7 +751,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'Menu',
+                                                                  'Home',
                                                                   context
                                                                       .mounted);
                                                             },
@@ -840,7 +840,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                     }
 
                                                                     context.goNamedAuth(
-                                                                        'Menu',
+                                                                        'Home',
                                                                         context
                                                                             .mounted);
                                                                   },
@@ -1224,7 +1224,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       return;
                                                     }
 
-                                                    context.goNamedAuth('Menu',
+                                                    context.goNamedAuth('Home',
                                                         context.mounted);
                                                   },
                                                   text: 'Iniciar Sesión',
@@ -1324,7 +1324,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'Menu',
+                                                            'Home',
                                                             context.mounted);
                                                       },
                                                       text:
@@ -1408,7 +1408,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'Menu',
+                                                                  'Home',
                                                                   context
                                                                       .mounted);
                                                             },
@@ -1483,7 +1483,8 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         0.0, 0.0, 0.0, 16.0),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
-                                                    context.pushNamed('forgot');
+                                                    context.pushNamed(
+                                                        'PasswordOlvidado');
                                                   },
                                                   text:
                                                       '¿Has olvidado tu contraseña?',

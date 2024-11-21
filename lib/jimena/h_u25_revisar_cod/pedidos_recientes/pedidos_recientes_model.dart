@@ -9,7 +9,7 @@ class PedidosRecientesModel extends FlutterFlowModel<PedidosRecientesWidget> {
 
   int maxRango = 1;
 
-  int pagina = 2;
+  int paginas = 2;
 
   @override
   void initState(BuildContext context) {}
