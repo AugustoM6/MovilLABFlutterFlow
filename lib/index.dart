@@ -3,7 +3,7 @@ export '/jimena/uh3/info_lab1/info_lab1_widget.dart' show InfoLab1Widget;
 export '/milagro/u_h2_pendiente/ver_catalogo/ver_catalogo_widget.dart'
     show VerCatalogoWidget;
 export '/milagro/contactenos/contactenos_widget.dart' show ContactenosWidget;
-export '/milagro/guardar_productos_lista/guardar_productos_lista_widget.dart'
+export '/milagro/u_h24_completa/guardar_productos_lista/guardar_productos_lista_widget.dart'
     show GuardarProductosListaWidget;
 export '/milagro/u_h23_completa/reporte_pedidos/reporte_pedidos_widget.dart'
     show ReportePedidosWidget;
