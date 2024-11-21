@@ -40,7 +40,9 @@ class _AgregarServiciosWidgetState extends State<AgregarServiciosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              'g4ty03jz' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,

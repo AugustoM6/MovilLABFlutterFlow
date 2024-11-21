@@ -43,3 +43,8 @@ int numeroPagina(
   int totalPaginas = (total + pagina - 1) ~/ pagina;
   return totalPaginas;
 }
+
+int conversionInteger(double value) {
+  int resultado = value.toInt();
+  return resultado;
+}

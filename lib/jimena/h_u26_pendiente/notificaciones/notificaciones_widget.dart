@@ -40,7 +40,9 @@ class _NotificacionesWidgetState extends State<NotificacionesWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              '6uhdjly5' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,

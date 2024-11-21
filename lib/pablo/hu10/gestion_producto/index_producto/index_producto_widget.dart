@@ -60,7 +60,9 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
             ),
           ),
           title: Text(
-            'Gestion de Productos',
+            FFLocalizations.of(context).getText(
+              '9cf3qptz' /* Gestion de Productos */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -87,7 +89,9 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                       onPressed: () async {
                         context.pushNamed('agregarProducto');
                       },
-                      text: 'AGREGAR',
+                      text: FFLocalizations.of(context).getText(
+                        'c790vstk' /* AGREGAR */,
+                      ),
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 45.0,
@@ -202,11 +206,11 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 5.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: () async {
-                                                context.pushNamed(
-                                                    'editarProducto');
-                                              },
-                                              text: 'Editar',
+                                              onPressed: () async {},
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'rr5wyjkj' /* Editar */,
+                                              ),
                                               options: FFButtonOptions(
                                                 width: 100.0,
                                                 height: 35.0,
@@ -241,10 +245,49 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           FFButtonWidget(
-                                            onPressed: () {
-                                              print('deleteBtn pressed ...');
+                                            onPressed: () async {
+                                              var confirmDialogResponse =
+                                                  await showDialog<bool>(
+                                                        context: context,
+                                                        builder:
+                                                            (alertDialogContext) {
+                                                          return AlertDialog(
+                                                            title:
+                                                                const Text('Aviso'),
+                                                            content: const Text(
+                                                                '¿Seguro que desea eliminar el producto?'),
+                                                            actions: [
+                                                              TextButton(
+                                                                onPressed: () =>
+                                                                    Navigator.pop(
+                                                                        alertDialogContext,
+                                                                        false),
+                                                                child: const Text(
+                                                                    'Cancelar'),
+                                                              ),
+                                                              TextButton(
+                                                                onPressed: () =>
+                                                                    Navigator.pop(
+                                                                        alertDialogContext,
+                                                                        true),
+                                                                child: const Text(
+                                                                    'Confirmar'),
+                                                              ),
+                                                            ],
+                                                          );
+                                                        },
+                                                      ) ??
+                                                      false;
+                                              if (confirmDialogResponse) {
+                                                await listViewProductoRecord
+                                                    .reference
+                                                    .delete();
+                                              }
                                             },
-                                            text: 'Eliminar',
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'vm2hm5a2' /* Eliminar */,
+                                            ),
                                             options: FFButtonOptions(
                                               width: 100.0,
                                               height: 35.0,

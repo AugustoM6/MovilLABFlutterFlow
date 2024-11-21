@@ -40,7 +40,9 @@ class _IndexServicioWidgetState extends State<IndexServicioWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              '5772gpj1' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,

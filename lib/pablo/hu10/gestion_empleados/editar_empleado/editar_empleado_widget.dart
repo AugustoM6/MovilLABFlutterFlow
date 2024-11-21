@@ -40,7 +40,9 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              '5vs8ai6f' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,

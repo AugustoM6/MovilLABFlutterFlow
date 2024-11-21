@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'eliminar_empleado_widget.dart' show EliminarEmpleadoWidget;
+import 'cha_bot_widget.dart' show ChaBotWidget;
 import 'package:flutter/material.dart';
 
-class EliminarEmpleadoModel extends FlutterFlowModel<EliminarEmpleadoWidget> {
+class ChaBotModel extends FlutterFlowModel<ChaBotWidget> {
   @override
   void initState(BuildContext context) {}
 

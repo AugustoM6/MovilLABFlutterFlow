@@ -40,7 +40,9 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              'ehg9x5s8' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,

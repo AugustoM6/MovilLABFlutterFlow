@@ -55,7 +55,9 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
             },
           ),
           title: Text(
-            '¡Conózcanos!',
+            FFLocalizations.of(context).getText(
+              'bmrutvp9' /* ¡Conózcanos! */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,
@@ -111,7 +113,9 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 5.0, 0.0),
                                   child: Text(
-                                    'En Esencia Dental nos caracterizamos por ser más que un equipo de profesionales comprometidos y especializados en técnica dental, somos una familia que busca devolver la sonrisa a sus pacientes.',
+                                    FFLocalizations.of(context).getText(
+                                      'lwitu7il' /* En Esencia Dental nos caracter... */,
+                                    ),
                                     textAlign: TextAlign.justify,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -157,7 +161,9 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Text(
-                            '\"Manos expertas y el mejor equipo humano y tecnológico nos permite asegurarles la mejor calidad y los mejores tiempos de entrega. Hoy estamos desarrollando el tercer año desde que empezamos con dicho proceso y en la actualidad contamos con 14 empleados y un laboratorio completo con la capacidad de abarcar desde el punto inicial del proceso, que se llama “el modelo” e implica la impresión que se le toma al paciente. En nuestro negocio somos capaces de desarrollar todas las técnicas.\"',
+                            FFLocalizations.of(context).getText(
+                              '5to7d89q' /* "Manos expertas y el mejor equ... */,
+                            ),
                             textAlign: TextAlign.justify,
                             style:
                                 FlutterFlowTheme.of(context).bodySmall.override(
@@ -182,7 +188,9 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Equipo Humano en Esencia Dental\n',
+                              text: FFLocalizations.of(context).getText(
+                                '4u4wg6d2' /* Equipo Humano en Esencia Denta... */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -193,7 +201,9 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                                   ),
                             ),
                             TextSpan(
-                              text: '#SomosUnEquipo ',
+                              text: FFLocalizations.of(context).getText(
+                                'gwsabrpp' /* #SomosUnEquipo  */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

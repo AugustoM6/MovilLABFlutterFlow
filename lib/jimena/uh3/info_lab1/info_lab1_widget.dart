@@ -56,7 +56,9 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
             },
           ),
           title: Text(
-            'Laboratorio Principal',
+            FFLocalizations.of(context).getText(
+              '4ug0jyih' /* Laboratorio Principal */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,
@@ -130,7 +132,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: 'Horario:\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'edevuccu' /* Horario:
+ */
+                                                ,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -141,7 +148,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                                   ),
                                             ),
                                             TextSpan(
-                                              text: 'De Lunes a Viernes\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'ju8lu7dx' /* De Lunes a Viernes
+ */
+                                                ,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -151,9 +163,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                            const TextSpan(
-                                              text: 'de 7am - 5pm',
-                                              style: TextStyle(),
+                                            TextSpan(
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                '4omp2u46' /* de 7am - 5pm */,
+                                              ),
+                                              style: const TextStyle(),
                                             )
                                           ],
                                           style: FlutterFlowTheme.of(context)
@@ -200,7 +215,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: 'Dirección:\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'r6qrh6x4' /* Dirección:
+ */
+                                                ,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -211,8 +231,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                                   ),
                                             ),
                                             TextSpan(
-                                              text:
-                                                  'Del Ice 50m N\nEdificio El Roble \nsegundo piso \nHeredia, 40101, \nCosta Rica.',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'yers8ym0' /* Del Ice 50m N
+Edificio El Robl... */
+                                                ,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -255,7 +279,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: 'Sobre el laboratorio:\n',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'bj3a1vvo' /* Sobre el laboratorio:
+ */
+                                            ,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -265,8 +294,10 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                               ),
                                         ),
                                         TextSpan(
-                                          text:
-                                              'El Laboratorio Esencia Dental (AJ Dental Design) es un laboratorio dental especializado en crear prótesis dentales fijas de alta estética natural que se adaptan a las necesidades de cada paciente; ubicado en Heredia, Costa Rica, trabaja en estrecha colaboración con dentistas, ortodoncistas estéticos y prostodoncistas para ofrecer soluciones protésicas avanzadas. \n\nFue fundado el 17 de octubre del 2018, ha brindado 7 años de servicio en el área de la salud dental, catalogado como uno de los mejores laboratorios dentales y destacado por su compromiso como empresa con la excelencia y la atención al detalle en cada etapa del proceso.',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'diysiin8' /* El Laboratorio Esencia Dental ... */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
                                               .override(
@@ -320,7 +351,9 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                           onPressed: () async {
                             context.pushNamed('InfoLab2');
                           },
-                          text: 'Ver local asociado',
+                          text: FFLocalizations.of(context).getText(
+                            'h9melw03' /* Ver local asociado */,
+                          ),
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(

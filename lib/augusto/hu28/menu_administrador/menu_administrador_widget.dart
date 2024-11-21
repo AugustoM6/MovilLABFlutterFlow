@@ -57,7 +57,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
             },
           ),
           title: Text(
-            'Administrador',
+            FFLocalizations.of(context).getText(
+              '3wnrn19r' /* Administrador */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primary,
@@ -96,7 +98,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              'Resumen de Pedidos',
+                              FFLocalizations.of(context).getText(
+                                'craret79' /* Resumen de Pedidos */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -115,7 +119,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      '12',
+                                      FFLocalizations.of(context).getText(
+                                        'dsikdemd' /* 12 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .displayMedium
                                           .override(
@@ -126,7 +132,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'Pedidos Activos',
+                                      FFLocalizations.of(context).getText(
+                                        'dracdyiu' /* Pedidos Activos */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -143,7 +151,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      '8',
+                                      FFLocalizations.of(context).getText(
+                                        '7p0rf5nf' /* 8 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .displayMedium
                                           .override(
@@ -154,7 +164,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'En Proceso',
+                                      FFLocalizations.of(context).getText(
+                                        'a9pq7wdh' /* En Proceso */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -171,7 +183,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      '4',
+                                      FFLocalizations.of(context).getText(
+                                        'nt9wbt0h' /* 4 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .displayMedium
                                           .override(
@@ -182,7 +196,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                           ),
                                     ),
                                     Text(
-                                      'Completados',
+                                      FFLocalizations.of(context).getText(
+                                        '0onryhrl' /* Completados */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -221,7 +237,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              'Pedidos del Mes',
+                              FFLocalizations.of(context).getText(
+                                'buukx6g2' /* Pedidos del Mes */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -253,7 +271,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               onPressed: () {
                                 print('btnGestionPedidos pressed ...');
                               },
-                              text: 'Gestión de Pedidos',
+                              text: FFLocalizations.of(context).getText(
+                                'py18nru5' /* Gestión de Pedidos */,
+                              ),
                               icon: const Icon(
                                 Icons.inventory_2,
                                 size: 15.0,
@@ -281,7 +301,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               onPressed: () {
                                 print('btnGestionProductos pressed ...');
                               },
-                              text: 'Gestión de Productos',
+                              text: FFLocalizations.of(context).getText(
+                                'dzmba3kz' /* Gestión de Productos */,
+                              ),
                               icon: const Icon(
                                 Icons.inventory_2,
                                 size: 15.0,
@@ -309,7 +331,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               onPressed: () {
                                 print('btnReportes pressed ...');
                               },
-                              text: 'Reportes',
+                              text: FFLocalizations.of(context).getText(
+                                'ogkzr7oh' /* Reportes */,
+                              ),
                               icon: const Icon(
                                 Icons.assessment,
                                 size: 15.0,
@@ -337,7 +361,9 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               onPressed: () {
                                 print('btnLogOut pressed ...');
                               },
-                              text: 'Cerrar Sesión',
+                              text: FFLocalizations.of(context).getText(
+                                'nae33p8b' /* Cerrar Sesión */,
+                              ),
                               icon: const Icon(
                                 Icons.logout,
                                 size: 15.0,

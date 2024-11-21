@@ -68,22 +68,28 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 30.0,
+          leading: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+            child: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 60.0,
+              fillColor: FlutterFlowTheme.of(context).secondary,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: FlutterFlowTheme.of(context).primaryBackground,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.pop();
+              },
             ),
-            onPressed: () async {
-              context.pop();
-            },
           ),
           title: Text(
-            'Mi Cuenta',
+            FFLocalizations.of(context).getText(
+              'rraf1i8d' /* Mi Cuenta */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -117,16 +123,36 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(60.0),
                       ),
-                      child: AuthUserStreamWidget(
-                        builder: (context) => ClipRRect(
-                          borderRadius: BorderRadius.circular(60.0),
-                          child: Image.network(
-                            currentUserPhoto,
-                            width: 120.0,
-                            height: 120.0,
-                            fit: BoxFit.cover,
+                      child: Stack(
+                        children: [
+                          AuthUserStreamWidget(
+                            builder: (context) => ClipRRect(
+                              borderRadius: BorderRadius.circular(60.0),
+                              child: Image.network(
+                                currentUserPhoto,
+                                width: 120.0,
+                                height: 120.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
-                        ),
+                          Align(
+                            alignment: const AlignmentDirectional(1.0, 1.0),
+                            child: FlutterFlowIconButton(
+                              borderRadius: 30.0,
+                              buttonSize: 40.0,
+                              fillColor: FlutterFlowTheme.of(context).tertiary,
+                              icon: Icon(
+                                Icons.edit_rounded,
+                                color: FlutterFlowTheme.of(context).info,
+                                size: 21.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -159,7 +185,9 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Configuración de cuenta',
+                              FFLocalizations.of(context).getText(
+                                'o0krnwyp' /* Configuración de cuenta */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -204,14 +232,20 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelText: 'Nombre',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'u055erjx' /* Nombre */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'TextField',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'it3c0yjz' /* TextField */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -307,14 +341,20 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelText: 'Edad',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'iatoo8v4' /* Edad */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'TextField',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'iaj30ie5' /* TextField */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -411,14 +451,20 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelText: 'Dirrección',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'am29ttka' /* Dirrección */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'TextField',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'giaxbqsa' /* TextField */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -515,14 +561,20 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelText: 'Teléfono',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'yzguaehi' /* Teléfono */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'TextField',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'o1c8qk4j' /* TextField */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -656,12 +708,18 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                       buttonMargin:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               8.0, 0.0, 8.0, 0.0),
-                                      tabs: const [
+                                      tabs: [
                                         Tab(
-                                          text: 'Femenino',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'chp0080i' /* Femenino */,
+                                          ),
                                         ),
                                         Tab(
-                                          text: 'Masculino',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'kvew7m24' /* Masculino */,
+                                          ),
                                         ),
                                       ],
                                       controller: _model.tabBarController,
@@ -710,14 +768,16 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         },
                       );
                     },
-                    text: 'Actualizar',
+                    text: FFLocalizations.of(context).getText(
+                      'idkzd3pl' /* Actualizar */,
+                    ),
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FlutterFlowTheme.of(context).secondary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Readex Pro',

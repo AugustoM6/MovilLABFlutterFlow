@@ -71,7 +71,9 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Historial de pedidos',
+                FFLocalizations.of(context).getText(
+                  'tc7f0pk5' /* Historial de pedidos */,
+                ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
                       fontSize: 25.0,
@@ -214,7 +216,9 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       onPressed: () async {
                         await actions.generarPDF();
                       },
-                      text: 'Generar',
+                      text: FFLocalizations.of(context).getText(
+                        'ifyuo4cn' /* Generar */,
+                      ),
                       icon: const Icon(
                         Icons.picture_as_pdf,
                         size: 15.0,
@@ -240,10 +244,12 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       ),
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('ReportePedidos');
                       },
-                      text: 'Consultar',
+                      text: FFLocalizations.of(context).getText(
+                        'aukp8zhb' /* Consultar */,
+                      ),
                       icon: const Icon(
                         Icons.cloud_sync_outlined,
                         size: 15.0,

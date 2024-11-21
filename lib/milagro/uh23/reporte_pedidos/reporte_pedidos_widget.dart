@@ -9,7 +9,12 @@ import 'reporte_pedidos_model.dart';
 export 'reporte_pedidos_model.dart';
 
 class ReportePedidosWidget extends StatefulWidget {
-  const ReportePedidosWidget({super.key});
+  const ReportePedidosWidget({
+    super.key,
+    required this.mes,
+  });
+
+  final String? mes;
 
   @override
   State<ReportePedidosWidget> createState() => _ReportePedidosWidgetState();
@@ -118,7 +123,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Juan Pablo Pérez Arroyo',
+                    FFLocalizations.of(context).getText(
+                      'qtn88dqo' /* Juan Pablo Pérez Arroyo */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           fontSize: 16.0,
@@ -158,7 +165,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Reporte pedidos',
+                      FFLocalizations.of(context).getText(
+                        '5qs46woe' /* Reporte pedidos */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
                             letterSpacing: 0.0,
@@ -184,19 +193,19 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            await queryPedidosRecordOnce();
-
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'ReportePedidos',
                               queryParameters: {
                                 'mes': serializeParam(
-                                  'Enero',
+                                  '',
                                   ParamType.String,
                                 ),
                               }.withoutNulls,
                             );
                           },
-                          text: 'Enero',
+                          text: FFLocalizations.of(context).getText(
+                            'fdqvxsga' /* Enero */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -240,7 +249,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Febrero',
+                          text: FFLocalizations.of(context).getText(
+                            '0j1xf420' /* Febrero */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -284,7 +295,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Marzo',
+                          text: FFLocalizations.of(context).getText(
+                            'gtfv6lc5' /* Marzo */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -328,7 +341,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Abril',
+                          text: FFLocalizations.of(context).getText(
+                            '9qtbp4fx' /* Abril */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -372,7 +387,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Mayo',
+                          text: FFLocalizations.of(context).getText(
+                            '0eg8ssup' /* Mayo */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -416,7 +433,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Junio',
+                          text: FFLocalizations.of(context).getText(
+                            'kk1ze7gc' /* Junio */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -460,7 +479,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Julio',
+                          text: FFLocalizations.of(context).getText(
+                            '9escjjfb' /* Julio */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -504,7 +525,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Agosto',
+                          text: FFLocalizations.of(context).getText(
+                            'mnxsbtd1' /* Agosto */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -547,7 +570,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Setiembre',
+                          text: FFLocalizations.of(context).getText(
+                            '80eynrm9' /* Setiembre */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -590,7 +615,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Octubre',
+                          text: FFLocalizations.of(context).getText(
+                            '9xnfw57x' /* Octubre */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -633,7 +660,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Noviembre',
+                          text: FFLocalizations.of(context).getText(
+                            'p495u0bn' /* Noviembre */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -676,7 +705,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: 'Diciembre',
+                          text: FFLocalizations.of(context).getText(
+                            'sv0muj9i' /* Diciembre */,
+                          ),
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
@@ -714,7 +745,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       onPressed: () async {
                         await actions.generarPDF();
                       },
-                      text: 'Generar',
+                      text: FFLocalizations.of(context).getText(
+                        'e9jlje35' /* Generar */,
+                      ),
                       icon: const Icon(
                         Icons.picture_as_pdf,
                         size: 15.0,
@@ -745,13 +778,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           'HistorialPedidos',
                           queryParameters: {
                             'mes': serializeParam(
-                              '',
+                              widget.mes,
                               ParamType.String,
                             ),
                           }.withoutNulls,
                         );
                       },
-                      text: 'Consultar',
+                      text: FFLocalizations.of(context).getText(
+                        'gecw9dqc' /* Consultar */,
+                      ),
                       icon: const Icon(
                         Icons.cloud_sync_outlined,
                         size: 15.0,

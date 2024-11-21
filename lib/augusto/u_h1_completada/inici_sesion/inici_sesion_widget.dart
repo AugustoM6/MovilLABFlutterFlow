@@ -143,7 +143,9 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 16.0),
                 child: Text(
-                  'Logo',
+                  FFLocalizations.of(context).getText(
+                    '6zk2njyh' /* Logo */,
+                  ),
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Plus Jakarta Sans',
                         color: const Color(0xFF101213),
@@ -201,7 +203,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                 ),
                                               ),
                                             Text(
-                                              'Crea una cuenta',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'po4h99jr' /* Crea una cuenta */,
+                                              ),
                                               textAlign: TextAlign.start,
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -220,7 +225,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   .fromSTEB(
                                                       0.0, 4.0, 0.0, 24.0),
                                               child: Text(
-                                                'Llene el siguiente formulario',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '6c1zhbw1' /* Llene el siguiente formulario */,
+                                                ),
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -255,7 +263,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     labelText:
-                                                        'Correo Electronico',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      '32sj7xtk' /* Correo Electronico */,
+                                                    ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .labelLarge
@@ -359,7 +371,12 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   obscureText: !_model
                                                       .passwordCreateVisibility,
                                                   decoration: InputDecoration(
-                                                    labelText: 'Contraseña',
+                                                    labelText:
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      'yi6vnxyn' /* Contraseña */,
+                                                    ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .labelLarge
@@ -482,7 +499,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       .passwordCreateConfirmVisibility,
                                                   decoration: InputDecoration(
                                                     labelText:
-                                                        'Ingresa de nuevo tu contraseña',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      '1w73fsvt' /* Ingresa de nuevo tu contraseña */,
+                                                    ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .labelLarge
@@ -629,10 +650,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       return;
                                                     }
 
-                                                    context.goNamedAuth('Home',
+                                                    context.goNamedAuth(
+                                                        'ChaBot',
                                                         context.mounted);
                                                   },
-                                                  text: 'Crear Cuenta',
+                                                  text: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '3bru038f' /* Crear Cuenta */,
+                                                  ),
                                                   options: FFButtonOptions(
                                                     width: 230.0,
                                                     height: 52.0,
@@ -682,7 +708,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 24.0),
                                                     child: Text(
-                                                      'O registrate aqui',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'ly04tf82' /* O registrate aqui */,
+                                                      ),
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: FlutterFlowTheme
@@ -751,12 +781,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'Home',
+                                                                  'ChaBot',
                                                                   context
                                                                       .mounted);
                                                             },
-                                                            text:
-                                                                'Continue with Google',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              '2a8kwlbh' /* Continue with Google */,
+                                                            ),
                                                             icon: const FaIcon(
                                                               FontAwesomeIcons
                                                                   .google,
@@ -840,12 +873,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                     }
 
                                                                     context.goNamedAuth(
-                                                                        'Home',
+                                                                        'ChaBot',
                                                                         context
                                                                             .mounted);
                                                                   },
-                                                                  text:
-                                                                      'Continue with Apple',
+                                                                  text: FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'khjmok9s' /* Continue with Apple */,
+                                                                  ),
                                                                   icon: const FaIcon(
                                                                     FontAwesomeIcons
                                                                         .apple,
@@ -944,7 +980,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 20.0),
                                               child: Text(
-                                                'Ingrese los siguientes datos',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'g6bcnc6b' /* Ingrese los siguientes datos */,
+                                                ),
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -979,7 +1018,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     labelText:
-                                                        'Correo Electronico',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      '5rfmz6fy' /* Correo Electronico */,
+                                                    ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .labelLarge
@@ -1088,7 +1131,12 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   obscureText: !_model
                                                       .passwordVisibility,
                                                   decoration: InputDecoration(
-                                                    labelText: 'Contraseña',
+                                                    labelText:
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      '6vl8uh2v' /* Contraseña */,
+                                                    ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .labelLarge
@@ -1224,10 +1272,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       return;
                                                     }
 
-                                                    context.goNamedAuth('Home',
+                                                    context.goNamedAuth(
+                                                        'ChaBot',
                                                         context.mounted);
                                                   },
-                                                  text: 'Iniciar Sesión',
+                                                  text: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '32hxiqat' /* Iniciar Sesión */,
+                                                  ),
                                                   options: FFButtonOptions(
                                                     width: 230.0,
                                                     height: 52.0,
@@ -1272,7 +1325,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 24.0),
                                                 child: Text(
-                                                  'o inicia sesión con',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'x5ib51re' /* o inicia sesión con */,
+                                                  ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -1324,11 +1380,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'Home',
+                                                            'ChaBot',
                                                             context.mounted);
                                                       },
-                                                      text:
-                                                          'Continua con Google',
+                                                      text: FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'gbtb9tob' /* Continua con Google */,
+                                                      ),
                                                       icon: const FaIcon(
                                                         FontAwesomeIcons.google,
                                                         size: 20.0,
@@ -1408,12 +1467,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'Home',
+                                                                  'ChaBot',
                                                                   context
                                                                       .mounted);
                                                             },
-                                                            text:
-                                                                'Continua con Apple',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              'zcoxcidi' /* Continua con Apple */,
+                                                            ),
                                                             icon: const FaIcon(
                                                               FontAwesomeIcons
                                                                   .apple,
@@ -1486,8 +1548,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     context.pushNamed(
                                                         'PasswordOlvidado');
                                                   },
-                                                  text:
-                                                      '¿Has olvidado tu contraseña?',
+                                                  text: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    'smkj0hii' /* ¿Has olvidado tu contraseña? */,
+                                                  ),
                                                   options: FFButtonOptions(
                                                     height: 44.0,
                                                     padding:
@@ -1573,12 +1638,16 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                     12.0, 0.0, 12.0, 0.0),
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                tabs: const [
+                                tabs: [
                                   Tab(
-                                    text: 'Crear Cuenta',
+                                    text: FFLocalizations.of(context).getText(
+                                      'vm23sd0p' /* Crear Cuenta */,
+                                    ),
                                   ),
                                   Tab(
-                                    text: 'Iniciar Sesión',
+                                    text: FFLocalizations.of(context).getText(
+                                      'x1y5oybw' /* Iniciar Sesión */,
+                                    ),
                                   ),
                                 ],
                                 controller: _model.tabBarController,

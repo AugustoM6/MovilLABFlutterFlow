@@ -60,7 +60,9 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
         title: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
           child: Text(
-            'Atras',
+            FFLocalizations.of(context).getText(
+              '8yxc40c1' /* Atras */,
+            ),
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Inter',
                   fontSize: 16.0,
@@ -116,7 +118,9 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Back',
+                            FFLocalizations.of(context).getText(
+                              'njflrfgf' /* Back */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -132,7 +136,9 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
-                  'Has olvidado tu contraseña',
+                  FFLocalizations.of(context).getText(
+                    'h35sncml' /* Has olvidado tu contraseña */,
+                  ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Inter',
                         letterSpacing: 0.0,
@@ -142,7 +148,9 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                 child: Text(
-                  'Le enviaremos un correo electrónico con un enlace para restablecer su contraseña, ingrese el correo electrónico asociado a su cuenta a continuación.  ',
+                  FFLocalizations.of(context).getText(
+                    'vz2qurcn' /* Le enviaremos un correo electr... */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,
@@ -159,13 +167,17 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                     autofillHints: const [AutofillHints.email],
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Su dirección de correo electrónico...',
+                      labelText: FFLocalizations.of(context).getText(
+                        '1qohuj5l' /* Su dirección de correo electró... */,
+                      ),
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
                                 fontFamily: 'Readex Pro',
                                 letterSpacing: 0.0,
                               ),
-                      hintText: 'Ingrese su correo electrónico ',
+                      hintText: FFLocalizations.of(context).getText(
+                        '7lxncwqx' /* Ingrese su correo electrónico  */,
+                      ),
                       hintStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
                                 fontFamily: 'Readex Pro',
@@ -238,7 +250,9 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                         context: context,
                       );
                     },
-                    text: 'Eviar enlance ',
+                    text: FFLocalizations.of(context).getText(
+                      'xnqwrvww' /* Eviar enlance  */,
+                    ),
                     options: FFButtonOptions(
                       width: 270.0,
                       height: 50.0,

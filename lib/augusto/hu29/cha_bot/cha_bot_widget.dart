@@ -1,25 +1,25 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'eliminar_servicio_model.dart';
-export 'eliminar_servicio_model.dart';
+import 'cha_bot_model.dart';
+export 'cha_bot_model.dart';
 
-class EliminarServicioWidget extends StatefulWidget {
-  const EliminarServicioWidget({super.key});
+class ChaBotWidget extends StatefulWidget {
+  const ChaBotWidget({super.key});
 
   @override
-  State<EliminarServicioWidget> createState() => _EliminarServicioWidgetState();
+  State<ChaBotWidget> createState() => _ChaBotWidgetState();
 }
 
-class _EliminarServicioWidgetState extends State<EliminarServicioWidget> {
-  late EliminarServicioModel _model;
+class _ChaBotWidgetState extends State<ChaBotWidget> {
+  late ChaBotModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => EliminarServicioModel());
+    _model = createModel(context, () => ChaBotModel());
   }
 
   @override
@@ -40,7 +40,9 @@ class _EliminarServicioWidgetState extends State<EliminarServicioWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              'snh52fdu' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,
@@ -52,11 +54,31 @@ class _EliminarServicioWidgetState extends State<EliminarServicioWidget> {
           centerTitle: false,
           elevation: 2.0,
         ),
-        body: const SafeArea(
+        body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Container(
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {},
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: FlutterFlowTheme.of(context).primaryText,
+                    size: 24.0,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -78,7 +78,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
             ),
           ),
           title: Text(
-            'Gestion de Productos',
+            FFLocalizations.of(context).getText(
+              'hseykpb0' /* Gestion de Productos */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -104,7 +106,10 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.network(
-                        _model.uploadedFileUrl,
+                        valueOrDefault<String>(
+                          _model.uploadedFileUrl,
+                          'https://th.bing.com/th/id/OIP.21b4i1wGFm8q35Cx2_-JFwHaHa?w=190&h=190&c=7&r=0&o=5&pid=1.7',
+                        ),
                         width: 175.0,
                         height: 175.0,
                         fit: BoxFit.cover,
@@ -161,7 +166,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           }
                         }
                       },
-                      text: 'Cargar',
+                      text: FFLocalizations.of(context).getText(
+                        '3pkisd33' /* Cargar */,
+                      ),
                       icon: const Icon(
                         Icons.image_outlined,
                         size: 15.0,
@@ -203,7 +210,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: true,
-                            labelText: 'Nombre del producto',
+                            labelText: FFLocalizations.of(context).getText(
+                              'rqrmxkew' /* Nombre del producto */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -277,7 +286,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: true,
-                            labelText: 'Descripcion',
+                            labelText: FFLocalizations.of(context).getText(
+                              'tgjmz7ae' /* Descripcion */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -351,7 +362,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: true,
-                            labelText: 'Departamento',
+                            labelText: FFLocalizations.of(context).getText(
+                              'cz2060vp' /* Departamento */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -425,7 +438,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: true,
-                            labelText: 'Tecnico',
+                            labelText: FFLocalizations.of(context).getText(
+                              '1t5cbmaq' /* Tecnico */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -499,7 +514,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: true,
-                            labelText: 'Categoria',
+                            labelText: FFLocalizations.of(context).getText(
+                              'uzvbrofj' /* Categoria */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -569,7 +586,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                       onPressed: () {
                         print('cancelarBtn pressed ...');
                       },
-                      text: 'Cancelar',
+                      text: FFLocalizations.of(context).getText(
+                        'fir9v5v1' /* Cancelar */,
+                      ),
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 40.0,
@@ -610,6 +629,13 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           _model.txtFdTecnicoTextController?.clear();
                           _model.txtFdCategoriaTextController?.clear();
                         });
+                        safeSetState(() {
+                          _model.isDataUploading = false;
+                          _model.uploadedLocalFile =
+                              FFUploadedFile(bytes: Uint8List.fromList([]));
+                          _model.uploadedFileUrl = '';
+                        });
+
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
@@ -624,7 +650,9 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                           ),
                         );
                       },
-                      text: 'Agregar',
+                      text: FFLocalizations.of(context).getText(
+                        '6ewiylw8' /* Agregar */,
+                      ),
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 40.0,

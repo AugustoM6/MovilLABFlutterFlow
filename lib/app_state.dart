@@ -25,4 +25,10 @@ class FFAppState extends ChangeNotifier {
   set generoSeleccionado(String value) {
     _generoSeleccionado = value;
   }
+
+  int _textSize = 12;
+  int get textSize => _textSize;
+  set textSize(int value) {
+    _textSize = value;
+  }
 }

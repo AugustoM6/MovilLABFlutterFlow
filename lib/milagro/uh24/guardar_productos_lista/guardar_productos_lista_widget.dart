@@ -65,7 +65,9 @@ class _GuardarProductosListaWidgetState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Lista de Deseos',
+                FFLocalizations.of(context).getText(
+                  'ztqvskpj' /* Lista de Deseos */,
+                ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -176,7 +178,9 @@ class _GuardarProductosListaWidgetState
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
-                                      'Coronas y Carillas EMAX',
+                                      FFLocalizations.of(context).getText(
+                                        'oldd4cuv' /* Coronas y Carillas EMAX */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -223,7 +227,9 @@ class _GuardarProductosListaWidgetState
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        '¡En Esencia Dental, te ayudamos \na que vuelvas a sonreír! ',
+                        FFLocalizations.of(context).getText(
+                          '2de19b8k' /* ¡En Esencia Dental, te ayudamo... */,
+                        ),
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -249,7 +255,9 @@ class _GuardarProductosListaWidgetState
                             .doc()
                             .set(createProductoRecordData());
                       },
-                      text: 'Agregar',
+                      text: FFLocalizations.of(context).getText(
+                        '91d6dpqw' /* Agregar */,
+                      ),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
@@ -271,7 +279,9 @@ class _GuardarProductosListaWidgetState
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Eliminar',
+                      text: FFLocalizations.of(context).getText(
+                        'of6dta64' /* Eliminar */,
+                      ),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(

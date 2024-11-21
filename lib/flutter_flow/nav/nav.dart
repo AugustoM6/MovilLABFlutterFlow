@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -72,13 +73,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomeWidget() : const IniciSesionWidget(),
+          appStateNotifier.loggedIn ? const ChaBotWidget() : const InfoLab1Widget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomeWidget() : const IniciSesionWidget(),
+              appStateNotifier.loggedIn ? const ChaBotWidget() : const InfoLab1Widget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -103,7 +104,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ReportePedidos',
           path: '/reportePedidos',
-          builder: (context, params) => const ReportePedidosWidget(),
+          builder: (context, params) => ReportePedidosWidget(
+            mes: params.getParam(
+              'mes',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'HistorialPedidos',
@@ -173,12 +179,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'editarProducto',
           path: '/editarProducto',
-          builder: (context, params) => const EditarProductoWidget(),
-        ),
-        FFRoute(
-          name: 'eliminarProducto',
-          path: '/eliminarProducto',
-          builder: (context, params) => const EliminarProductoWidget(),
+          asyncParams: {
+            'paramProductos': getDoc(['producto'], ProductoRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarProductoWidget(
+            paramProductos: params.getParam(
+              'paramProductos',
+              ParamType.Document,
+            ),
+          ),
         ),
         FFRoute(
           name: 'indexEmpleados',
@@ -201,11 +210,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const DetallesEmpleadoWidget(),
         ),
         FFRoute(
-          name: 'eliminarEmpleado',
-          path: '/eliminarEmpleado',
-          builder: (context, params) => const EliminarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'indexServicio',
           path: '/indexServicio',
           builder: (context, params) => const IndexServicioWidget(),
@@ -221,11 +225,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const EditarServicioWidget(),
         ),
         FFRoute(
-          name: 'eliminarServicio',
-          path: '/eliminarServicio',
-          builder: (context, params) => const EliminarServicioWidget(),
-        ),
-        FFRoute(
           name: 'Home',
           path: '/home',
           builder: (context, params) => const HomeWidget(),
@@ -234,6 +233,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Notificaciones',
           path: '/notificaciones',
           builder: (context, params) => const NotificacionesWidget(),
+        ),
+        FFRoute(
+          name: 'ChaBot',
+          path: '/chaBot',
+          builder: (context, params) => const ChaBotWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -404,7 +408,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/iniciSesion';
+            return '/infoLab1';
           }
           return null;
         },

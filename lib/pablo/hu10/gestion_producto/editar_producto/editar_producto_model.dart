@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final formKey = GlobalKey<FormState>();
   // State field(s) for txtFdNombre widget.
   FocusNode? txtFdNombreFocusNode;
   TextEditingController? txtFdNombreTextController;
@@ -21,6 +22,11 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
   FocusNode? txtFdTecnicoFocusNode;
   TextEditingController? txtFdTecnicoTextController;
   String? Function(BuildContext, String?)? txtFdTecnicoTextControllerValidator;
+  // State field(s) for txtFdCategoria widget.
+  FocusNode? txtFdCategoriaFocusNode;
+  TextEditingController? txtFdCategoriaTextController;
+  String? Function(BuildContext, String?)?
+      txtFdCategoriaTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -38,5 +44,8 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
 
     txtFdTecnicoFocusNode?.dispose();
     txtFdTecnicoTextController?.dispose();
+
+    txtFdCategoriaFocusNode?.dispose();
+    txtFdCategoriaTextController?.dispose();
   }
 }

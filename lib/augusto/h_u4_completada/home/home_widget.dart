@@ -58,7 +58,9 @@ class _HomeWidgetState extends State<HomeWidget> {
             },
           ),
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              'pjx461ar' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -87,7 +89,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '¡Bienvenidx a la app!',
+                            FFLocalizations.of(context).getText(
+                              'kysbfh16' /* ¡Bienvenidx a la app! */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -159,7 +163,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              'Menú de productos/servicios',
+                              FFLocalizations.of(context).getText(
+                                'ev1w618o' /* Menú de productosservicios */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -191,7 +197,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Productos y Servicios',
+                                      FFLocalizations.of(context).getText(
+                                        'uu4112kc' /* Productos y Servicios */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -233,7 +241,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Historial de pedidos',
+                                      FFLocalizations.of(context).getText(
+                                        'm1vfrtfc' /* Historial de pedidos */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -275,7 +285,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Sobre el Laboratorio ED',
+                                      FFLocalizations.of(context).getText(
+                                        '71z8y084' /* Sobre el Laboratorio ED */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -317,7 +329,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Configuración de la cuenta',
+                                      FFLocalizations.of(context).getText(
+                                        '63hkglem' /* Configuración de la cuenta */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -359,7 +373,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Lista de deseos',
+                                      FFLocalizations.of(context).getText(
+                                        '0yf107ll' /* Lista de deseos */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -401,7 +417,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Contáctenos',
+                                      FFLocalizations.of(context).getText(
+                                        'wq4s0yp0' /* Contáctenos */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -443,7 +461,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Realizar Pedido',
+                                      FFLocalizations.of(context).getText(
+                                        'tjfbgr01' /* Realizar Pedido */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -475,9 +495,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                           await authManager.signOut();
                           GoRouter.of(context).clearRedirectLocation();
 
-                          context.goNamedAuth('IniciSesion', context.mounted);
+                          context.goNamedAuth('InfoLab1', context.mounted);
                         },
-                        text: 'Cerrar Sesión',
+                        text: FFLocalizations.of(context).getText(
+                          '4s5xgmxz' /* Cerrar Sesión */,
+                        ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 48.0,
@@ -502,7 +524,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               .refFromURL('')
                               .delete();
                         },
-                        text: 'Eliminar Cuenta',
+                        text: FFLocalizations.of(context).getText(
+                          'hmbufnz5' /* Eliminar Cuenta */,
+                        ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 48.0,

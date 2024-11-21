@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'ver_catalogo_model.dart';
 export 'ver_catalogo_model.dart';
@@ -45,15 +46,15 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
           backgroundColor: const Color(0xFFF7F7F7),
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(11.0),
+            padding: const EdgeInsets.all(10.0),
             child: FlutterFlowIconButton(
-              borderRadius: 8.0,
+              borderRadius: 30.0,
               buttonSize: 40.0,
               fillColor: const Color(0xFF74ECF0),
               icon: Icon(
                 Icons.arrow_back_outlined,
                 color: FlutterFlowTheme.of(context).info,
-                size: 24.0,
+                size: 21.0,
               ),
               onPressed: () async {
                 context.safePop();
@@ -63,7 +64,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
           title: Align(
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
-              'Catálogo de productos',
+              FFLocalizations.of(context).getText(
+                'a0twvkp7' /* Catálogo de productos */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Inter',
                     color: const Color(0xFF0D0000),
@@ -89,7 +92,17 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                   FlutterFlowDropDown<String>(
                     controller: _model.dropDownValueController ??=
                         FormFieldController<String>(null),
-                    options: const ['Option 1', 'Option 2', 'Option 3'],
+                    options: [
+                      FFLocalizations.of(context).getText(
+                        't21jktug' /* Option 1 */,
+                      ),
+                      FFLocalizations.of(context).getText(
+                        'gz5oqr31' /* Option 2 */,
+                      ),
+                      FFLocalizations.of(context).getText(
+                        'nssqltnn' /* Option 3 */,
+                      )
+                    ],
                     onChanged: (val) =>
                         safeSetState(() => _model.dropDownValue = val),
                     width: 200.0,
@@ -98,7 +111,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    hintText: 'Filtrar por categoría',
+                    hintText: FFLocalizations.of(context).getText(
+                      '0ton6wry' /* Filtrar por categoría */,
+                    ),
                     icon: Icon(
                       Icons.keyboard_arrow_down_rounded,
                       color: FlutterFlowTheme.of(context).secondaryText,
@@ -199,7 +214,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                     Align(
                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
-                                        'Blanqueamiento dental',
+                                        FFLocalizations.of(context).getText(
+                                          'w1fof9wr' /* Blanqueamiento dental */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -258,7 +275,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                 },
               ),
               Text(
-                '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
+                FFLocalizations.of(context).getText(
+                  '6y9gbat5' /* ¡En Esencia Dental, te ayudamo... */,
+                ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
@@ -270,10 +289,14 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
               Padding(
                 padding: const EdgeInsets.all(14.0),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    unawaited(
+                      () async {}(),
+                    );
                   },
-                  text: 'Eliminar',
+                  text: FFLocalizations.of(context).getText(
+                    'nqus51t3' /* Eliminar */,
+                  ),
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:

@@ -79,7 +79,9 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                 },
               ),
               title: Text(
-                'Pedidos',
+                FFLocalizations.of(context).getText(
+                  '7ses1vnp' /* Pedidos */,
+                ),
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Inter',
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -134,7 +136,9 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 12.0, 0.0),
                                 child: Text(
-                                  'Recientes',
+                                  FFLocalizations.of(context).getText(
+                                    'zhdi935y' /* Recientes */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -175,7 +179,10 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                           Expanded(
                                             flex: 1,
                                             child: Text(
-                                              'Número',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '88q6ts4x' /* Número */,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodySmall
@@ -192,7 +199,9 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                         Expanded(
                                           flex: 4,
                                           child: Text(
-                                            'Cliente',
+                                            FFLocalizations.of(context).getText(
+                                              'eb5znb43' /* Cliente */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -212,7 +221,10 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Text(
-                                              'Fecha',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'jlyi2sbo' /* Fecha */,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodySmall
@@ -228,7 +240,9 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                           ),
                                         Expanded(
                                           child: Text(
-                                            'Estado',
+                                            FFLocalizations.of(context).getText(
+                                              'shhto855' /* Estado */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -242,7 +256,9 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                         ),
                                         Expanded(
                                           child: Text(
-                                            'Actions',
+                                            FFLocalizations.of(context).getText(
+                                              'ech9ovxp' /* Actions */,
+                                            ),
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
                                             style: FlutterFlowTheme.of(context)
@@ -475,7 +491,11 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                       Expanded(
                                                         flex: 2,
                                                         child: Text(
-                                                          'Jan. 20th, 2023',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '5vlv2ng0' /* Jan. 20th, 2023 */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -521,7 +541,11 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                           12.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'Active',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'b9xigbbe' /* Active */,
+                                                                ),
                                                                 maxLines: 1,
                                                                 style: FlutterFlowTheme.of(
                                                                         context)

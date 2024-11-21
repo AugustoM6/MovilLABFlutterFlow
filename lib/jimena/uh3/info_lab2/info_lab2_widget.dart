@@ -55,7 +55,9 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
             },
           ),
           title: Text(
-            'Laboratorio Asociado',
+            FFLocalizations.of(context).getText(
+              'ew5gdyo5' /* Laboratorio Asociado */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: Colors.white,
@@ -135,7 +137,12 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: 'Horario:\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                '0fxrc1t6' /* Horario:
+ */
+                                                ,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -146,7 +153,12 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                                   ),
                                             ),
                                             TextSpan(
-                                              text: 'De Lunes a Viernes\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'qb35yxqu' /* De Lunes a Viernes
+ */
+                                                ,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -156,9 +168,12 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                            const TextSpan(
-                                              text: 'de 7am - 5pm',
-                                              style: TextStyle(),
+                                            TextSpan(
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'p1jbevir' /* de 7am - 5pm */,
+                                              ),
+                                              style: const TextStyle(),
                                             )
                                           ],
                                           style: FlutterFlowTheme.of(context)
@@ -205,7 +220,13 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: 'Para más \ninformación:\n',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'cu2cn03o' /* Para más 
+información:
+ */
+                                                ,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -216,8 +237,12 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                                   ),
                                             ),
                                             TextSpan(
-                                              text:
-                                                  'Visite nuestras\nredes sociales.',
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'kh3qmut8' /* Visite nuestras
+redes sociales... */
+                                                ,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -260,7 +285,12 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: 'Sobre el laboratorio:\n',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            '38lfftop' /* Sobre el laboratorio:
+ */
+                                            ,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -270,8 +300,10 @@ class _InfoLab2WidgetState extends State<InfoLab2Widget> {
                                               ),
                                         ),
                                         TextSpan(
-                                          text:
-                                              'El Laboratorio Esencial Aligners es uno de nuestros socios, nuestra empresa hermana con la cual diseñamos alineadores dentales de altísima calidad. ',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            '77ygfipw' /* El Laboratorio Esencial Aligne... */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
                                               .override(

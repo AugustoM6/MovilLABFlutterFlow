@@ -97,7 +97,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                           context.pushNamed('ConfiguracionCuenta');
                         },
                         child: Text(
-                          'Editar cuenta',
+                          FFLocalizations.of(context).getText(
+                            'b5rjwg5y' /* Editar cuenta */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -140,7 +142,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                       size: 24.0,
                                     ),
                                     Text(
-                                      'Accesibilidad',
+                                      FFLocalizations.of(context).getText(
+                                        'yl305dol' /* Accesibilidad */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -172,7 +176,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                       size: 24.0,
                                     ),
                                     Text(
-                                      'Notificaciones',
+                                      FFLocalizations.of(context).getText(
+                                        'miuzdowq' /* Notificaciones */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -222,7 +228,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         size: 24.0,
                                       ),
                                       Text(
-                                        'Lenguaje',
+                                        FFLocalizations.of(context).getText(
+                                          'a3xpsv90' /* Lenguaje */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -255,7 +263,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                       size: 24.0,
                                     ),
                                     Text(
-                                      'Privacidad',
+                                      FFLocalizations.of(context).getText(
+                                        '802exsif' /* Privacidad */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -307,7 +317,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 GoRouter.of(context).clearRedirectLocation();
 
                                 context.goNamedAuth(
-                                    'IniciSesion', context.mounted);
+                                    'InfoLab1', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -324,7 +334,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         size: 24.0,
                                       ),
                                       Text(
-                                        'Cerrar sesión',
+                                        FFLocalizations.of(context).getText(
+                                          'c43np712' /* Cerrar sesión */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -348,7 +360,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               onTap: () async {
                                 await authManager.deleteUser(context);
 
-                                context.goNamedAuth('Home', context.mounted);
+                                context.goNamedAuth('ChaBot', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -365,7 +377,9 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         size: 24.0,
                                       ),
                                       Text(
-                                        'Eliminar cuenta',
+                                        FFLocalizations.of(context).getText(
+                                          '2mz78m8v' /* Eliminar cuenta */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
