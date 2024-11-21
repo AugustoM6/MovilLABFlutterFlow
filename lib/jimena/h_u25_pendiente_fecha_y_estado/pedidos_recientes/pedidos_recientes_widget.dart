@@ -360,6 +360,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                         child: Text(
                                                           containerPedidosRecord
                                                               .numeroPedido,
+                                                          maxLines: 1,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -406,7 +407,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                             40.0),
                                                                 child: Image
                                                                     .network(
-                                                                  'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                                                  'https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png',
                                                                   width: 32.0,
                                                                   height: 32.0,
                                                                   fit: BoxFit

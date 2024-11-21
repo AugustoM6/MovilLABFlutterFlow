@@ -234,11 +234,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomeWidget(),
         ),
         FFRoute(
-          name: 'Notificaciones',
-          path: '/notificaciones',
-          builder: (context, params) => const NotificacionesWidget(),
-        ),
-        FFRoute(
           name: 'ChaBot',
           path: '/chaBot',
           builder: (context, params) => const ChaBotWidget(),
@@ -261,6 +256,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Recordatorios',
+          path: '/recordatorios',
+          builder: (context, params) => const RecordatoriosWidget(),
+        ),
+        FFRoute(
+          name: 'Notificaciones',
+          path: '/notificaciones',
+          builder: (context, params) => const NotificacionesWidget(),
         ),
         FFRoute(
           name: 'agregarEmpleado',

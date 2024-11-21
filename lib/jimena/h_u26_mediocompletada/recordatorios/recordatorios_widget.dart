@@ -1,35 +1,32 @@
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'accesibilidad_e_idioma_model.dart';
-export 'accesibilidad_e_idioma_model.dart';
+import 'recordatorios_model.dart';
+export 'recordatorios_model.dart';
 
-class AccesibilidadEIdiomaWidget extends StatefulWidget {
-  const AccesibilidadEIdiomaWidget({super.key});
+class RecordatoriosWidget extends StatefulWidget {
+  const RecordatoriosWidget({super.key});
 
   @override
-  State<AccesibilidadEIdiomaWidget> createState() =>
-      _AccesibilidadEIdiomaWidgetState();
+  State<RecordatoriosWidget> createState() => _RecordatoriosWidgetState();
 }
 
-class _AccesibilidadEIdiomaWidgetState
-    extends State<AccesibilidadEIdiomaWidget> {
-  late AccesibilidadEIdiomaModel _model;
+class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
+  late RecordatoriosModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AccesibilidadEIdiomaModel());
+    _model = createModel(context, () => RecordatoriosModel());
 
-    _model.switchValue = true;
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+    _model.switchValue1 = true;
+    _model.switchValue2 = true;
   }
 
   @override
@@ -41,8 +38,6 @@ class _AccesibilidadEIdiomaWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -71,7 +66,7 @@ class _AccesibilidadEIdiomaWidgetState
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'f5cnme44' /* Accesibilidad e Idioma */,
+              'aj9w21ig' /* Notificaciones */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
@@ -104,58 +99,7 @@ class _AccesibilidadEIdiomaWidgetState
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              'x0rmhgsq' /* Tamaño de Letra */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  fontSize: FFAppState().textSize.toDouble(),
-                                  letterSpacing: 0.0,
-                                ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Slider(
-                            activeColor: FlutterFlowTheme.of(context).secondary,
-                            inactiveColor:
-                                FlutterFlowTheme.of(context).alternate,
-                            min: 12.0,
-                            max: 22.0,
-                            value: _model.sliderValue ??= 1.0,
-                            divisions: 10,
-                            onChanged: (newValue) async {
-                              newValue =
-                                  double.parse(newValue.toStringAsFixed(2));
-                              safeSetState(() => _model.sliderValue = newValue);
-                              FFAppState().textSize = valueOrDefault<int>(
-                                functions
-                                    .conversionInteger(_model.sliderValue!),
-                                0,
-                              );
-                              safeSetState(() {});
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'sxaym312' /* Modo Claro  Oscuro */,
+                              'tge26s5n' /* ¿Desea modificar un rocordator... */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -170,10 +114,104 @@ class _AccesibilidadEIdiomaWidgetState
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Switch.adaptive(
-                            value: _model.switchValue!,
+                            value: _model.switchValue1!,
                             onChanged: (newValue) async {
                               safeSetState(
-                                  () => _model.switchValue = newValue);
+                                  () => _model.switchValue1 = newValue);
+                            },
+                            activeColor: FlutterFlowTheme.of(context).alternate,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).secondary,
+                            inactiveTrackColor:
+                                FlutterFlowTheme.of(context).alternate,
+                            inactiveThumbColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FlutterFlowDropDown<String>(
+                      controller: _model.dropDownValueController1 ??=
+                          FormFieldController<String>(null),
+                      options: [
+                        FFLocalizations.of(context).getText(
+                          'fbzs6vj1' /* Option 1 */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'm1obdrcz' /* Option 2 */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          '7jkqptd7' /* Option 3 */,
+                        )
+                      ],
+                      onChanged: (val) =>
+                          safeSetState(() => _model.dropDownValue1 = val),
+                      width: 200.0,
+                      height: 40.0,
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Readex Pro',
+                                letterSpacing: 0.0,
+                              ),
+                      hintText: FFLocalizations.of(context).getText(
+                        'b548t45n' /* Select... */,
+                      ),
+                      icon: Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      elevation: 2.0,
+                      borderColor: Colors.transparent,
+                      borderWidth: 0.0,
+                      borderRadius: 8.0,
+                      margin:
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      hidesUnderline: true,
+                      isOverButton: false,
+                      isSearchable: false,
+                      isMultiSelect: false,
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'wmbndr7r' /* Configurar un nuevo recordator... */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Switch.adaptive(
+                            value: _model.switchValue2!,
+                            onChanged: (newValue) async {
+                              safeSetState(
+                                  () => _model.switchValue2 = newValue);
                               if (newValue) {
                                 setDarkModeSetting(context, ThemeMode.dark);
                               } else {
@@ -194,63 +232,54 @@ class _AccesibilidadEIdiomaWidgetState
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 5.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                've5gd7d4' /* Elige tu idioma */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
+                      FlutterFlowDropDown<String>(
+                        controller: _model.dropDownValueController2 ??=
+                            FormFieldController<String>(null),
+                        options: [
+                          FFLocalizations.of(context).getText(
+                            'sg36wgll' /* Option 1 */,
                           ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                5.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowLanguageSelector(
-                              width: 170.0,
-                              height: 40.0,
-                              backgroundColor: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              borderColor: Colors.transparent,
-                              dropdownIconColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
-                              borderRadius: 8.0,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                              hideFlags: true,
-                              flagSize: 24.0,
-                              flagTextGap: 8.0,
-                              currentLanguage:
-                                  FFLocalizations.of(context).languageCode,
-                              languages: FFLocalizations.languages(),
-                              onChanged: (lang) =>
-                                  setAppLanguage(context, lang),
-                            ),
+                          FFLocalizations.of(context).getText(
+                            'tktigcj3' /* Option 2 */,
                           ),
+                          FFLocalizations.of(context).getText(
+                            'mfbnp8z2' /* Option 3 */,
+                          )
                         ],
+                        onChanged: (val) =>
+                            safeSetState(() => _model.dropDownValue2 = val),
+                        width: 200.0,
+                        height: 40.0,
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
+                        hintText: FFLocalizations.of(context).getText(
+                          'vf9h5gqp' /* Select... */,
+                        ),
+                        icon: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 24.0,
+                        ),
+                        fillColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
+                        elevation: 2.0,
+                        borderColor: Colors.transparent,
+                        borderWidth: 0.0,
+                        borderRadius: 8.0,
+                        margin: const EdgeInsetsDirectional.fromSTEB(
+                            12.0, 0.0, 12.0, 0.0),
+                        hidesUnderline: true,
+                        isOverButton: false,
+                        isSearchable: false,
+                        isMultiSelect: false,
                       ),
                     ],
                   ),
@@ -266,7 +295,7 @@ class _AccesibilidadEIdiomaWidgetState
                           print('Button pressed ...');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'c2svg7c1' /* Cancelar */,
+                          '5hpxf0fk' /* Cancelar */,
                         ),
                         icon: const Icon(
                           Icons.cancel_rounded,
@@ -295,7 +324,7 @@ class _AccesibilidadEIdiomaWidgetState
                           print('Button pressed ...');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'f01gbn7c' /* Guardar */,
+                          'qs1xih45' /* Guardar */,
                         ),
                         icon: const Icon(
                           Icons.save_rounded,

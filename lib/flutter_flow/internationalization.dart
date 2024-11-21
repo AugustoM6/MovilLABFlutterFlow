@@ -13,7 +13,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
-  static List<String> languages() => ['en', 'es'];
+  static List<String> languages() => ['es', 'en'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -38,10 +38,10 @@ class FFLocalizations {
       (kTranslationsMap[key] ?? {})[locale.toString()] ?? '';
 
   String getVariableText({
-    String? enText = '',
     String? esText = '',
+    String? enText = '',
   }) =>
-      [enText, esText][languageIndex] ?? '';
+      [esText, enText][languageIndex] ?? '';
 
   static const Set<String> _languagesWithShortCode = {
     'ar',
@@ -147,1234 +147,1289 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // InfoLab1
   {
     'edevuccu': {
-      'en': 'Horario:\n',
-      'es': '',
+      'es': 'Horario:\n',
+      'en': '',
     },
     'ju8lu7dx': {
-      'en': 'De Lunes a Viernes\n',
-      'es': '',
+      'es': 'De Lunes a Viernes\n',
+      'en': '',
     },
     '4omp2u46': {
-      'en': 'de 7am - 5pm',
-      'es': '',
+      'es': 'de 7am - 5pm',
+      'en': '',
     },
     'r6qrh6x4': {
-      'en': 'Dirección:\n',
-      'es': '',
+      'es': 'Dirección:\n',
+      'en': '',
     },
     'yers8ym0': {
-      'en':
+      'es':
           'Del Ice 50m N\nEdificio El Roble \nsegundo piso \nHeredia, 40101, \nCosta Rica.',
-      'es': '',
+      'en': '',
     },
     'bj3a1vvo': {
-      'en': 'Sobre el laboratorio:\n',
-      'es': '',
+      'es': 'Sobre el laboratorio:\n',
+      'en': '',
     },
     'diysiin8': {
-      'en':
+      'es':
           'El Laboratorio Esencia Dental (AJ Dental Design) es un laboratorio dental especializado en crear prótesis dentales fijas de alta estética natural que se adaptan a las necesidades de cada paciente; ubicado en Heredia, Costa Rica, trabaja en estrecha colaboración con dentistas, ortodoncistas estéticos y prostodoncistas para ofrecer soluciones protésicas avanzadas. \n\nFue fundado el 17 de octubre del 2018, ha brindado 7 años de servicio en el área de la salud dental, catalogado como uno de los mejores laboratorios dentales y destacado por su compromiso como empresa con la excelencia y la atención al detalle en cada etapa del proceso.',
-      'es': '',
+      'en': '',
     },
     'h9melw03': {
-      'en': 'Ver local asociado',
-      'es': '',
+      'es': 'Ver local asociado',
+      'en': '',
     },
     '4ug0jyih': {
-      'en': 'Laboratorio Principal',
-      'es': '',
+      'es': 'Laboratorio Principal',
+      'en': '',
     },
     'y6fca95k': {
-      'en': 'Home',
-      'es': '',
+      'es': 'Home',
+      'en': '',
     },
   },
   // VerCatalogo
   {
     'a0twvkp7': {
-      'en': 'Catálogo de productos',
-      'es': '',
+      'es': 'Catálogo de productos',
+      'en': '',
     },
     't21jktug': {
-      'en': 'Option 1',
-      'es': '',
+      'es': 'Option 1',
+      'en': '',
     },
     'gz5oqr31': {
-      'en': 'Option 2',
-      'es': '',
+      'es': 'Option 2',
+      'en': '',
     },
     'nssqltnn': {
-      'en': 'Option 3',
-      'es': '',
+      'es': 'Option 3',
+      'en': '',
     },
     '0ton6wry': {
-      'en': 'Filtrar por categoría',
-      'es': '',
+      'es': 'Filtrar por categoría',
+      'en': '',
     },
     '849i73cd': {
-      'en': 'Search...',
-      'es': '',
+      'es': 'Search...',
+      'en': '',
     },
     'w1fof9wr': {
-      'en': 'Blanqueamiento dental',
-      'es': '',
+      'es': 'Blanqueamiento dental',
+      'en': '',
     },
     '6y9gbat5': {
-      'en': '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
-      'es': '',
+      'es': '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
+      'en': '',
     },
     'nqus51t3': {
-      'en': 'Eliminar',
-      'es': '',
+      'es': 'Eliminar',
+      'en': '',
     },
     'i88qlbah': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // Contactenos
   {
     'p94tc1lp': {
-      'en': 'TD. Javier Rojas Castaño \n Director',
-      'es': '',
+      'es': 'TD. Javier Rojas Castaño \n Director',
+      'en': '',
     },
     '3yk7zb72': {
-      'en':
+      'es':
           'Comunicador Social - Periodista egresado de la Universidad de la Sabana, con 12 años de experiencia como ceramista dental de alta estética. Propietario de Esencia Dental en Costa Rica, especializado en prótesis fijas. Líder en Viax Dental Lab, experto en planeación de sonrisas y restauraciones cerámicas mínimamente invasivas, miembro de Ivoclar Vivadent en el uso de Zirconio Nexxzr+. Capacitado por destacados técnicos como Nondas Vlachopoulos y August Bruguera, y con participación en seminarios de Pascal Magne y Sidney Kina.',
-      'es': '',
+      'en': '',
     },
     'gft3qctx': {
-      'en': 'Detalles de contacto',
-      'es': '',
+      'es': 'Detalles de contacto',
+      'en': '',
     },
     'urqnmtnt': {
-      'en': '+506 8727 - 1239',
-      'es': '',
+      'es': '+506 8727 - 1239',
+      'en': '',
     },
     'gtk7xkez': {
-      'en': 'Visítanos en Esencia Dental Costa Rica',
-      'es': '',
+      'es': 'Visítanos en Esencia Dental Costa Rica',
+      'en': '',
     },
     'tttnru7u': {
-      'en': 'Síguenos en Instagram - Esencia Dental',
-      'es': '',
+      'es': 'Síguenos en Instagram - Esencia Dental',
+      'en': '',
     },
     't3kjcbcc': {
-      'en': '¡Contáctenos!',
-      'es': '',
+      'es': '¡Contáctenos!',
+      'en': '',
     },
     'ogbshy1o': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // GuardarProductosLista
   {
     'oldd4cuv': {
-      'en': 'Coronas y Carillas EMAX',
-      'es': '',
+      'es': 'Coronas y Carillas EMAX',
+      'en': '',
     },
     'nzutsiw4': {
-      'en': 'Corona Provisional en PMMA',
-      'es': '',
+      'es': 'Corona Provisional en PMMA',
+      'en': '',
     },
     'vfqlhig9': {
-      'en': 'Blanqueamiento dental',
       'es': 'Blanqueamiento dental',
+      'en': '',
     },
     '2de19b8k': {
-      'en': '¡En Esencia Dental, te ayudamos \na que vuelvas a sonreír! ',
-      'es': '',
+      'es': '¡En Esencia Dental, te ayudamos \na que vuelvas a sonreír! ',
+      'en': '',
     },
     '91d6dpqw': {
-      'en': 'Agregar',
-      'es': '',
+      'es': 'Agregar',
+      'en': '',
     },
     'of6dta64': {
-      'en': 'Eliminar',
       'es': 'Eliminar',
+      'en': '',
     },
     'ztqvskpj': {
-      'en': 'Lista de Deseos',
-      'es': '',
+      'es': 'Lista de Deseos',
+      'en': '',
     },
     'g5efq2fr': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // ReportePedidos
   {
     'qtn88dqo': {
-      'en': 'Juan Pablo Pérez Arroyo',
-      'es': '',
+      'es': 'Juan Pablo Pérez Arroyo',
+      'en': '',
     },
     '5qs46woe': {
-      'en': 'Reporte pedidos',
-      'es': '',
+      'es': 'Reporte pedidos',
+      'en': '',
     },
     'fdqvxsga': {
-      'en': 'Enero',
-      'es': '',
+      'es': 'Enero',
+      'en': '',
     },
     '0j1xf420': {
-      'en': 'Febrero',
-      'es': '',
+      'es': 'Febrero',
+      'en': '',
     },
     'gtfv6lc5': {
-      'en': 'Marzo',
-      'es': '',
+      'es': 'Marzo',
+      'en': '',
     },
     '9qtbp4fx': {
-      'en': 'Abril',
-      'es': '',
+      'es': 'Abril',
+      'en': '',
     },
     '0eg8ssup': {
-      'en': 'Mayo',
-      'es': '',
+      'es': 'Mayo',
+      'en': '',
     },
     'kk1ze7gc': {
-      'en': 'Junio',
-      'es': '',
+      'es': 'Junio',
+      'en': '',
     },
     '9escjjfb': {
-      'en': 'Julio',
-      'es': '',
+      'es': 'Julio',
+      'en': '',
     },
     'mnxsbtd1': {
-      'en': 'Agosto',
-      'es': '',
+      'es': 'Agosto',
+      'en': '',
     },
     '80eynrm9': {
-      'en': 'Setiembre',
-      'es': '',
+      'es': 'Setiembre',
+      'en': '',
     },
     '9xnfw57x': {
-      'en': 'Octubre',
-      'es': '',
+      'es': 'Octubre',
+      'en': '',
     },
     'p495u0bn': {
-      'en': 'Noviembre',
-      'es': '',
+      'es': 'Noviembre',
+      'en': '',
     },
     'sv0muj9i': {
-      'en': 'Diciembre',
-      'es': '',
+      'es': 'Diciembre',
+      'en': '',
     },
     'e9jlje35': {
-      'en': 'Generar',
-      'es': '',
+      'es': 'Generar',
+      'en': '',
     },
     'gecw9dqc': {
-      'en': 'Consultar',
-      'es': '',
+      'es': 'Consultar',
+      'en': '',
     },
     'mxtrn29m': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // HistorialPedidos
   {
     'wzhfe1rl': {
-      'en': '001',
-      'es': '',
+      'es': '001',
+      'en': '',
     },
     'mzz935p4': {
-      'en': '16/10/2023',
-      'es': '',
+      'es': '16/10/2023',
+      'en': '',
     },
     'y5c70d15': {
-      'en': 'Carillas',
-      'es': '',
+      'es': 'Carillas',
+      'en': '',
     },
     '3gpwqtph': {
-      'en': '2',
-      'es': '',
+      'es': '2',
+      'en': '',
     },
     'is6rwjpk': {
-      'en': 'XXX',
-      'es': '',
+      'es': 'XXX',
+      'en': '',
     },
     'yajyvg1e': {
-      'en': '002',
-      'es': '',
+      'es': '002',
+      'en': '',
     },
     '6j17w0l5': {
-      'en': '16/10/2023',
-      'es': '',
+      'es': '16/10/2023',
+      'en': '',
     },
     'a825eb87': {
-      'en': 'Puentes',
-      'es': '',
+      'es': 'Puentes',
+      'en': '',
     },
     'wm29r6hv': {
-      'en': '2',
-      'es': '',
+      'es': '2',
+      'en': '',
     },
     '7hrw099i': {
-      'en': 'XXX',
-      'es': '',
+      'es': 'XXX',
+      'en': '',
     },
     '2vm7ci6i': {
-      'en': '003',
-      'es': '',
+      'es': '003',
+      'en': '',
     },
     'a7a9g2qd': {
-      'en': '16/10/2023',
-      'es': '',
+      'es': '16/10/2023',
+      'en': '',
     },
     'ukckqnb4': {
-      'en': 'Puentes',
-      'es': '',
+      'es': 'Puentes',
+      'en': '',
     },
     'ap69r5ht': {
-      'en': '2',
-      'es': '',
+      'es': '2',
+      'en': '',
     },
     'lhzlpvry': {
-      'en': 'XXX',
-      'es': '',
+      'es': 'XXX',
+      'en': '',
     },
     'lp2g81bp': {
-      'en': '004',
-      'es': '',
+      'es': '004',
+      'en': '',
     },
     'w0jzalho': {
-      'en': '16/10/2023',
-      'es': '',
+      'es': '16/10/2023',
+      'en': '',
     },
     'jrabw2cy': {
-      'en': 'Carillas',
-      'es': '',
+      'es': 'Carillas',
+      'en': '',
     },
     'alovaxrn': {
-      'en': '2',
-      'es': '',
+      'es': '2',
+      'en': '',
     },
     'sz2czpit': {
-      'en': 'XXX',
-      'es': '',
+      'es': 'XXX',
+      'en': '',
     },
     'j2xrhu4k': {
-      'en': '005',
-      'es': '',
+      'es': '005',
+      'en': '',
     },
     'yz0m6nc8': {
-      'en': '16/10/2023',
-      'es': '',
+      'es': '16/10/2023',
+      'en': '',
     },
     '3j0g6b14': {
-      'en': 'Coronas',
-      'es': '',
+      'es': 'Coronas',
+      'en': '',
     },
     'gef88dd3': {
-      'en': '2',
-      'es': '',
+      'es': '2',
+      'en': '',
     },
     '41h9g5kv': {
-      'en': 'XXX',
-      'es': '',
+      'es': 'XXX',
+      'en': '',
     },
     'ifyuo4cn': {
-      'en': 'Generar',
       'es': 'Generar',
+      'en': '',
     },
     'aukp8zhb': {
-      'en': 'Consultar',
       'es': 'Consultar',
+      'en': '',
     },
     'tc7f0pk5': {
-      'en': 'Historial de pedidos',
-      'es': '',
+      'es': 'Historial de pedidos',
+      'en': '',
     },
     'nz4zsi0c': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // InfoLab2
   {
     '0fxrc1t6': {
-      'en': 'Horario:\n',
       'es': 'Horario:\n',
+      'en': '',
     },
     'qb35yxqu': {
-      'en': 'De Lunes a Viernes\n',
       'es': 'De Lunes a Viernes\n',
+      'en': '',
     },
     'p1jbevir': {
-      'en': 'de 7am - 5pm',
       'es': 'de 7am - 5pm',
+      'en': '',
     },
     'cu2cn03o': {
-      'en': 'Para más \ninformación:\n',
-      'es': '',
+      'es': 'Para más \ninformación:\n',
+      'en': '',
     },
     'kh3qmut8': {
-      'en': 'Visite nuestras\nredes sociales.',
-      'es': '',
+      'es': 'Visite nuestras\nredes sociales.',
+      'en': '',
     },
     '38lfftop': {
-      'en': 'Sobre el laboratorio:\n',
       'es': 'Sobre el laboratorio:\n',
+      'en': '',
     },
     '77ygfipw': {
-      'en':
+      'es':
           'El Laboratorio Esencial Aligners es uno de nuestros socios, nuestra empresa hermana con la cual diseñamos alineadores dentales de altísima calidad. ',
-      'es': '',
+      'en': '',
     },
     'ew5gdyo5': {
-      'en': 'Laboratorio Asociado',
-      'es': '',
+      'es': 'Laboratorio Asociado',
+      'en': '',
     },
     'l2cyawv6': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // Conozcanos
   {
     'lwitu7il': {
-      'en':
+      'es':
           'En Esencia Dental nos caracterizamos por ser más que un equipo de profesionales comprometidos y especializados en técnica dental, somos una familia que busca devolver la sonrisa a sus pacientes.',
-      'es': '',
+      'en': '',
     },
     '5to7d89q': {
-      'en':
+      'es':
           '\"Manos expertas y el mejor equipo humano y tecnológico nos permite asegurarles la mejor calidad y los mejores tiempos de entrega. Hoy estamos desarrollando el tercer año desde que empezamos con dicho proceso y en la actualidad contamos con 14 empleados y un laboratorio completo con la capacidad de abarcar desde el punto inicial del proceso, que se llama “el modelo” e implica la impresión que se le toma al paciente. En nuestro negocio somos capaces de desarrollar todas las técnicas.\"',
-      'es': '',
+      'en': '',
     },
     '4u4wg6d2': {
-      'en': 'Equipo Humano en Esencia Dental\n',
-      'es': '',
+      'es': 'Equipo Humano en Esencia Dental\n',
+      'en': '',
     },
     'gwsabrpp': {
-      'en': '#SomosUnEquipo ',
-      'es': '',
+      'es': '#SomosUnEquipo ',
+      'en': '',
     },
     'bmrutvp9': {
-      'en': '¡Conózcanos!',
-      'es': '',
+      'es': '¡Conózcanos!',
+      'en': '',
     },
     'pv4b85fj': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // AccesibilidadEIdioma
   {
-    'x0rmhgsq': {
-      'en': 'Tamaño de Letra',
-      'es': '',
+    'oe9di57t': {
+      'es': 'Tamaño de texto',
+      'en': '',
     },
     'sxaym312': {
-      'en': 'Modo Claro / Oscuro',
-      'es': '',
+      'es': 'Modo Claro / Oscuro',
+      'en': '',
     },
     've5gd7d4': {
-      'en': 'Elige tu idioma',
-      'es': '',
+      'es': 'Elige tu idioma',
+      'en': '',
     },
     'c2svg7c1': {
-      'en': 'Cancelar',
-      'es': '',
+      'es': 'Cancelar',
+      'en': '',
     },
     'f01gbn7c': {
-      'en': 'Guardar',
-      'es': '',
+      'es': 'Guardar',
+      'en': '',
     },
     'f5cnme44': {
-      'en': 'Accesibilidad e Idioma',
-      'es': '',
+      'es': 'Accesibilidad e Idioma',
+      'en': '',
     },
     't7ckvhdm': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // PedidosRecientes
   {
     'zhdi935y': {
-      'en': 'Recientes',
-      'es': '',
+      'es': 'Recientes',
+      'en': '',
     },
     '88q6ts4x': {
-      'en': 'Número',
-      'es': '',
+      'es': 'Número',
+      'en': '',
     },
     'eb5znb43': {
-      'en': 'Cliente',
-      'es': '',
+      'es': 'Cliente',
+      'en': '',
     },
     'jlyi2sbo': {
-      'en': 'Fecha',
-      'es': '',
+      'es': 'Fecha',
+      'en': '',
     },
     'shhto855': {
-      'en': 'Estado',
-      'es': '',
+      'es': 'Estado',
+      'en': '',
     },
     'ech9ovxp': {
-      'en': 'Actions',
-      'es': '',
+      'es': 'Actions',
+      'en': '',
     },
     '5vlv2ng0': {
-      'en': 'Jan. 20th, 2023',
-      'es': '',
+      'es': 'Jan. 20th, 2023',
+      'en': '',
     },
     'b9xigbbe': {
-      'en': 'Active',
-      'es': '',
+      'es': 'Active',
+      'en': '',
     },
     '7ses1vnp': {
-      'en': 'Pedidos',
-      'es': '',
+      'es': 'Pedidos',
+      'en': '',
     },
     't2gvr1ou': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // MenuAdministrador
   {
     'craret79': {
-      'en': 'Resumen de Pedidos',
-      'es': '',
+      'es': 'Resumen de Pedidos',
+      'en': '',
     },
     'dsikdemd': {
-      'en': '12',
-      'es': '',
+      'es': '12',
+      'en': '',
     },
     'dracdyiu': {
-      'en': 'Pedidos Activos',
-      'es': '',
+      'es': 'Pedidos Activos',
+      'en': '',
     },
     '7p0rf5nf': {
-      'en': '8',
-      'es': '',
+      'es': '8',
+      'en': '',
     },
     'a9pq7wdh': {
-      'en': 'En Proceso',
-      'es': '',
+      'es': 'En Proceso',
+      'en': '',
     },
     'nt9wbt0h': {
-      'en': '4',
-      'es': '',
+      'es': '4',
+      'en': '',
     },
     '0onryhrl': {
-      'en': 'Completados',
-      'es': '',
+      'es': 'Completados',
+      'en': '',
     },
     'buukx6g2': {
-      'en': 'Pedidos del Mes',
-      'es': '',
+      'es': 'Pedidos del Mes',
+      'en': '',
     },
     'py18nru5': {
-      'en': 'Gestión de Pedidos',
-      'es': '',
+      'es': 'Gestión de Pedidos',
+      'en': '',
     },
     'dzmba3kz': {
-      'en': 'Gestión de Productos',
-      'es': '',
+      'es': 'Gestión de Productos',
+      'en': '',
     },
     'ogkzr7oh': {
-      'en': 'Reportes',
-      'es': '',
+      'es': 'Reportes',
+      'en': '',
     },
     'nae33p8b': {
-      'en': 'Cerrar Sesión',
-      'es': '',
+      'es': 'Cerrar Sesión',
+      'en': '',
     },
     '3wnrn19r': {
-      'en': 'Administrador',
-      'es': '',
+      'es': 'Administrador',
+      'en': '',
     },
   },
   // IndexProducto
   {
     'c790vstk': {
-      'en': 'AGREGAR',
-      'es': '',
+      'es': 'AGREGAR',
+      'en': '',
     },
     'rr5wyjkj': {
-      'en': 'Editar',
-      'es': '',
+      'es': 'Editar',
+      'en': '',
     },
     'vm2hm5a2': {
-      'en': 'Eliminar',
       'es': 'Eliminar',
+      'en': '',
     },
     '9cf3qptz': {
-      'en': 'Gestion de Productos',
-      'es': '',
+      'es': 'Gestion de Productos',
+      'en': '',
     },
     '25whn5s9': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // IniciSesion
   {
     '6zk2njyh': {
-      'en': 'Logo',
-      'es': '',
+      'es': 'Logo',
+      'en': '',
     },
     'vm23sd0p': {
-      'en': 'Crear Cuenta',
-      'es': '',
+      'es': 'Crear Cuenta',
+      'en': '',
     },
     'po4h99jr': {
-      'en': 'Crea una cuenta',
-      'es': '',
+      'es': 'Crea una cuenta',
+      'en': '',
     },
     '6c1zhbw1': {
-      'en': 'Llene el siguiente formulario',
-      'es': '',
+      'es': 'Llene el siguiente formulario',
+      'en': '',
     },
     '32sj7xtk': {
-      'en': 'Correo Electronico',
-      'es': '',
+      'es': 'Correo Electronico',
+      'en': '',
     },
     'yi6vnxyn': {
-      'en': 'Contraseña',
-      'es': '',
+      'es': 'Contraseña',
+      'en': '',
     },
     '1w73fsvt': {
-      'en': 'Ingresa de nuevo tu contraseña',
-      'es': '',
+      'es': 'Ingresa de nuevo tu contraseña',
+      'en': '',
     },
     '3bru038f': {
-      'en': 'Crear Cuenta',
-      'es': '',
+      'es': 'Crear Cuenta',
+      'en': '',
     },
     'ly04tf82': {
-      'en': 'O registrate aqui',
-      'es': '',
+      'es': 'O registrate aqui',
+      'en': '',
     },
     '2a8kwlbh': {
-      'en': 'Continue with Google',
-      'es': '',
+      'es': 'Continue with Google',
+      'en': '',
     },
     'khjmok9s': {
-      'en': 'Continue with Apple',
-      'es': '',
+      'es': 'Continue with Apple',
+      'en': '',
     },
     'x1y5oybw': {
-      'en': 'Iniciar Sesión',
-      'es': '',
+      'es': 'Iniciar Sesión',
+      'en': '',
     },
     'g6bcnc6b': {
-      'en': 'Ingrese los siguientes datos',
-      'es': '',
+      'es': 'Ingrese los siguientes datos',
+      'en': '',
     },
     '5rfmz6fy': {
-      'en': 'Correo Electronico',
-      'es': '',
+      'es': 'Correo Electronico',
+      'en': '',
     },
     '6vl8uh2v': {
-      'en': 'Contraseña',
-      'es': '',
+      'es': 'Contraseña',
+      'en': '',
     },
     '32hxiqat': {
-      'en': 'Iniciar Sesión',
-      'es': '',
+      'es': 'Iniciar Sesión',
+      'en': '',
     },
     'x5ib51re': {
-      'en': 'o inicia sesión con',
-      'es': '',
+      'es': 'o inicia sesión con',
+      'en': '',
     },
     'gbtb9tob': {
-      'en': 'Continua con Google',
-      'es': '',
+      'es': 'Continua con Google',
+      'en': '',
     },
     'zcoxcidi': {
-      'en': 'Continua con Apple',
-      'es': '',
+      'es': 'Continua con Apple',
+      'en': '',
     },
     'smkj0hii': {
-      'en': '¿Has olvidado tu contraseña?',
-      'es': '',
+      'es': '¿Has olvidado tu contraseña?',
+      'en': '',
     },
     'h5y6xaci': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // agregarProducto
   {
     '3pkisd33': {
-      'en': 'Cargar',
-      'es': '',
+      'es': 'Cargar',
+      'en': '',
     },
     'rqrmxkew': {
-      'en': 'Nombre del producto',
-      'es': '',
+      'es': 'Nombre del producto',
+      'en': '',
     },
     'tgjmz7ae': {
-      'en': 'Descripcion',
-      'es': '',
+      'es': 'Descripcion',
+      'en': '',
     },
     'cz2060vp': {
-      'en': 'Departamento',
-      'es': '',
+      'es': 'Departamento',
+      'en': '',
     },
     '1t5cbmaq': {
-      'en': 'Tecnico',
-      'es': '',
+      'es': 'Tecnico',
+      'en': '',
     },
     'uzvbrofj': {
-      'en': 'Categoria',
-      'es': '',
+      'es': 'Categoria',
+      'en': '',
     },
     'fir9v5v1': {
-      'en': 'Cancelar',
-      'es': '',
+      'es': 'Cancelar',
+      'en': '',
     },
     '6ewiylw8': {
-      'en': 'Agregar',
       'es': 'Agregar',
+      'en': '',
     },
     'hseykpb0': {
-      'en': 'Gestion de Productos',
       'es': 'Gestion de Productos',
+      'en': '',
     },
     '2018f8tq': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // PasswordOlvidado
   {
     'njflrfgf': {
-      'en': 'Back',
-      'es': '',
+      'es': 'Back',
+      'en': '',
     },
     'h35sncml': {
-      'en': 'Has olvidado tu contraseña',
-      'es': '',
+      'es': 'Has olvidado tu contraseña',
+      'en': '',
     },
     'vz2qurcn': {
-      'en':
+      'es':
           'Le enviaremos un correo electrónico con un enlace para restablecer su contraseña, ingrese el correo electrónico asociado a su cuenta a continuación.  ',
-      'es': '',
+      'en': '',
     },
     '1qohuj5l': {
-      'en': 'Su dirección de correo electrónico...',
-      'es': '',
+      'es': 'Su dirección de correo electrónico...',
+      'en': '',
     },
     '7lxncwqx': {
-      'en': 'Ingrese su correo electrónico ',
-      'es': '',
+      'es': 'Ingrese su correo electrónico ',
+      'en': '',
     },
     'xnqwrvww': {
-      'en': 'Eviar enlance ',
-      'es': '',
+      'es': 'Eviar enlance ',
+      'en': '',
     },
     '8yxc40c1': {
-      'en': 'Atras',
-      'es': '',
+      'es': 'Atras',
+      'en': '',
     },
     'smg4rdq4': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // Perfil
   {
     'b5rjwg5y': {
-      'en': 'Editar cuenta',
-      'es': '',
+      'es': 'Editar cuenta',
+      'en': '',
     },
     'yl305dol': {
-      'en': 'Accesibilidad',
-      'es': '',
+      'es': 'Accesibilidad',
+      'en': '',
     },
     'miuzdowq': {
-      'en': 'Notificaciones',
-      'es': '',
+      'es': 'Notificaciones',
+      'en': '',
     },
     'a3xpsv90': {
-      'en': 'Lenguaje',
-      'es': '',
+      'es': 'Lenguaje',
+      'en': '',
     },
     '802exsif': {
-      'en': 'Privacidad',
-      'es': '',
+      'es': 'Privacidad',
+      'en': '',
     },
     'c43np712': {
-      'en': 'Cerrar sesión',
-      'es': '',
+      'es': 'Cerrar sesión',
+      'en': '',
     },
     '2mz78m8v': {
-      'en': 'Eliminar cuenta',
-      'es': '',
+      'es': 'Eliminar cuenta',
+      'en': '',
     },
   },
   // ConfiguracionCuenta
   {
     'o0krnwyp': {
-      'en': 'Configuración de cuenta',
-      'es': '',
+      'es': 'Configuración de cuenta',
+      'en': '',
     },
     'u055erjx': {
-      'en': 'Nombre',
-      'es': '',
+      'es': 'Nombre',
+      'en': '',
     },
     'it3c0yjz': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'iatoo8v4': {
-      'en': 'Edad',
-      'es': '',
+      'es': 'Edad',
+      'en': '',
     },
     'iaj30ie5': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'am29ttka': {
-      'en': 'Dirrección',
-      'es': '',
+      'es': 'Dirrección',
+      'en': '',
     },
     'giaxbqsa': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'yzguaehi': {
-      'en': 'Teléfono',
-      'es': '',
+      'es': 'Teléfono',
+      'en': '',
     },
     'o1c8qk4j': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'chp0080i': {
-      'en': 'Femenino',
-      'es': '',
+      'es': 'Femenino',
+      'en': '',
     },
     'kvew7m24': {
-      'en': 'Masculino',
-      'es': '',
+      'es': 'Masculino',
+      'en': '',
     },
     'idkzd3pl': {
-      'en': 'Actualizar',
-      'es': '',
+      'es': 'Actualizar',
+      'en': '',
     },
     'rraf1i8d': {
-      'en': 'Mi Cuenta',
-      'es': '',
+      'es': 'Mi Cuenta',
+      'en': '',
     },
   },
   // editarProducto
   {
     'tkjymx2l': {
-      'en': 'Nombre del producto',
       'es': 'Nombre del producto',
+      'en': '',
     },
     'yl4ka7w4': {
-      'en': 'Descripcion',
       'es': 'Descripcion',
+      'en': '',
     },
     '4p128i2b': {
-      'en': 'Departamento',
       'es': 'Departamento',
+      'en': '',
     },
     '4j13gluz': {
-      'en': 'Tecnico',
       'es': 'Tecnico',
+      'en': '',
     },
     'xf52zwxx': {
-      'en': 'Categoria',
-      'es': '',
+      'es': 'Categoria',
+      'en': '',
     },
     'efdp40yt': {
-      'en': 'Cancelar',
       'es': 'Cancelar',
+      'en': '',
     },
     'gmcig2f1': {
-      'en': 'Actualizar',
       'es': 'Actualizar',
+      'en': '',
     },
     'gr043whn': {
-      'en': 'Gestion de Productos',
       'es': 'Gestion de Productos',
+      'en': '',
     },
     'f1tkhdcu': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // indexEmpleados
   {
     'iv5ygj30': {
-      'en': 'AGREGAR',
-      'es': '',
+      'es': 'AGREGAR',
+      'en': '',
     },
     'aldqorvp': {
-      'en': 'Editar',
-      'es': '',
+      'es': 'Editar',
+      'en': '',
     },
     'qd968mjz': {
-      'en': 'Eliminar',
-      'es': '',
+      'es': 'Eliminar',
+      'en': '',
     },
     'hg3vcouh': {
-      'en': 'Gestion de Empleados',
-      'es': '',
+      'es': 'Gestion de Empleados',
+      'en': '',
     },
     'f1e2snq5': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // detallesEmpleado
   {
     '5bmt3f5x': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'q6rnnt0p': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'sdcafxkz': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'm8w560qh': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     '7bflktpz': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'qkn93dr4': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'mvyvyvam': {
-      'en': 'Gestion de Empleados',
-      'es': '',
+      'es': 'Gestion de Empleados',
+      'en': '',
     },
     '2mrlgf3o': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // indexServicio
   {
     '5lfkr2pw': {
-      'en': 'Page Title',
       'es': 'Page Title',
+      'en': '',
     },
     'ceurpgo6': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // agregarServicios
   {
     '5vs8ai6f': {
-      'en': 'Page Title',
       'es': 'Page Title',
+      'en': '',
     },
     'xc9knmhm': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // editarServicio
   {
     '9u1vy0ic': {
-      'en': 'Page Title',
       'es': 'Page Title',
+      'en': '',
     },
     '5ejx2ate': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // Home
   {
     'kysbfh16': {
-      'en': '¡Bienvenidx a la app!',
-      'es': '',
+      'es': '¡Bienvenidx a la app!',
+      'en': '',
     },
     'ev1w618o': {
-      'en': 'Menú de productos/servicios',
-      'es': '',
+      'es': 'Menú de productos/servicios',
+      'en': '',
     },
     'uu4112kc': {
-      'en': 'Productos y Servicios',
-      'es': '',
+      'es': 'Productos y Servicios',
+      'en': '',
     },
     'm1vfrtfc': {
-      'en': 'Historial de pedidos',
-      'es': '',
+      'es': 'Historial de pedidos',
+      'en': '',
     },
     '71z8y084': {
-      'en': 'Sobre el Laboratorio ED',
-      'es': '',
+      'es': 'Sobre el Laboratorio ED',
+      'en': '',
     },
     '63hkglem': {
-      'en': 'Configuración de la cuenta',
-      'es': '',
+      'es': 'Configuración de la cuenta',
+      'en': '',
     },
     '0yf107ll': {
-      'en': 'Lista de deseos',
-      'es': '',
+      'es': 'Lista de deseos',
+      'en': '',
     },
     'wq4s0yp0': {
-      'en': 'Contáctenos',
-      'es': '',
+      'es': 'Contáctenos',
+      'en': '',
     },
     'tjfbgr01': {
-      'en': 'Realizar Pedido',
-      'es': '',
+      'es': 'Realizar Pedido',
+      'en': '',
     },
     '4s5xgmxz': {
-      'en': 'Cerrar Sesión',
       'es': 'Cerrar Sesión',
+      'en': '',
     },
     'hmbufnz5': {
-      'en': 'Eliminar Cuenta',
-      'es': '',
+      'es': 'Eliminar Cuenta',
+      'en': '',
     },
     'pjx461ar': {
-      'en': 'Page Title',
-      'es': '',
-    },
-  },
-  // Notificaciones
-  {
-    '5772gpj1': {
-      'en': 'Page Title',
       'es': 'Page Title',
-    },
-    'ihqtjn59': {
-      'en': 'Home',
-      'es': 'Home',
+      'en': '',
     },
   },
   // ChaBot
   {
     'xvjtcjyo': {
-      'en': 'ChatBot',
-      'es': '',
+      'es': 'ChatBot',
+      'en': '',
     },
     'knhn7xdb': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // IconoChatBot
   {
     'g4ty03jz': {
-      'en': 'Page Title',
       'es': 'Page Title',
+      'en': '',
     },
     'afsgyqvq': {
-      'en': 'Home',
       'es': 'Home',
+      'en': '',
     },
   },
   // editarEmpleado
   {
     'aicmdm3n': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'e62b5ca7': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'ghsjyjw0': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'coluhmyu': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'iovhfo2t': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     'cpiqrci4': {
-      'en': 'TextField',
-      'es': '',
+      'es': 'TextField',
+      'en': '',
     },
     '5deafnss': {
-      'en': 'Cancelar',
-      'es': '',
+      'es': 'Cancelar',
+      'en': '',
     },
     'ajx0bwod': {
-      'en': 'Actualizar',
-      'es': '',
+      'es': 'Actualizar',
+      'en': '',
     },
     'qkvhf8lc': {
-      'en': 'Gestion de Empleados',
-      'es': '',
+      'es': 'Gestion de Empleados',
+      'en': '',
     },
     'e37r9jco': {
-      'en': 'Home',
-      'es': '',
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // Recordatorios
+  {
+    'tge26s5n': {
+      'es': '¿Desea modificar un rocordatorio existente?',
+      'en': '',
+    },
+    'fbzs6vj1': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    'm1obdrcz': {
+      'es': 'Option 2',
+      'en': '',
+    },
+    '7jkqptd7': {
+      'es': 'Option 3',
+      'en': '',
+    },
+    'b548t45n': {
+      'es': 'Select...',
+      'en': '',
+    },
+    'g8pkxpw1': {
+      'es': 'Search...',
+      'en': '',
+    },
+    'wmbndr7r': {
+      'es': 'Configurar un nuevo recordatorio',
+      'en': '',
+    },
+    'sg36wgll': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    'tktigcj3': {
+      'es': 'Option 2',
+      'en': '',
+    },
+    'mfbnp8z2': {
+      'es': 'Option 3',
+      'en': '',
+    },
+    'vf9h5gqp': {
+      'es': 'Select...',
+      'en': '',
+    },
+    '4us9epcw': {
+      'es': 'Search...',
+      'en': '',
+    },
+    '5hpxf0fk': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'qs1xih45': {
+      'es': 'Guardar',
+      'en': '',
+    },
+    'aj9w21ig': {
+      'es': 'Notificaciones',
+      'en': '',
+    },
+    '75rxv9f7': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // Notificaciones
+  {
+    'i11gdgbn': {
+      'es': 'Desactivar todas las notificaciones',
+      'en': '',
+    },
+    '98x0zgwc': {
+      'es': 'Activar notificaciones críticas',
+      'en': '',
+    },
+    'bh4et3j6': {
+      'es': 'Configurar un nuevo recordatorio',
+      'en': '',
+    },
+    'oq7rl0k9': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'gwszih58': {
+      'es': 'Guardar',
+      'en': '',
+    },
+    'z9aowxjh': {
+      'es': 'Notificaciones',
+      'en': '',
+    },
+    '1u859o1e': {
+      'es': 'Home',
+      'en': '',
     },
   },
   // agregarEmpleado
   {
-    'k2fxvy29': {
-      'en': 'Cargar',
-      'es': '',
+    'rl79otd9': {
+      'es': 'Gestion de Empleados',
+      'en': '',
     },
-    'gv52m4m4': {
-      'en': 'Nombre del producto',
-      'es': '',
-    },
-    'u0mt8dmy': {
-      'en': 'Descripcion',
-      'es': '',
-    },
-    '1fkt0iko': {
-      'en': 'Departamento',
-      'es': '',
-    },
-    'ubfv7ne1': {
-      'en': 'Tecnico',
-      'es': '',
-    },
-    'jckre531': {
-      'en': 'Categoria',
-      'es': '',
-    },
-    '7li1l3gd': {
-      'en': 'Cancelar',
-      'es': '',
-    },
-    'vfw99aej': {
-      'en': 'Agregar',
-      'es': 'Agregar',
-    },
-    '8zrqgja9': {
-      'en': 'Gestion de Empleado',
-      'es': 'Gestion de Productos',
-    },
-    '3qyb301l': {
-      'en': 'Home',
+    'bnlslorb': {
       'es': 'Home',
+      'en': '',
     },
   },
   // Miscellaneous
   {
     'pvbpctp9': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '5k09qpyc': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'mc7n40e9': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'xv0dxec4': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'iv3frsi9': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'r3qzh0wr': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'vw2ochhw': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'gu0vf0rm': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '7y7080ef': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     's950ol6t': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'oozrpaqf': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '0dv4ru9p': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'y3yxzshf': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'i3jyeohw': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '3cth0vmb': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '5v26i8qg': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '5rvng5ga': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '7q2fjh4r': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '88tlcphp': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '0gp0ko7g': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '99cdjiet': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'b34k15mu': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'ssocc3y8': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     '7poy96qm': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'ktrhj18f': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'r5xpxiiy': {
-      'en': '',
       'es': '',
+      'en': '',
     },
     'fxn2ehtu': {
-      'en': '',
       'es': '',
+      'en': '',
     },
   },
 ].reduce((a, b) => a..addAll(b));

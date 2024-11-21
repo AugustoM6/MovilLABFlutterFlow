@@ -20,7 +20,7 @@ List<DocumentReference> getListaPedidos(
   List<DocumentReference> listaPedidos = <DocumentReference<Object?>>[];
 
   for (int i = 0; i < lista.length; i++) {
-    if (lista[i] >= rangoMin && lista[i] <= rangoMax) {
+    if (rangoMin <= i && rangoMax >= i) {
       listaPedidos.add(lista[i]);
     }
   }

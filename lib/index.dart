@@ -12,9 +12,9 @@ export '/milagro/u_h23_completa/historial_pedidos/historial_pedidos_widget.dart'
 export '/jimena/uh3/info_lab2/info_lab2_widget.dart' show InfoLab2Widget;
 export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
     show ConozcanosWidget;
-export '/jimena/h_u9_h_u19y30_compeletada/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
+export '/jimena/h_u9x19x30_compeletada/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
     show AccesibilidadEIdiomaWidget;
-export '/jimena/h_u25_revisar_cod/pedidos_recientes/pedidos_recientes_widget.dart'
+export '/jimena/h_u25_pendiente_fecha_y_estado/pedidos_recientes/pedidos_recientes_widget.dart'
     show PedidosRecientesWidget;
 export '/augusto/hu28/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
@@ -41,12 +41,14 @@ export '/pablo/hu10/gestion_servicios/agregar_servicios/agregar_servicios_widget
 export '/pablo/hu10/gestion_servicios/editar_servicio/editar_servicio_widget.dart'
     show EditarServicioWidget;
 export '/augusto/h_u4_completada/home/home_widget.dart' show HomeWidget;
-export '/jimena/h_u26_pendiente/notificaciones/notificaciones_widget.dart'
-    show NotificacionesWidget;
 export '/augusto/hu29completa/cha_bot/cha_bot_widget.dart' show ChaBotWidget;
 export '/augusto/hu29completa/icono_chat_bot/icono_chat_bot_widget.dart'
     show IconoChatBotWidget;
 export '/pablo/hu10/gestion_empleados/editar_empleado/editar_empleado_widget.dart'
     show EditarEmpleadoWidget;
+export '/jimena/h_u26_mediocompletada/recordatorios/recordatorios_widget.dart'
+    show RecordatoriosWidget;
+export '/jimena/h_u26_mediocompletada/notificaciones/notificaciones_widget.dart'
+    show NotificacionesWidget;
 export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;

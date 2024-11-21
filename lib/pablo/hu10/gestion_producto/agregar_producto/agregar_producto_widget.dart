@@ -615,11 +615,11 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                               nombre: _model.txtFdNombreTextController.text,
                               descripcion:
                                   _model.txtFdDescripTextController.text,
+                              categoria:
+                                  _model.txtFdCategoriaTextController.text,
                               departamento:
                                   _model.txtFdDepartamTextController.text,
                               tecnico: _model.txtFdTecnicoTextController.text,
-                              categoria:
-                                  _model.txtFdCategoriaTextController.text,
                               imagen: _model.uploadedFileUrl,
                             ));
                         safeSetState(() {

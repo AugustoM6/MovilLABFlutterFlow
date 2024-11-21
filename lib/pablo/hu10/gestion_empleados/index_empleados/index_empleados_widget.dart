@@ -91,8 +91,8 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed('null');
+                          onPressed: () {
+                            print('addBtn pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
                             'iv5ygj30' /* AGREGAR */,
