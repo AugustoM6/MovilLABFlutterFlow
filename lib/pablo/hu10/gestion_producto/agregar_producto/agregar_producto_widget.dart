@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -5,7 +6,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'agregar_producto_model.dart';
 export 'agregar_producto_model.dart';
 
@@ -60,14 +64,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               buttonSize: 48.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -88,7 +92,7 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -98,7 +102,7 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 25.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 25.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -169,17 +173,17 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                       text: FFLocalizations.of(context).getText(
                         '3pkisd33' /* Cargar */,
                       ),
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.image_outlined,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).tertiary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -196,12 +200,12 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.txtFdNombreTextController,
@@ -226,14 +230,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -272,12 +276,12 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.txtFdDescripTextController,
@@ -302,14 +306,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -348,12 +352,12 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.txtFdDepartamTextController,
@@ -378,14 +382,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -424,12 +428,12 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.txtFdTecnicoTextController,
@@ -454,14 +458,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -500,12 +504,12 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
-                      child: SizedBox(
+                      child: Container(
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.txtFdCategoriaTextController,
@@ -530,14 +534,14 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -577,7 +581,7 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -592,10 +596,10 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).tertiary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -644,7 +648,7 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                             ),
-                            duration: const Duration(milliseconds: 4000),
+                            duration: Duration(milliseconds: 4000),
                             backgroundColor:
                                 FlutterFlowTheme.of(context).secondary,
                           ),
@@ -656,10 +660,10 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).tertiary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

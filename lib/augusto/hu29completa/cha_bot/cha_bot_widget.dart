@@ -2,7 +2,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_web_view.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'cha_bot_model.dart';
 export 'cha_bot_model.dart';
 
@@ -66,7 +69,7 @@ class _ChaBotWidgetState extends State<ChaBotWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -78,7 +81,7 @@ class _ChaBotWidgetState extends State<ChaBotWidget> {
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
-            child: const FlutterFlowWebView(
+            child: FlutterFlowWebView(
               content: 'https://typebot.co/chat-b-zsrv1cz',
               bypass: false,
               height: 500.0,

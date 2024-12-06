@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'index_empleados_model.dart';
 export 'index_empleados_model.dart';
@@ -44,14 +46,14 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               buttonSize: 48.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -72,7 +74,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -85,7 +87,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -100,9 +102,9 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                           options: FFButtonOptions(
                             width: 100.0,
                             height: 45.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).secondary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -148,15 +150,15 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                           final listViewEmpleadosRecord =
                               listViewEmpleadosRecordList[listViewIndex];
                           return Padding(
-                            padding: const EdgeInsets.all(10.0),
+                            padding: EdgeInsets.all(10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -186,7 +188,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                             width: 100.0,
                                             height: 100.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -205,7 +207,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 50.0, 25.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -223,7 +225,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 50.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -234,7 +236,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 5.0, 0.0),
                                                 child: FFButtonWidget(
@@ -263,11 +265,11 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                                     width: 100.0,
                                                     height: 35.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -304,23 +306,23 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                                               return WebViewAware(
                                                                 child:
                                                                     AlertDialog(
-                                                                  title: const Text(
+                                                                  title: Text(
                                                                       'Aviso'),
-                                                                  content: const Text(
+                                                                  content: Text(
                                                                       '¿Seguro desea eliminar el empleado?'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed: () => Navigator.pop(
                                                                           alertDialogContext,
                                                                           false),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'Cancelar'),
                                                                     ),
                                                                     TextButton(
                                                                       onPressed: () => Navigator.pop(
                                                                           alertDialogContext,
                                                                           true),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'Confirmar'),
                                                                     ),
                                                                   ],
@@ -343,11 +345,11 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                                                 options: FFButtonOptions(
                                                   width: 100.0,
                                                   height: 35.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 0.0, 16.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(

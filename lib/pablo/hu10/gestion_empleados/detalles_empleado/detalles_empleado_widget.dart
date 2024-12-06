@@ -2,7 +2,10 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'detalles_empleado_model.dart';
 export 'detalles_empleado_model.dart';
 
@@ -29,27 +32,27 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
     _model = createModel(context, () => DetallesEmpleadoModel());
 
     _model.txtNombreTextController ??=
-        TextEditingController(text: widget.paramEmpleados?.nombre);
+        TextEditingController(text: widget!.paramEmpleados?.nombre);
     _model.txtNombreFocusNode ??= FocusNode();
 
     _model.txtEmailTextController ??=
-        TextEditingController(text: widget.paramEmpleados?.email);
+        TextEditingController(text: widget!.paramEmpleados?.email);
     _model.txtEmailFocusNode ??= FocusNode();
 
     _model.txtTelefonoTextController ??=
-        TextEditingController(text: widget.paramEmpleados?.telefono);
+        TextEditingController(text: widget!.paramEmpleados?.telefono);
     _model.txtTelefonoFocusNode ??= FocusNode();
 
     _model.txtDepartamentoTextController ??=
-        TextEditingController(text: widget.paramEmpleados?.departamento);
+        TextEditingController(text: widget!.paramEmpleados?.departamento);
     _model.txtDepartamentoFocusNode ??= FocusNode();
 
     _model.txtEstadoTextController ??=
-        TextEditingController(text: widget.paramEmpleados?.estado.toString());
+        TextEditingController(text: widget!.paramEmpleados?.estado?.toString());
     _model.txtEstadoFocusNode ??= FocusNode();
 
     _model.txtFechaContratTextController ??= TextEditingController(
-        text: widget.paramEmpleados?.fechaContatacion?.toString());
+        text: widget!.paramEmpleados?.fechaContatacion?.toString());
     _model.txtFechaContratFocusNode ??= FocusNode();
   }
 
@@ -71,14 +74,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               buttonSize: 48.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -99,7 +102,7 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -115,7 +118,7 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(50.0),
+                      padding: EdgeInsets.all(50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -124,11 +127,11 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                             width: 150.0,
                             height: 150.0,
                             clipBehavior: Clip.antiAlias,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-                              widget.paramEmpleados!.imagen,
+                              widget!.paramEmpleados!.imagen,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -136,12 +139,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtNombreTextController,
@@ -167,14 +170,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -216,12 +219,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtEmailTextController,
@@ -247,14 +250,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -296,12 +299,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtTelefonoTextController,
@@ -327,14 +330,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -376,12 +379,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller:
@@ -408,14 +411,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -457,12 +460,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtEstadoTextController,
@@ -488,14 +491,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -537,12 +540,12 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller:
@@ -569,14 +572,14 @@ class _DetallesEmpleadoWidgetState extends State<DetallesEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),

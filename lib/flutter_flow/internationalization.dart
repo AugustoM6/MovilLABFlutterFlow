@@ -189,49 +189,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // VerCatalogo
-  {
-    'a0twvkp7': {
-      'es': 'Catálogo de productos',
-      'en': '',
-    },
-    't21jktug': {
-      'es': 'Option 1',
-      'en': '',
-    },
-    'gz5oqr31': {
-      'es': 'Option 2',
-      'en': '',
-    },
-    'nssqltnn': {
-      'es': 'Option 3',
-      'en': '',
-    },
-    '0ton6wry': {
-      'es': 'Filtrar por categoría',
-      'en': '',
-    },
-    '849i73cd': {
-      'es': 'Search...',
-      'en': '',
-    },
-    'w1fof9wr': {
-      'es': 'Blanqueamiento dental',
-      'en': '',
-    },
-    '6y9gbat5': {
-      'es': '¡En Esencia Dental, te ayudamos\n a que vuelvas a sonreír!\"',
-      'en': '',
-    },
-    'nqus51t3': {
-      'es': 'Eliminar',
-      'en': '',
-    },
-    'i88qlbah': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
   // Contactenos
   {
     'p94tc1lp': {
@@ -272,14 +229,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'oldd4cuv': {
       'es': 'Coronas y Carillas EMAX',
-      'en': '',
-    },
-    'nzutsiw4': {
-      'es': 'Corona Provisional en PMMA',
-      'en': '',
-    },
-    'vfqlhig9': {
-      'es': 'Blanqueamiento dental',
       'en': '',
     },
     '2de19b8k': {
@@ -325,39 +274,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Marzo',
       'en': '',
     },
-    '9qtbp4fx': {
+    '4djhx21k': {
       'es': 'Abril',
       'en': '',
     },
-    '0eg8ssup': {
+    'l3yhpzf6': {
       'es': 'Mayo',
       'en': '',
     },
-    'kk1ze7gc': {
+    '8kk45azp': {
       'es': 'Junio',
       'en': '',
     },
-    '9escjjfb': {
+    'nkr469ts': {
       'es': 'Julio',
       'en': '',
     },
-    'mnxsbtd1': {
+    'c45kk4zf': {
       'es': 'Agosto',
       'en': '',
     },
-    '80eynrm9': {
+    'ng7gs6uh': {
       'es': 'Setiembre',
       'en': '',
     },
-    '9xnfw57x': {
+    '9k4tfb1q': {
       'es': 'Octubre',
       'en': '',
     },
-    'p495u0bn': {
+    'zlxtwrf6': {
       'es': 'Noviembre',
       'en': '',
     },
-    'sv0muj9i': {
+    'lxu01e9g': {
       'es': 'Diciembre',
       'en': '',
     },
@@ -376,106 +325,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HistorialPedidos
   {
-    'wzhfe1rl': {
-      'es': '001',
-      'en': '',
-    },
-    'mzz935p4': {
-      'es': '16/10/2023',
-      'en': '',
-    },
-    'y5c70d15': {
-      'es': 'Carillas',
-      'en': '',
-    },
-    '3gpwqtph': {
-      'es': '2',
-      'en': '',
-    },
-    'is6rwjpk': {
-      'es': 'XXX',
-      'en': '',
-    },
-    'yajyvg1e': {
-      'es': '002',
-      'en': '',
-    },
-    '6j17w0l5': {
-      'es': '16/10/2023',
-      'en': '',
-    },
-    'a825eb87': {
-      'es': 'Puentes',
-      'en': '',
-    },
-    'wm29r6hv': {
-      'es': '2',
-      'en': '',
-    },
-    '7hrw099i': {
-      'es': 'XXX',
-      'en': '',
-    },
-    '2vm7ci6i': {
-      'es': '003',
-      'en': '',
-    },
-    'a7a9g2qd': {
-      'es': '16/10/2023',
-      'en': '',
-    },
-    'ukckqnb4': {
-      'es': 'Puentes',
-      'en': '',
-    },
-    'ap69r5ht': {
-      'es': '2',
-      'en': '',
-    },
-    'lhzlpvry': {
-      'es': 'XXX',
-      'en': '',
-    },
-    'lp2g81bp': {
-      'es': '004',
-      'en': '',
-    },
-    'w0jzalho': {
-      'es': '16/10/2023',
-      'en': '',
-    },
-    'jrabw2cy': {
-      'es': 'Carillas',
-      'en': '',
-    },
-    'alovaxrn': {
-      'es': '2',
-      'en': '',
-    },
-    'sz2czpit': {
-      'es': 'XXX',
-      'en': '',
-    },
-    'j2xrhu4k': {
-      'es': '005',
-      'en': '',
-    },
-    'yz0m6nc8': {
-      'es': '16/10/2023',
-      'en': '',
-    },
-    '3j0g6b14': {
-      'es': 'Coronas',
-      'en': '',
-    },
-    'gef88dd3': {
-      'es': '2',
-      'en': '',
-    },
-    '41h9g5kv': {
-      'es': 'XXX',
-      'en': '',
-    },
     'ifyuo4cn': {
       'es': 'Generar',
       'en': '',
@@ -1316,7 +1165,240 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Gestion de Empleados',
       'en': '',
     },
-    'bnlslorb': {
+    'i88qlbah': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // Formulario
+  {
+    'ovxe48tm': {
+      'es': 'Solicitud de Trabajo',
+      'en': '',
+    },
+    'g62ikowc': {
+      'es': 'Esencia Dental',
+      'en': '',
+    },
+    'ajl5gxkd': {
+      'es': 'Tel: +506 2222-3333',
+      'en': '',
+    },
+    '7c6z5tdi': {
+      'es': 'info@esenciadental.com',
+      'en': '',
+    },
+    '43egeuat': {
+      'es': 'Factura #12345',
+      'en': '',
+    },
+    '5wgim6yv': {
+      'es': 'Información del Paciente',
+      'en': '',
+    },
+    'fvqgfany': {
+      'es': 'Nombre del Doctor',
+      'en': '',
+    },
+    'v4aqlvbt': {
+      'es': 'Fecha',
+      'en': '',
+    },
+    'aeyb4p15': {
+      'es': '',
+      'en': '',
+    },
+    '6fzf829l': {
+      'es': 'Paciente',
+      'en': '',
+    },
+    'ecechkpb': {
+      'es': 'Edad',
+      'en': '',
+    },
+    '5g05c2p3': {
+      'es': 'Masculino',
+      'en': '',
+    },
+    'as6ecyhu': {
+      'es': 'Femenino',
+      'en': '',
+    },
+    'uf3x8kvu': {
+      'es': 'Recursos',
+      'en': '',
+    },
+    't8lmpxe7': {
+      'es': 'Impresión superior',
+      'en': '',
+    },
+    'q8gu72ov': {
+      'es': 'Impresión inferior',
+      'en': '',
+    },
+    'zavm17kr': {
+      'es': 'Antagonista',
+      'en': '',
+    },
+    'b5p7hlcn': {
+      'es': 'Arco facial',
+      'en': '',
+    },
+    '3iuvaem5': {
+      'es': 'Pilares',
+      'en': '',
+    },
+    '4pa88ehm': {
+      'es': 'Fotos',
+      'en': '',
+    },
+    '89zdbyt1': {
+      'es': 'Otros recursos',
+      'en': '',
+    },
+    'v03ilk5p': {
+      'es': 'Tipo de Trabajo',
+      'en': '',
+    },
+    '59euzod1': {
+      'es': 'Coronas',
+      'en': '',
+    },
+    'aci0dmwx': {
+      'es': 'Incrustación',
+      'en': '',
+    },
+    'w8xs6yp5': {
+      'es': 'Carillas',
+      'en': '',
+    },
+    'z0pnrzto': {
+      'es': 'Puentes',
+      'en': '',
+    },
+    '9dfr8n9o': {
+      'es': 'Otros trabajos',
+      'en': '',
+    },
+    'nyzht2rc': {
+      'es': 'Material y Línea',
+      'en': '',
+    },
+    'eymjdmuq': {
+      'es': 'Premium',
+      'en': '',
+    },
+    'd7z81zw5': {
+      'es': 'Estándar',
+      'en': '',
+    },
+    'dtuu2aiz': {
+      'es': 'Clasic',
+      'en': '',
+    },
+    '9wlkbqy9': {
+      'es': 'Zr',
+      'en': '',
+    },
+    '8d6wdudp': {
+      'es': 'Metal Porcelana',
+      'en': '',
+    },
+    '2k3jmapb': {
+      'es': 'Emax',
+      'en': '',
+    },
+    'u2n1ilfl': {
+      'es': 'Información de Implantes',
+      'en': '',
+    },
+    'pcrgoyhr': {
+      'es': 'Marca',
+      'en': '',
+    },
+    'huhaq26v': {
+      'es': 'Número de plataforma',
+      'en': '',
+    },
+    'qni72c56': {
+      'es': 'Subir odontograma',
+      'en': '',
+    },
+    '3prz14m5': {
+      'es': 'Color y Acabado',
+      'en': '',
+    },
+    'rvb19ozq': {
+      'es': 'Color del muñón',
+      'en': '',
+    },
+    '3fd8rj6v': {
+      'es': 'Color final',
+      'en': '',
+    },
+    'jf2scxfl': {
+      'es': 'Alta',
+      'en': '',
+    },
+    'rtrzf2bd': {
+      'es': 'Media',
+      'en': '',
+    },
+    'sz7buawj': {
+      'es': 'Baja',
+      'en': '',
+    },
+    '6ryalnr2': {
+      'es': 'Observaciones',
+      'en': '',
+    },
+    'zpb049pw': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'jcsgvi8x': {
+      'es': 'Enviar Solicitud',
+      'en': '',
+    },
+  },
+  // VerCatalogo
+  {
+    'lanqvcgb': {
+      'es': 'Blanqueamiento',
+      'en': '',
+    },
+    'k3clch6m': {
+      'es': 'Coronas',
+      'en': '',
+    },
+    'n7sy6b0z': {
+      'es': 'Select...',
+      'en': '',
+    },
+    'a3jewg0o': {
+      'es': 'Search...',
+      'en': '',
+    },
+    'j0ztcb6r': {
+      'es': 'Agregar',
+      'en': '',
+    },
+    'ehg9x5s8': {
+      'es': 'Catalogo de Productos',
+      'en': '',
+    },
+    '43ek9c10': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // reserva
+  {
+    'xxm85ko0': {
+      'es': 'Reserva',
+      'en': '',
+    },
+    'i71hyqcu': {
       'es': 'Home',
       'en': '',
     },

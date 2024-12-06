@@ -1,13 +1,12 @@
 // Export pages
 export '/jimena/uh3/info_lab1/info_lab1_widget.dart' show InfoLab1Widget;
-export '/milagro/u_h2_pendiente/ver_catalogo/ver_catalogo_widget.dart'
-    show VerCatalogoWidget;
-export '/milagro/contactenos/contactenos_widget.dart' show ContactenosWidget;
+export '/milagro/u_h5_completa/contactenos/contactenos_widget.dart'
+    show ContactenosWidget;
 export '/milagro/u_h24_completa/guardar_productos_lista/guardar_productos_lista_widget.dart'
     show GuardarProductosListaWidget;
-export '/milagro/u_h23_completa/reporte_pedidos/reporte_pedidos_widget.dart'
+export '/milagro/u_h23_pendiente/reporte_pedidos/reporte_pedidos_widget.dart'
     show ReportePedidosWidget;
-export '/milagro/u_h23_completa/historial_pedidos/historial_pedidos_widget.dart'
+export '/milagro/u_h23_pendiente/historial_pedidos/historial_pedidos_widget.dart'
     show HistorialPedidosWidget;
 export '/jimena/uh3/info_lab2/info_lab2_widget.dart' show InfoLab2Widget;
 export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
@@ -52,3 +51,8 @@ export '/jimena/h_u26_mediocompletada/notificaciones/notificaciones_widget.dart'
     show NotificacionesWidget;
 export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;
+export '/augusto/h_u11a13_pendiente/formulario/formulario_widget.dart'
+    show FormularioWidget;
+export '/milagro/u_h2_completa/ver_catalogo/ver_catalogo_widget.dart'
+    show VerCatalogoWidget;
+export '/milagro/u_h2_completa/reserva/reserva_widget.dart' show ReservaWidget;

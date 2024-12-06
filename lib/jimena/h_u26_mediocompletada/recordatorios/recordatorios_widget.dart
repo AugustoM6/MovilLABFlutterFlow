@@ -5,6 +5,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'recordatorios_model.dart';
 export 'recordatorios_model.dart';
 
@@ -47,7 +49,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
             child: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
@@ -76,20 +78,20 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -117,7 +119,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                             value: _model.switchValue1!,
                             onChanged: (newValue) async {
                               safeSetState(
-                                  () => _model.switchValue1 = newValue);
+                                  () => _model.switchValue1 = newValue!);
                             },
                             activeColor: FlutterFlowTheme.of(context).alternate,
                             activeTrackColor:
@@ -174,7 +176,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -183,7 +185,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -211,8 +213,8 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                             value: _model.switchValue2!,
                             onChanged: (newValue) async {
                               safeSetState(
-                                  () => _model.switchValue2 = newValue);
-                              if (newValue) {
+                                  () => _model.switchValue2 = newValue!);
+                              if (newValue!) {
                                 setDarkModeSetting(context, ThemeMode.dark);
                               } else {
                                 setDarkModeSetting(context, ThemeMode.light);
@@ -232,7 +234,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -274,7 +276,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
+                        margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -285,7 +287,7 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -297,15 +299,15 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                         text: FFLocalizations.of(context).getText(
                           '5hpxf0fk' /* Cancelar */,
                         ),
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.cancel_rounded,
                           size: 15.0,
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).tertiary,
                           textStyle:
@@ -326,15 +328,15 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
                         text: FFLocalizations.of(context).getText(
                           'qs1xih45' /* Guardar */,
                         ),
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.save_rounded,
                           size: 15.0,
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).tertiary,
                           textStyle:

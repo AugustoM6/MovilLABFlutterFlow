@@ -2,18 +2,19 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'historial_pedidos_model.dart';
 export 'historial_pedidos_model.dart';
 
 class HistorialPedidosWidget extends StatefulWidget {
   const HistorialPedidosWidget({
     super.key,
-    required this.mes,
+    required this.selectedMonth,
   });
 
-  final String? mes;
+  final String? selectedMonth;
 
   @override
   State<HistorialPedidosWidget> createState() => _HistorialPedidosWidgetState();
@@ -48,7 +49,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: EdgeInsets.all(4.0),
             child: Container(
               width: 100.0,
               height: 100.0,
@@ -83,7 +84,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
               ),
             ],
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -96,7 +97,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                 stream: queryPedidosRecord(
                   queryBuilder: (pedidosRecord) => pedidosRecord.where(
                     'mes',
-                    isEqualTo: widget.mes,
+                    isEqualTo: widget!.selectedMonth,
                   ),
                 ),
                 builder: (context, snapshot) {
@@ -126,13 +127,13 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       final listViewPedidosRecord =
                           listViewPedidosRecordList[listViewIndex];
                       return Padding(
-                        padding: const EdgeInsets.all(15.0),
+                        padding: EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.numeroPedido,
                                 style: FlutterFlowTheme.of(context)
@@ -145,7 +146,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Text(
                                 valueOrDefault<String>(
                                   listViewPedidosRecord.fecha?.toString(),
@@ -161,7 +162,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.producto,
                                 style: FlutterFlowTheme.of(context)
@@ -174,7 +175,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.cantidad.toString(),
                                 style: FlutterFlowTheme.of(context)
@@ -187,7 +188,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.total.toString(),
                                 style: FlutterFlowTheme.of(context)
@@ -207,28 +208,28 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                 },
               ),
               Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: EdgeInsets.all(30.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () async {
-                        await actions.generarPDF();
+                      onPressed: () {
+                        print('Button pressed ...');
                       },
                       text: FFLocalizations.of(context).getText(
                         'ifyuo4cn' /* Generar */,
                       ),
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.picture_as_pdf,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -244,30 +245,22 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       ),
                     ),
                     FFButtonWidget(
-                      onPressed: () async {
-                        context.pushNamed(
-                          'HistorialPedidos',
-                          queryParameters: {
-                            'mes': serializeParam(
-                              widget.mes,
-                              ParamType.String,
-                            ),
-                          }.withoutNulls,
-                        );
+                      onPressed: () {
+                        print('Button pressed ...');
                       },
                       text: FFLocalizations.of(context).getText(
                         'aukp8zhb' /* Consultar */,
                       ),
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.cloud_sync_outlined,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

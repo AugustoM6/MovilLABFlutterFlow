@@ -1,9 +1,13 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'guardar_productos_lista_model.dart';
 export 'guardar_productos_lista_model.dart';
@@ -46,11 +50,11 @@ class _GuardarProductosListaWidgetState
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: EdgeInsets.all(4.0),
             child: FlutterFlowIconButton(
               borderRadius: 200.0,
               buttonSize: 40.0,
-              fillColor: const Color(0xFF8EE0EC),
+              fillColor: Color(0xFF8EE0EC),
               icon: Icon(
                 Icons.arrow_circle_left_outlined,
                 color: FlutterFlowTheme.of(context).primaryBackground,
@@ -79,7 +83,7 @@ class _GuardarProductosListaWidgetState
               ),
             ],
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -88,13 +92,8 @@ class _GuardarProductosListaWidgetState
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              StreamBuilder<List<ProductoRecord>>(
-                stream: queryProductoRecord(
-                  queryBuilder: (productoRecord) => productoRecord.where(
-                    'favoritos',
-                    isEqualTo: true,
-                  ),
-                ),
+              StreamBuilder<List<FavoritosRecord>>(
+                stream: queryFavoritosRecord(),
                 builder: (context, snapshot) {
                   // Customize what your widget looks like when it's loading.
                   if (!snapshot.hasData) {
@@ -110,19 +109,19 @@ class _GuardarProductosListaWidgetState
                       ),
                     );
                   }
-                  List<ProductoRecord> listViewProductoRecordList =
+                  List<FavoritosRecord> listViewFavoritosRecordList =
                       snapshot.data!;
 
                   return ListView.builder(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
-                    itemCount: listViewProductoRecordList.length,
+                    itemCount: listViewFavoritosRecordList.length,
                     itemBuilder: (context, listViewIndex) {
-                      final listViewProductoRecord =
-                          listViewProductoRecordList[listViewIndex];
+                      final listViewFavoritosRecord =
+                          listViewFavoritosRecordList[listViewIndex];
                       return Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -135,7 +134,7 @@ class _GuardarProductosListaWidgetState
                                     .secondaryBackground,
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.network(
@@ -148,14 +147,14 @@ class _GuardarProductosListaWidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              alignment: AlignmentDirectional(1.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'oldd4cuv' /* Coronas y Carillas EMAX */,
@@ -174,13 +173,13 @@ class _GuardarProductosListaWidgetState
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(6.0),
+                              padding: EdgeInsets.all(6.0),
                               child: FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
                                 borderRadius: 8.0,
                                 buttonSize: 40.0,
-                                fillColor: const Color(0xFFFDFDFD),
-                                icon: const Icon(
+                                fillColor: Color(0xFFFDFDFD),
+                                icon: Icon(
                                   Icons.favorite_border,
                                   color: Color(0xFF0B0000),
                                   size: 24.0,
@@ -198,13 +197,13 @@ class _GuardarProductosListaWidgetState
                 },
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '2de19b8k' /* ¡En Esencia Dental, te ayudamo... */,
@@ -223,7 +222,7 @@ class _GuardarProductosListaWidgetState
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: StreamBuilder<List<ProductoRecord>>(
                   stream: queryProductoRecord(
                     singleRecord: true,
@@ -272,9 +271,9 @@ class _GuardarProductosListaWidgetState
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).tertiary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -295,19 +294,19 @@ class _GuardarProductosListaWidgetState
                                   builder: (alertDialogContext) {
                                     return WebViewAware(
                                       child: AlertDialog(
-                                        title: const Text('¿Estás seguro?'),
-                                        content: const Text(
+                                        title: Text('¿Estás seguro?'),
+                                        content: Text(
                                             '¿Deseas eliminar este producto de la lista de deseos?'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext, false),
-                                            child: const Text('Cancel'),
+                                            child: Text('Cancel'),
                                           ),
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext, true),
-                                            child: const Text('Confirm'),
+                                            child: Text('Confirm'),
                                           ),
                                         ],
                                       ),
@@ -324,9 +323,9 @@ class _GuardarProductosListaWidgetState
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).tertiary,
                             textStyle: FlutterFlowTheme.of(context)

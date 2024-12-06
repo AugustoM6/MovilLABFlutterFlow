@@ -18,22 +18,60 @@ service cloud.firestore {
     match /producto/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if true;
-      allow delete: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
     match /empleados/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if true;
-      allow delete: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
     match /servicios/{document} {
       allow create: if true;
       allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /favoritos/{document} {
+      allow create: if true;
+      allow read: if true;
       allow write: if true;
       allow delete: if true;
     }
+
+    match /carrito/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
+
+    match /producto/{parent}/Blanqueamiento/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
+
+    match /{path=**}/Blanqueamiento/{document} {
+      allow read: if true;
+    }
+
+
+    match /producto/{parent}/Coronas/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
+
+    match /{path=**}/Coronas/{document} {
+      allow read: if true;
+    }
+
   }
 }

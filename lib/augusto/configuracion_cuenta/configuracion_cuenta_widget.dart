@@ -5,7 +5,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'configuracion_cuenta_model.dart';
 export 'configuracion_cuenta_model.dart';
 
@@ -69,7 +72,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
             child: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
@@ -97,14 +100,14 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -137,7 +140,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(1.0, 1.0),
+                            alignment: AlignmentDirectional(1.0, 1.0),
                             child: FlutterFlowIconButton(
                               borderRadius: 30.0,
                               buttonSize: 40.0,
@@ -172,11 +175,11 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                               ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 8.0)),
+                    ].divide(SizedBox(height: 8.0)),
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 150.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 150.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +201,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                             ),
                           ],
                         ),
-                      ].divide(const SizedBox(height: 8.0)),
+                      ].divide(SizedBox(height: 8.0)),
                     ),
                   ),
                   Material(
@@ -215,15 +218,15 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: AuthUserStreamWidget(
-                                builder: (context) => SizedBox(
+                                builder: (context) => Container(
                                   width: 200.0,
                                   child: TextFormField(
                                     controller: _model.txtNombreTextController,
@@ -253,7 +256,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -261,7 +264,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -305,7 +308,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -324,15 +327,15 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: AuthUserStreamWidget(
-                                builder: (context) => SizedBox(
+                                builder: (context) => Container(
                                   width: 200.0,
                                   child: TextFormField(
                                     controller: _model.txtEdadTextController,
@@ -362,7 +365,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -370,7 +373,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -414,7 +417,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -433,15 +436,15 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: AuthUserStreamWidget(
-                                builder: (context) => SizedBox(
+                                builder: (context) => Container(
                                   width: 200.0,
                                   child: TextFormField(
                                     controller:
@@ -472,7 +475,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -480,7 +483,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -524,7 +527,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -543,15 +546,15 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: AuthUserStreamWidget(
-                                builder: (context) => SizedBox(
+                                builder: (context) => Container(
                                   width: 200.0,
                                   child: TextFormField(
                                     controller:
@@ -582,7 +585,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -590,7 +593,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -634,7 +637,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -653,7 +656,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -664,7 +667,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                   Expanded(
                                     child: TabBarView(
                                       controller: _model.tabBarController,
-                                      children: const [
+                                      children: [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [],
@@ -677,7 +680,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const Alignment(0.0, 0),
+                                    alignment: Alignment(0.0, 0),
                                     child: FlutterFlowButtonTabBar(
                                       useToggleButtonStyle: true,
                                       labelStyle: FlutterFlowTheme.of(context)
@@ -695,18 +698,18 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
                                               ),
-                                      labelColor: const Color(0xFF101213),
-                                      unselectedLabelColor: const Color(0xFF57636C),
+                                      labelColor: Color(0xFF101213),
+                                      unselectedLabelColor: Color(0xFF57636C),
                                       backgroundColor: Colors.white,
                                       unselectedBackgroundColor:
-                                          const Color(0xFFF1F4F8),
-                                      borderColor: const Color(0xFFE0E3E7),
-                                      unselectedBorderColor: const Color(0xFFE0E3E7),
+                                          Color(0xFFF1F4F8),
+                                      borderColor: Color(0xFFE0E3E7),
+                                      unselectedBorderColor: Color(0xFFE0E3E7),
                                       borderWidth: 2.0,
                                       borderRadius: 8.0,
                                       elevation: 0.0,
                                       buttonMargin:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               8.0, 0.0, 8.0, 0.0),
                                       tabs: [
                                         Tab(
@@ -742,7 +745,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 ],
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -760,7 +763,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                       context.pushNamed(
                         'Perfil',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 0),
@@ -774,9 +777,9 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -788,7 +791,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                ].divide(const SizedBox(height: 24.0)),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

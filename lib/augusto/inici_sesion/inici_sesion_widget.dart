@@ -4,9 +4,13 @@ import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'inici_sesion_model.dart';
 export 'inici_sesion_model.dart';
 
@@ -66,15 +70,15 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 80.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 80.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.8, 0.8),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -93,8 +97,8 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 20.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 20.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -113,8 +117,8 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 20.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 20.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -141,14 +145,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 16.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '6zk2njyh' /* Logo */,
                   ),
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Plus Jakarta Sans',
-                        color: const Color(0xFF101213),
+                        color: Color(0xFF101213),
                         fontSize: 36.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
@@ -157,14 +161,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
               ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                     child: Container(
                       width: double.infinity,
                       height: MediaQuery.sizeOf(context).height * 0.8,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 530.0,
                       ),
                       decoration: BoxDecoration(
@@ -172,7 +176,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                       ),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                         child: Column(
                           children: [
                             Expanded(
@@ -180,9 +184,9 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                 controller: _model.tabBarController,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 16.0, 24.0, 0.0),
                                       child: SingleChildScrollView(
                                         child: Column(
@@ -198,7 +202,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               Container(
                                                 width: 230.0,
                                                 height: 16.0,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -214,14 +218,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF101213),
+                                                    color: Color(0xFF101213),
                                                     fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 4.0, 0.0, 24.0),
                                               child: Text(
@@ -237,7 +241,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -246,10 +250,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 16.0),
-                                              child: SizedBox(
+                                              child: Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -257,7 +261,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   focusNode: _model
                                                       .emailAddressCreateFocusNode,
                                                   autofocus: true,
-                                                  autofillHints: const [
+                                                  autofillHints: [
                                                     AutofillHints.email
                                                   ],
                                                   obscureText: false,
@@ -275,7 +279,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -283,7 +287,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -294,7 +298,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFF4B39EF),
                                                         width: 2.0,
@@ -305,7 +309,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -316,7 +320,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -328,7 +332,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     filled: true,
                                                     fillColor: Colors.white,
                                                     contentPadding:
-                                                        const EdgeInsets.all(24.0),
+                                                        EdgeInsets.all(24.0),
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -337,7 +341,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF101213),
+                                                            Color(0xFF101213),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -346,7 +350,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   keyboardType: TextInputType
                                                       .emailAddress,
                                                   cursorColor:
-                                                      const Color(0xFF4B39EF),
+                                                      Color(0xFF4B39EF),
                                                   validator: _model
                                                       .emailAddressCreateTextControllerValidator
                                                       .asValidator(context),
@@ -354,10 +358,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 16.0),
-                                              child: SizedBox(
+                                              child: Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -365,7 +369,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   focusNode: _model
                                                       .passwordCreateFocusNode,
                                                   autofocus: true,
-                                                  autofillHints: const [
+                                                  autofillHints: [
                                                     AutofillHints.password
                                                   ],
                                                   obscureText: !_model
@@ -384,7 +388,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -392,7 +396,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -403,7 +407,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFF4B39EF),
                                                         width: 2.0,
@@ -414,7 +418,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -425,7 +429,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -437,7 +441,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     filled: true,
                                                     fillColor: Colors.white,
                                                     contentPadding:
-                                                        const EdgeInsets.all(24.0),
+                                                        EdgeInsets.all(24.0),
                                                     suffixIcon: InkWell(
                                                       onTap: () => safeSetState(
                                                         () => _model
@@ -454,7 +458,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             : Icons
                                                                 .visibility_off_outlined,
                                                         color:
-                                                            const Color(0xFF57636C),
+                                                            Color(0xFF57636C),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -466,14 +470,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF101213),
+                                                            Color(0xFF101213),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
                                                   cursorColor:
-                                                      const Color(0xFF4B39EF),
+                                                      Color(0xFF4B39EF),
                                                   validator: _model
                                                       .passwordCreateTextControllerValidator
                                                       .asValidator(context),
@@ -481,10 +485,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 16.0),
-                                              child: SizedBox(
+                                              child: Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -492,7 +496,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   focusNode: _model
                                                       .passwordCreateConfirmFocusNode,
                                                   autofocus: true,
-                                                  autofillHints: const [
+                                                  autofillHints: [
                                                     AutofillHints.password
                                                   ],
                                                   obscureText: !_model
@@ -511,7 +515,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -519,7 +523,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -530,7 +534,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFF4B39EF),
                                                         width: 2.0,
@@ -541,7 +545,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -552,7 +556,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -564,7 +568,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     filled: true,
                                                     fillColor: Colors.white,
                                                     contentPadding:
-                                                        const EdgeInsets.all(24.0),
+                                                        EdgeInsets.all(24.0),
                                                     suffixIcon: InkWell(
                                                       onTap: () => safeSetState(
                                                         () => _model
@@ -581,7 +585,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             : Icons
                                                                 .visibility_off_outlined,
                                                         color:
-                                                            const Color(0xFF57636C),
+                                                            Color(0xFF57636C),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -593,14 +597,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF101213),
+                                                            Color(0xFF101213),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
                                                   cursorColor:
-                                                      const Color(0xFF4B39EF),
+                                                      Color(0xFF4B39EF),
                                                   validator: _model
                                                       .passwordCreateConfirmTextControllerValidator
                                                       .asValidator(context),
@@ -608,10 +612,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 16.0),
                                                 child: FFButtonWidget(
@@ -627,7 +631,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       ScaffoldMessenger.of(
                                                               context)
                                                           .showSnackBar(
-                                                        const SnackBar(
+                                                        SnackBar(
                                                           content: Text(
                                                             'Passwords don\'t match!',
                                                           ),
@@ -651,7 +655,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     }
 
                                                     context.goNamedAuth(
-                                                        'ChaBot',
+                                                        'VerCatalogo',
                                                         context.mounted);
                                                   },
                                                   text: FFLocalizations.of(
@@ -663,14 +667,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     width: 230.0,
                                                     height: 52.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: const Color(0xFF4B39EF),
+                                                    color: Color(0xFF4B39EF),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -684,7 +688,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               FontWeight.w500,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -700,11 +704,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 24.0),
                                                     child: Text(
@@ -721,7 +725,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
@@ -733,11 +737,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: Wrap(
@@ -759,7 +763,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -781,7 +785,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'ChaBot',
+                                                                  'VerCatalogo',
                                                                   context
                                                                       .mounted);
                                                             },
@@ -790,7 +794,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                 .getText(
                                                               '2a8kwlbh' /* Continue with Google */,
                                                             ),
-                                                            icon: const FaIcon(
+                                                            icon: FaIcon(
                                                               FontAwesomeIcons
                                                                   .google,
                                                               size: 20.0,
@@ -800,14 +804,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               width: 230.0,
                                                               height: 44.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -822,7 +826,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF101213),
                                                                         fontSize:
                                                                             14.0,
@@ -833,7 +837,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                       ),
                                                               elevation: 0.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -842,7 +846,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                   BorderRadius
                                                                       .circular(
                                                                           12.0),
-                                                              hoverColor: const Color(
+                                                              hoverColor: Color(
                                                                   0xFFF1F4F8),
                                                             ),
                                                           ),
@@ -851,7 +855,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             ? Container()
                                                             : Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -873,7 +877,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                     }
 
                                                                     context.goNamedAuth(
-                                                                        'ChaBot',
+                                                                        'VerCatalogo',
                                                                         context
                                                                             .mounted);
                                                                   },
@@ -882,7 +886,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                       .getText(
                                                                     'khjmok9s' /* Continue with Apple */,
                                                                   ),
-                                                                  icon: const FaIcon(
+                                                                  icon: FaIcon(
                                                                     FontAwesomeIcons
                                                                         .apple,
                                                                     size: 20.0,
@@ -893,14 +897,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                         230.0,
                                                                     height:
                                                                         44.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -914,7 +918,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                           fontFamily:
                                                                               'Plus Jakarta Sans',
                                                                           color:
-                                                                              const Color(0xFF101213),
+                                                                              Color(0xFF101213),
                                                                           fontSize:
                                                                               14.0,
                                                                           letterSpacing:
@@ -925,7 +929,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFE0E3E7),
                                                                       width:
@@ -935,7 +939,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                         BorderRadius.circular(
                                                                             12.0),
                                                                     hoverColor:
-                                                                        const Color(
+                                                                        Color(
                                                                             0xFFF1F4F8),
                                                                   ),
                                                                 ),
@@ -953,9 +957,9 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 16.0, 24.0, 0.0),
                                       child: SingleChildScrollView(
                                         child: Column(
@@ -971,12 +975,12 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               Container(
                                                 width: 230.0,
                                                 height: 16.0,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   color: Colors.white,
                                                 ),
                                               ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 20.0),
                                               child: Text(
@@ -992,7 +996,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF101213),
+                                                              Color(0xFF101213),
                                                           fontSize: 24.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -1001,10 +1005,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 16.0),
-                                              child: SizedBox(
+                                              child: Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -1012,7 +1016,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   focusNode: _model
                                                       .emailAddressFocusNode,
                                                   autofocus: true,
-                                                  autofillHints: const [
+                                                  autofillHints: [
                                                     AutofillHints.email
                                                   ],
                                                   obscureText: false,
@@ -1030,7 +1034,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -1038,7 +1042,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -1049,7 +1053,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFF4B39EF),
                                                         width: 2.0,
@@ -1060,7 +1064,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -1071,7 +1075,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -1083,7 +1087,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     filled: true,
                                                     fillColor: Colors.white,
                                                     contentPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 24.0,
                                                                 24.0,
@@ -1097,7 +1101,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF101213),
+                                                            Color(0xFF101213),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -1106,7 +1110,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   keyboardType: TextInputType
                                                       .emailAddress,
                                                   cursorColor:
-                                                      const Color(0xFF4B39EF),
+                                                      Color(0xFF4B39EF),
                                                   validator: _model
                                                       .emailAddressTextControllerValidator
                                                       .asValidator(context),
@@ -1114,10 +1118,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 16.0),
-                                              child: SizedBox(
+                                              child: Container(
                                                 width: double.infinity,
                                                 child: TextFormField(
                                                   controller: _model
@@ -1125,7 +1129,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   focusNode:
                                                       _model.passwordFocusNode,
                                                   autofocus: true,
-                                                  autofillHints: const [
+                                                  autofillHints: [
                                                     AutofillHints.password
                                                   ],
                                                   obscureText: !_model
@@ -1144,7 +1148,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -1152,7 +1156,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFE0E3E7),
                                                         width: 2.0,
@@ -1163,7 +1167,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFF4B39EF),
                                                         width: 2.0,
@@ -1174,7 +1178,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     errorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -1185,7 +1189,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     ),
                                                     focusedErrorBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Color(0xFFFF5963),
                                                         width: 2.0,
@@ -1197,7 +1201,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     filled: true,
                                                     fillColor: Colors.white,
                                                     contentPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 24.0,
                                                                 24.0,
@@ -1219,7 +1223,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             : Icons
                                                                 .visibility_off_outlined,
                                                         color:
-                                                            const Color(0xFF57636C),
+                                                            Color(0xFF57636C),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -1231,14 +1235,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF101213),
+                                                            Color(0xFF101213),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
                                                   cursorColor:
-                                                      const Color(0xFF4B39EF),
+                                                      Color(0xFF4B39EF),
                                                   validator: _model
                                                       .passwordTextControllerValidator
                                                       .asValidator(context),
@@ -1246,10 +1250,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 16.0),
                                                 child: FFButtonWidget(
@@ -1273,7 +1277,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     }
 
                                                     context.goNamedAuth(
-                                                        'ChaBot',
+                                                        'VerCatalogo',
                                                         context.mounted);
                                                   },
                                                   text: FFLocalizations.of(
@@ -1285,14 +1289,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                     width: 230.0,
                                                     height: 52.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: const Color(0xFF4B39EF),
+                                                    color: Color(0xFF4B39EF),
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -1306,7 +1310,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               FontWeight.w500,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -1318,10 +1322,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 24.0),
                                                 child: Text(
@@ -1337,7 +1341,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF57636C),
+                                                            Color(0xFF57636C),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -1347,7 +1351,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Wrap(
                                                 spacing: 16.0,
@@ -1364,7 +1368,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: FFButtonWidget(
@@ -1380,7 +1384,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'ChaBot',
+                                                            'VerCatalogo',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -1388,7 +1392,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           .getText(
                                                         'gbtb9tob' /* Continua con Google */,
                                                       ),
-                                                      icon: const FaIcon(
+                                                      icon: FaIcon(
                                                         FontAwesomeIcons.google,
                                                         size: 20.0,
                                                       ),
@@ -1396,14 +1400,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         width: 230.0,
                                                         height: 44.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1417,7 +1421,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF101213),
                                                                   fontSize:
                                                                       14.0,
@@ -1428,7 +1432,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                           .bold,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color:
                                                               Color(0xFFE0E3E7),
                                                           width: 2.0,
@@ -1437,7 +1441,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                             BorderRadius
                                                                 .circular(12.0),
                                                         hoverColor:
-                                                            const Color(0xFFF1F4F8),
+                                                            Color(0xFFF1F4F8),
                                                       ),
                                                     ),
                                                   ),
@@ -1445,7 +1449,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                       ? Container()
                                                       : Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1467,7 +1471,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               }
 
                                                               context.goNamedAuth(
-                                                                  'ChaBot',
+                                                                  'VerCatalogo',
                                                                   context
                                                                       .mounted);
                                                             },
@@ -1476,7 +1480,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                 .getText(
                                                               'zcoxcidi' /* Continua con Apple */,
                                                             ),
-                                                            icon: const FaIcon(
+                                                            icon: FaIcon(
                                                               FontAwesomeIcons
                                                                   .apple,
                                                               size: 20.0,
@@ -1486,14 +1490,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                               width: 230.0,
                                                               height: 44.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1508,7 +1512,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF101213),
                                                                         fontSize:
                                                                             14.0,
@@ -1519,7 +1523,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                       ),
                                                               elevation: 0.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1528,7 +1532,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                                   BorderRadius
                                                                       .circular(
                                                                           12.0),
-                                                              hoverColor: const Color(
+                                                              hoverColor: Color(
                                                                   0xFFF1F4F8),
                                                             ),
                                                           ),
@@ -1537,10 +1541,10 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 16.0),
                                                 child: FFButtonWidget(
@@ -1556,11 +1560,11 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                   options: FFButtonOptions(
                                                     height: 44.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(32.0, 0.0,
                                                                 32.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: Colors.white,
@@ -1571,14 +1575,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF101213),
+                                                              Color(0xFF101213),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                                     elevation: 0.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.white,
                                                       width: 2.0,
                                                     ),
@@ -1586,7 +1590,7 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                                         BorderRadius.circular(
                                                             40.0),
                                                     hoverColor:
-                                                        const Color(0xFFF1F4F8),
+                                                        Color(0xFFF1F4F8),
                                                   ),
                                                 ),
                                               ),
@@ -1601,14 +1605,14 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                               ),
                             ),
                             Align(
-                              alignment: const Alignment(0.0, 0),
+                              alignment: Alignment(0.0, 0),
                               child: FlutterFlowButtonTabBar(
                                 useToggleButtonStyle: true,
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF101213),
+                                      color: Color(0xFF101213),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
@@ -1618,25 +1622,25 @@ class _IniciSesionWidgetState extends State<IniciSesionWidget>
                                         .bodyLarge
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: const Color(0xFF101213),
+                                          color: Color(0xFF101213),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                         ),
-                                labelColor: const Color(0xFF101213),
-                                unselectedLabelColor: const Color(0xFF57636C),
+                                labelColor: Color(0xFF101213),
+                                unselectedLabelColor: Color(0xFF57636C),
                                 backgroundColor: Colors.white,
-                                unselectedBackgroundColor: const Color(0xFFF1F4F8),
-                                borderColor: const Color(0xFFE0E3E7),
-                                unselectedBorderColor: const Color(0xFFE0E3E7),
+                                unselectedBackgroundColor: Color(0xFFF1F4F8),
+                                borderColor: Color(0xFFE0E3E7),
+                                unselectedBorderColor: Color(0xFFE0E3E7),
                                 borderWidth: 2.0,
                                 borderRadius: 8.0,
                                 elevation: 0.0,
-                                labelPadding: const EdgeInsetsDirectional.fromSTEB(
+                                labelPadding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                buttonMargin: const EdgeInsetsDirectional.fromSTEB(
+                                buttonMargin: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 tabs: [
                                   Tab(
