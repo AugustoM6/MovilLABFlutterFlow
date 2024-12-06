@@ -36,7 +36,7 @@ dependencies:
   cloud_firestore_web: 4.3.2
   collection: 1.18.0
   csslib: 0.17.3
-  download: ^0.2.0
+  dependencies: ^5.6.0
   dropdown_button2: 2.3.9
   emoji_flag_converter: 1.1.0
   file_picker: 8.1.2
