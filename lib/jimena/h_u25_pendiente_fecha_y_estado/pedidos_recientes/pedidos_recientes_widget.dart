@@ -2,12 +2,8 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'pedidos_recientes_model.dart';
 export 'pedidos_recientes_model.dart';
 
@@ -27,6 +23,8 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PedidosRecientesModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -94,7 +92,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                       fontWeight: FontWeight.w900,
                     ),
               ),
-              actions: [],
+              actions: const [],
               centerTitle: true,
               elevation: 0.0,
             ),
@@ -104,17 +102,17 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Container(
                         width: double.infinity,
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           maxWidth: 1170.0,
                         ),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Color(0x33000000),
@@ -126,18 +124,18 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                           ],
                           borderRadius: BorderRadius.circular(8.0),
                           border: Border.all(
-                            color: Color(0xFFE0E3E7),
+                            color: const Color(0xFFE0E3E7),
                             width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 12.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
@@ -147,7 +145,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                       .headlineMedium
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
+                                        color: const Color(0xFF14181B),
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
@@ -155,12 +153,12 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
                                   height: 40.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Color(0xFFF1F4F8),
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
@@ -170,7 +168,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -192,7 +190,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                   .bodySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF14181B),
+                                                    color: const Color(0xFF14181B),
                                                     fontSize: 12.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight:
@@ -210,7 +208,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                 .bodySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF14181B),
+                                                  color: const Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -234,7 +232,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                   .bodySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF14181B),
+                                                    color: const Color(0xFF14181B),
                                                     fontSize: 12.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight:
@@ -251,7 +249,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                 .bodySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF14181B),
+                                                  color: const Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -269,7 +267,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                 .bodySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF14181B),
+                                                  color: const Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
@@ -302,7 +300,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                       final itemsFiltradosItem =
                                           itemsFiltrados[itemsFiltradosIndex];
                                       return Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 1.0),
                                         child: StreamBuilder<PedidosRecord>(
                                           stream: PedidosRecord.getDocument(
@@ -333,7 +331,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
 
                                             return Container(
                                               width: 100.0,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 color: Colors.white,
                                                 boxShadow: [
                                                   BoxShadow(
@@ -347,7 +345,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                 ],
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 child: Row(
@@ -371,7 +369,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -386,7 +384,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                       flex: 4,
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     8.0,
@@ -398,7 +396,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -422,7 +420,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             0.0,
@@ -449,7 +447,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                             fontFamily:
                                                                                 'Readex Pro',
                                                                             color:
-                                                                                Color(0xFF14181B),
+                                                                                const Color(0xFF14181B),
                                                                             fontSize:
                                                                                 14.0,
                                                                             letterSpacing:
@@ -459,7 +457,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                           ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -473,7 +471,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                             .bodySmall
                                                                             .override(
                                                                               fontFamily: 'Readex Pro',
-                                                                              color: Color(0xFF4B39EF),
+                                                                              color: const Color(0xFF4B39EF),
                                                                               fontSize: 12.0,
                                                                               letterSpacing: 0.0,
                                                                               fontWeight: FontWeight.normal,
@@ -507,7 +505,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -527,7 +525,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                             height: 32.0,
                                                             decoration:
                                                                 BoxDecoration(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFFF1F4F8),
                                                               borderRadius:
                                                                   BorderRadius
@@ -535,11 +533,11 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                           40.0),
                                                             ),
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -558,7 +556,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           14.0,
@@ -588,7 +586,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                           ))
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -604,7 +602,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                                     1.0,
                                                                 buttonSize:
                                                                     44.0,
-                                                                icon: Icon(
+                                                                icon: const Icon(
                                                                   Icons
                                                                       .edit_outlined,
                                                                   color: Color(
@@ -623,7 +621,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                                                             borderRadius: 30.0,
                                                             borderWidth: 1.0,
                                                             buttonSize: 44.0,
-                                                            icon: Icon(
+                                                            icon: const Icon(
                                                               Icons.more_vert,
                                                               color: Color(
                                                                   0xFF57636C),
@@ -655,7 +653,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -712,7 +710,7 @@ class _PedidosRecientesWidgetState extends State<PedidosRecientesWidget> {
                               safeSetState(() {});
                             },
                           ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ],

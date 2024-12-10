@@ -148,11 +148,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
 
-  late Color ultramarine = Color(0xFF0D088C);
-  late Color nonPhotoBlue = Color(0xFF6FDBED);
-  late Color iris = Color(0xFF624DC2);
-  late Color platinum = Color(0xFFDBE1E5);
-  late Color taupeGray = Color(0xFF8B8B8E);
+  late Color ultramarine = const Color(0xFF0D088C);
+  late Color nonPhotoBlue = const Color(0xFF6FDBED);
+  late Color iris = const Color(0xFF624DC2);
+  late Color platinum = const Color(0xFFDBE1E5);
+  late Color taupeGray = const Color(0xFF8B8B8E);
 }
 
 abstract class Typography {
@@ -324,11 +324,11 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
 
-  late Color ultramarine = Color(0xFF0D088C);
-  late Color nonPhotoBlue = Color(0xFF6FDBED);
-  late Color iris = Color(0xFF624DC2);
-  late Color platinum = Color(0xFFDBE1E5);
-  late Color taupeGray = Color(0xFF8B8B8E);
+  late Color ultramarine = const Color(0xFF0D088C);
+  late Color nonPhotoBlue = const Color(0xFF6FDBED);
+  late Color iris = const Color(0xFF624DC2);
+  late Color platinum = const Color(0xFFDBE1E5);
+  late Color taupeGray = const Color(0xFF8B8B8E);
 }
 
 extension TextStyleHelper on TextStyle {

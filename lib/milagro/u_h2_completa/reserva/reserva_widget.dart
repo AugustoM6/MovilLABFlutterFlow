@@ -1,12 +1,7 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'reserva_model.dart';
 export 'reserva_model.dart';
@@ -27,6 +22,8 @@ class _ReservaWidgetState extends State<ReservaWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ReservaModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -72,7 +69,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -82,7 +79,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: StreamBuilder<List<ProductoRecord>>(
                   stream: queryProductoRecord(
                     queryBuilder: (productoRecord) => productoRecord.where(
@@ -117,7 +114,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                         final listViewProductoRecord =
                             listViewProductoRecordList[listViewIndex];
                         return Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 8.0),
                           child: Container(
                             width: 100.0,
@@ -127,12 +124,12 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 1.0, 1.0, 1.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
@@ -146,7 +143,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           8.0, 8.0, 4.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -156,7 +153,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Padding(
-                                            padding: EdgeInsets.all(5.0),
+                                            padding: const EdgeInsets.all(5.0),
                                             child: Text(
                                               listViewProductoRecord.nombre,
                                               style:
@@ -171,7 +168,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 8.0, 0.0),
                                             child: Text(
                                               listViewProductoRecord
@@ -197,7 +194,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 20.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -212,9 +209,9 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                                           (alertDialogContext) {
                                                         return WebViewAware(
                                                           child: AlertDialog(
-                                                            title: Text(
+                                                            title: const Text(
                                                                 'Eliminar'),
-                                                            content: Text(
+                                                            content: const Text(
                                                                 'Desea eliminar este producto?'),
                                                             actions: [
                                                               TextButton(
@@ -223,7 +220,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                                                         alertDialogContext,
                                                                         false),
                                                                 child:
-                                                                    Text('No'),
+                                                                    const Text('No'),
                                                               ),
                                                               TextButton(
                                                                 onPressed: () =>
@@ -231,7 +228,7 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                                                         alertDialogContext,
                                                                         true),
                                                                 child:
-                                                                    Text('Si'),
+                                                                    const Text('Si'),
                                                               ),
                                                             ],
                                                           ),
@@ -245,14 +242,14 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                                 builder: (alertDialogContext) {
                                                   return WebViewAware(
                                                     child: AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'Producto eliminado'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('Ok'),
+                                                          child: const Text('Ok'),
                                                         ),
                                                       ],
                                                     ),
@@ -265,14 +262,14 @@ class _ReservaWidgetState extends State<ReservaWidget> {
                                                 builder: (alertDialogContext) {
                                                   return WebViewAware(
                                                     child: AlertDialog(
-                                                      title: Text(
+                                                      title: const Text(
                                                           'Producto no eliminado'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('Ok'),
+                                                          child: const Text('Ok'),
                                                         ),
                                                       ],
                                                     ),

@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -6,10 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'editar_empleado_model.dart';
 export 'editar_empleado_model.dart';
 
@@ -36,28 +32,30 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
     _model = createModel(context, () => EditarEmpleadoModel());
 
     _model.txtNombreTextController ??=
-        TextEditingController(text: widget!.paramEmpleados?.nombre);
+        TextEditingController(text: widget.paramEmpleados?.nombre);
     _model.txtNombreFocusNode ??= FocusNode();
 
     _model.txtEmailTextController ??=
-        TextEditingController(text: widget!.paramEmpleados?.email);
+        TextEditingController(text: widget.paramEmpleados?.email);
     _model.txtEmailFocusNode ??= FocusNode();
 
     _model.txtTelefonoTextController ??=
-        TextEditingController(text: widget!.paramEmpleados?.telefono);
+        TextEditingController(text: widget.paramEmpleados?.telefono);
     _model.txtTelefonoFocusNode ??= FocusNode();
 
     _model.txtDepartamentoTextController ??=
-        TextEditingController(text: widget!.paramEmpleados?.departamento);
+        TextEditingController(text: widget.paramEmpleados?.departamento);
     _model.txtDepartamentoFocusNode ??= FocusNode();
 
     _model.txtEstadoTextController ??=
-        TextEditingController(text: widget!.paramEmpleados?.estado?.toString());
+        TextEditingController(text: widget.paramEmpleados?.estado.toString());
     _model.txtEstadoFocusNode ??= FocusNode();
 
     _model.txtFechaContratTextController ??= TextEditingController(
-        text: widget!.paramEmpleados?.fechaContatacion?.toString());
+        text: widget.paramEmpleados?.fechaContatacion?.toString());
     _model.txtFechaContratFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -78,14 +76,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsets.all(6.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               buttonSize: 48.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -106,7 +104,7 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -122,7 +120,7 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(50.0),
+                      padding: const EdgeInsets.all(50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -188,11 +186,11 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                               width: 150.0,
                               height: 150.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
-                                widget!.paramEmpleados!.imagen,
+                                widget.paramEmpleados!.imagen,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -201,12 +199,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtNombreTextController,
@@ -231,14 +229,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -280,12 +278,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtEmailTextController,
@@ -310,14 +308,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -359,12 +357,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtTelefonoTextController,
@@ -389,14 +387,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -438,12 +436,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller:
@@ -469,14 +467,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -518,12 +516,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.txtEstadoTextController,
@@ -548,14 +546,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -597,12 +595,12 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller:
@@ -628,14 +626,14 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -680,7 +678,7 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -694,10 +692,10 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -711,16 +709,16 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
-                        await widget!.paramEmpleados!.reference
+                        await widget.paramEmpleados!.reference
                             .update(createEmpleadosRecordData(
-                          nombre: widget!.paramEmpleados?.nombre,
-                          email: widget!.paramEmpleados?.email,
-                          telefono: widget!.paramEmpleados?.telefono,
-                          departamento: widget!.paramEmpleados?.departamento,
-                          imagen: widget!.paramEmpleados?.imagen,
-                          estado: widget!.paramEmpleados?.estado,
+                          nombre: widget.paramEmpleados?.nombre,
+                          email: widget.paramEmpleados?.email,
+                          telefono: widget.paramEmpleados?.telefono,
+                          departamento: widget.paramEmpleados?.departamento,
+                          imagen: widget.paramEmpleados?.imagen,
+                          estado: widget.paramEmpleados?.estado,
                           fechaContatacion:
-                              widget!.paramEmpleados?.fechaContatacion,
+                              widget.paramEmpleados?.fechaContatacion,
                         ));
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
@@ -730,7 +728,7 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                             ),
-                            duration: Duration(milliseconds: 4000),
+                            duration: const Duration(milliseconds: 4000),
                             backgroundColor:
                                 FlutterFlowTheme.of(context).secondary,
                           ),
@@ -741,10 +739,10 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

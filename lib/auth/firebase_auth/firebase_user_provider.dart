@@ -8,6 +8,7 @@ export '../base_auth_user_provider.dart';
 class G8SC703JNAppLabEDFirebaseUser extends BaseAuthUser {
   G8SC703JNAppLabEDFirebaseUser(this.user);
   User? user;
+  @override
   bool get loggedIn => user != null;
 
   @override

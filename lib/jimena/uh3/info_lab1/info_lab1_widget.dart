@@ -2,10 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'info_lab1_model.dart';
 export 'info_lab1_model.dart';
 
@@ -25,6 +22,8 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => InfoLab1Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -70,21 +69,21 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                   fontWeight: FontWeight.w900,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -95,7 +94,7 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 20.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(200.0),
@@ -108,12 +107,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(10.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(5.0),
+                                    padding: const EdgeInsets.all(5.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -171,7 +170,7 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                                                   .getText(
                                                 '4omp2u46' /* de 7am - 5pm */,
                                               ),
-                                              style: TextStyle(),
+                                              style: const TextStyle(),
                                             )
                                           ],
                                           style: FlutterFlowTheme.of(context)
@@ -189,12 +188,12 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(10.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(5.0),
+                                    padding: const EdgeInsets.all(5.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -268,14 +267,14 @@ Edificio El Robl... */
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.all(5.0),
+                                  padding: const EdgeInsets.all(5.0),
                                   child: RichText(
                                     textScaler:
                                         MediaQuery.of(context).textScaler,
@@ -331,7 +330,7 @@ Edificio El Robl... */
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.network(
@@ -349,7 +348,7 @@ Edificio El Robl... */
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('InfoLab2');
@@ -359,9 +358,9 @@ Edificio El Robl... */
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)

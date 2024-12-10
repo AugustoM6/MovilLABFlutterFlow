@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'reporte_pedidos_model.dart';
 export 'reporte_pedidos_model.dart';
 
@@ -34,6 +32,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ReportePedidosModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -54,11 +54,11 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsets.all(2.0),
+            padding: const EdgeInsets.all(2.0),
             child: FlutterFlowIconButton(
               borderRadius: 200.0,
               buttonSize: 40.0,
-              fillColor: Color(0xFF92D8E2),
+              fillColor: const Color(0xFF92D8E2),
               icon: Icon(
                 Icons.arrow_circle_left_outlined,
                 color: FlutterFlowTheme.of(context).info,
@@ -69,7 +69,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
               },
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -79,7 +79,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -96,15 +96,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Padding(
-                        padding: EdgeInsets.all(6.0),
+                        padding: const EdgeInsets.all(6.0),
                         child: FlutterFlowIconButton(
                           borderRadius: 200.0,
                           buttonSize: 40.0,
@@ -164,7 +164,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -184,7 +184,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
               Expanded(
                 child: GridView(
                   padding: EdgeInsets.zero,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     crossAxisSpacing: 10.0,
                     mainAxisSpacing: 10.0,
@@ -193,15 +193,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                   scrollDirection: Axis.vertical,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: StreamBuilder<List<PedidosRecord>>(
                           stream: queryPedidosRecord(
                             queryBuilder: (pedidosRecord) =>
                                 pedidosRecord.where(
                               'fecha',
-                              isEqualTo: widget!.fecha,
+                              isEqualTo: widget.fecha,
                             ),
                             singleRecord: true,
                           ),
@@ -234,7 +234,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidos',
+                                  'HistorialPedidosPENDIENTE',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Enero',
@@ -249,9 +249,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -275,13 +275,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Febrero',
@@ -296,8 +296,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsets.all(0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -319,13 +319,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Marzo',
@@ -340,9 +340,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -363,15 +363,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: StreamBuilder<List<PedidosRecord>>(
                           stream: queryPedidosRecord(
                             queryBuilder: (pedidosRecord) =>
                                 pedidosRecord.where(
                               'fecha',
-                              isEqualTo: widget!.fecha,
+                              isEqualTo: widget.fecha,
                             ),
                             singleRecord: true,
                           ),
@@ -404,7 +404,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidos',
+                                  'HistorialPedidosPENDIENTE',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Abril',
@@ -419,9 +419,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -445,13 +445,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Mayo',
@@ -466,8 +466,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsets.all(0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -489,13 +489,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Junio',
@@ -510,9 +510,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -533,15 +533,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: StreamBuilder<List<PedidosRecord>>(
                           stream: queryPedidosRecord(
                             queryBuilder: (pedidosRecord) =>
                                 pedidosRecord.where(
                               'fecha',
-                              isEqualTo: widget!.fecha,
+                              isEqualTo: widget.fecha,
                             ),
                             singleRecord: true,
                           ),
@@ -574,7 +574,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidos',
+                                  'HistorialPedidosPENDIENTE',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Julio',
@@ -589,9 +589,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -615,13 +615,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Agosto',
@@ -636,8 +636,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsets.all(0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -659,13 +659,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Setiembre',
@@ -680,9 +680,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -703,15 +703,15 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: StreamBuilder<List<PedidosRecord>>(
                           stream: queryPedidosRecord(
                             queryBuilder: (pedidosRecord) =>
                                 pedidosRecord.where(
                               'fecha',
-                              isEqualTo: widget!.fecha,
+                              isEqualTo: widget.fecha,
                             ),
                             singleRecord: true,
                           ),
@@ -744,7 +744,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidos',
+                                  'HistorialPedidosPENDIENTE',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Octubre',
@@ -759,9 +759,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -785,13 +785,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(8.0, 0.0),
+                      alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Noviembre',
@@ -806,8 +806,8 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsets.all(0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -829,13 +829,13 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsets.all(25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidos',
+                              'HistorialPedidosPENDIENTE',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Diciembre',
@@ -850,9 +850,9 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                           options: FFButtonOptions(
                             width: 80.0,
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -876,7 +876,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(30.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -888,16 +888,16 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       text: FFLocalizations.of(context).getText(
                         'e9jlje35' /* Generar */,
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.picture_as_pdf,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -915,10 +915,10 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                     FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
-                          'HistorialPedidos',
+                          'HistorialPedidosPENDIENTE',
                           queryParameters: {
                             'selectedMonth': serializeParam(
-                              widget!.mes,
+                              widget.mes,
                               ParamType.String,
                             ),
                           }.withoutNulls,
@@ -927,16 +927,16 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                       text: FFLocalizations.of(context).getText(
                         'gecw9dqc' /* Consultar */,
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.cloud_sync_outlined,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

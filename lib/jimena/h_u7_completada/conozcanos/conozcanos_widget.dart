@@ -1,11 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'conozcanos_model.dart';
 export 'conozcanos_model.dart';
 
@@ -25,6 +21,8 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ConozcanosModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -49,7 +47,7 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -70,14 +68,14 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                   fontWeight: FontWeight.w900,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -86,7 +84,7 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
@@ -100,21 +98,21 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.all(5.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 5.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -138,7 +136,7 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.network(
@@ -155,14 +153,14 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -182,7 +180,7 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.all(30.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,

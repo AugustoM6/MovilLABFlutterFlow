@@ -14,6 +14,7 @@ import 'schema/favoritos_record.dart';
 import 'schema/carrito_record.dart';
 import 'schema/blanqueamiento_record.dart';
 import 'schema/coronas_record.dart';
+import 'schema/formulario_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -31,6 +32,7 @@ export 'schema/favoritos_record.dart';
 export 'schema/carrito_record.dart';
 export 'schema/blanqueamiento_record.dart';
 export 'schema/coronas_record.dart';
+export 'schema/formulario_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -371,6 +373,43 @@ Future<List<CoronasRecord>> queryCoronasRecordOnce({
       singleRecord: singleRecord,
     );
 
+/// Functions to query FormularioRecords (as a Stream and as a Future).
+Future<int> queryFormularioRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      FormularioRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<FormularioRecord>> queryFormularioRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      FormularioRecord.collection,
+      FormularioRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<FormularioRecord>> queryFormularioRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      FormularioRecord.collection,
+      FormularioRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
 Future<int> queryCollectionCount(
   Query collection, {
   Query Function(Query)? queryBuilder,
@@ -490,7 +529,7 @@ Future<FFFirestorePage<T>> queryCollectionPage<T>(
   } else {
     docSnapshot = await query.get();
   }
-  final getDocs = (QuerySnapshot s) => s.docs
+  getDocs(QuerySnapshot s) => s.docs
       .map(
         (d) => safeGet(
           () => recordBuilder(d),

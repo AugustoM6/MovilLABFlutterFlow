@@ -3,13 +3,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'historial_pedidos_model.dart';
-export 'historial_pedidos_model.dart';
+import 'historial_pedidos_p_e_n_d_i_e_n_t_e_model.dart';
+export 'historial_pedidos_p_e_n_d_i_e_n_t_e_model.dart';
 
-class HistorialPedidosWidget extends StatefulWidget {
-  const HistorialPedidosWidget({
+class HistorialPedidosPENDIENTEWidget extends StatefulWidget {
+  const HistorialPedidosPENDIENTEWidget({
     super.key,
     required this.selectedMonth,
   });
@@ -17,18 +15,22 @@ class HistorialPedidosWidget extends StatefulWidget {
   final String? selectedMonth;
 
   @override
-  State<HistorialPedidosWidget> createState() => _HistorialPedidosWidgetState();
+  State<HistorialPedidosPENDIENTEWidget> createState() =>
+      _HistorialPedidosPENDIENTEWidgetState();
 }
 
-class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
-  late HistorialPedidosModel _model;
+class _HistorialPedidosPENDIENTEWidgetState
+    extends State<HistorialPedidosPENDIENTEWidget> {
+  late HistorialPedidosPENDIENTEModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HistorialPedidosModel());
+    _model = createModel(context, () => HistorialPedidosPENDIENTEModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -49,7 +51,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(4.0),
             child: Container(
               width: 100.0,
               height: 100.0,
@@ -84,7 +86,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
               ),
             ],
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -97,7 +99,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                 stream: queryPedidosRecord(
                   queryBuilder: (pedidosRecord) => pedidosRecord.where(
                     'mes',
-                    isEqualTo: widget!.selectedMonth,
+                    isEqualTo: widget.selectedMonth,
                   ),
                 ),
                 builder: (context, snapshot) {
@@ -127,13 +129,13 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       final listViewPedidosRecord =
                           listViewPedidosRecordList[listViewIndex];
                       return Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.numeroPedido,
                                 style: FlutterFlowTheme.of(context)
@@ -146,7 +148,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
                                 valueOrDefault<String>(
                                   listViewPedidosRecord.fecha?.toString(),
@@ -162,7 +164,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.producto,
                                 style: FlutterFlowTheme.of(context)
@@ -175,7 +177,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.cantidad.toString(),
                                 style: FlutterFlowTheme.of(context)
@@ -188,7 +190,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(2.0),
+                              padding: const EdgeInsets.all(2.0),
                               child: Text(
                                 listViewPedidosRecord.total.toString(),
                                 style: FlutterFlowTheme.of(context)
@@ -208,7 +210,7 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                 },
               ),
               Padding(
-                padding: EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(30.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -220,16 +222,16 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       text: FFLocalizations.of(context).getText(
                         'ifyuo4cn' /* Generar */,
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.picture_as_pdf,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -245,22 +247,22 @@ class _HistorialPedidosWidgetState extends State<HistorialPedidosWidget> {
                       ),
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
                         'aukp8zhb' /* Consultar */,
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.cloud_sync_outlined,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'icono_chat_bot_model.dart';
 export 'icono_chat_bot_model.dart';
 
@@ -23,6 +20,8 @@ class _IconoChatBotWidgetState extends State<IconoChatBotWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => IconoChatBotModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -53,14 +52,14 @@ class _IconoChatBotWidgetState extends State<IconoChatBotWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 20.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -85,7 +84,7 @@ class _IconoChatBotWidgetState extends State<IconoChatBotWidget> {
                           context.pushNamed(
                             'ChaBot',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                                 duration: Duration(milliseconds: 0),
@@ -117,7 +116,7 @@ class _IconoChatBotWidgetState extends State<IconoChatBotWidget> {
                         context.pushNamed(
                           'ChaBot',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
+                            kTransitionInfoKey: const TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.fade,
                               duration: Duration(milliseconds: 0),

@@ -1,10 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'perfil_model.dart';
 export 'perfil_model.dart';
 
@@ -24,6 +21,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PerfilModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -43,7 +42,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -111,7 +110,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 8.0)),
+                    ].divide(const SizedBox(height: 8.0)),
                   ),
                   Material(
                     color: Colors.transparent,
@@ -126,7 +125,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -155,7 +154,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 12.0)),
+                                  ].divide(const SizedBox(width: 12.0)),
                                 ),
                                 Icon(
                                   Icons.chevron_right,
@@ -189,7 +188,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 12.0)),
+                                  ].divide(const SizedBox(width: 12.0)),
                                 ),
                                 Icon(
                                   Icons.chevron_right,
@@ -208,7 +207,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 context.pushNamed(
                                   'AccesibilidadEIdioma',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 0),
@@ -241,7 +240,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 12.0)),
+                                    ].divide(const SizedBox(width: 12.0)),
                                   ),
                                   Icon(
                                     Icons.chevron_right,
@@ -276,7 +275,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 12.0)),
+                                  ].divide(const SizedBox(width: 12.0)),
                                 ),
                                 Icon(
                                   Icons.chevron_right,
@@ -286,7 +285,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -304,7 +303,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -319,7 +318,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 await authManager.signOut();
                                 GoRouter.of(context).clearRedirectLocation();
 
-                                context.goNamedAuth('Home', context.mounted);
+                                context.goNamedAuth('Login', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -349,7 +348,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 12.0)),
+                                    ].divide(const SizedBox(width: 12.0)),
                                   ),
                                 ],
                               ),
@@ -362,8 +361,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               onTap: () async {
                                 await authManager.deleteUser(context);
 
-                                context.goNamedAuth(
-                                    'VerCatalogo', context.mounted);
+                                context.goNamedAuth('Home', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -393,17 +391,17 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 12.0)),
+                                    ].divide(const SizedBox(width: 12.0)),
                                   ),
                                 ],
                               ),
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 24.0)),
+                ].divide(const SizedBox(height: 24.0)),
               ),
             ),
           ),

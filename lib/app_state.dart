@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '/backend/backend.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
@@ -35,32 +34,9 @@ class FFAppState extends ChangeNotifier {
     _textSize = value;
   }
 
-  List<DocumentReference> _pedidosList = [];
-  List<DocumentReference> get pedidosList => _pedidosList;
-  set pedidosList(List<DocumentReference> value) {
-    _pedidosList = value;
-  }
-
-  void addToPedidosList(DocumentReference value) {
-    pedidosList.add(value);
-  }
-
-  void removeFromPedidosList(DocumentReference value) {
-    pedidosList.remove(value);
-  }
-
-  void removeAtIndexFromPedidosList(int index) {
-    pedidosList.removeAt(index);
-  }
-
-  void updatePedidosListAtIndex(
-    int index,
-    DocumentReference Function(DocumentReference) updateFn,
-  ) {
-    pedidosList[index] = updateFn(_pedidosList[index]);
-  }
-
-  void insertAtIndexInPedidosList(int index, DocumentReference value) {
-    pedidosList.insert(index, value);
+  DocumentReference? _Pedidos;
+  DocumentReference? get Pedidos => _Pedidos;
+  set Pedidos(DocumentReference? value) {
+    _Pedidos = value;
   }
 }

@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'index_producto_model.dart';
 export 'index_producto_model.dart';
@@ -26,6 +24,8 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => IndexProductoModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -46,13 +46,13 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsets.all(6.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -73,7 +73,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -83,7 +83,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -98,10 +98,10 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                       options: FFButtonOptions(
                         width: 100.0,
                         height: 45.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).secondary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -145,15 +145,15 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                       final listViewProductoRecord =
                           listViewProductoRecordList[listViewIndex];
                       return Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -177,7 +177,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 50.0, 25.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -195,7 +195,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 50.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -206,7 +206,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 5.0, 0.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {},
@@ -217,11 +217,11 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                               options: FFButtonOptions(
                                                 width: 100.0,
                                                 height: 35.0,
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:
@@ -257,8 +257,8 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                           return WebViewAware(
                                                             child: AlertDialog(
                                                               title:
-                                                                  Text('Aviso'),
-                                                              content: Text(
+                                                                  const Text('Aviso'),
+                                                              content: const Text(
                                                                   '¿Seguro que desea eliminar el producto?'),
                                                               actions: [
                                                                 TextButton(
@@ -266,7 +266,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                                       Navigator.pop(
                                                                           alertDialogContext,
                                                                           false),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Cancelar'),
                                                                 ),
                                                                 TextButton(
@@ -274,7 +274,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                                       Navigator.pop(
                                                                           alertDialogContext,
                                                                           true),
-                                                                  child: Text(
+                                                                  child: const Text(
                                                                       'Confirmar'),
                                                                 ),
                                                               ],
@@ -296,10 +296,10 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                             options: FFButtonOptions(
                                               width: 100.0,
                                               height: 35.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)

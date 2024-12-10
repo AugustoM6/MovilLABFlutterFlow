@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menu_administrador_model.dart';
 export 'menu_administrador_model.dart';
 
@@ -25,6 +23,8 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MenuAdministradorModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -69,14 +69,14 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -94,7 +94,7 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -214,7 +214,7 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -233,7 +233,7 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -276,16 +276,16 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               text: FFLocalizations.of(context).getText(
                                 'py18nru5' /* Gestión de Pedidos */,
                               ),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.inventory_2,
                                 size: 15.0,
                               ),
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 56.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -306,16 +306,16 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               text: FFLocalizations.of(context).getText(
                                 'dzmba3kz' /* Gestión de Productos */,
                               ),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.inventory_2,
                                 size: 15.0,
                               ),
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 56.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -336,16 +336,16 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               text: FFLocalizations.of(context).getText(
                                 'ogkzr7oh' /* Reportes */,
                               ),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.assessment,
                                 size: 15.0,
                               ),
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 56.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -366,16 +366,16 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                               text: FFLocalizations.of(context).getText(
                                 'nae33p8b' /* Cerrar Sesión */,
                               ),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.logout,
                                 size: 15.0,
                               ),
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 56.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).error,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -389,12 +389,12 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                 borderRadius: BorderRadius.circular(28.0),
                               ),
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 24.0)),
+                ].divide(const SizedBox(height: 24.0)),
               ),
             ),
           ),

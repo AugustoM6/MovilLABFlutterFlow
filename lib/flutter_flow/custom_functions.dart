@@ -48,3 +48,22 @@ int conversionInteger(double value) {
   int resultado = value.toInt();
   return resultado;
 }
+
+int? numeroFac() {
+  FirebaseFirestore.instance
+      .collection('formulario')
+      .orderBy('numFactura', descending: true)
+      .limit(1)
+      .get()
+      .then((snapshot) {
+    if (snapshot.docs.isNotEmpty) {
+      final lastFactura = snapshot.docs.first.data()['numFactura'] as int;
+      return lastFactura + 1;
+    } else {
+      return 1;
+    }
+  }).catchError((error) {
+    print('Error al consultar el número de factura: $error');
+    return null;
+  });
+}

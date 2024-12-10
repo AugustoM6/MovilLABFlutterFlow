@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'contactenos_model.dart';
 export 'contactenos_model.dart';
 
@@ -24,6 +21,8 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ContactenosModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -44,13 +43,13 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10.0, 1.0, 0.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 1.0, 0.0, 10.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondaryBackground,
               borderRadius: 30.0,
               borderWidth: 2.0,
               buttonSize: 40.0,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 25.0,
@@ -61,33 +60,33 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
             ),
           ),
           title: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 't3kjcbcc' /* ¡Contáctenos! */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
-                    color: Color(0xFFFBFBFB),
+                    color: const Color(0xFFFBFBFB),
                     fontSize: 25.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w900,
                   ),
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +109,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -122,7 +121,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(1.0),
+                          padding: const EdgeInsets.all(1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
@@ -136,9 +135,9 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -160,7 +159,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -179,7 +178,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -188,7 +187,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                       FlutterFlowIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: Color(0xFFF5F5F9),
+                        fillColor: const Color(0xFFF5F5F9),
                         icon: Icon(
                           Icons.phone,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -211,7 +210,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -221,7 +220,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         borderColor: Colors.transparent,
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: Color(0xFFF5F5F9),
+                        fillColor: const Color(0xFFF5F5F9),
                         icon: Icon(
                           Icons.facebook_sharp,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -244,7 +243,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -254,7 +253,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         borderColor: Colors.transparent,
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: Color(0xFFF5F5F9),
+                        fillColor: const Color(0xFFF5F5F9),
                         icon: Icon(
                           Icons.web_asset,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -277,7 +276,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,

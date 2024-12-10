@@ -323,7 +323,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // HistorialPedidos
+  // HistorialPedidosPENDIENTE
   {
     'ifyuo4cn': {
       'es': 'Generar',
@@ -563,7 +563,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // IniciSesion
+  // Login
   {
     '6zk2njyh': {
       'es': 'Logo',
@@ -1188,24 +1188,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'info@esenciadental.com',
       'en': '',
     },
-    '43egeuat': {
-      'es': 'Factura #12345',
-      'en': '',
-    },
     '5wgim6yv': {
       'es': 'Información del Paciente',
       'en': '',
     },
     'fvqgfany': {
       'es': 'Nombre del Doctor',
-      'en': '',
-    },
-    'v4aqlvbt': {
-      'es': 'Fecha',
-      'en': '',
-    },
-    'aeyb4p15': {
-      'es': '',
       'en': '',
     },
     '6fzf829l': {
@@ -1228,83 +1216,87 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Recursos',
       'en': '',
     },
-    't8lmpxe7': {
+    'rhhumkx4': {
       'es': 'Impresión superior',
       'en': '',
     },
-    'q8gu72ov': {
+    'kwrowpfb': {
       'es': 'Impresión inferior',
       'en': '',
     },
-    'zavm17kr': {
+    'j1q6xche': {
       'es': 'Antagonista',
       'en': '',
     },
-    'b5p7hlcn': {
+    'x44xwurj': {
       'es': 'Arco facial',
       'en': '',
     },
-    '3iuvaem5': {
+    '4q3ojsb5': {
       'es': 'Pilares',
       'en': '',
     },
-    '4pa88ehm': {
+    'ioy1s60l': {
       'es': 'Fotos',
+      'en': '',
+    },
+    '9htk11mc': {
+      'es': 'Subir',
       'en': '',
     },
     '89zdbyt1': {
       'es': 'Otros recursos',
       'en': '',
     },
-    'v03ilk5p': {
+    'nkwqnclm': {
       'es': 'Tipo de Trabajo',
       'en': '',
     },
-    '59euzod1': {
+    'y9vmg0ne': {
       'es': 'Coronas',
       'en': '',
     },
-    'aci0dmwx': {
-      'es': 'Incrustación',
+    'yi6t80xd': {
+      'es': 'Incrutación',
       'en': '',
     },
-    'w8xs6yp5': {
+    '1wp4rtzs': {
       'es': 'Carillas',
       'en': '',
     },
-    'z0pnrzto': {
+    'll1rbqit': {
       'es': 'Puentes',
       'en': '',
     },
-    '9dfr8n9o': {
+    '4jxdk3vn': {
       'es': 'Otros trabajos',
       'en': '',
     },
-    'nyzht2rc': {
+    'vrtvwerd': {
       'es': 'Material y Línea',
       'en': '',
     },
-    'eymjdmuq': {
+    'pffq36d5': {
       'es': 'Premium',
       'en': '',
     },
-    'd7z81zw5': {
+    'kji6d5hm': {
       'es': 'Estándar',
       'en': '',
     },
-    'dtuu2aiz': {
+    'ntvvsmf3': {
       'es': 'Clasic',
       'en': '',
     },
-    '9wlkbqy9': {
+    'cagyp3ar': {
       'es': 'Zr',
       'en': '',
     },
-    '8d6wdudp': {
+    'rkxbnyor': {
       'es': 'Metal Porcelana',
       'en': '',
     },
-    '2k3jmapb': {
+    'ihe1fsno': {
       'es': 'Emax',
       'en': '',
     },
@@ -1318,10 +1310,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'huhaq26v': {
       'es': 'Número de plataforma',
-      'en': '',
-    },
-    'qni72c56': {
-      'es': 'Subir odontograma',
       'en': '',
     },
     '3prz14m5': {
@@ -1369,6 +1357,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'k3clch6m': {
       'es': 'Coronas',
+      'en': '',
+    },
+    'y5c70d15': {
+      'es': 'Carillas',
+      'en': '',
+    },
+    'hqfgsfaf': {
+      'es': 'Solo modelos de resina',
+      'en': '',
+    },
+    'gbgd6e0n': {
+      'es': 'Incrustacion',
+      'en': '',
+    },
+    '2n5p8uf2': {
+      'es': 'Puentes',
+      'en': '',
+    },
+    'k1qffbtq': {
+      'es': 'Otros',
       'en': '',
     },
     'n7sy6b0z': {

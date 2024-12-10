@@ -1,20 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -79,28 +73,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? VerCatalogoWidget() : HomeWidget(),
+          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? VerCatalogoWidget() : HomeWidget(),
+              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
           path: '/infoLab1',
-          builder: (context, params) => InfoLab1Widget(),
+          builder: (context, params) => const InfoLab1Widget(),
         ),
         FFRoute(
           name: 'Contactenos',
           path: '/contactenos',
-          builder: (context, params) => ContactenosWidget(),
+          builder: (context, params) => const ContactenosWidget(),
         ),
         FFRoute(
           name: 'GuardarProductosLista',
           path: '/guardarProductosLista',
-          builder: (context, params) => GuardarProductosListaWidget(),
+          builder: (context, params) => const GuardarProductosListaWidget(),
         ),
         FFRoute(
           name: 'ReportePedidos',
@@ -121,9 +115,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'HistorialPedidos',
-          path: '/historialPedidos',
-          builder: (context, params) => HistorialPedidosWidget(
+          name: 'HistorialPedidosPENDIENTE',
+          path: '/historialPedidosPENDIENTE',
+          builder: (context, params) => HistorialPedidosPENDIENTEWidget(
             selectedMonth: params.getParam(
               'selectedMonth',
               ParamType.String,
@@ -133,57 +127,57 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'InfoLab2',
           path: '/infoLab2',
-          builder: (context, params) => InfoLab2Widget(),
+          builder: (context, params) => const InfoLab2Widget(),
         ),
         FFRoute(
           name: 'Conozcanos',
           path: '/conozcanos',
-          builder: (context, params) => ConozcanosWidget(),
+          builder: (context, params) => const ConozcanosWidget(),
         ),
         FFRoute(
           name: 'AccesibilidadEIdioma',
           path: '/accesibilidadEIdioma',
-          builder: (context, params) => AccesibilidadEIdiomaWidget(),
+          builder: (context, params) => const AccesibilidadEIdiomaWidget(),
         ),
         FFRoute(
           name: 'PedidosRecientes',
           path: '/pedidosRecientes',
-          builder: (context, params) => PedidosRecientesWidget(),
+          builder: (context, params) => const PedidosRecientesWidget(),
         ),
         FFRoute(
           name: 'MenuAdministrador',
           path: '/menuAdministrador',
-          builder: (context, params) => MenuAdministradorWidget(),
+          builder: (context, params) => const MenuAdministradorWidget(),
         ),
         FFRoute(
           name: 'IndexProducto',
           path: '/indexProducto',
-          builder: (context, params) => IndexProductoWidget(),
+          builder: (context, params) => const IndexProductoWidget(),
         ),
         FFRoute(
-          name: 'IniciSesion',
-          path: '/iniciSesion',
-          builder: (context, params) => IniciSesionWidget(),
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'agregarProducto',
           path: '/agregarProducto',
-          builder: (context, params) => AgregarProductoWidget(),
+          builder: (context, params) => const AgregarProductoWidget(),
         ),
         FFRoute(
           name: 'PasswordOlvidado',
           path: '/passwordOlvidado',
-          builder: (context, params) => PasswordOlvidadoWidget(),
+          builder: (context, params) => const PasswordOlvidadoWidget(),
         ),
         FFRoute(
           name: 'Perfil',
           path: '/perfil',
-          builder: (context, params) => PerfilWidget(),
+          builder: (context, params) => const PerfilWidget(),
         ),
         FFRoute(
           name: 'ConfiguracionCuenta',
           path: '/configuracionCuenta',
-          builder: (context, params) => ConfiguracionCuentaWidget(),
+          builder: (context, params) => const ConfiguracionCuentaWidget(),
         ),
         FFRoute(
           name: 'editarProducto',
@@ -201,7 +195,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'indexEmpleados',
           path: '/indexEmpleados',
-          builder: (context, params) => IndexEmpleadosWidget(),
+          builder: (context, params) => const IndexEmpleadosWidget(),
         ),
         FFRoute(
           name: 'detallesEmpleado',
@@ -220,32 +214,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'indexServicio',
           path: '/indexServicio',
-          builder: (context, params) => IndexServicioWidget(),
+          builder: (context, params) => const IndexServicioWidget(),
         ),
         FFRoute(
           name: 'agregarServicios',
           path: '/agregarServicios',
-          builder: (context, params) => AgregarServiciosWidget(),
+          builder: (context, params) => const AgregarServiciosWidget(),
         ),
         FFRoute(
           name: 'editarServicio',
           path: '/editarServicio',
-          builder: (context, params) => EditarServicioWidget(),
+          builder: (context, params) => const EditarServicioWidget(),
         ),
         FFRoute(
           name: 'Home',
           path: '/home',
-          builder: (context, params) => HomeWidget(),
+          builder: (context, params) => const HomeWidget(),
         ),
         FFRoute(
           name: 'ChaBot',
           path: '/chaBot',
-          builder: (context, params) => ChaBotWidget(),
+          builder: (context, params) => const ChaBotWidget(),
         ),
         FFRoute(
           name: 'IconoChatBot',
           path: '/iconoChatBot',
-          builder: (context, params) => IconoChatBotWidget(),
+          builder: (context, params) => const IconoChatBotWidget(),
         ),
         FFRoute(
           name: 'editarEmpleado',
@@ -264,32 +258,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Recordatorios',
           path: '/recordatorios',
-          builder: (context, params) => RecordatoriosWidget(),
+          builder: (context, params) => const RecordatoriosWidget(),
         ),
         FFRoute(
           name: 'Notificaciones',
           path: '/notificaciones',
-          builder: (context, params) => NotificacionesWidget(),
+          builder: (context, params) => const NotificacionesWidget(),
         ),
         FFRoute(
           name: 'agregarEmpleado',
           path: '/agregarEmpleado',
-          builder: (context, params) => AgregarEmpleadoWidget(),
+          builder: (context, params) => const AgregarEmpleadoWidget(),
         ),
         FFRoute(
           name: 'Formulario',
           path: '/formulario',
-          builder: (context, params) => FormularioWidget(),
+          builder: (context, params) => const FormularioWidget(),
         ),
         FFRoute(
           name: 'VerCatalogo',
           path: '/verCatalogo',
-          builder: (context, params) => VerCatalogoWidget(),
+          builder: (context, params) => const VerCatalogoWidget(),
         ),
         FFRoute(
           name: 'reserva',
           path: '/reserva',
-          builder: (context, params) => ReservaWidget(),
+          builder: (context, params) => const ReservaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -460,7 +454,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/home';
+            return '/login';
           }
           return null;
         },
@@ -527,7 +521,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'agregar_empleado_model.dart';
 export 'agregar_empleado_model.dart';
 
@@ -24,6 +21,8 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AgregarEmpleadoModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -44,14 +43,14 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: EdgeInsets.all(6.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlutterFlowIconButton(
               borderColor: FlutterFlowTheme.of(context).secondary,
               borderRadius: 100.0,
               borderWidth: 1.0,
               buttonSize: 48.0,
               fillColor: FlutterFlowTheme.of(context).secondary,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30.0,
@@ -72,11 +71,11 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
-        body: SafeArea(
+        body: const SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,

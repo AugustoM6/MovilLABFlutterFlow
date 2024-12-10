@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -6,10 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'ver_catalogo_model.dart';
 export 'ver_catalogo_model.dart';
@@ -30,6 +26,8 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => VerCatalogoModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -75,7 +73,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -85,7 +83,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -99,6 +97,21 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                         ),
                         FFLocalizations.of(context).getText(
                           'k3clch6m' /* Coronas */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'y5c70d15' /* Carillas */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'hqfgsfaf' /* Solo modelos de resina */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'gbgd6e0n' /* Incrustacion */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          '2n5p8uf2' /* Puentes */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'k1qffbtq' /* Otros */,
                         )
                       ],
                       onChanged: (val) =>
@@ -125,7 +138,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                       borderWidth: 0.0,
                       borderRadius: 8.0,
                       margin:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
                       isOverButton: false,
                       isSearchable: false,
@@ -133,7 +146,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: FlutterFlowIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
@@ -190,7 +203,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                           final columnProductoRecord =
                               columnProductoRecordList[columnIndex];
                           return Padding(
-                            padding: EdgeInsets.all(14.0),
+                            padding: const EdgeInsets.all(14.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -214,9 +227,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsets.all(5.0),
+                                          padding: const EdgeInsets.all(5.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               columnProductoRecord.nombre,
@@ -233,7 +246,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           valueOrDefault<String>(
                                             columnProductoRecord.descripcion,
@@ -252,7 +265,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                 ),
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -260,7 +273,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   30.0, 0.0, 0.0, 0.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -280,15 +293,15 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                                 builder: (alertDialogContext) {
                                                   return WebViewAware(
                                                     child: AlertDialog(
-                                                      title: Text('Favoritos'),
-                                                      content: Text(
+                                                      title: const Text('Favoritos'),
+                                                      content: const Text(
                                                           'Producto agregados a reserva'),
                                                       actions: [
                                                         TextButton(
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: Text('Ok'),
+                                                          child: const Text('Ok'),
                                                         ),
                                                       ],
                                                     ),
@@ -313,9 +326,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 0.0, 0.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -335,15 +348,15 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                                               builder: (alertDialogContext) {
                                                 return WebViewAware(
                                                   child: AlertDialog(
-                                                    title: Text('Favoritos'),
-                                                    content: Text(
+                                                    title: const Text('Favoritos'),
+                                                    content: const Text(
                                                         'Producto agregados a reserva'),
                                                     actions: [
                                                       TextButton(
                                                         onPressed: () =>
                                                             Navigator.pop(
                                                                 alertDialogContext),
-                                                        child: Text('Ok'),
+                                                        child: const Text('Ok'),
                                                       ),
                                                     ],
                                                   ),
@@ -372,7 +385,7 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(35.0),
+                padding: const EdgeInsets.all(35.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -386,10 +399,10 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).tertiary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
