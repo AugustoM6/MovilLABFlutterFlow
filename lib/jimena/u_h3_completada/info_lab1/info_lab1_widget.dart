@@ -41,7 +41,7 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -50,7 +50,7 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
             buttonSize: 60.0,
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
+              color: FlutterFlowTheme.of(context).info,
               size: 30.0,
             ),
             onPressed: () async {
@@ -63,7 +63,7 @@ class _InfoLab1WidgetState extends State<InfoLab1Widget> {
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
-                  color: FlutterFlowTheme.of(context).primaryText,
+                  color: FlutterFlowTheme.of(context).info,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w900,
@@ -333,8 +333,8 @@ Edificio El Robl... */
                         padding: const EdgeInsets.all(5.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            'https://scontent.fsyq4-1.fna.fbcdn.net/v/t39.30808-6/402855150_786516876613145_8877351762694583600_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VJNOd3F61XgQ7kNvgFIb7fN&_nc_zt=23&_nc_ht=scontent.fsyq4-1.fna&_nc_gid=AYgZG-x6uLr9LMdReFlSSbP&oh=00_AYBzBJngTLSgE-Dr5BGNEX3E8Zszm1WzG0EZwlbCLzBuQg&oe=673DC956',
+                          child: Image.asset(
+                            'assets/images/EquipoED.jpg',
                             width: 300.0,
                             height: 200.0,
                             fit: BoxFit.cover,

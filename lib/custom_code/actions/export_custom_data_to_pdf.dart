@@ -138,6 +138,7 @@ Future<void> exportCustomDataToPdf() async {
   }
 }
 
+// Helper para obtener bytes de imágenes desde URLs
 Future<Uint8List?> _fetchImageBytes(String imagePath) async {
   try {
     final response = await http.get(Uri.parse(imagePath));

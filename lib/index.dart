@@ -1,5 +1,6 @@
 // Export pages
-export '/jimena/uh3/info_lab1/info_lab1_widget.dart' show InfoLab1Widget;
+export '/jimena/u_h3_completada/info_lab1/info_lab1_widget.dart'
+    show InfoLab1Widget;
 export '/milagro/u_h5_completa/contactenos/contactenos_widget.dart'
     show ContactenosWidget;
 export '/milagro/u_h24_completa/guardar_productos_lista/guardar_productos_lista_widget.dart'
@@ -8,7 +9,8 @@ export '/milagro/u_h23_completa/reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f/report
     show ReportePedidosFALTABOTONPDFWidget;
 export '/milagro/u_h23_completa/historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f/historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_widget.dart'
     show HistorialPedidosFALTABOTONPDFWidget;
-export '/jimena/uh3/info_lab2/info_lab2_widget.dart' show InfoLab2Widget;
+export '/jimena/u_h3_completada/info_lab2/info_lab2_widget.dart'
+    show InfoLab2Widget;
 export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
     show ConozcanosWidget;
 export '/jimena/h_u9x19x30_compeletada/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
@@ -57,7 +59,7 @@ export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
 export '/milagro/u_h2_completa/ver_catalogo/ver_catalogo_widget.dart'
     show VerCatalogoWidget;
 export '/milagro/u_h2_completa/reserva/reserva_widget.dart' show ReservaWidget;
-export '/milagro/uh21/ver_catalogo_por_categoria/ver_catalogo_por_categoria_widget.dart'
+export '/milagro/u_h21_completa/ver_catalogo_por_categoria/ver_catalogo_por_categoria_widget.dart'
     show VerCatalogoPorCategoriaWidget;
 export '/pablo/hu8/promociones/promociones/promociones_widget.dart'
     show PromocionesWidget;
