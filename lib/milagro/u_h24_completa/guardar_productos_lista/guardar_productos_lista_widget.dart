@@ -48,15 +48,15 @@ class _GuardarProductosListaWidgetState
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
             child: FlutterFlowIconButton(
-              borderRadius: 200.0,
-              buttonSize: 40.0,
-              fillColor: const Color(0xFF8EE0EC),
+              borderRadius: 30.0,
+              buttonSize: 30.0,
+              fillColor: FlutterFlowTheme.of(context).secondary,
               icon: Icon(
-                Icons.arrow_circle_left_outlined,
-                color: FlutterFlowTheme.of(context).primaryBackground,
-                size: 30.0,
+                Icons.arrow_back_rounded,
+                color: FlutterFlowTheme.of(context).info,
+                size: 24.0,
               ),
               onPressed: () async {
                 context.safePop();
@@ -67,17 +67,20 @@ class _GuardarProductosListaWidgetState
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                FFLocalizations.of(context).getText(
-                  'ztqvskpj' /* Lista de Deseos */,
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 0.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'ztqvskpj' /* Lista de Deseos */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Readex Pro',
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        fontSize: 24.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w900,
+                      ),
                 ),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Readex Pro',
-                      color: FlutterFlowTheme.of(context).primaryText,
-                      fontSize: 25.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.bold,
-                    ),
               ),
             ],
           ),

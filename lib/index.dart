@@ -15,7 +15,7 @@ export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
     show ConozcanosWidget;
 export '/jimena/h_u9x19x30_compeletada/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
     show AccesibilidadEIdiomaWidget;
-export '/jimena/h_u25_pendiente_fecha_y_estado/pedidos_recientes/pedidos_recientes_widget.dart'
+export '/jimena/h_u25x14x15_pendiente_fecha_y_estado/pedidos_recientes/pedidos_recientes_widget.dart'
     show PedidosRecientesWidget;
 export '/augusto/hu28/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;

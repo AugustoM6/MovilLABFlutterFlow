@@ -45,7 +45,6 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
           leading: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(10.0, 1.0, 0.0, 10.0),
             child: FlutterFlowIconButton(
-              borderColor: FlutterFlowTheme.of(context).secondaryBackground,
               borderRadius: 30.0,
               borderWidth: 2.0,
               buttonSize: 40.0,

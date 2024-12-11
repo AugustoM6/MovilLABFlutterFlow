@@ -60,7 +60,7 @@ class _VerCatalogoPorCategoriaWidgetState
               context.safePop();
             },
             child: Icon(
-              Icons.arrow_circle_left,
+              Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).secondary,
               size: 40.0,
             ),
@@ -70,16 +70,14 @@ class _VerCatalogoPorCategoriaWidgetState
               'hbtexowr' /* Catalogo de Productos */,
             ),
             textAlign: TextAlign.start,
-            style: FlutterFlowTheme.of(context).displaySmall.override(
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
-                  fontSize: 28.0,
                   letterSpacing: 0.0,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w900,
                 ),
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,

@@ -52,9 +52,9 @@ class _ReservaWidgetState extends State<ReservaWidget> {
               context.safePop();
             },
             child: Icon(
-              Icons.arrow_circle_left,
+              Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).secondary,
-              size: 40.0,
+              size: 30.0,
             ),
           ),
           title: Text(
@@ -62,16 +62,15 @@ class _ReservaWidgetState extends State<ReservaWidget> {
               'xxm85ko0' /* Reserva */,
             ),
             textAlign: TextAlign.start,
-            style: FlutterFlowTheme.of(context).displaySmall.override(
+            style: FlutterFlowTheme.of(context).headlineLarge.override(
                   fontFamily: 'Inter',
-                  fontSize: 28.0,
+                  fontSize: 24.0,
                   letterSpacing: 0.0,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w900,
                 ),
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,

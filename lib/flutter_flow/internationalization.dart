@@ -148,81 +148,84 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'edevuccu': {
       'es': 'Horario:\n',
-      'en': '',
+      'en': 'Schedule:',
     },
     'ju8lu7dx': {
       'es': 'De Lunes a Viernes\n',
-      'en': '',
+      'en': 'Monday to Friday',
     },
     '4omp2u46': {
       'es': 'de 7am - 5pm',
-      'en': '',
+      'en': 'from 7am - 5pm',
     },
     'r6qrh6x4': {
       'es': 'Dirección:\n',
-      'en': '',
+      'en': 'Address:',
     },
     'yers8ym0': {
       'es':
           'Del Ice 50m N\nEdificio El Roble \nsegundo piso \nHeredia, 40101, \nCosta Rica.',
-      'en': '',
+      'en':
+          'Del Ice 50m N\nEl Roble Building\nsecond floor\nHeredia, 40101,\nCosta Rica.',
     },
     'bj3a1vvo': {
       'es': 'Sobre el laboratorio:\n',
-      'en': '',
+      'en': 'About the laboratory:',
     },
     'diysiin8': {
       'es':
           'El Laboratorio Esencia Dental (AJ Dental Design) es un laboratorio dental especializado en crear prótesis dentales fijas de alta estética natural que se adaptan a las necesidades de cada paciente; ubicado en Heredia, Costa Rica, trabaja en estrecha colaboración con dentistas, ortodoncistas estéticos y prostodoncistas para ofrecer soluciones protésicas avanzadas. \n\nFue fundado el 17 de octubre del 2018, ha brindado 7 años de servicio en el área de la salud dental, catalogado como uno de los mejores laboratorios dentales y destacado por su compromiso como empresa con la excelencia y la atención al detalle en cada etapa del proceso.',
-      'en': '',
+      'en':
+          'Esencia Dental Laboratory (AJ Dental Design) is a dental laboratory specialized in creating highly aesthetic fixed dental prostheses that adapt to the needs of each patient; located in Heredia, Costa Rica, it works closely with dentists, aesthetic orthodontists and prosthodontists to offer advanced prosthetic solutions. \n\nIt was founded on October 17, 2018, and has provided 7 years of service in the area of dental health, listed as one of the best dental laboratories and noted for its commitment as a company to excellence and attention to detail at every stage of the process.',
     },
     'h9melw03': {
       'es': 'Ver local asociado',
-      'en': '',
+      'en': 'See associated premises',
     },
     '4ug0jyih': {
       'es': 'Laboratorio Principal',
-      'en': '',
+      'en': 'Main Laboratory',
     },
     'y6fca95k': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Contactenos
   {
     'p94tc1lp': {
       'es': 'TD. Javier Rojas Castaño \n Director',
-      'en': '',
+      'en': 'TD. Javier Rojas Castaño \nDirector',
     },
     '3yk7zb72': {
       'es':
           'Comunicador Social - Periodista egresado de la Universidad de la Sabana, con 12 años de experiencia como ceramista dental de alta estética. Propietario de Esencia Dental en Costa Rica, especializado en prótesis fijas. Líder en Viax Dental Lab, experto en planeación de sonrisas y restauraciones cerámicas mínimamente invasivas, miembro de Ivoclar Vivadent en el uso de Zirconio Nexxzr+. Capacitado por destacados técnicos como Nondas Vlachopoulos y August Bruguera, y con participación en seminarios de Pascal Magne y Sidney Kina.',
-      'en': '',
+      'en':
+          'Social Communicator - Journalist graduated from the Universidad de la Sabana, with 12 years of experience as a highly aesthetic dental ceramist. Owner of Esencia Dental in Costa Rica, specialized in fixed prosthetics. Leader at Viax Dental Lab, expert in smile planning and minimally invasive ceramic restorations, member of Ivoclar Vivadent in the use of Zirconium Nexxzr+. Trained by leading technicians such as Nondas Vlachopoulos and August Bruguera, and with participation in seminars by Pascal Magne and Sidney Kina.',
     },
     'gft3qctx': {
       'es': 'Detalles de contacto',
-      'en': '',
+      'en': 'Contact details',
     },
     'urqnmtnt': {
       'es': '+506 8727 - 1239',
-      'en': '',
+      'en': '+506 8727 - 1239',
     },
     'gtk7xkez': {
       'es': 'Visítanos en Esencia Dental Costa Rica',
-      'en': '',
+      'en': 'Visit us at Esencia Dental Costa Rica',
     },
     'tttnru7u': {
       'es': 'Síguenos en Instagram - Esencia Dental',
-      'en': '',
+      'en': 'Follow us on Instagram - Dental Essence',
     },
     't3kjcbcc': {
       'es': '¡Contáctenos!',
-      'en': '',
+      'en': 'Contact us!',
     },
     'ogbshy1o': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // GuardarProductosLista
@@ -949,62 +952,62 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'kysbfh16': {
       'es': '¡Bienvenidx a la app!',
-      'en': '',
+      'en': 'Welcome to the app!',
     },
     'ev1w618o': {
       'es': 'Menú',
-      'en': '',
+      'en': 'Menu',
     },
     'uu4112kc': {
       'es': 'Productos y Servicios',
-      'en': '',
+      'en': 'Products and Services',
     },
     '1c4u96f9': {
       'es': 'Productos por Categoria',
-      'en': '',
+      'en': 'Products by Category',
     },
     'm1vfrtfc': {
       'es': 'Historial de pedidos',
-      'en': '',
+      'en': 'Order History',
     },
     '71z8y084': {
       'es': 'Sobre el Laboratorio ED',
-      'en': '',
+      'en': 'About ED Laboratory',
     },
     '63hkglem': {
       'es': 'Configuración de la cuenta',
-      'en': '',
+      'en': 'Account Settings',
     },
     '0yf107ll': {
       'es': 'Lista de deseos',
-      'en': '',
+      'en': 'Wishlist',
     },
     'wq4s0yp0': {
       'es': 'Contáctenos',
-      'en': '',
+      'en': 'Contact us',
     },
     'tjfbgr01': {
       'es': 'Realizar Pedido',
-      'en': '',
+      'en': 'Place Order',
     },
     '4s5xgmxz': {
       'es': 'Cerrar Sesión',
-      'en': '',
+      'en': 'Close Session',
     },
     'hmbufnz5': {
       'es': 'Eliminar Cuenta',
-      'en': '',
+      'en': 'Delete Account',
     },
   },
   // ChaBot
   {
     'xvjtcjyo': {
       'es': 'ChatBot',
-      'en': '',
+      'en': 'ChatBot',
     },
     'knhn7xdb': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // IconoChatBot
@@ -1065,98 +1068,98 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'tge26s5n': {
       'es': '¿Desea modificar un rocordatorio existente?',
-      'en': '',
+      'en': 'Do you want to modify an existing reminder?',
     },
     'fbzs6vj1': {
       'es': 'Option 1',
-      'en': '',
+      'en': 'Option 1',
     },
     'm1obdrcz': {
       'es': 'Option 2',
-      'en': '',
+      'en': 'Option 2',
     },
     '7jkqptd7': {
       'es': 'Option 3',
-      'en': '',
+      'en': 'Option 3',
     },
     'b548t45n': {
       'es': 'Select...',
-      'en': '',
+      'en': 'Select...',
     },
     'g8pkxpw1': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     'wmbndr7r': {
       'es': 'Configurar un nuevo recordatorio',
-      'en': '',
+      'en': 'Set a new reminder',
     },
     'sg36wgll': {
       'es': 'Option 1',
-      'en': '',
+      'en': 'Option 1',
     },
     'tktigcj3': {
       'es': 'Option 2',
-      'en': '',
+      'en': 'Option 2',
     },
     'mfbnp8z2': {
       'es': 'Option 3',
-      'en': '',
+      'en': 'Option 3',
     },
     'vf9h5gqp': {
       'es': 'Select...',
-      'en': '',
+      'en': 'Select...',
     },
     '4us9epcw': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     '5hpxf0fk': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'qs1xih45': {
       'es': 'Guardar',
-      'en': '',
+      'en': 'Keep',
     },
     'aj9w21ig': {
       'es': 'Recordatorio',
-      'en': '',
+      'en': 'Reminder',
     },
     '75rxv9f7': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Notificaciones
   {
     'i11gdgbn': {
       'es': 'Desactivar todas las notificaciones',
-      'en': '',
+      'en': 'Disable all notifications',
     },
     '98x0zgwc': {
       'es': 'Activar notificaciones críticas',
-      'en': '',
+      'en': 'Enable critical notifications',
     },
     'bh4et3j6': {
       'es': 'Configurar un nuevo recordatorio',
-      'en': '',
+      'en': 'Set a new reminder',
     },
     'oq7rl0k9': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'gwszih58': {
       'es': 'Guardar',
-      'en': '',
+      'en': 'Keep',
     },
     'z9aowxjh': {
       'es': 'Notificaciones',
-      'en': '',
+      'en': 'Notifications',
     },
     '1u859o1e': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // agregarEmpleado
@@ -1478,7 +1481,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bnlslorb': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Miscellaneous

@@ -1,9 +1,11 @@
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 export 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 
@@ -51,39 +53,36 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Container(
-              width: 100.0,
-              height: 100.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).secondaryBackground,
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://th.bing.com/th/id/OIP.iNYGi1zZQSEtNGqk-HBbOwHaHa?rs=1&pid=ImgDetMain',
-                  width: 200.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
           title: Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                FFLocalizations.of(context).getText(
-                  'tc7f0pk5' /* Historial de pedidos */,
+              FlutterFlowIconButton(
+                borderRadius: 10.0,
+                buttonSize: 40.0,
+                fillColor: FlutterFlowTheme.of(context).primary,
+                icon: FaIcon(
+                  FontAwesomeIcons.clipboardList,
+                  color: FlutterFlowTheme.of(context).info,
+                  size: 24.0,
                 ),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Readex Pro',
-                      fontSize: 25.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                onPressed: () {
+                  print('IconButton pressed ...');
+                },
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'tc7f0pk5' /* Historial de pedidos */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Readex Pro',
+                        fontSize: 25.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
               ),
             ],
           ),

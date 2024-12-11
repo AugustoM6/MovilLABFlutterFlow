@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 export 'reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
@@ -56,13 +57,13 @@ class _ReportePedidosFALTABOTONPDFWidgetState
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Padding(
-            padding: const EdgeInsets.all(2.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
             child: FlutterFlowIconButton(
-              borderRadius: 200.0,
-              buttonSize: 40.0,
-              fillColor: const Color(0xFF92D8E2),
+              borderRadius: 30.0,
+              buttonSize: 30.0,
+              fillColor: FlutterFlowTheme.of(context).secondary,
               icon: Icon(
-                Icons.arrow_circle_left_outlined,
+                Icons.arrow_back_rounded,
                 color: FlutterFlowTheme.of(context).info,
                 size: 24.0,
               ),
@@ -884,8 +885,8 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await actions.exportCustomDataToPdf();
                       },
                       text: FFLocalizations.of(context).getText(
                         'e9jlje35' /* Generar */,
