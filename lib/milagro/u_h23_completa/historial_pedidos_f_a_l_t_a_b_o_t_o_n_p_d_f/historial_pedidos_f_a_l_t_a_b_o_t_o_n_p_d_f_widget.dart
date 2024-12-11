@@ -218,7 +218,7 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
                   children: [
                     FFButtonWidget(
                       onPressed: () async {
-                        await actions.exportPedidosToPdf();
+                        await actions.exportCustomDataToPdf();
                       },
                       text: FFLocalizations.of(context).getText(
                         'ifyuo4cn' /* Generar */,
