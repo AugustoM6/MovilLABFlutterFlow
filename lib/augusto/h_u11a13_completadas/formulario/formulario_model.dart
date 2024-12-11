@@ -32,9 +32,8 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
       checkRecursosValueController?.value = v;
 
   bool isDataUploading1 = false;
-  FFUploadedFile uploadedLocalFile1 =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl1 = '';
+  List<FFUploadedFile> uploadedLocalFiles1 = [];
+  List<String> uploadedFileUrls1 = [];
 
   // State field(s) for txOtrosRecursos widget.
   FocusNode? txOtrosRecursosFocusNode;

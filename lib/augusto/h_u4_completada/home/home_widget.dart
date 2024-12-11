@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -43,34 +42,26 @@ class _HomeWidgetState extends State<HomeWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 30.0,
-            ),
-            onPressed: () async {
-              context.pop();
-            },
-          ),
-          title: Text(
-            FFLocalizations.of(context).getText(
-              'pjx461ar' /* Page Title */,
-            ),
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter',
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  fontSize: 22.0,
-                  letterSpacing: 0.0,
-                ),
-          ),
           actions: const [],
+          flexibleSpace: FlexibleSpaceBar(
+            background: Container(
+              width: 100.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    FlutterFlowTheme.of(context).primary,
+                    FlutterFlowTheme.of(context).primaryBackground
+                  ],
+                  stops: const [0.0, 1.0],
+                  begin: const AlignmentDirectional(0.0, -1.0),
+                  end: const AlignmentDirectional(0, 1.0),
+                ),
+              ),
+            ),
+          ),
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -101,6 +92,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w900,
                                 ),
                           ),
                           AuthUserStreamWidget(
@@ -112,6 +104,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     fontFamily: 'Inter',
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
                             ),
                           ),
@@ -120,22 +113,31 @@ class _HomeWidgetState extends State<HomeWidget> {
                       Material(
                         color: Colors.transparent,
                         elevation: 2.0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
+                        shape: const CircleBorder(),
                         child: Container(
                           width: 60.0,
                           height: 60.0,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: BorderRadius.circular(30.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 4.0,
+                                color: Color(0x33000000),
+                                offset: Offset(
+                                  2.0,
+                                  2.0,
+                                ),
+                                spreadRadius: 1.0,
+                              )
+                            ],
+                            shape: BoxShape.circle,
                           ),
                           child: AuthUserStreamWidget(
                             builder: (context) => ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              child: Image.network(
-                                currentUserPhoto,
+                              child: Image.asset(
+                                'assets/images/LogoLabED.jpg',
                                 width: 60.0,
                                 height: 60.0,
                                 fit: BoxFit.cover,
@@ -157,6 +159,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(16.0),
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 2.0,
+                        ),
                       ),
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
@@ -166,13 +172,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'ev1w618o' /* Menú de productosservicios */,
+                                'ev1w618o' /* Menú */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Inter',
                                     letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w800,
                                   ),
                             ),
                             InkWell(
@@ -182,6 +189,59 @@ class _HomeWidgetState extends State<HomeWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed('VerCatalogo');
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        width: 40.0,
+                                        height: 40.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .accent3,
+                                          borderRadius:
+                                              BorderRadius.circular(20.0),
+                                        ),
+                                        child: Icon(
+                                          Icons.shopping_bag,
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                          size: 24.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          'uu4112kc' /* Productos y Servicios */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ].divide(const SizedBox(width: 12.0)),
+                                  ),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 24.0,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('VerCatalogoPorCategoria');
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -209,7 +269,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'uu4112kc' /* Productos y Servicios */,
+                                          '1c4u96f9' /* Productos por Categoria */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
@@ -222,8 +282,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   ),
                                   Icon(
                                     Icons.chevron_right,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 24.0,
                                   ),
                                 ],
@@ -236,7 +295,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.goNamed(
-                                  'ReportePedidos',
+                                  'ReportePedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'mes': serializeParam(
                                       '',
@@ -284,8 +343,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   ),
                                   Icon(
                                     Icons.chevron_right,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 24.0,
                                   ),
                                 ],
@@ -329,8 +387,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 ),
                                 Icon(
                                   Icons.chevron_right,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   size: 24.0,
                                 ),
                               ],
@@ -373,8 +430,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 ),
                                 Icon(
                                   Icons.chevron_right,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   size: 24.0,
                                 ),
                               ],
@@ -426,8 +482,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   ),
                                   Icon(
                                     Icons.chevron_right,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 24.0,
                                   ),
                                 ],
@@ -480,8 +535,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   ),
                                   Icon(
                                     Icons.chevron_right,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 24.0,
                                   ),
                                 ],
@@ -534,8 +588,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   ),
                                   Icon(
                                     Icons.chevron_right,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 24.0,
                                   ),
                                 ],
@@ -560,14 +613,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                         text: FFLocalizations.of(context).getText(
                           '4s5xgmxz' /* Cerrar Sesión */,
                         ),
+                        icon: const Icon(
+                          Icons.logout_rounded,
+                          size: 20.0,
+                        ),
                         options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          width: MediaQuery.sizeOf(context).width * 0.5,
                           height: 48.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).error,
+                          color: FlutterFlowTheme.of(context).tertiary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
@@ -575,6 +632,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           elevation: 0.0,
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
+                            width: 1.0,
+                          ),
                           borderRadius: BorderRadius.circular(24.0),
                         ),
                       ),
@@ -588,7 +649,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           'hmbufnz5' /* Eliminar Cuenta */,
                         ),
                         options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          width: MediaQuery.sizeOf(context).width * 0.5,
                           height: 48.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),

@@ -49,21 +49,23 @@ int conversionInteger(double value) {
   return resultado;
 }
 
-int? numeroFac() {
+int factura() {
+  // Realizame uncodigo para que se consulte la colleccion formulario, el campo numeroFactura de tipo integer y que se sume +1 y lo devuelva esta funcion se debe hacer autromaticamente y no usar Nullable
+  int numeroFactura = 0;
+
+  // Consultar la colección 'formulario' en Firestore
   FirebaseFirestore.instance
       .collection('formulario')
-      .orderBy('numFactura', descending: true)
-      .limit(1)
       .get()
-      .then((snapshot) {
-    if (snapshot.docs.isNotEmpty) {
-      final lastFactura = snapshot.docs.first.data()['numFactura'] as int;
-      return lastFactura + 1;
-    } else {
-      return 1;
-    }
-  }).catchError((error) {
-    print('Error al consultar el número de factura: $error');
-    return null;
+      .then((QuerySnapshot querySnapshot) {
+    // Iterar sobre los documentos en la colección
+    querySnapshot.docs.forEach((doc) {
+      // Obtener el valor del campo 'numeroFactura' como entero
+      int factura = doc['numeroFactura'] as int;
+      // Sumar 1 al valor obtenido
+      numeroFactura += factura + 1;
+    });
   });
+
+  return numeroFactura;
 }

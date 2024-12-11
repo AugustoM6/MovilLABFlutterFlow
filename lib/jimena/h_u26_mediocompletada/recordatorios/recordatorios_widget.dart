@@ -67,14 +67,14 @@ class _RecordatoriosWidgetState extends State<RecordatoriosWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'aj9w21ig' /* Notificaciones */,
+              'aj9w21ig' /* Recordatorio */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
                   color: FlutterFlowTheme.of(context).primaryText,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                 ),
           ),
           actions: const [],

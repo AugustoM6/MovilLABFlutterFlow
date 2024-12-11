@@ -93,9 +93,8 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  fontSize: 22.0,
                   letterSpacing: 0.0,
+                  fontWeight: FontWeight.w900,
                 ),
           ),
           actions: const [],
@@ -169,6 +168,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                               .override(
                                 fontFamily: 'Inter',
                                 color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 21.0,
                                 letterSpacing: 0.0,
                               ),
                         ),

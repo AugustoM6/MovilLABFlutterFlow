@@ -143,18 +143,43 @@ class _LoginWidgetState extends State<LoginWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 16.0),
-                child: Text(
-                  FFLocalizations.of(context).getText(
-                    '6zk2njyh' /* Logo */,
-                  ),
-                  style: FlutterFlowTheme.of(context).displaySmall.override(
-                        fontFamily: 'Plus Jakarta Sans',
-                        color: const Color(0xFF101213),
-                        fontSize: 36.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w600,
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 200.0,
+                      height: 200.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x33000000),
+                            offset: Offset(
+                              2.0,
+                              2.0,
+                            ),
+                            spreadRadius: 2.0,
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(100.0),
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                        ),
                       ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100.0),
+                        child: Image.asset(
+                          'assets/images/LogoLabED.jpg',
+                          width: 200.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Expanded(
@@ -219,7 +244,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     color: const Color(0xFF101213),
                                                     fontSize: 24.0,
                                                     letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.bold,
                                                   ),
                                             ),
                                             Padding(
@@ -671,7 +696,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: const Color(0xFF4B39EF),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiary,
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall
@@ -1292,7 +1319,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
-                                                    color: const Color(0xFF4B39EF),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .tertiary,
                                                     textStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .titleSmall

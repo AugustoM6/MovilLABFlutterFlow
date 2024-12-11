@@ -45,19 +45,23 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30.0,
-          borderWidth: 1.0,
-          buttonSize: 60.0,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.of(context).primaryText,
-            size: 30.0,
+        leading: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
+            fillColor: FlutterFlowTheme.of(context).secondary,
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.of(context).primaryBackground,
+              size: 30.0,
+            ),
+            onPressed: () async {
+              context.pop();
+            },
           ),
-          onPressed: () async {
-            context.pop();
-          },
         ),
         title: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
@@ -136,13 +140,26 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                   ),
                 ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 0.0, 10.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'h35sncml' /* Has olvidado tu contraseña */,
+                    'h35sncml' /* Olvidaste la contraseña */,
                   ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Inter',
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 10.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'vz2qurcn' /* Siempre mantén tu cuenta segur... */,
+                  ),
+                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily: 'Readex Pro',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -151,7 +168,7 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'vz2qurcn' /* Le enviaremos un correo electr... */,
+                    'l1io98rq' /* Le enviaremos un correo electr... */,
                   ),
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
@@ -262,7 +279,7 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FlutterFlowTheme.of(context).secondary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Readex Pro',

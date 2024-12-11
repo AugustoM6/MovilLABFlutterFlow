@@ -46,11 +46,6 @@ class FormularioRecord extends FirestoreRecord {
   List<String> get recursosCheck => _recursosCheck ?? const [];
   bool hasRecursosCheck() => _recursosCheck != null;
 
-  // "imagenRecursos" field.
-  String? _imagenRecursos;
-  String get imagenRecursos => _imagenRecursos ?? '';
-  bool hasImagenRecursos() => _imagenRecursos != null;
-
   // "otrosRecursos" field.
   String? _otrosRecursos;
   String get otrosRecursos => _otrosRecursos ?? '';
@@ -116,6 +111,11 @@ class FormularioRecord extends FirestoreRecord {
   String get imagenImplante => _imagenImplante ?? '';
   bool hasImagenImplante() => _imagenImplante != null;
 
+  // "imagenRecursos" field.
+  List<String>? _imagenRecursos;
+  List<String> get imagenRecursos => _imagenRecursos ?? const [];
+  bool hasImagenRecursos() => _imagenRecursos != null;
+
   void _initializeFields() {
     _edad = castToType<int>(snapshotData['edad']);
     _genero = snapshotData['genero'] as String?;
@@ -123,7 +123,6 @@ class FormularioRecord extends FirestoreRecord {
     _nombreDoc = snapshotData['nombreDoc'] as String?;
     _nombrePaciente = snapshotData['nombrePaciente'] as String?;
     _recursosCheck = getDataList(snapshotData['recursosCheck']);
-    _imagenRecursos = snapshotData['imagenRecursos'] as String?;
     _otrosRecursos = snapshotData['otrosRecursos'] as String?;
     _trabajoCheck = getDataList(snapshotData['trabajoCheck']);
     _otroTrabajo = snapshotData['otroTrabajo'] as String?;
@@ -137,6 +136,7 @@ class FormularioRecord extends FirestoreRecord {
     _fecha = snapshotData['fecha'] as String?;
     _numeroFactura = castToType<int>(snapshotData['numeroFactura']);
     _imagenImplante = snapshotData['imagenImplante'] as String?;
+    _imagenRecursos = getDataList(snapshotData['imagenRecursos']);
   }
 
   static CollectionReference get collection =>
@@ -179,7 +179,6 @@ Map<String, dynamic> createFormularioRecordData({
   String? infoRecursos,
   String? nombreDoc,
   String? nombrePaciente,
-  String? imagenRecursos,
   String? otrosRecursos,
   String? otroTrabajo,
   String? marca,
@@ -199,7 +198,6 @@ Map<String, dynamic> createFormularioRecordData({
       'infoRecursos': infoRecursos,
       'nombreDoc': nombreDoc,
       'nombrePaciente': nombrePaciente,
-      'imagenRecursos': imagenRecursos,
       'otrosRecursos': otrosRecursos,
       'otroTrabajo': otroTrabajo,
       'marca': marca,
@@ -229,7 +227,6 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e1?.nombreDoc == e2?.nombreDoc &&
         e1?.nombrePaciente == e2?.nombrePaciente &&
         listEquality.equals(e1?.recursosCheck, e2?.recursosCheck) &&
-        e1?.imagenRecursos == e2?.imagenRecursos &&
         e1?.otrosRecursos == e2?.otrosRecursos &&
         listEquality.equals(e1?.trabajoCheck, e2?.trabajoCheck) &&
         e1?.otroTrabajo == e2?.otroTrabajo &&
@@ -242,7 +239,8 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e1?.observacionesFinales == e2?.observacionesFinales &&
         e1?.fecha == e2?.fecha &&
         e1?.numeroFactura == e2?.numeroFactura &&
-        e1?.imagenImplante == e2?.imagenImplante;
+        e1?.imagenImplante == e2?.imagenImplante &&
+        listEquality.equals(e1?.imagenRecursos, e2?.imagenRecursos);
   }
 
   @override
@@ -253,7 +251,6 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e?.nombreDoc,
         e?.nombrePaciente,
         e?.recursosCheck,
-        e?.imagenRecursos,
         e?.otrosRecursos,
         e?.trabajoCheck,
         e?.otroTrabajo,
@@ -266,7 +263,8 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e?.observacionesFinales,
         e?.fecha,
         e?.numeroFactura,
-        e?.imagenImplante
+        e?.imagenImplante,
+        e?.imagenRecursos
       ]);
 
   @override

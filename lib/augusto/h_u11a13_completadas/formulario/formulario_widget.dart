@@ -78,32 +78,75 @@ class _FormularioWidgetState extends State<FormularioWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            buttonSize: 48.0,
-            icon: Icon(
-              Icons.arrow_back,
-              color: FlutterFlowTheme.of(context).info,
-              size: 24.0,
-            ),
-            onPressed: () {
-              print('IconButton pressed ...');
-            },
-          ),
-          title: Text(
-            FFLocalizations.of(context).getText(
-              'ovxe48tm' /* Solicitud de Trabajo */,
-            ),
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter',
-                  color: FlutterFlowTheme.of(context).info,
-                  letterSpacing: 0.0,
-                ),
-          ),
           actions: const [],
+          flexibleSpace: FlexibleSpaceBar(
+            background: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: FlutterFlowIconButton(
+                      borderRadius: 30.0,
+                      fillColor: FlutterFlowTheme.of(context).secondary,
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: FlutterFlowTheme.of(context).info,
+                        size: 24.0,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'ovxe48tm' /* Formulario */,
+                      ),
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: 'Inter',
+                                color: FlutterFlowTheme.of(context).secondary,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(70.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        shape: BoxShape.circle,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100.0),
+                        child: Image.asset(
+                          'assets/images/LogoLabAJDD.jpg',
+                          width: 100.0,
+                          height: 50.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
@@ -179,10 +222,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                   ],
                                 ),
                                 Text(
-                                  valueOrDefault<String>(
-                                    functions.numeroFac()?.toString(),
-                                    '0',
-                                  ),
+                                  functions.factura().toString(),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -391,7 +431,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                             val?.firstOrNull),
                                     selectedChipStyle: ChipStyle(
                                       backgroundColor:
-                                          FlutterFlowTheme.of(context).primary,
+                                          FlutterFlowTheme.of(context).tertiary,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -536,7 +576,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                             ),
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
-                                                    .primary,
+                                                    .tertiary,
                                             checkColor:
                                                 FlutterFlowTheme.of(context)
                                                     .info,
@@ -573,114 +613,131 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          child: Image.network(
-                                            _model.uploadedFileUrl1,
-                                            width: 200.0,
-                                            height: 200.0,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        FFButtonWidget(
-                                          onPressed: () async {
-                                            final selectedMedia =
-                                                await selectMediaWithSourceBottomSheet(
-                                              context: context,
-                                              allowPhoto: true,
-                                            );
-                                            if (selectedMedia != null &&
-                                                selectedMedia.every((m) =>
-                                                    validateFileFormat(
-                                                        m.storagePath,
-                                                        context))) {
-                                              safeSetState(() => _model
-                                                  .isDataUploading1 = true);
-                                              var selectedUploadedFiles =
-                                                  <FFUploadedFile>[];
+                                        Builder(
+                                          builder: (context) {
+                                            final listaIma = _model
+                                                .uploadedFileUrls1
+                                                .map((e) => e)
+                                                .toList();
 
-                                              var downloadUrls = <String>[];
-                                              try {
-                                                selectedUploadedFiles =
-                                                    selectedMedia
-                                                        .map((m) =>
-                                                            FFUploadedFile(
-                                                              name: m
-                                                                  .storagePath
-                                                                  .split('/')
-                                                                  .last,
-                                                              bytes: m.bytes,
-                                                              height: m
-                                                                  .dimensions
-                                                                  ?.height,
-                                                              width: m
-                                                                  .dimensions
-                                                                  ?.width,
-                                                              blurHash:
-                                                                  m.blurHash,
-                                                            ))
-                                                        .toList();
+                                            return Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children:
+                                                  List.generate(listaIma.length,
+                                                      (listaImaIndex) {
+                                                final listaImaItem =
+                                                    listaIma[listaImaIndex];
+                                                return Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 5.0, 0.0),
+                                                  child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
+                                                    onTap: () async {
+                                                      final selectedMedia =
+                                                          await selectMedia(
+                                                        mediaSource: MediaSource
+                                                            .photoGallery,
+                                                        multiImage: true,
+                                                      );
+                                                      if (selectedMedia !=
+                                                              null &&
+                                                          selectedMedia.every((m) =>
+                                                              validateFileFormat(
+                                                                  m.storagePath,
+                                                                  context))) {
+                                                        safeSetState(() => _model
+                                                                .isDataUploading1 =
+                                                            true);
+                                                        var selectedUploadedFiles =
+                                                            <FFUploadedFile>[];
 
-                                                downloadUrls =
-                                                    (await Future.wait(
-                                                  selectedMedia.map(
-                                                    (m) async =>
-                                                        await uploadData(
-                                                            m.storagePath,
-                                                            m.bytes),
-                                                  ),
-                                                ))
-                                                        .where((u) => u != null)
-                                                        .map((u) => u!)
-                                                        .toList();
-                                              } finally {
-                                                _model.isDataUploading1 = false;
-                                              }
-                                              if (selectedUploadedFiles
-                                                          .length ==
-                                                      selectedMedia.length &&
-                                                  downloadUrls.length ==
-                                                      selectedMedia.length) {
-                                                safeSetState(() {
-                                                  _model.uploadedLocalFile1 =
-                                                      selectedUploadedFiles
-                                                          .first;
-                                                  _model.uploadedFileUrl1 =
-                                                      downloadUrls.first;
-                                                });
-                                              } else {
-                                                safeSetState(() {});
-                                                return;
-                                              }
-                                            }
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '9htk11mc' /* Subir */,
-                                          ),
-                                          options: FFButtonOptions(
-                                            height: 40.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      letterSpacing: 0.0,
+                                                        var downloadUrls =
+                                                            <String>[];
+                                                        try {
+                                                          selectedUploadedFiles =
+                                                              selectedMedia
+                                                                  .map((m) =>
+                                                                      FFUploadedFile(
+                                                                        name: m
+                                                                            .storagePath
+                                                                            .split('/')
+                                                                            .last,
+                                                                        bytes: m
+                                                                            .bytes,
+                                                                        height: m
+                                                                            .dimensions
+                                                                            ?.height,
+                                                                        width: m
+                                                                            .dimensions
+                                                                            ?.width,
+                                                                        blurHash:
+                                                                            m.blurHash,
+                                                                      ))
+                                                                  .toList();
+
+                                                          downloadUrls =
+                                                              (await Future
+                                                                      .wait(
+                                                            selectedMedia.map(
+                                                              (m) async =>
+                                                                  await uploadData(
+                                                                      m.storagePath,
+                                                                      m.bytes),
+                                                            ),
+                                                          ))
+                                                                  .where((u) =>
+                                                                      u != null)
+                                                                  .map(
+                                                                      (u) => u!)
+                                                                  .toList();
+                                                        } finally {
+                                                          _model.isDataUploading1 =
+                                                              false;
+                                                        }
+                                                        if (selectedUploadedFiles
+                                                                    .length ==
+                                                                selectedMedia
+                                                                    .length &&
+                                                            downloadUrls
+                                                                    .length ==
+                                                                selectedMedia
+                                                                    .length) {
+                                                          safeSetState(() {
+                                                            _model.uploadedLocalFiles1 =
+                                                                selectedUploadedFiles;
+                                                            _model.uploadedFileUrls1 =
+                                                                downloadUrls;
+                                                          });
+                                                        } else {
+                                                          safeSetState(() {});
+                                                          return;
+                                                        }
+                                                      }
+                                                    },
+                                                    child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                      child: Image.network(
+                                                        'https://picsum.photos/seed/294/600',
+                                                        width: 250.0,
+                                                        height: 200.0,
+                                                        fit: BoxFit.cover,
+                                                      ),
                                                     ),
-                                            elevation: 0.0,
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
+                                                  ),
+                                                );
+                                              }),
+                                            );
+                                          },
                                         ),
                                       ].divide(const SizedBox(width: 8.0)),
                                     ),
@@ -803,7 +860,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                             ),
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
-                                                    .primary,
+                                                    .tertiary,
                                             checkColor:
                                                 FlutterFlowTheme.of(context)
                                                     .info,
@@ -960,7 +1017,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                             ),
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
-                                                    .primary,
+                                                    .tertiary,
                                             checkColor:
                                                 FlutterFlowTheme.of(context)
                                                     .info,
@@ -1325,7 +1382,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                   _model.choiceAcabadoValue = val?.firstOrNull),
                               selectedChipStyle: ChipStyle(
                                 backgroundColor:
-                                    FlutterFlowTheme.of(context).primary,
+                                    FlutterFlowTheme.of(context).tertiary,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -1404,8 +1461,8 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('btnCancelar pressed ...');
+                        onPressed: () async {
+                          context.safePop();
                         },
                         text: FFLocalizations.of(context).getText(
                           'zpb049pw' /* Cancelar */,
@@ -1451,7 +1508,6 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                 genero: _model.choiceGeneroValue,
                                 infoRecursos:
                                     _model.txOtrosRecursosTextController.text,
-                                numeroFactura: functions.numeroFac(),
                                 nombreDoc:
                                     _model.txtNombreDocTextController.text,
                                 nombrePaciente:
@@ -1472,7 +1528,6 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                 categoriaAcabado: _model.choiceAcabadoValue,
                                 observacionesFinales: _model
                                     .txtObservacionesFinalTextController.text,
-                                imagenRecursos: _model.uploadedFileUrl1,
                                 imagenImplante: _model.uploadedFileUrl2,
                               ),
                               ...mapToFirestore(
@@ -1480,6 +1535,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                   'recursosCheck': _model.checkRecursosValues,
                                   'trabajoCheck': _model.checkTrabajoValues,
                                   'materialCheck': _model.checkMaterialValues,
+                                  'imagenRecursos': _model.uploadedFileUrls1,
                                 },
                               ),
                             });

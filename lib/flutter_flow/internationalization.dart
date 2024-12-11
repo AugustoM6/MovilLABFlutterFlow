@@ -252,7 +252,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // ReportePedidos
+  // ReportePedidosFALTABOTONPDF
   {
     'qtn88dqo': {
       'es': 'Juan Pablo Pérez Arroyo',
@@ -323,7 +323,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // HistorialPedidosPENDIENTE
+  // HistorialPedidosFALTABOTONPDF
   {
     'ifyuo4cn': {
       'es': 'Generar',
@@ -565,10 +565,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Login
   {
-    '6zk2njyh': {
-      'es': 'Logo',
-      'en': '',
-    },
     'vm23sd0p': {
       'es': 'Crear Cuenta',
       'en': '',
@@ -700,10 +696,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'h35sncml': {
-      'es': 'Has olvidado tu contraseña',
+      'es': 'Olvidaste la contraseña',
       'en': '',
     },
     'vz2qurcn': {
+      'es': 'Siempre mantén tu cuenta segura y no olvides actualizarla.',
+      'en': '',
+    },
+    'l1io98rq': {
       'es':
           'Le enviaremos un correo electrónico con un enlace para restablecer su contraseña, ingrese el correo electrónico asociado a su cuenta a continuación.  ',
       'en': '',
@@ -952,11 +952,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'ev1w618o': {
-      'es': 'Menú de productos/servicios',
+      'es': 'Menú',
       'en': '',
     },
     'uu4112kc': {
       'es': 'Productos y Servicios',
+      'en': '',
+    },
+    '1c4u96f9': {
+      'es': 'Productos por Categoria',
       'en': '',
     },
     'm1vfrtfc': {
@@ -989,10 +993,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hmbufnz5': {
       'es': 'Eliminar Cuenta',
-      'en': '',
-    },
-    'pjx461ar': {
-      'es': 'Page Title',
       'en': '',
     },
   },
@@ -1120,7 +1120,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'aj9w21ig': {
-      'es': 'Notificaciones',
+      'es': 'Recordatorio',
       'en': '',
     },
     '75rxv9f7': {
@@ -1173,7 +1173,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Formulario
   {
     'ovxe48tm': {
-      'es': 'Solicitud de Trabajo',
+      'es': 'Formulario',
       'en': '',
     },
     'g62ikowc': {
@@ -1238,10 +1238,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ioy1s60l': {
       'es': 'Fotos',
-      'en': '',
-    },
-    '9htk11mc': {
-      'es': 'Subir',
       'en': '',
     },
     '89zdbyt1': {
@@ -1407,6 +1403,80 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'i71hyqcu': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // VerCatalogoPorCategoria
+  {
+    '8z3v4kuz': {
+      'es': 'Blanqueamiento',
+      'en': '',
+    },
+    'o7dgge10': {
+      'es': 'Coronas',
+      'en': '',
+    },
+    'ulxsp3ab': {
+      'es': 'Carillas',
+      'en': '',
+    },
+    '1fgkb2l2': {
+      'es': 'Solo modelos de resina',
+      'en': '',
+    },
+    '6qwb64fv': {
+      'es': 'Incrustacion',
+      'en': '',
+    },
+    '54kf6w0z': {
+      'es': 'Puentes',
+      'en': '',
+    },
+    'd80h426l': {
+      'es': 'Otros',
+      'en': '',
+    },
+    'idd4vmph': {
+      'es': 'Select...',
+      'en': '',
+    },
+    'dnm9b533': {
+      'es': 'Search...',
+      'en': '',
+    },
+    'xx8g6euq': {
+      'es': '▼',
+      'en': '',
+    },
+    'pbz5fqby': {
+      'es': '¡En Esencia Dental, te ayudaremos\na que vuelvas a sonreír!',
+      'en': '',
+    },
+    'tswratf5': {
+      'es': 'Atras',
+      'en': '',
+    },
+    'hbtexowr': {
+      'es': 'Catalogo de Productos',
+      'en': '',
+    },
+    'igy1qxlm': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // Promociones
+  {
+    'mf6pkmmy': {
+      'es': 'Aplicar',
+      'en': '',
+    },
+    's1dyllf5': {
+      'es': 'Promociones',
+      'en': '',
+    },
+    'bnlslorb': {
       'es': 'Home',
       'en': '',
     },

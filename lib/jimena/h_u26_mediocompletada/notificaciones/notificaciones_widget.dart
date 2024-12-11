@@ -73,7 +73,7 @@ class _NotificacionesWidgetState extends State<NotificacionesWidget> {
                   color: FlutterFlowTheme.of(context).primaryText,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                 ),
           ),
           actions: const [],

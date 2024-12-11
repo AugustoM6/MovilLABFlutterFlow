@@ -2,12 +2,13 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'historial_pedidos_p_e_n_d_i_e_n_t_e_model.dart';
-export 'historial_pedidos_p_e_n_d_i_e_n_t_e_model.dart';
+import 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
+export 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 
-class HistorialPedidosPENDIENTEWidget extends StatefulWidget {
-  const HistorialPedidosPENDIENTEWidget({
+class HistorialPedidosFALTABOTONPDFWidget extends StatefulWidget {
+  const HistorialPedidosFALTABOTONPDFWidget({
     super.key,
     required this.selectedMonth,
   });
@@ -15,20 +16,20 @@ class HistorialPedidosPENDIENTEWidget extends StatefulWidget {
   final String? selectedMonth;
 
   @override
-  State<HistorialPedidosPENDIENTEWidget> createState() =>
-      _HistorialPedidosPENDIENTEWidgetState();
+  State<HistorialPedidosFALTABOTONPDFWidget> createState() =>
+      _HistorialPedidosFALTABOTONPDFWidgetState();
 }
 
-class _HistorialPedidosPENDIENTEWidgetState
-    extends State<HistorialPedidosPENDIENTEWidget> {
-  late HistorialPedidosPENDIENTEModel _model;
+class _HistorialPedidosFALTABOTONPDFWidgetState
+    extends State<HistorialPedidosFALTABOTONPDFWidget> {
+  late HistorialPedidosFALTABOTONPDFModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HistorialPedidosPENDIENTEModel());
+    _model = createModel(context, () => HistorialPedidosFALTABOTONPDFModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -216,8 +217,8 @@ class _HistorialPedidosPENDIENTEWidgetState
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await actions.exportPedidosToPdf();
                       },
                       text: FFLocalizations.of(context).getText(
                         'ifyuo4cn' /* Generar */,

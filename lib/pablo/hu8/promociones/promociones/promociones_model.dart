@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'reporte_pedidos_widget.dart' show ReportePedidosWidget;
+import 'promociones_widget.dart' show PromocionesWidget;
 import 'package:flutter/material.dart';
 
-class ReportePedidosModel extends FlutterFlowModel<ReportePedidosWidget> {
+class PromocionesModel extends FlutterFlowModel<PromocionesWidget> {
   @override
   void initState(BuildContext context) {}
 

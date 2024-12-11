@@ -4,11 +4,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'reporte_pedidos_model.dart';
-export 'reporte_pedidos_model.dart';
+import 'reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
+export 'reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 
-class ReportePedidosWidget extends StatefulWidget {
-  const ReportePedidosWidget({
+class ReportePedidosFALTABOTONPDFWidget extends StatefulWidget {
+  const ReportePedidosFALTABOTONPDFWidget({
     super.key,
     required this.mes,
     this.fecha,
@@ -20,18 +20,20 @@ class ReportePedidosWidget extends StatefulWidget {
   final DateTime? selectedMonth;
 
   @override
-  State<ReportePedidosWidget> createState() => _ReportePedidosWidgetState();
+  State<ReportePedidosFALTABOTONPDFWidget> createState() =>
+      _ReportePedidosFALTABOTONPDFWidgetState();
 }
 
-class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
-  late ReportePedidosModel _model;
+class _ReportePedidosFALTABOTONPDFWidgetState
+    extends State<ReportePedidosFALTABOTONPDFWidget> {
+  late ReportePedidosFALTABOTONPDFModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ReportePedidosModel());
+    _model = createModel(context, () => ReportePedidosFALTABOTONPDFModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -234,7 +236,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidosPENDIENTE',
+                                  'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Enero',
@@ -281,7 +283,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Febrero',
@@ -325,7 +327,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Marzo',
@@ -404,7 +406,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidosPENDIENTE',
+                                  'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Abril',
@@ -451,7 +453,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Mayo',
@@ -495,7 +497,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Junio',
@@ -574,7 +576,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidosPENDIENTE',
+                                  'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Julio',
@@ -621,7 +623,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Agosto',
@@ -665,7 +667,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Setiembre',
@@ -744,7 +746,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                             return FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'HistorialPedidosPENDIENTE',
+                                  'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
                                       'Octubre',
@@ -791,7 +793,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Noviembre',
@@ -835,7 +837,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'HistorialPedidosPENDIENTE',
+                              'HistorialPedidosFALTABOTONPDF',
                               queryParameters: {
                                 'selectedMonth': serializeParam(
                                   'Diciembre',
@@ -915,7 +917,7 @@ class _ReportePedidosWidgetState extends State<ReportePedidosWidget> {
                     FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
-                          'HistorialPedidosPENDIENTE',
+                          'HistorialPedidosFALTABOTONPDF',
                           queryParameters: {
                             'selectedMonth': serializeParam(
                               widget.mes,

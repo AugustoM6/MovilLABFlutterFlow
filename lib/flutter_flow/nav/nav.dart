@@ -97,9 +97,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GuardarProductosListaWidget(),
         ),
         FFRoute(
-          name: 'ReportePedidos',
-          path: '/reportePedidos',
-          builder: (context, params) => ReportePedidosWidget(
+          name: 'ReportePedidosFALTABOTONPDF',
+          path: '/reportePedidosFALTABOTONPDF',
+          builder: (context, params) => ReportePedidosFALTABOTONPDFWidget(
             mes: params.getParam(
               'mes',
               ParamType.String,
@@ -115,9 +115,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'HistorialPedidosPENDIENTE',
-          path: '/historialPedidosPENDIENTE',
-          builder: (context, params) => HistorialPedidosPENDIENTEWidget(
+          name: 'HistorialPedidosFALTABOTONPDF',
+          path: '/historialPedidosFALTABOTONPDF',
+          builder: (context, params) => HistorialPedidosFALTABOTONPDFWidget(
             selectedMonth: params.getParam(
               'selectedMonth',
               ParamType.String,
@@ -284,6 +284,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'reserva',
           path: '/reserva',
           builder: (context, params) => const ReservaWidget(),
+        ),
+        FFRoute(
+          name: 'VerCatalogoPorCategoria',
+          path: '/verCatalogoPorCategoria',
+          builder: (context, params) => const VerCatalogoPorCategoriaWidget(),
+        ),
+        FFRoute(
+          name: 'Promociones',
+          path: '/promociones',
+          builder: (context, params) => const PromocionesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

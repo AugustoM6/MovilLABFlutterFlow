@@ -139,8 +139,8 @@ class _ConozcanosWidgetState extends State<ConozcanosWidget> {
                             padding: const EdgeInsets.all(10.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://scontent.fsyq4-1.fna.fbcdn.net/v/t39.30808-6/334265504_747179523428880_2804610708358238477_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=QMs2GuMaJ98Q7kNvgFkyXFJ&_nc_zt=23&_nc_ht=scontent.fsyq4-1.fna&_nc_gid=AXyAyNmkV3KYlTgse2Gar_f&oh=00_AYAc1h5r08sA85E4yoZu_UIQn_apYjkmvd-vm6V8o2-Exg&oe=674313BA',
+                              child: Image.asset(
+                                'assets/images/334265504_747179523428880_2804610708358238477_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=QMs2GuMaJ98Q7kNvgFkyXFJ&_nc_zt=23&_nc_ht=scontent.fsyq4-1.fna&_nc_gid=AXyAyNmkV3KYlTgse2Gar_f&oh=00_AYAc1h5r08sA85E4yoZu_UIQn_apYjkmvd-vm6V8o2-Exg&oe=674313BA',
                                 width: 145.0,
                                 height: 150.0,
                                 fit: BoxFit.cover,
