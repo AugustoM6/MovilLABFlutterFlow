@@ -1177,175 +1177,175 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ovxe48tm': {
       'es': 'Formulario',
-      'en': '',
+      'en': 'Form',
     },
     'g62ikowc': {
       'es': 'Esencia Dental',
-      'en': '',
+      'en': 'Dental Essence',
     },
     'ajl5gxkd': {
       'es': 'Tel: +506 2222-3333',
-      'en': '',
+      'en': 'Tel: +506 2222-3333',
     },
     '7c6z5tdi': {
       'es': 'info@esenciadental.com',
-      'en': '',
+      'en': 'info@esenciadental.com',
     },
     '5wgim6yv': {
       'es': 'Información del Paciente',
-      'en': '',
+      'en': 'Patient Information',
     },
     'fvqgfany': {
       'es': 'Nombre del Doctor',
-      'en': '',
+      'en': 'Doctor\'s Name',
     },
     '6fzf829l': {
       'es': 'Paciente',
-      'en': '',
+      'en': 'Patient',
     },
     'ecechkpb': {
       'es': 'Edad',
-      'en': '',
+      'en': 'Age',
     },
     '5g05c2p3': {
       'es': 'Masculino',
-      'en': '',
+      'en': 'Male',
     },
     'as6ecyhu': {
       'es': 'Femenino',
-      'en': '',
+      'en': 'Female',
     },
     'uf3x8kvu': {
       'es': 'Recursos',
-      'en': '',
+      'en': 'Resources',
     },
     'rhhumkx4': {
       'es': 'Impresión superior',
-      'en': '',
+      'en': 'Top print',
     },
     'kwrowpfb': {
       'es': 'Impresión inferior',
-      'en': '',
+      'en': 'Bottom print',
     },
     'j1q6xche': {
       'es': 'Antagonista',
-      'en': '',
+      'en': 'Antagonist',
     },
     'x44xwurj': {
       'es': 'Arco facial',
-      'en': '',
+      'en': 'Facebow',
     },
     '4q3ojsb5': {
       'es': 'Pilares',
-      'en': '',
+      'en': 'Pillars',
     },
     'ioy1s60l': {
       'es': 'Fotos',
-      'en': '',
+      'en': 'Photos',
     },
     '89zdbyt1': {
       'es': 'Otros recursos',
-      'en': '',
+      'en': 'Other resources',
     },
     'nkwqnclm': {
       'es': 'Tipo de Trabajo',
-      'en': '',
+      'en': 'Type of Work',
     },
     'y9vmg0ne': {
       'es': 'Coronas',
-      'en': '',
+      'en': 'Crowns',
     },
     'yi6t80xd': {
       'es': 'Incrutación',
-      'en': '',
+      'en': 'Embedding',
     },
     '1wp4rtzs': {
       'es': 'Carillas',
-      'en': '',
+      'en': 'Veneers',
     },
     'll1rbqit': {
       'es': 'Puentes',
-      'en': '',
+      'en': 'Bridges',
     },
     '4jxdk3vn': {
       'es': 'Otros trabajos',
-      'en': '',
+      'en': 'Other works',
     },
     'vrtvwerd': {
       'es': 'Material y Línea',
-      'en': '',
+      'en': 'Material and Line',
     },
     'pffq36d5': {
       'es': 'Premium',
-      'en': '',
+      'en': 'Premium',
     },
     'kji6d5hm': {
       'es': 'Estándar',
-      'en': '',
+      'en': 'Standard',
     },
     'ntvvsmf3': {
       'es': 'Clasic',
-      'en': '',
+      'en': 'Classic',
     },
     'cagyp3ar': {
       'es': 'Zr',
-      'en': '',
+      'en': 'Zr',
     },
     'rkxbnyor': {
       'es': 'Metal Porcelana',
-      'en': '',
+      'en': 'Metal Porcelain',
     },
     'ihe1fsno': {
       'es': 'Emax',
-      'en': '',
+      'en': 'Emax',
     },
     'u2n1ilfl': {
       'es': 'Información de Implantes',
-      'en': '',
+      'en': 'Implant Information',
     },
     'pcrgoyhr': {
       'es': 'Marca',
-      'en': '',
+      'en': 'Brand',
     },
     'huhaq26v': {
       'es': 'Número de plataforma',
-      'en': '',
+      'en': 'Platform number',
     },
     '3prz14m5': {
       'es': 'Color y Acabado',
-      'en': '',
+      'en': 'Color and Finish',
     },
     'rvb19ozq': {
       'es': 'Color del muñón',
-      'en': '',
+      'en': 'Stump color',
     },
     '3fd8rj6v': {
       'es': 'Color final',
-      'en': '',
+      'en': 'Final color',
     },
     'jf2scxfl': {
       'es': 'Alta',
-      'en': '',
+      'en': 'High',
     },
     'rtrzf2bd': {
       'es': 'Media',
-      'en': '',
+      'en': 'Average',
     },
     'sz7buawj': {
       'es': 'Baja',
-      'en': '',
+      'en': 'Low',
     },
     '6ryalnr2': {
       'es': 'Observaciones',
-      'en': '',
+      'en': 'Observations',
     },
     'zpb049pw': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'jcsgvi8x': {
       'es': 'Enviar Solicitud',
-      'en': '',
+      'en': 'Send Request',
     },
   },
   // VerCatalogo
