@@ -141,7 +141,12 @@ final parametersBuilderMap =
       ),
   'indexServicio': ParameterData.none(),
   'agregarServicios': ParameterData.none(),
-  'editarServicio': ParameterData.none(),
+  'editarServicio': (data) async => ParameterData(
+        allParams: {
+          'paramServicio': await getDocumentParameter<ServiciosRecord>(
+              data, 'paramServicio', ServiciosRecord.fromSnapshot),
+        },
+      ),
   'Home': ParameterData.none(),
   'ChaBot': ParameterData.none(),
   'editarEmpleado': (data) async => ParameterData(
@@ -170,6 +175,20 @@ final parametersBuilderMap =
       ),
   'Formulario': ParameterData.none(),
   'agregarEmpleado': ParameterData.none(),
+  'indexPedidos': ParameterData.none(),
+  'editarPedido': (data) async => ParameterData(
+        allParams: {
+          'paramPedidos': await getDocumentParameter<PedidosRecord>(
+              data, 'paramPedidos', PedidosRecord.fromSnapshot),
+        },
+      ),
+  'agregarPedido': ParameterData.none(),
+  'detallesPedido': (data) async => ParameterData(
+        allParams: {
+          'paramPedidos': await getDocumentParameter<PedidosRecord>(
+              data, 'paramPedidos', PedidosRecord.fromSnapshot),
+        },
+      ),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

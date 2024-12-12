@@ -17,10 +17,10 @@ export '/jimena/h_u25x14x15_pendiente_fecha_y_estado/pedidos_recientes/pedidos_r
     show PedidosRecientesWidget;
 export '/augusto/h_u28_pendiente_garficas/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
-export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/index_producto/index_producto_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_producto_c_o_m_p_l_e_t_a_d_o/index_producto/index_producto_widget.dart'
     show IndexProductoWidget;
 export '/augusto/login/login_widget.dart' show LoginWidget;
-export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/agregar_producto/agregar_producto_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_producto_c_o_m_p_l_e_t_a_d_o/agregar_producto/agregar_producto_widget.dart'
     show AgregarProductoWidget;
 export '/augusto/u_h1_completada100/password_olvidado/password_olvidado_widget.dart'
     show PasswordOlvidadoWidget;
@@ -28,22 +28,22 @@ export '/augusto/h_u4_completada100/perfil/perfil_widget.dart'
     show PerfilWidget;
 export '/augusto/configuracion_cuenta/configuracion_cuenta_widget.dart'
     show ConfiguracionCuentaWidget;
-export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/editar_producto/editar_producto_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_producto_c_o_m_p_l_e_t_a_d_o/editar_producto/editar_producto_widget.dart'
     show EditarProductoWidget;
-export '/pablo/hu10/gestion_empleados/index_empleados/index_empleados_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_empleados_c_o_m_p_l_e_t_a_d_o/index_empleados/index_empleados_widget.dart'
     show IndexEmpleadosWidget;
-export '/pablo/hu10/gestion_empleados/detalles_empleado/detalles_empleado_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_empleados_c_o_m_p_l_e_t_a_d_o/detalles_empleado/detalles_empleado_widget.dart'
     show DetallesEmpleadoWidget;
-export '/pablo/hu10/gestion_servicios/index_servicio/index_servicio_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_servicios/index_servicio/index_servicio_widget.dart'
     show IndexServicioWidget;
-export '/pablo/hu10/gestion_servicios/agregar_servicios/agregar_servicios_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_servicios/agregar_servicios/agregar_servicios_widget.dart'
     show AgregarServiciosWidget;
-export '/pablo/hu10/gestion_servicios/editar_servicio/editar_servicio_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_servicios/editar_servicio/editar_servicio_widget.dart'
     show EditarServicioWidget;
 export '/augusto/h_u4_completada100/home/home_widget.dart' show HomeWidget;
 export '/augusto/h_u29_completada100/cha_bot/cha_bot_widget.dart'
     show ChaBotWidget;
-export '/pablo/hu10/gestion_empleados/editar_empleado/editar_empleado_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_empleados_c_o_m_p_l_e_t_a_d_o/editar_empleado/editar_empleado_widget.dart'
     show EditarEmpleadoWidget;
 export '/jimena/h_u26_mediocompletada/recordatorios/recordatorios_widget.dart'
     show RecordatoriosWidget;
@@ -63,5 +63,13 @@ export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_
     show ReportePedidosUsuarioWidget;
 export '/augusto/h_u11a13_completadas100/formulario/formulario_widget.dart'
     show FormularioWidget;
-export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
+export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_empleados_c_o_m_p_l_e_t_a_d_o/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;
+export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/index_pedidos/index_pedidos_widget.dart'
+    show IndexPedidosWidget;
+export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/editar_pedido/editar_pedido_widget.dart'
+    show EditarPedidoWidget;
+export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/agregar_pedido/agregar_pedido_widget.dart'
+    show AgregarPedidoWidget;
+export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/detalles_pedido/detalles_pedido_widget.dart'
+    show DetallesPedidoWidget;

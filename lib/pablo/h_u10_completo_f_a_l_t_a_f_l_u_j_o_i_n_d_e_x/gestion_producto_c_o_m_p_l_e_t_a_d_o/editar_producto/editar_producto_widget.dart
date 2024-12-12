@@ -590,8 +590,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('cancelarBtn pressed ...');
+                        onPressed: () async {
+                          context.safePop();
                         },
                         text: FFLocalizations.of(context).getText(
                           'efdp40yt' /* Cancelar */,

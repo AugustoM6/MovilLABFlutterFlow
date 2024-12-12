@@ -588,8 +588,8 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('cancelarBtn pressed ...');
+                      onPressed: () async {
+                        context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
                         'fir9v5v1' /* Cancelar */,

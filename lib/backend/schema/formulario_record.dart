@@ -96,11 +96,6 @@ class FormularioRecord extends FirestoreRecord {
   String get observacionesFinales => _observacionesFinales ?? '';
   bool hasObservacionesFinales() => _observacionesFinales != null;
 
-  // "fecha" field.
-  String? _fecha;
-  String get fecha => _fecha ?? '';
-  bool hasFecha() => _fecha != null;
-
   // "imagenImplante" field.
   String? _imagenImplante;
   String get imagenImplante => _imagenImplante ?? '';
@@ -115,6 +110,16 @@ class FormularioRecord extends FirestoreRecord {
   double? _numeroFactura;
   double get numeroFactura => _numeroFactura ?? 0.0;
   bool hasNumeroFactura() => _numeroFactura != null;
+
+  // "fecha" field.
+  String? _fecha;
+  String get fecha => _fecha ?? '';
+  bool hasFecha() => _fecha != null;
+
+  // "count" field.
+  double? _count;
+  double get count => _count ?? 0.0;
+  bool hasCount() => _count != null;
 
   void _initializeFields() {
     _edad = castToType<int>(snapshotData['edad']);
@@ -133,10 +138,11 @@ class FormularioRecord extends FirestoreRecord {
     _colorfinal = snapshotData['colorfinal'] as String?;
     _categoriaAcabado = snapshotData['categoriaAcabado'] as String?;
     _observacionesFinales = snapshotData['observacionesFinales'] as String?;
-    _fecha = snapshotData['fecha'] as String?;
     _imagenImplante = snapshotData['imagenImplante'] as String?;
     _imagenRecursos = getDataList(snapshotData['imagenRecursos']);
     _numeroFactura = castToType<double>(snapshotData['NumeroFactura']);
+    _fecha = snapshotData['fecha'] as String?;
+    _count = castToType<double>(snapshotData['count']);
   }
 
   static CollectionReference get collection =>
@@ -187,9 +193,10 @@ Map<String, dynamic> createFormularioRecordData({
   String? colorfinal,
   String? categoriaAcabado,
   String? observacionesFinales,
-  String? fecha,
   String? imagenImplante,
   double? numeroFactura,
+  String? fecha,
+  double? count,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -206,9 +213,10 @@ Map<String, dynamic> createFormularioRecordData({
       'colorfinal': colorfinal,
       'categoriaAcabado': categoriaAcabado,
       'observacionesFinales': observacionesFinales,
-      'fecha': fecha,
       'imagenImplante': imagenImplante,
       'NumeroFactura': numeroFactura,
+      'fecha': fecha,
+      'count': count,
     }.withoutNulls,
   );
 
@@ -237,10 +245,11 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e1?.colorfinal == e2?.colorfinal &&
         e1?.categoriaAcabado == e2?.categoriaAcabado &&
         e1?.observacionesFinales == e2?.observacionesFinales &&
-        e1?.fecha == e2?.fecha &&
         e1?.imagenImplante == e2?.imagenImplante &&
         listEquality.equals(e1?.imagenRecursos, e2?.imagenRecursos) &&
-        e1?.numeroFactura == e2?.numeroFactura;
+        e1?.numeroFactura == e2?.numeroFactura &&
+        e1?.fecha == e2?.fecha &&
+        e1?.count == e2?.count;
   }
 
   @override
@@ -261,10 +270,11 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e?.colorfinal,
         e?.categoriaAcabado,
         e?.observacionesFinales,
-        e?.fecha,
         e?.imagenImplante,
         e?.imagenRecursos,
-        e?.numeroFactura
+        e?.numeroFactura,
+        e?.fecha,
+        e?.count
       ]);
 
   @override

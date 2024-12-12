@@ -793,7 +793,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'indexEmpleados',
+                                                            'indexPedidos',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -951,7 +951,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   }
 
                                                                   context.goNamedAuth(
-                                                                      'indexEmpleados',
+                                                                      'indexPedidos',
                                                                       context
                                                                           .mounted);
                                                                 },
@@ -1038,7 +1038,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                         }
 
                                                                         context.goNamedAuth(
-                                                                            'indexEmpleados',
+                                                                            'indexPedidos',
                                                                             context.mounted);
                                                                       },
                                                                       text: FFLocalizations.of(
@@ -1478,7 +1478,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'indexEmpleados',
+                                                            'indexPedidos',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -1610,7 +1610,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             }
 
                                                             context.goNamedAuth(
-                                                                'indexEmpleados',
+                                                                'indexPedidos',
                                                                 context
                                                                     .mounted);
                                                           },
@@ -1703,7 +1703,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   }
 
                                                                   context.goNamedAuth(
-                                                                      'indexEmpleados',
+                                                                      'indexPedidos',
                                                                       context
                                                                           .mounted);
                                                                 },
