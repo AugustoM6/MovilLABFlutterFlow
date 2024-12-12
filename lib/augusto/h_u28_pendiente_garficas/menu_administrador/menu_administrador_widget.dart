@@ -296,105 +296,123 @@ class _MenuAdministradorWidgetState extends State<MenuAdministradorWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                            FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed('PedidosRecientes');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'py18nru5' /* Gestión de Pedidos */,
-                              ),
-                              icon: const Icon(
-                                Icons.inventory_2,
-                                size: 15.0,
-                              ),
-                              options: FFButtonOptions(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: 56.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context).info,
-                                      letterSpacing: 0.0,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(28.0),
-                              ),
-                            ),
-                            FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed('IndexProducto');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'dzmba3kz' /* Gestión de Productos */,
-                              ),
-                              icon: const Icon(
-                                Icons.inventory_2,
-                                size: 15.0,
-                              ),
-                              options: FFButtonOptions(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: 56.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context).info,
-                                      letterSpacing: 0.0,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(28.0),
-                              ),
-                            ),
-                            FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed(
-                                  'ReportePedidosAdmin',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType: PageTransitionType.fade,
-                                      duration: Duration(milliseconds: 0),
-                                    ),
+                            if (valueOrDefault<bool>(
+                                currentUserDocument?.isAdmin, false))
+                              AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed('PedidosRecientes');
                                   },
-                                );
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'ogkzr7oh' /* Reportes */,
+                                  text: FFLocalizations.of(context).getText(
+                                    'py18nru5' /* Gestión de Pedidos */,
+                                  ),
+                                  icon: const Icon(
+                                    Icons.inventory_2,
+                                    size: 15.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    height: 56.0,
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
+                                        ),
+                                    elevation: 0.0,
+                                    borderRadius: BorderRadius.circular(28.0),
+                                  ),
+                                ),
                               ),
-                              icon: const Icon(
-                                Icons.assessment,
-                                size: 15.0,
+                            if (currentUserEmailVerified)
+                              AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed('IndexProducto');
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'dzmba3kz' /* Gestión de Productos */,
+                                  ),
+                                  icon: const Icon(
+                                    Icons.inventory_2,
+                                    size: 15.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    height: 56.0,
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
+                                        ),
+                                    elevation: 0.0,
+                                    borderRadius: BorderRadius.circular(28.0),
+                                  ),
+                                ),
                               ),
-                              options: FFButtonOptions(
-                                width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: 56.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context).info,
-                                      letterSpacing: 0.0,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(28.0),
+                            if (valueOrDefault<bool>(
+                                currentUserDocument?.isAdmin, false))
+                              AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed(
+                                      'ReportePedidosAdmin',
+                                      extra: <String, dynamic>{
+                                        kTransitionInfoKey: const TransitionInfo(
+                                          hasTransition: true,
+                                          transitionType:
+                                              PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 0),
+                                        ),
+                                      },
+                                    );
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'ogkzr7oh' /* Reportes */,
+                                  ),
+                                  icon: const Icon(
+                                    Icons.assessment,
+                                    size: 15.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    height: 56.0,
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
+                                        ),
+                                    elevation: 0.0,
+                                    borderRadius: BorderRadius.circular(28.0),
+                                  ),
+                                ),
                               ),
-                            ),
                             FFButtonWidget(
                               onPressed: () async {
                                 GoRouter.of(context).prepareAuthEvent();

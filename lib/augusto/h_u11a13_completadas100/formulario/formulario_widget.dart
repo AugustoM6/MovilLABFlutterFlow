@@ -1653,12 +1653,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                         .doc()
                                         .set({
                                       ...createFormularioRecordData(
-                                        fecha: dateTimeFormat(
-                                          "d/M/y",
-                                          getCurrentTimestamp,
-                                          locale: FFLocalizations.of(context)
-                                              .languageCode,
-                                        ),
+                                        fecha: getCurrentTimestamp.toString(),
                                         edad: int.tryParse(
                                             _model.txtEdadTextController.text),
                                         genero: _model.choiceGeneroValue,

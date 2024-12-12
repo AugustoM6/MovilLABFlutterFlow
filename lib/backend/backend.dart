@@ -15,6 +15,7 @@ import 'schema/blanqueamiento_record.dart';
 import 'schema/coronas_record.dart';
 import 'schema/formulario_record.dart';
 import 'schema/promociones_record.dart';
+import 'schema/pedidos_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -33,6 +34,7 @@ export 'schema/blanqueamiento_record.dart';
 export 'schema/coronas_record.dart';
 export 'schema/formulario_record.dart';
 export 'schema/promociones_record.dart';
+export 'schema/pedidos_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -405,6 +407,43 @@ Future<List<PromocionesRecord>> queryPromocionesRecordOnce({
     queryCollectionOnce(
       PromocionesRecord.collection,
       PromocionesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query PedidosRecords (as a Stream and as a Future).
+Future<int> queryPedidosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      PedidosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<PedidosRecord>> queryPedidosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      PedidosRecord.collection,
+      PedidosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<PedidosRecord>> queryPedidosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      PedidosRecord.collection,
+      PedidosRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

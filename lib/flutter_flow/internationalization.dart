@@ -846,8 +846,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // indexServicio
   {
-    '5lfkr2pw': {
-      'es': 'Page Title',
+    'pknmo7pc': {
+      'es': 'AGREGAR',
+      'en': '',
+    },
+    'c3l0r780': {
+      'es': 'Editar',
+      'en': '',
+    },
+    'rcstd724': {
+      'es': 'Eliminar',
+      'en': '',
+    },
+    'd3rs9u7p': {
+      'es': 'Gestion de Servicios',
       'en': '',
     },
     'ceurpgo6': {
@@ -857,8 +869,32 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // agregarServicios
   {
-    '5vs8ai6f': {
-      'es': 'Page Title',
+    'aefeefhq': {
+      'es': 'Nombre del servicio',
+      'en': '',
+    },
+    'tuq7kp7b': {
+      'es': 'Descripcion',
+      'en': '',
+    },
+    'ry5fmrnm': {
+      'es': 'Precio',
+      'en': '',
+    },
+    'x389uit8': {
+      'es': 'Empleado',
+      'en': '',
+    },
+    'e5qt4f29': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'y1t18ffa': {
+      'es': 'Agregar',
+      'en': '',
+    },
+    'wed6e2sn': {
+      'es': 'Gestion de Productos',
       'en': '',
     },
     'xc9knmhm': {
@@ -868,8 +904,32 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // editarServicio
   {
-    '9u1vy0ic': {
-      'es': 'Page Title',
+    '7opge6uy': {
+      'es': 'Nombre del servicio',
+      'en': '',
+    },
+    'hldjlpbh': {
+      'es': 'Descripcion',
+      'en': '',
+    },
+    '61h7mdzm': {
+      'es': 'Precio',
+      'en': '',
+    },
+    'z593rl94': {
+      'es': 'Estado',
+      'en': '',
+    },
+    'o5kt3jm8': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'c66171sh': {
+      'es': 'Actualizar',
+      'en': '',
+    },
+    '875e40dx': {
+      'es': 'Gestion de Servicios',
       'en': '',
     },
     '5ejx2ate': {
@@ -1654,6 +1714,130 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'uswtuqg0': {
       'es': 'Home',
       'en': '',
+    },
+  },
+  // indexPedidos
+  {
+    'ax02bkyu': {
+      'es': 'AGREGAR',
+      'en': '',
+    },
+    '4gj0y9zw': {
+      'es': 'Editar',
+      'en': '',
+    },
+    'hg2724ap': {
+      'es': 'Eliminar',
+      'en': '',
+    },
+    'ih7f86dm': {
+      'es': 'Detalles',
+      'en': '',
+    },
+    '7v306w4j': {
+      'es': 'Gestion de Pedidos',
+      'en': '',
+    },
+    'bnlslorb': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // editarPedido
+  {
+    'fkikivgd': {
+      'es': 'Nombre del pedido',
+      'en': '',
+    },
+    'ybm8hzka': {
+      'es': 'FECHA DE SOLICITUD DEL PEDIDO:',
+      'en': '',
+    },
+    'vec3f34l': {
+      'es': 'Tecnico',
+      'en': '',
+    },
+    'qlhtq2kl': {
+      'es': 'Estado',
+      'en': '',
+    },
+    '9e5bskmh': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    '44an8ap1': {
+      'es': 'Actualizar',
+      'en': '',
+    },
+    'lbz64o52': {
+      'es': 'Gestion de Pedidos',
+      'en': '',
+    },
+    'goli5z89': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // agregarPedido
+  {
+    '1ez1nrua': {
+      'es': 'Nombre del pedido',
+      'en': '',
+    },
+    '5enl868h': {
+      'es': 'FECHA DE SOLICITUD DEL PEDIDO:',
+      'en': '',
+    },
+    'e1y33jo5': {
+      'es': 'Tecnico',
+      'en': '',
+    },
+    'yban2dl4': {
+      'es': 'Estado',
+      'en': '',
+    },
+    'tzjpzav3': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    '1iuhewgf': {
+      'es': 'Agregar',
+      'en': '',
+    },
+    '7ohah207': {
+      'es': 'Gestion de Pedidos',
+      'en': '',
+    },
+    '18iurgng': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // detallesPedido
+  {
+    'caemf3ym': {
+      'es': 'Nombre del pedido',
+      'en': '',
+    },
+    'b1osyd8h': {
+      'es': 'Nombre del pedido',
+      'en': '',
+    },
+    'ht4dg9wz': {
+      'es': 'Tecnico',
+      'en': '',
+    },
+    'r6pl1qrd': {
+      'es': 'Estado',
+      'en': '',
+    },
+    'y9dmxhtk': {
+      'es': 'Gestion de Pedidos',
+      'en': '',
+    },
+    'c4vue3so': {
+      'es': 'Home',
+      'en': 'Home',
     },
   },
   // Miscellaneous

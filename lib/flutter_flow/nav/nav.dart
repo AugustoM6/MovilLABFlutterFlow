@@ -75,14 +75,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const IndexEmpleadosWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const IndexPedidosWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const IndexEmpleadosWidget()
-              : const LoginWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const IndexPedidosWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -209,7 +208,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'editarServicio',
           path: '/editarServicio',
-          builder: (context, params) => const EditarServicioWidget(),
+          asyncParams: {
+            'paramServicio':
+                getDoc(['servicios'], ServiciosRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarServicioWidget(
+            paramServicio: params.getParam(
+              'paramServicio',
+              ParamType.Document,
+            ),
+          ),
         ),
         FFRoute(
           name: 'Home',
@@ -302,6 +310,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'agregarEmpleado',
           path: '/agregarEmpleado',
           builder: (context, params) => const AgregarEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'indexPedidos',
+          path: '/indexPedidos',
+          builder: (context, params) => const IndexPedidosWidget(),
+        ),
+        FFRoute(
+          name: 'editarPedido',
+          path: '/editarPedido',
+          asyncParams: {
+            'paramPedidos': getDoc(['pedidos'], PedidosRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarPedidoWidget(
+            paramPedidos: params.getParam(
+              'paramPedidos',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'agregarPedido',
+          path: '/agregarPedido',
+          builder: (context, params) => const AgregarPedidoWidget(),
+        ),
+        FFRoute(
+          name: 'detallesPedido',
+          path: '/detallesPedido',
+          asyncParams: {
+            'paramPedidos': getDoc(['pedidos'], PedidosRecord.fromSnapshot),
+          },
+          builder: (context, params) => DetallesPedidoWidget(
+            paramPedidos: params.getParam(
+              'paramPedidos',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

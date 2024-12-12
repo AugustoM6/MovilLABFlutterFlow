@@ -25,62 +25,118 @@ Future<void> exportCustomDataToPdf() async {
 
     // Añade una página al PDF
     pdf.addPage(
-      pw.Page(
+      pw.MultiPage(
         pageFormat: PdfPageFormat.a4,
         build: (context) {
-          return pw.ListView(
-            children: querySnapshot.docs.map((doc) {
-              final data = doc.data();
+          return querySnapshot.docs.map((doc) {
+            final data = doc.data();
 
-              // Extrae los datos del documento
-              final edad = data['edad']?.toString() ?? 'N/A';
-              final genero = data['genero'] ?? 'N/A';
-              final infoRecursos = data['infoRecursos'] ?? 'N/A';
-              final nombreDoc = data['nombreDoc'] ?? 'N/A';
-              final nombrePaciente = data['nombrePaciente'] ?? 'N/A';
-              final otrosRecursos = data['otrosRecursos'] ?? 'N/A';
-              final otroTrabajo = data['otroTrabajo'] ?? 'N/A';
-              final marca = data['marca'] ?? 'N/A';
-              final numeroPlataforma =
-                  data['numeroPlataforma']?.toString() ?? 'N/A';
-              final colorMunon = data['colorMunon'] ?? 'N/A';
-              final colorfinal = data['colorfinal'] ?? 'N/A';
-              final categoriaAcabado = data['categoriaAcabado'] ?? 'N/A';
-              final observacionesFinales =
-                  data['observacionesFinales'] ?? 'N/A';
-              final fecha = data['fecha'] ?? 'N/A';
-              final numeroFactura = data['numeroFactura']?.toString() ?? 'N/A';
+            // Extrae los datos del documento
+            final numeroFactura = data['numeroFactura']?.toString() ?? 'N/A';
+            final nombreDoc = data['nombreDoc'] ?? 'N/A';
+            final fecha = data['fecha'] ?? 'N/A';
+            final nombrePaciente = data['nombrePaciente'] ?? 'N/A';
+            final edad = data['edad']?.toString() ?? 'N/A';
+            final genero = data['genero'] ?? 'N/A';
 
-              // Retorna una sección por documento
-              return pw.Column(
-                crossAxisAlignment: pw.CrossAxisAlignment.start,
-                children: [
-                  pw.Text('Edad: $edad'),
-                  pw.Text('Género: $genero'),
-                  pw.Text('Info Recursos: $infoRecursos'),
-                  pw.Text('Nombre Doc: $nombreDoc'),
-                  pw.Text('Nombre Paciente: $nombrePaciente'),
-                  pw.Text('Otros Recursos: $otrosRecursos'),
-                  pw.Text('Otro Trabajo: $otroTrabajo'),
-                  pw.Text('Marca: $marca'),
-                  pw.Text('Número Plataforma: $numeroPlataforma'),
-                  pw.Text('Color Muñón: $colorMunon'),
-                  pw.Text('Color Final: $colorfinal'),
-                  pw.Text('Categoría Acabado: $categoriaAcabado'),
-                  pw.Text('Observaciones Finales: $observacionesFinales'),
-                  pw.Text('Fecha: $fecha'),
-                  pw.Text('Número Factura: $numeroFactura'),
-                  pw.Divider(),
-                ],
-              );
-            }).toList(),
-          );
+            final recursosCheck =
+                List<String>.from(data['recursosCheck'] ?? []);
+            final imagenRecursos =
+                List<String>.from(data['imagenRecursos'] ?? []);
+            final otrosRecursos = data['otrosRecursos'] ?? 'N/A';
+
+            final trabajoCheck = List<String>.from(data['trabajoCheck'] ?? []);
+            final otroTrabajo = data['otroTrabajo'] ?? 'N/A';
+
+            final materialCheck =
+                List<String>.from(data['materialCheck'] ?? []);
+
+            final marca = data['marca'] ?? 'N/A';
+            final numeroPlataforma =
+                data['numeroPlataforma']?.toString() ?? 'N/A';
+            final imagenImplante = data['imagenImplante'] ?? '';
+
+            final colorMunon = data['colorMunon'] ?? 'N/A';
+            final colorFinal = data['colorfinal'] ?? 'N/A';
+            final categoriaAcabado = data['categoriaAcabado'] ?? 'N/A';
+
+            // Retorna el contenido para una página del PDF
+            return pw.Column(
+              crossAxisAlignment: pw.CrossAxisAlignment.start,
+              children: [
+                pw.Center(
+                  child: pw.Text('Factura No: $numeroFactura',
+                      style: pw.TextStyle(
+                          fontSize: 16, fontWeight: pw.FontWeight.bold)),
+                ),
+                pw.SizedBox(height: 20),
+                pw.Center(
+                  child: pw.Text('Información del Paciente',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                pw.SizedBox(height: 10),
+                pw.Text('Doctor: $nombreDoc'),
+                pw.Text('Fecha: $fecha'),
+                pw.Text('Paciente: $nombrePaciente'),
+                pw.Text('Edad: $edad'),
+                pw.Text('Género: $genero'),
+                pw.Divider(),
+                pw.Center(
+                  child: pw.Text('Recursos',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                pw.SizedBox(height: 10),
+                ...recursosCheck.map((recurso) => pw.Text(recurso)).toList(),
+                pw.SizedBox(height: 10),
+                ...imagenRecursos
+                    .map((imgPath) =>
+                        pw.Image(pw.MemoryImage(Uint8List.fromList([]))))
+                    .toList(),
+                pw.Text('Otros Recursos: $otrosRecursos'),
+                pw.Divider(),
+                pw.Center(
+                  child: pw.Text('Tipo Trabajo',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                ...trabajoCheck.map((trabajo) => pw.Text(trabajo)).toList(),
+                pw.Text('Otro Trabajo: $otroTrabajo'),
+                pw.Divider(),
+                pw.Center(
+                  child: pw.Text('Material',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                ...materialCheck.map((material) => pw.Text(material)).toList(),
+                pw.Divider(),
+                pw.Center(
+                  child: pw.Text('Información de Implantes',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                pw.Text('Marca: $marca'),
+                pw.Text('Número Plataforma: $numeroPlataforma'),
+                pw.Image(pw.MemoryImage(Uint8List.fromList([]))),
+                pw.Divider(),
+                pw.Center(
+                  child: pw.Text('Color y Acabado',
+                      style: pw.TextStyle(
+                          fontSize: 14, fontWeight: pw.FontWeight.bold)),
+                ),
+                pw.Text('Color Muñón: $colorMunon'),
+                pw.Text('Color Final: $colorFinal'),
+                pw.Text('Categoría Acabado: $categoriaAcabado'),
+              ],
+            );
+          }).toList();
         },
       ),
     );
 
     // Convierte el archivo PDF a bytes
-    final pdfBytes = await pdf.save();
+    final pdfBytes = await pdf.save() as Uint8List;
 
     // Crea un blob y una URL para descargar el archivo
     final blob = html.Blob([pdfBytes], 'application/pdf');
