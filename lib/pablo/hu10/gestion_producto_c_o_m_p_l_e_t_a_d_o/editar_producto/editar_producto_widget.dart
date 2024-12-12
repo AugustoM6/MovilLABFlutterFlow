@@ -618,13 +618,29 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                         onPressed: () async {
                           await widget.paramProductos!.reference
                               .update(createProductoRecordData(
-                            nombre: widget.paramProductos?.nombre,
-                            descripcion: widget.paramProductos?.descripcion,
-                            departamento: widget.paramProductos?.departamento,
-                            tecnico: widget.paramProductos?.tecnico,
-                            categoria: widget.paramProductos?.categoria,
-                            imagen: widget.paramProductos?.imagen,
+                            nombre: _model.txtFdNombreTextController.text,
+                            descripcion: _model.txtFdDescripTextController.text,
+                            categoria: _model.txtFdCategoriaTextController.text,
+                            departamento:
+                                _model.txtFdDepartamTextController.text,
+                            tecnico: _model.txtFdTecnicoTextController.text,
+                            imagen: _model.uploadedFileUrl,
                           ));
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Producto Editado',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: const Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).success,
+                            ),
+                          );
+                          context.safePop();
                         },
                         text: FFLocalizations.of(context).getText(
                           'gmcig2f1' /* Actualizar */,

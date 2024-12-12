@@ -17,17 +17,17 @@ export '/jimena/h_u25x14x15_pendiente_fecha_y_estado/pedidos_recientes/pedidos_r
     show PedidosRecientesWidget;
 export '/augusto/h_u28_pendiente_garficas/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
-export '/pablo/hu10/gestion_producto/index_producto/index_producto_widget.dart'
+export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/index_producto/index_producto_widget.dart'
     show IndexProductoWidget;
 export '/augusto/login/login_widget.dart' show LoginWidget;
-export '/pablo/hu10/gestion_producto/agregar_producto/agregar_producto_widget.dart'
+export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/agregar_producto/agregar_producto_widget.dart'
     show AgregarProductoWidget;
 export '/augusto/u_h1_completada/password_olvidado/password_olvidado_widget.dart'
     show PasswordOlvidadoWidget;
 export '/augusto/h_u4_completada/perfil/perfil_widget.dart' show PerfilWidget;
 export '/augusto/configuracion_cuenta/configuracion_cuenta_widget.dart'
     show ConfiguracionCuentaWidget;
-export '/pablo/hu10/gestion_producto/editar_producto/editar_producto_widget.dart'
+export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/editar_producto/editar_producto_widget.dart'
     show EditarProductoWidget;
 export '/pablo/hu10/gestion_empleados/index_empleados/index_empleados_widget.dart'
     show IndexEmpleadosWidget;
@@ -50,8 +50,6 @@ export '/jimena/h_u26_mediocompletada/recordatorios/recordatorios_widget.dart'
     show RecordatoriosWidget;
 export '/jimena/h_u26_mediocompletada/notificaciones/notificaciones_widget.dart'
     show NotificacionesWidget;
-export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
-    show AgregarEmpleadoWidget;
 export '/milagro/u_h2_completa/ver_catalogo_o_l_d/ver_catalogo_o_l_d_widget.dart'
     show VerCatalogoOLDWidget;
 export '/milagro/u_h2_completa/ver_catalogo/ver_catalogo_widget.dart'
@@ -68,3 +66,5 @@ export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_
     show ReportePedidosUsuarioWidget;
 export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
     show FormularioWidget;
+export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
+    show AgregarEmpleadoWidget;

@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'editar_empleado_widget.dart' show EditarEmpleadoWidget;
 import 'package:flutter/material.dart';
@@ -32,14 +33,16 @@ class EditarEmpleadoModel extends FlutterFlowModel<EditarEmpleadoWidget> {
   FocusNode? txtEstadoFocusNode;
   TextEditingController? txtEstadoTextController;
   String? Function(BuildContext, String?)? txtEstadoTextControllerValidator;
-  // State field(s) for txtFechaContrat widget.
-  FocusNode? txtFechaContratFocusNode;
-  TextEditingController? txtFechaContratTextController;
-  String? Function(BuildContext, String?)?
-      txtFechaContratTextControllerValidator;
+  // State field(s) for Calendar widget.
+  DateTimeRange? calendarSelectedDay;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    calendarSelectedDay = DateTimeRange(
+      start: DateTime.now().startOfDay,
+      end: DateTime.now().endOfDay,
+    );
+  }
 
   @override
   void dispose() {
@@ -57,8 +60,5 @@ class EditarEmpleadoModel extends FlutterFlowModel<EditarEmpleadoWidget> {
 
     txtEstadoFocusNode?.dispose();
     txtEstadoTextController?.dispose();
-
-    txtFechaContratFocusNode?.dispose();
-    txtFechaContratTextController?.dispose();
   }
 }

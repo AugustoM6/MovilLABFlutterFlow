@@ -211,7 +211,6 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                         child: TextFormField(
                           controller: _model.txtFdNombreTextController,
                           focusNode: _model.txtFdNombreFocusNode,
-                          onFieldSubmitted: (_) async {},
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(

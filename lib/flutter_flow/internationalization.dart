@@ -404,18 +404,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Actions',
       'en': '',
     },
-    'l4jz7hbt': {
-      'es': '#2424',
-      'en': '#2424',
-    },
-    '1evg95ea': {
-      'es': '',
-      'en': 'Randy Peterson',
-    },
-    '5vlv2ng0': {
-      'es': 'Jan. 20th, 2023',
-      'en': '',
-    },
     'b9xigbbe': {
       'es': 'Active',
       'en': '',
@@ -992,8 +980,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'TextField',
       'en': '',
     },
-    'cpiqrci4': {
-      'es': 'TextField',
+    'gy1070n5': {
+      'es': 'FECHA DE CONTRATACIÓN:',
       'en': '',
     },
     '5deafnss': {
@@ -1109,17 +1097,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1u859o1e': {
       'es': 'Home',
       'en': 'Home',
-    },
-  },
-  // agregarEmpleado
-  {
-    'rl79otd9': {
-      'es': 'Gestion de Empleados',
-      'en': '',
-    },
-    'i88qlbah': {
-      'es': 'Home',
-      'en': '',
     },
   },
   // VerCatalogoOLD
@@ -1249,9 +1226,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Promociones',
       'en': '',
     },
-    'bnlslorb': {
+    'i88qlbah': {
       'es': 'Home',
-      'en': 'Home',
+      'en': '',
     },
   },
   // pruebscroll
@@ -1260,7 +1237,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Page Title',
       'en': '',
     },
-    'goli5z89': {
+    'bnlslorb': {
       'es': 'Home',
       'en': '',
     },
@@ -1660,6 +1637,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ratptpzq': {
       'es': 'Home',
       'en': 'Home',
+    },
+  },
+  // agregarEmpleado
+  {
+    'i0fpv439': {
+      'es': 'Cargar',
+      'en': '',
+    },
+    'ayyep71y': {
+      'es': 'Nombre ',
+      'en': '',
+    },
+    'spca03ia': {
+      'es': 'Email',
+      'en': '',
+    },
+    'zqh81mpw': {
+      'es': 'Telefono',
+      'en': '',
+    },
+    'sm67bomj': {
+      'es': 'Departamento',
+      'en': '',
+    },
+    'hxxz8hkh': {
+      'es': 'Estado',
+      'en': '',
+    },
+    '8hv59a31': {
+      'es': 'FECHA DE CONTRATACIÓN:',
+      'en': '',
+    },
+    'wluhrhor': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'ue4v7sbh': {
+      'es': 'Agregar',
+      'en': '',
+    },
+    'cq6jouvp': {
+      'es': 'Gestion de Empleados',
+      'en': '',
+    },
+    'uswtuqg0': {
+      'es': 'Home',
+      'en': '',
     },
   },
   // Miscellaneous

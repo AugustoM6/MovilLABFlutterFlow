@@ -735,7 +735,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                         onPressed: () async {
                           await authManager.deleteUser(context);
 
-                          context.goNamedAuth('Home', context.mounted);
+                          context.goNamedAuth(
+                              'indexEmpleados', context.mounted);
                         },
                         text: FFLocalizations.of(context).getText(
                           'hmbufnz5' /* Eliminar Cuenta */,

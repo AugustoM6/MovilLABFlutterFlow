@@ -73,13 +73,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const IndexEmpleadosWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const IndexEmpleadosWidget()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -248,11 +249,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const NotificacionesWidget(),
         ),
         FFRoute(
-          name: 'agregarEmpleado',
-          path: '/agregarEmpleado',
-          builder: (context, params) => const AgregarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'VerCatalogoOLD',
           path: '/verCatalogoOLD',
           builder: (context, params) => const VerCatalogoOLDWidget(),
@@ -309,6 +305,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Formulario',
           path: '/formulario',
           builder: (context, params) => const FormularioWidget(),
+        ),
+        FFRoute(
+          name: 'agregarEmpleado',
+          path: '/agregarEmpleado',
+          builder: (context, params) => const AgregarEmpleadoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
