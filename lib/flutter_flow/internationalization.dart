@@ -1175,7 +1175,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // VerCatalogo
   {
-    'xxm85ko0': {
+    '4ri87aj0': {
       'es': 'Catálogo de Productos',
       'en': '',
     },
