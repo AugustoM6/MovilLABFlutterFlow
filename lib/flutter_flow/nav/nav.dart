@@ -6,6 +6,8 @@ import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/backend/push_notifications/push_notifications_handler.dart'
+    show PushNotificationsHandler;
 import '/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -73,13 +75,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const IndexEmpleadosWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const IndexEmpleadosWidget()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -219,11 +222,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ChaBotWidget(),
         ),
         FFRoute(
-          name: 'IconoChatBot',
-          path: '/iconoChatBot',
-          builder: (context, params) => const IconoChatBotWidget(),
-        ),
-        FFRoute(
           name: 'editarEmpleado',
           path: '/editarEmpleado',
           asyncParams: {
@@ -248,11 +246,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const NotificacionesWidget(),
         ),
         FFRoute(
-          name: 'agregarEmpleado',
-          path: '/agregarEmpleado',
-          builder: (context, params) => const AgregarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'VerCatalogoOLD',
           path: '/verCatalogoOLD',
           builder: (context, params) => const VerCatalogoOLDWidget(),
@@ -271,11 +264,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Promociones',
           path: '/promociones',
           builder: (context, params) => const PromocionesWidget(),
-        ),
-        FFRoute(
-          name: 'pruebscroll',
-          path: '/pruebscroll',
-          builder: (context, params) => const PruebscrollWidget(),
         ),
         FFRoute(
           name: 'ReportePedidosAdmin',
@@ -309,6 +297,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Formulario',
           path: '/formulario',
           builder: (context, params) => const FormularioWidget(),
+        ),
+        FFRoute(
+          name: 'agregarEmpleado',
+          path: '/agregarEmpleado',
+          builder: (context, params) => const AgregarEmpleadoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -504,7 +497,7 @@ class FFRoute {
                     ),
                   ),
                 )
-              : page;
+              : PushNotificationsHandler(child: page);
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

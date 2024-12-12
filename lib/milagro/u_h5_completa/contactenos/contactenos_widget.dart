@@ -88,39 +88,18 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'p94tc1lp' /* TD. Javier Rojas Castaño 
- Dir... */
-                          ,
-                        ),
-                        textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyLarge.override(
-                              fontFamily: 'Readex Pro',
-                              fontSize: 18.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
                       Container(
                         width: 100.0,
                         height: 100.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
+                          shape: BoxShape.circle,
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(1.0),
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(50.0),
                             child: Image.network(
                               'https://landingwebimg.s3.amazonaws.com/uploads/landing_page_bio/image/88895/43626189_10155945304822810_1188805028651991040_n.jpg',
                               width: 200.0,
@@ -130,25 +109,48 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                           ),
                         ),
                       ),
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'p94tc1lp' /* TD. Javier Rojas Castaño 
+ Dir... */
+                            ,
+                          ),
+                          textAlign: TextAlign.start,
+                          style:
+                              FlutterFlowTheme.of(context).bodyLarge.override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
                       Expanded(
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                15.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '3yk7zb72' /* Comunicador Social - Periodist... */,
-                              ),
-                              textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                  ),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '3yk7zb72' /* Comunicador Social - Periodist... */,
                             ),
+                            textAlign: TextAlign.justify,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 12.0,
+                                  letterSpacing: 0.0,
+                                ),
                           ),
                         ),
                       ),
@@ -156,7 +158,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -184,7 +186,8 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                       FlutterFlowIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: const Color(0xFFF5F5F9),
+                        fillColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.phone,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -217,7 +220,8 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         borderColor: Colors.transparent,
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: const Color(0xFFF5F5F9),
+                        fillColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.facebook_sharp,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -250,7 +254,8 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         borderColor: Colors.transparent,
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: const Color(0xFFF5F5F9),
+                        fillColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.web_asset,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -279,17 +284,22 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: Text(
-                          'Equipo Humano en Esencia Dental #SomosUnEquipo',
-                          textAlign: TextAlign.center,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w300,
-                                    fontStyle: FontStyle.italic,
-                                  ),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 0.0),
+                          child: Text(
+                            'Equipo Humano en Esencia Dental #SomosUnEquipo',
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 18.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w300,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                          ),
                         ),
                       ),
                     ],

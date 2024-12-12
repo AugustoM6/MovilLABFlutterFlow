@@ -404,18 +404,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Actions',
       'en': '',
     },
-    'l4jz7hbt': {
-      'es': '#2424',
-      'en': '#2424',
-    },
-    '1evg95ea': {
-      'es': '',
-      'en': 'Randy Peterson',
-    },
-    '5vlv2ng0': {
-      'es': 'Jan. 20th, 2023',
-      'en': '',
-    },
     'b9xigbbe': {
       'es': 'Active',
       'en': '',
@@ -687,10 +675,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Lenguaje',
       'en': '',
     },
-    '802exsif': {
-      'es': 'Privacidad',
-      'en': '',
-    },
     'c43np712': {
       'es': 'Cerrar sesión',
       'en': '',
@@ -907,10 +891,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos y Servicios',
       'en': 'Products and Services',
     },
-    '1c4u96f9': {
-      'es': 'Productos por Categoria',
-      'en': 'Products by Category',
-    },
     'm1vfrtfc': {
       'es': 'Historial de pedidos',
       'en': 'Order History',
@@ -959,17 +939,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // IconoChatBot
-  {
-    'g4ty03jz': {
-      'es': 'Page Title',
-      'en': '',
-    },
-    'afsgyqvq': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
   // editarEmpleado
   {
     'aicmdm3n': {
@@ -992,8 +961,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'TextField',
       'en': '',
     },
-    'cpiqrci4': {
-      'es': 'TextField',
+    'gy1070n5': {
+      'es': 'FECHA DE CONTRATACIÓN:',
       'en': '',
     },
     '5deafnss': {
@@ -1111,17 +1080,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // agregarEmpleado
-  {
-    'rl79otd9': {
-      'es': 'Gestion de Empleados',
-      'en': '',
-    },
-    'i88qlbah': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
   // VerCatalogoOLD
   {
     'lanqvcgb': {
@@ -1175,7 +1133,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // VerCatalogo
   {
-    'xxm85ko0': {
+    '4ri87aj0': {
       'es': 'Catálogo de Productos',
       'en': '',
     },
@@ -1249,18 +1207,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Promociones',
       'en': '',
     },
-    'bnlslorb': {
-      'es': 'Home',
-      'en': 'Home',
-    },
-  },
-  // pruebscroll
-  {
-    'h0wejpl2': {
-      'es': 'Page Title',
-      'en': '',
-    },
-    'goli5z89': {
+    'i88qlbah': {
       'es': 'Home',
       'en': '',
     },
@@ -1660,6 +1607,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ratptpzq': {
       'es': 'Home',
       'en': 'Home',
+    },
+  },
+  // agregarEmpleado
+  {
+    'i0fpv439': {
+      'es': 'Cargar',
+      'en': '',
+    },
+    'ayyep71y': {
+      'es': 'Nombre ',
+      'en': '',
+    },
+    'spca03ia': {
+      'es': 'Email',
+      'en': '',
+    },
+    'zqh81mpw': {
+      'es': 'Telefono',
+      'en': '',
+    },
+    'sm67bomj': {
+      'es': 'Departamento',
+      'en': '',
+    },
+    'hxxz8hkh': {
+      'es': 'Estado',
+      'en': '',
+    },
+    '8hv59a31': {
+      'es': 'FECHA DE CONTRATACIÓN:',
+      'en': '',
+    },
+    'wluhrhor': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    'ue4v7sbh': {
+      'es': 'Agregar',
+      'en': '',
+    },
+    'cq6jouvp': {
+      'es': 'Gestion de Empleados',
+      'en': '',
+    },
+    'uswtuqg0': {
+      'es': 'Home',
+      'en': '',
     },
   },
   // Miscellaneous

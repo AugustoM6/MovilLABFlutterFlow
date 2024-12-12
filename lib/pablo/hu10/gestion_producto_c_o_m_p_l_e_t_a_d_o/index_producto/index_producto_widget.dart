@@ -212,7 +212,22 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 5.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: () async {},
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                  'editarProducto',
+                                                  queryParameters: {
+                                                    'paramProductos':
+                                                        serializeParam(
+                                                      listViewProductoRecord,
+                                                      ParamType.Document,
+                                                    ),
+                                                  }.withoutNulls,
+                                                  extra: <String, dynamic>{
+                                                    'paramProductos':
+                                                        listViewProductoRecord,
+                                                  },
+                                                );
+                                              },
                                               text: FFLocalizations.of(context)
                                                   .getText(
                                                 'rr5wyjkj' /* Editar */,
