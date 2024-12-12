@@ -73,6 +73,9 @@ class _VerCatalogoWidgetState extends State<VerCatalogoWidget> {
                 ),
           ),
           actions: const [],
+          flexibleSpace: FlexibleSpaceBar(
+            background: Container(),
+          ),
           centerTitle: true,
           elevation: 0.0,
         ),
