@@ -675,10 +675,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Lenguaje',
       'en': '',
     },
-    '802exsif': {
-      'es': 'Privacidad',
-      'en': '',
-    },
     'c43np712': {
       'es': 'Cerrar sesión',
       'en': '',
@@ -895,10 +891,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos y Servicios',
       'en': 'Products and Services',
     },
-    '1c4u96f9': {
-      'es': 'Productos por Categoria',
-      'en': 'Products by Category',
-    },
     'm1vfrtfc': {
       'es': 'Historial de pedidos',
       'en': 'Order History',
@@ -945,17 +937,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'knhn7xdb': {
       'es': 'Home',
       'en': 'Home',
-    },
-  },
-  // IconoChatBot
-  {
-    'g4ty03jz': {
-      'es': 'Page Title',
-      'en': '',
-    },
-    'afsgyqvq': {
-      'es': 'Home',
-      'en': '',
     },
   },
   // editarEmpleado
@@ -1227,17 +1208,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'i88qlbah': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
-  // pruebscroll
-  {
-    'h0wejpl2': {
-      'es': 'Page Title',
-      'en': '',
-    },
-    'bnlslorb': {
       'es': 'Home',
       'en': '',
     },

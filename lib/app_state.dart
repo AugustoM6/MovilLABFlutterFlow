@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '/backend/backend.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
@@ -20,6 +19,13 @@ class FFAppState extends ChangeNotifier {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
       _InvoiceNo = prefs.getInt('ff_InvoiceNo') ?? _InvoiceNo;
+    });
+    _safeInit(() {
+      _listaUsuarios = prefs
+              .getStringList('ff_listaUsuarios')
+              ?.map((path) => path.ref)
+              .toList() ??
+          _listaUsuarios;
     });
   }
 
@@ -59,6 +65,48 @@ class FFAppState extends ChangeNotifier {
   DocumentReference? get Pedidos => _Pedidos;
   set Pedidos(DocumentReference? value) {
     _Pedidos = value;
+  }
+
+  List<DocumentReference> _listaUsuarios = [
+    FirebaseFirestore.instance.doc('/formulario/example')
+  ];
+  List<DocumentReference> get listaUsuarios => _listaUsuarios;
+  set listaUsuarios(List<DocumentReference> value) {
+    _listaUsuarios = value;
+    prefs.setStringList('ff_listaUsuarios', value.map((x) => x.path).toList());
+  }
+
+  void addToListaUsuarios(DocumentReference value) {
+    listaUsuarios.add(value);
+    prefs.setStringList(
+        'ff_listaUsuarios', _listaUsuarios.map((x) => x.path).toList());
+  }
+
+  void removeFromListaUsuarios(DocumentReference value) {
+    listaUsuarios.remove(value);
+    prefs.setStringList(
+        'ff_listaUsuarios', _listaUsuarios.map((x) => x.path).toList());
+  }
+
+  void removeAtIndexFromListaUsuarios(int index) {
+    listaUsuarios.removeAt(index);
+    prefs.setStringList(
+        'ff_listaUsuarios', _listaUsuarios.map((x) => x.path).toList());
+  }
+
+  void updateListaUsuariosAtIndex(
+    int index,
+    DocumentReference Function(DocumentReference) updateFn,
+  ) {
+    listaUsuarios[index] = updateFn(_listaUsuarios[index]);
+    prefs.setStringList(
+        'ff_listaUsuarios', _listaUsuarios.map((x) => x.path).toList());
+  }
+
+  void insertAtIndexInListaUsuarios(int index, DocumentReference value) {
+    listaUsuarios.insert(index, value);
+    prefs.setStringList(
+        'ff_listaUsuarios', _listaUsuarios.map((x) => x.path).toList());
   }
 }
 

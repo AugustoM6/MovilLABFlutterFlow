@@ -22,9 +22,10 @@ export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/index_producto/index_pr
 export '/augusto/login/login_widget.dart' show LoginWidget;
 export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/agregar_producto/agregar_producto_widget.dart'
     show AgregarProductoWidget;
-export '/augusto/u_h1_completada/password_olvidado/password_olvidado_widget.dart'
+export '/augusto/u_h1_completada100/password_olvidado/password_olvidado_widget.dart'
     show PasswordOlvidadoWidget;
-export '/augusto/h_u4_completada/perfil/perfil_widget.dart' show PerfilWidget;
+export '/augusto/h_u4_completada100/perfil/perfil_widget.dart'
+    show PerfilWidget;
 export '/augusto/configuracion_cuenta/configuracion_cuenta_widget.dart'
     show ConfiguracionCuentaWidget;
 export '/pablo/hu10/gestion_producto_c_o_m_p_l_e_t_a_d_o/editar_producto/editar_producto_widget.dart'
@@ -39,11 +40,9 @@ export '/pablo/hu10/gestion_servicios/agregar_servicios/agregar_servicios_widget
     show AgregarServiciosWidget;
 export '/pablo/hu10/gestion_servicios/editar_servicio/editar_servicio_widget.dart'
     show EditarServicioWidget;
-export '/augusto/h_u4_completada/home/home_widget.dart' show HomeWidget;
-export '/augusto/h_u29_completada/cha_bot/cha_bot_widget.dart'
+export '/augusto/h_u4_completada100/home/home_widget.dart' show HomeWidget;
+export '/augusto/h_u29_completada100/cha_bot/cha_bot_widget.dart'
     show ChaBotWidget;
-export '/augusto/h_u29_completada/icono_chat_bot/icono_chat_bot_widget.dart'
-    show IconoChatBotWidget;
 export '/pablo/hu10/gestion_empleados/editar_empleado/editar_empleado_widget.dart'
     show EditarEmpleadoWidget;
 export '/jimena/h_u26_mediocompletada/recordatorios/recordatorios_widget.dart'
@@ -58,13 +57,11 @@ export '/milagro/u_h21_completa/ver_catalogo_por_categoria/ver_catalogo_por_cate
     show VerCatalogoPorCategoriaWidget;
 export '/pablo/hu8/promociones/promociones/promociones_widget.dart'
     show PromocionesWidget;
-export '/augusto/h_u29_completada/pruebscroll/pruebscroll_widget.dart'
-    show PruebscrollWidget;
 export '/milagro/u_h23_completa/reporte_pedidos_admin/reporte_pedidos_admin_widget.dart'
     show ReportePedidosAdminWidget;
 export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_widget.dart'
     show ReportePedidosUsuarioWidget;
-export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
+export '/augusto/h_u11a13_completadas100/formulario/formulario_widget.dart'
     show FormularioWidget;
 export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;

@@ -183,71 +183,93 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Icon(
-                                      Icons.accessibility_new,
-                                      color:
-                                          FlutterFlowTheme.of(context).tertiary,
-                                      size: 24.0,
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'yl305dol' /* Accesibilidad */,
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('AccesibilidadEIdioma');
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Icon(
+                                        Icons.accessibility_new,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary,
+                                        size: 24.0,
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                  ].divide(const SizedBox(width: 12.0)),
-                                ),
-                                Icon(
-                                  Icons.chevron_right,
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  size: 24.0,
-                                ),
-                              ],
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          'yl305dol' /* Accesibilidad */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ].divide(const SizedBox(width: 12.0)),
+                                  ),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                    size: 24.0,
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Icon(
-                                      Icons.notifications_none,
-                                      color:
-                                          FlutterFlowTheme.of(context).tertiary,
-                                      size: 24.0,
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'miuzdowq' /* Notificaciones */,
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('Notificaciones');
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Icon(
+                                        Icons.notifications_none,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary,
+                                        size: 24.0,
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                  ].divide(const SizedBox(width: 12.0)),
-                                ),
-                                Icon(
-                                  Icons.chevron_right,
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  size: 24.0,
-                                ),
-                              ],
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          'miuzdowq' /* Notificaciones */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ].divide(const SizedBox(width: 12.0)),
+                                  ),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                    size: 24.0,
+                                  ),
+                                ],
+                              ),
                             ),
                             InkWell(
                               splashColor: Colors.transparent,
@@ -301,39 +323,6 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   ),
                                 ],
                               ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Icon(
-                                      Icons.lock_outline,
-                                      color:
-                                          FlutterFlowTheme.of(context).tertiary,
-                                      size: 24.0,
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        '802exsif' /* Privacidad */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                  ].divide(const SizedBox(width: 12.0)),
-                                ),
-                                Icon(
-                                  Icons.chevron_right,
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  size: 24.0,
-                                ),
-                              ],
                             ),
                           ].divide(const SizedBox(height: 16.0)),
                         ),
