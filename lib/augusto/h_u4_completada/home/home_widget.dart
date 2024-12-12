@@ -297,15 +297,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.goNamed(
-                                  'ReportePedidosFALTABOTONPDF',
-                                  queryParameters: {
-                                    'mes': serializeParam(
-                                      '',
-                                      ParamType.String,
-                                    ),
-                                  }.withoutNulls,
-                                );
+                                context.goNamed('ReportePedidosAdmin');
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,

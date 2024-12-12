@@ -427,7 +427,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                 await authManager.deleteUser(context);
 
                                 context.goNamedAuth(
-                                    'Contactenos', context.mounted);
+                                    'ReportePedidosAdmin', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -475,8 +475,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               false;
                                       await authManager.deleteUser(context);
 
-                                      context.goNamedAuth(
-                                          'Contactenos', context.mounted);
+                                      context.goNamedAuth('ReportePedidosAdmin',
+                                          context.mounted);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,

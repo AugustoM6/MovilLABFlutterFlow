@@ -301,15 +301,7 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
               ),
               FFButtonWidget(
                 onPressed: () async {
-                  context.pushNamed(
-                    'ReportePedidosFALTABOTONPDF',
-                    queryParameters: {
-                      'mes': serializeParam(
-                        '',
-                        ParamType.String,
-                      ),
-                    }.withoutNulls,
-                  );
+                  context.pushNamed('Home');
                 },
                 text: FFLocalizations.of(context).getText(
                   '79cepg43' /* Prueba */,

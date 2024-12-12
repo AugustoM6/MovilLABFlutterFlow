@@ -5,8 +5,6 @@ export '/milagro/u_h5_completa/contactenos/contactenos_widget.dart'
     show ContactenosWidget;
 export '/milagro/u_h24_completa/guardar_productos_lista/guardar_productos_lista_widget.dart'
     show GuardarProductosListaWidget;
-export '/milagro/u_h23_completa/reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f/reporte_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_widget.dart'
-    show ReportePedidosFALTABOTONPDFWidget;
 export '/milagro/u_h23_completa/historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f/historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_widget.dart'
     show HistorialPedidosFALTABOTONPDFWidget;
 export '/jimena/u_h3_completada/info_lab2/info_lab2_widget.dart'

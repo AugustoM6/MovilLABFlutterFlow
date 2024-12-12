@@ -684,7 +684,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                 }
 
                                                 context.goNamedAuth(
-                                                    'Contactenos',
+                                                    'ReportePedidosAdmin',
                                                     context.mounted);
                                               },
                                               text: FFLocalizations.of(context)
@@ -801,7 +801,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           }
 
                                                           context.goNamedAuth(
-                                                              'Contactenos',
+                                                              'ReportePedidosAdmin',
                                                               context.mounted);
                                                         },
                                                         text:
@@ -894,7 +894,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                 }
 
                                                                 context.goNamedAuth(
-                                                                    'Contactenos',
+                                                                    'ReportePedidosAdmin',
                                                                     context
                                                                         .mounted);
                                                               },
@@ -1275,7 +1275,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                 }
 
                                                 context.goNamedAuth(
-                                                    'Contactenos',
+                                                    'ReportePedidosAdmin',
                                                     context.mounted);
                                               },
                                               text: FFLocalizations.of(context)
@@ -1377,7 +1377,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     }
 
                                                     context.goNamedAuth(
-                                                        'Contactenos',
+                                                        'ReportePedidosAdmin',
                                                         context.mounted);
                                                   },
                                                   text: FFLocalizations.of(
@@ -1450,7 +1450,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           }
 
                                                           context.goNamedAuth(
-                                                              'Contactenos',
+                                                              'ReportePedidosAdmin',
                                                               context.mounted);
                                                         },
                                                         text:

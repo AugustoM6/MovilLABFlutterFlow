@@ -72,14 +72,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const ContactenosWidget() : const LoginWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? const ReportePedidosAdminWidget()
+          : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const ContactenosWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const ReportePedidosAdminWidget()
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -95,24 +97,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'GuardarProductosLista',
           path: '/guardarProductosLista',
           builder: (context, params) => const GuardarProductosListaWidget(),
-        ),
-        FFRoute(
-          name: 'ReportePedidosFALTABOTONPDF',
-          path: '/reportePedidosFALTABOTONPDF',
-          builder: (context, params) => ReportePedidosFALTABOTONPDFWidget(
-            mes: params.getParam(
-              'mes',
-              ParamType.String,
-            ),
-            fecha: params.getParam(
-              'fecha',
-              ParamType.DateTime,
-            ),
-            selectedMonth: params.getParam(
-              'selectedMonth',
-              ParamType.DateTime,
-            ),
-          ),
         ),
         FFRoute(
           name: 'HistorialPedidosFALTABOTONPDF',
