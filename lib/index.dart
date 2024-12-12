@@ -17,7 +17,7 @@ export '/jimena/h_u9x19x30_compeletada/accesibilidad_e_idioma/accesibilidad_e_id
     show AccesibilidadEIdiomaWidget;
 export '/jimena/h_u25x14x15_pendiente_fecha_y_estado/pedidos_recientes/pedidos_recientes_widget.dart'
     show PedidosRecientesWidget;
-export '/augusto/hu28/menu_administrador/menu_administrador_widget.dart'
+export '/augusto/h_u28_pendiente_garficas/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
 export '/pablo/hu10/gestion_producto/index_producto/index_producto_widget.dart'
     show IndexProductoWidget;
@@ -56,10 +56,17 @@ export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.d
     show AgregarEmpleadoWidget;
 export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
     show FormularioWidget;
+export '/milagro/u_h2_completa/ver_catalogo_o_l_d/ver_catalogo_o_l_d_widget.dart'
+    show VerCatalogoOLDWidget;
 export '/milagro/u_h2_completa/ver_catalogo/ver_catalogo_widget.dart'
     show VerCatalogoWidget;
-export '/milagro/u_h2_completa/reserva/reserva_widget.dart' show ReservaWidget;
 export '/milagro/u_h21_completa/ver_catalogo_por_categoria/ver_catalogo_por_categoria_widget.dart'
     show VerCatalogoPorCategoriaWidget;
 export '/pablo/hu8/promociones/promociones/promociones_widget.dart'
     show PromocionesWidget;
+export '/augusto/h_u29_completada/pruebscroll/pruebscroll_widget.dart'
+    show PruebscrollWidget;
+export '/milagro/u_h23_completa/reporte_pedidos_admin/reporte_pedidos_admin_widget.dart'
+    show ReportePedidosAdminWidget;
+export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_widget.dart'
+    show ReportePedidosUsuarioWidget;

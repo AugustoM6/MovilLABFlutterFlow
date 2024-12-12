@@ -49,7 +49,10 @@ class _ReportePedidosFALTABOTONPDFWidgetState
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -199,12 +202,12 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: StreamBuilder<List<PedidosRecord>>(
-                          stream: queryPedidosRecord(
-                            queryBuilder: (pedidosRecord) =>
-                                pedidosRecord.where(
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
                               'fecha',
-                              isEqualTo: widget.fecha,
+                              isEqualTo: widget.selectedMonth?.toString(),
                             ),
                             singleRecord: true,
                           ),
@@ -223,15 +226,15 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                 ),
                               );
                             }
-                            List<PedidosRecord> buttonPedidosRecordList =
+                            List<FormularioRecord> buttonFormularioRecordList =
                                 snapshot.data!;
                             // Return an empty Container when the item does not exist.
                             if (snapshot.data!.isEmpty) {
                               return Container();
                             }
-                            final buttonPedidosRecord =
-                                buttonPedidosRecordList.isNotEmpty
-                                    ? buttonPedidosRecordList.first
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
                                     : null;
 
                             return FFButtonWidget(
@@ -240,7 +243,15 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                   'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
-                                      'Enero',
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '01',
+                                      ),
                                       ParamType.String,
                                     ),
                                   }.withoutNulls,
@@ -281,100 +292,17 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Febrero',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            '0j1xf420' /* Febrero */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsets.all(0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Marzo',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'gtfv6lc5' /* Marzo */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(8.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: StreamBuilder<List<PedidosRecord>>(
-                          stream: queryPedidosRecord(
-                            queryBuilder: (pedidosRecord) =>
-                                pedidosRecord.where(
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
                               'fecha',
-                              isEqualTo: widget.fecha,
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
                             ),
                             singleRecord: true,
                           ),
@@ -393,15 +321,15 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                 ),
                               );
                             }
-                            List<PedidosRecord> buttonPedidosRecordList =
+                            List<FormularioRecord> buttonFormularioRecordList =
                                 snapshot.data!;
                             // Return an empty Container when the item does not exist.
                             if (snapshot.data!.isEmpty) {
                               return Container();
                             }
-                            final buttonPedidosRecord =
-                                buttonPedidosRecordList.isNotEmpty
-                                    ? buttonPedidosRecordList.first
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
                                     : null;
 
                             return FFButtonWidget(
@@ -410,7 +338,205 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                   'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
-                                      'Abril',
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '02',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '0j1xf420' /* Febrero */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '03',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'gtfv6lc5' /* Marzo */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(8.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '04',
+                                      ),
                                       ParamType.String,
                                     ),
                                   }.withoutNulls,
@@ -451,100 +577,17 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Mayo',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'l3yhpzf6' /* Mayo */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsets.all(0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Junio',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            '8kk45azp' /* Junio */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(8.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: StreamBuilder<List<PedidosRecord>>(
-                          stream: queryPedidosRecord(
-                            queryBuilder: (pedidosRecord) =>
-                                pedidosRecord.where(
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
                               'fecha',
-                              isEqualTo: widget.fecha,
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
                             ),
                             singleRecord: true,
                           ),
@@ -563,15 +606,15 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                 ),
                               );
                             }
-                            List<PedidosRecord> buttonPedidosRecordList =
+                            List<FormularioRecord> buttonFormularioRecordList =
                                 snapshot.data!;
                             // Return an empty Container when the item does not exist.
                             if (snapshot.data!.isEmpty) {
                               return Container();
                             }
-                            final buttonPedidosRecord =
-                                buttonPedidosRecordList.isNotEmpty
-                                    ? buttonPedidosRecordList.first
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
                                     : null;
 
                             return FFButtonWidget(
@@ -580,7 +623,205 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                   'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
-                                      'Julio',
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '05',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'l3yhpzf6' /* Mayo */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '06',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '8kk45azp' /* Junio */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(8.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '07',
+                                      ),
                                       ParamType.String,
                                     ),
                                   }.withoutNulls,
@@ -621,100 +862,17 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Agosto',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'c45kk4zf' /* Agosto */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsets.all(0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Setiembre',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'ng7gs6uh' /* Setiembre */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(8.0, 0.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: StreamBuilder<List<PedidosRecord>>(
-                          stream: queryPedidosRecord(
-                            queryBuilder: (pedidosRecord) =>
-                                pedidosRecord.where(
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
                               'fecha',
-                              isEqualTo: widget.fecha,
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
                             ),
                             singleRecord: true,
                           ),
@@ -733,15 +891,15 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                 ),
                               );
                             }
-                            List<PedidosRecord> buttonPedidosRecordList =
+                            List<FormularioRecord> buttonFormularioRecordList =
                                 snapshot.data!;
                             // Return an empty Container when the item does not exist.
                             if (snapshot.data!.isEmpty) {
                               return Container();
                             }
-                            final buttonPedidosRecord =
-                                buttonPedidosRecordList.isNotEmpty
-                                    ? buttonPedidosRecordList.first
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
                                     : null;
 
                             return FFButtonWidget(
@@ -750,7 +908,205 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                                   'HistorialPedidosFALTABOTONPDF',
                                   queryParameters: {
                                     'selectedMonth': serializeParam(
-                                      'Octubre',
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '08',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'c45kk4zf' /* Agosto */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '09',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'ng7gs6uh' /* Setiembre */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(8.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '10',
+                                      ),
                                       ParamType.String,
                                     ),
                                   }.withoutNulls,
@@ -791,43 +1147,94 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(8.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Noviembre',
-                                  ParamType.String,
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
                                 ),
-                              }.withoutNulls,
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      valueOrDefault<String>(
+                                        dateTimeFormat(
+                                          "M",
+                                          widget.fecha,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
+                                        '11',
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'zlxtwrf6' /* Noviembre */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsets.all(0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             );
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'zlxtwrf6' /* Noviembre */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsets.all(0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
                         ),
                       ),
                     ),
@@ -835,43 +1242,91 @@ class _ReportePedidosFALTABOTONPDFWidgetState
                       alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding: const EdgeInsets.all(25.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed(
-                              'HistorialPedidosFALTABOTONPDF',
-                              queryParameters: {
-                                'selectedMonth': serializeParam(
-                                  'Diciembre',
-                                  ParamType.String,
+                        child: StreamBuilder<List<FormularioRecord>>(
+                          stream: queryFormularioRecord(
+                            queryBuilder: (formularioRecord) =>
+                                formularioRecord.where(
+                              'fecha',
+                              isEqualTo: dateTimeFormat(
+                                "M",
+                                widget.selectedMonth,
+                                locale:
+                                    FFLocalizations.of(context).languageCode,
+                              ),
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).ultramarine,
+                                    ),
+                                  ),
                                 ),
-                              }.withoutNulls,
+                              );
+                            }
+                            List<FormularioRecord> buttonFormularioRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final buttonFormularioRecord =
+                                buttonFormularioRecordList.isNotEmpty
+                                    ? buttonFormularioRecordList.first
+                                    : null;
+
+                            return FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'HistorialPedidosFALTABOTONPDF',
+                                  queryParameters: {
+                                    'selectedMonth': serializeParam(
+                                      dateTimeFormat(
+                                        "M",
+                                        widget.fecha,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'lxu01e9g' /* Diciembre */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 80.0,
+                                height: 40.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             );
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'lxu01e9g' /* Diciembre */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 80.0,
-                            height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  letterSpacing: 0.0,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
                         ),
                       ),
                     ),

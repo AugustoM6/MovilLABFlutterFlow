@@ -44,7 +44,10 @@ class _AccesibilidadEIdiomaWidgetState
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -153,21 +156,21 @@ class _AccesibilidadEIdiomaWidgetState
                           ),
                         ],
                       ),
-                    ],
+                    ].divide(const SizedBox(width: 5.0)),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              'sxaym312' /* Modo Claro  Oscuro */,
+                              'sxaym312' /* Modo Claro / Oscuro */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -202,7 +205,7 @@ class _AccesibilidadEIdiomaWidgetState
                           ),
                         ],
                       ),
-                    ],
+                    ].divide(const SizedBox(width: 70.0)),
                   ),
                 ),
                 Padding(

@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'reserva_widget.dart' show ReservaWidget;
+import 'reporte_pedidos_usuario_widget.dart' show ReportePedidosUsuarioWidget;
 import 'package:flutter/material.dart';
 
-class ReservaModel extends FlutterFlowModel<ReservaWidget> {
+class ReportePedidosUsuarioModel
+    extends FlutterFlowModel<ReportePedidosUsuarioWidget> {
   @override
   void initState(BuildContext context) {}
 

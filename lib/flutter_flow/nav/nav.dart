@@ -73,13 +73,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const ContactenosWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
+              appStateNotifier.loggedIn ? const ContactenosWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -276,14 +276,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const FormularioWidget(),
         ),
         FFRoute(
+          name: 'VerCatalogoOLD',
+          path: '/verCatalogoOLD',
+          builder: (context, params) => const VerCatalogoOLDWidget(),
+        ),
+        FFRoute(
           name: 'VerCatalogo',
           path: '/verCatalogo',
           builder: (context, params) => const VerCatalogoWidget(),
-        ),
-        FFRoute(
-          name: 'reserva',
-          path: '/reserva',
-          builder: (context, params) => const ReservaWidget(),
         ),
         FFRoute(
           name: 'VerCatalogoPorCategoria',
@@ -294,6 +294,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Promociones',
           path: '/promociones',
           builder: (context, params) => const PromocionesWidget(),
+        ),
+        FFRoute(
+          name: 'pruebscroll',
+          path: '/pruebscroll',
+          builder: (context, params) => const PruebscrollWidget(),
+        ),
+        FFRoute(
+          name: 'ReportePedidosAdmin',
+          path: '/reportePedidosAdmin',
+          builder: (context, params) => ReportePedidosAdminWidget(
+            fecha: params.getParam(
+              'fecha',
+              ParamType.DateTime,
+            ),
+            selectedMonth: params.getParam(
+              'selectedMonth',
+              ParamType.DateTime,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'ReportePedidosUsuario',
+          path: '/reportePedidosUsuario',
+          builder: (context, params) => ReportePedidosUsuarioWidget(
+            fecha: params.getParam(
+              'fecha',
+              ParamType.DateTime,
+            ),
+            selectedMonth: params.getParam(
+              'selectedMonth',
+              ParamType.DateTime,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

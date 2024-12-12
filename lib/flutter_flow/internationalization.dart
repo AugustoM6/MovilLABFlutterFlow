@@ -219,9 +219,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Síguenos en Instagram - Esencia Dental',
       'en': 'Follow us on Instagram - Dental Essence',
     },
-    't3kjcbcc': {
+    'ehg9x5s8': {
       'es': '¡Contáctenos!',
-      'en': 'Contact us!',
+      'en': '',
     },
     'ogbshy1o': {
       'es': 'Home',
@@ -230,10 +230,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // GuardarProductosLista
   {
-    'oldd4cuv': {
-      'es': 'Coronas y Carillas EMAX',
-      'en': '',
-    },
     '2de19b8k': {
       'es': '¡En Esencia Dental, te ayudamos \na que vuelvas a sonreír! ',
       'en': '',
@@ -328,12 +324,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HistorialPedidosFALTABOTONPDF
   {
+    '5kbm5ihe': {
+      'es': '',
+      'en': 'NumPedido',
+    },
     'ifyuo4cn': {
       'es': 'Generar',
       'en': '',
     },
     'aukp8zhb': {
       'es': 'Consultar',
+      'en': '',
+    },
+    '79cepg43': {
+      'es': 'Prueba',
       'en': '',
     },
     'tc7f0pk5': {
@@ -471,6 +475,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Actions',
       'en': '',
     },
+    'l4jz7hbt': {
+      'es': '#2424',
+      'en': '#2424',
+    },
+    '1evg95ea': {
+      'es': '',
+      'en': 'Randy Peterson',
+    },
     '5vlv2ng0': {
       'es': 'Jan. 20th, 2023',
       'en': '',
@@ -568,80 +580,80 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Login
   {
-    'vm23sd0p': {
+    'asutwzzz': {
       'es': 'Crear Cuenta',
       'en': '',
     },
-    'po4h99jr': {
-      'es': 'Crea una cuenta',
+    'oe7cf99x': {
+      'es': 'Ingresa los siguientes datos.',
       'en': '',
     },
-    '6c1zhbw1': {
-      'es': 'Llene el siguiente formulario',
+    'cf7l9skg': {
+      'es': 'Correo electrónico ',
       'en': '',
     },
-    '32sj7xtk': {
-      'es': 'Correo Electronico',
-      'en': '',
-    },
-    'yi6vnxyn': {
+    'oer6598o': {
       'es': 'Contraseña',
       'en': '',
     },
-    '1w73fsvt': {
-      'es': 'Ingresa de nuevo tu contraseña',
+    'mxbl3zc2': {
+      'es': 'Confirmación de contraseña',
       'en': '',
     },
-    '3bru038f': {
+    'r99603ni': {
       'es': 'Crear Cuenta',
       'en': '',
     },
-    'ly04tf82': {
-      'es': 'O registrate aqui',
+    'vw0farqr': {
+      'es': 'o crea la cuenta con',
       'en': '',
     },
-    '2a8kwlbh': {
-      'es': 'Continue with Google',
+    'oes1qf72': {
+      'es': 'Continua con google',
       'en': '',
     },
-    'khjmok9s': {
-      'es': 'Continue with Apple',
+    '6hqp99bw': {
+      'es': 'Continua con apple',
       'en': '',
     },
-    'x1y5oybw': {
-      'es': 'Iniciar Sesión',
+    '1ddmng1v': {
+      'es': 'Iniciar sesión',
       'en': '',
     },
-    'g6bcnc6b': {
+    'xux8cifc': {
+      'es': 'Bienvenido',
+      'en': '',
+    },
+    'pqb495sf': {
       'es': 'Ingrese los siguientes datos',
       'en': '',
     },
-    '5rfmz6fy': {
-      'es': 'Correo Electronico',
+    'ghcjay5s': {
+      'es': 'Email',
       'en': '',
     },
-    '6vl8uh2v': {
-      'es': 'Contraseña',
+    'xfwkf143': {
+      'es': 'Password',
       'en': '',
     },
-    '32hxiqat': {
-      'es': 'Iniciar Sesión',
+    'lhxfyxud': {
+      'es': 'Iniciar sesión',
       'en': '',
     },
-    'x5ib51re': {
-      'es': 'o inicia sesión con',
+    'qm6yfpt5': {
+      'es': 'Or sign in with',
       'en': '',
     },
-    'gbtb9tob': {
+    'w1q93owp': {
       'es': 'Continua con Google',
       'en': '',
     },
-    'zcoxcidi': {
-      'es': 'Continua con Apple',
+    'hmraj5tb': {
+      'es': 'Continua con apple',
       'en': '',
     },
-    'smkj0hii': {
-      'es': '¿Has olvidado tu contraseña?',
+    '7mzl8npv': {
+      'es': 'Forgot Password?',
       'en': '',
     },
     'h5y6xaci': {
@@ -723,10 +735,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Eviar enlance ',
       'en': '',
     },
-    '8yxc40c1': {
-      'es': 'Atras',
-      'en': '',
-    },
     'smg4rdq4': {
       'es': 'Home',
       'en': '',
@@ -798,6 +806,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'o1c8qk4j': {
+      'es': 'TextField',
+      'en': '',
+    },
+    '87d3z7rc': {
+      'es': 'Correo electrónico',
+      'en': '',
+    },
+    'ol3emgjz': {
       'es': 'TextField',
       'en': '',
     },
@@ -990,6 +1006,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Realizar Pedido',
       'en': 'Place Order',
     },
+    '62lfjfb6': {
+      'es': 'Menú  Administrador',
+      'en': 'Place Order',
+    },
     '4s5xgmxz': {
       'es': 'Cerrar Sesión',
       'en': 'Close Session',
@@ -1176,7 +1196,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Formulario
   {
     'ovxe48tm': {
-      'es': 'Formulario',
+      'es': 'Orden de Trabajo',
       'en': 'Form',
     },
     'g62ikowc': {
@@ -1348,7 +1368,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Send Request',
     },
   },
-  // VerCatalogo
+  // VerCatalogoOLD
   {
     'lanqvcgb': {
       'es': 'Blanqueamiento',
@@ -1390,7 +1410,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Agregar',
       'en': '',
     },
-    'ehg9x5s8': {
+    '28xjl57h': {
       'es': 'Catalogo de Productos',
       'en': '',
     },
@@ -1399,10 +1419,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // reserva
+  // VerCatalogo
   {
     'xxm85ko0': {
-      'es': 'Reserva',
+      'es': 'Catálogo de Productos',
       'en': '',
     },
     'i71hyqcu': {
@@ -1441,15 +1461,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'idd4vmph': {
-      'es': 'Select...',
+      'es': 'Filtrar por categoría...',
       'en': '',
     },
     'dnm9b533': {
       'es': 'Search...',
-      'en': '',
-    },
-    'xx8g6euq': {
-      'es': '▼',
       'en': '',
     },
     'pbz5fqby': {
@@ -1457,11 +1473,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'tswratf5': {
-      'es': 'Atras',
+      'es': 'Atrás',
       'en': '',
     },
-    'hbtexowr': {
-      'es': 'Catalogo de Productos',
+    'svqa74bh': {
+      'es': 'Catálogo de Productos',
       'en': '',
     },
     'igy1qxlm': {
@@ -1482,6 +1498,159 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bnlslorb': {
       'es': 'Home',
       'en': 'Home',
+    },
+  },
+  // pruebscroll
+  {
+    'h0wejpl2': {
+      'es': 'Page Title',
+      'en': '',
+    },
+    'goli5z89': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // ReportePedidosAdmin
+  {
+    '1av6m3gq': {
+      'es': 'Pedidos',
+      'en': '',
+    },
+    'h98myreq': {
+      'es': 'Reportes',
+      'en': '',
+    },
+    '90x5volh': {
+      'es': 'Calendario de Pedidos',
+      'en': '',
+    },
+    'x472t4ad': {
+      'es': 'Enero',
+      'en': '',
+    },
+    'sh5ldrrf': {
+      'es': 'Febrero',
+      'en': '',
+    },
+    'ddg9mxpq': {
+      'es': 'Marzo',
+      'en': '',
+    },
+    'j2hhjct0': {
+      'es': 'Abril',
+      'en': '',
+    },
+    'svb8gemn': {
+      'es': 'Mayo',
+      'en': '',
+    },
+    'xd5sr8y3': {
+      'es': 'Junio',
+      'en': '',
+    },
+    'xzv2u8ak': {
+      'es': 'Julio',
+      'en': '',
+    },
+    'xt4hwfha': {
+      'es': 'Agosto',
+      'en': '',
+    },
+    'kuylxsfc': {
+      'es': 'Septiembre',
+      'en': '',
+    },
+    'xhe1fku8': {
+      'es': 'Octubre',
+      'en': '',
+    },
+    'kkbo9xa1': {
+      'es': 'Noviembre',
+      'en': '',
+    },
+    'y6d16crb': {
+      'es': 'Diciembre',
+      'en': '',
+    },
+    'ah9d884r': {
+      'es': 'Generar PDF',
+      'en': '',
+    },
+    '0t6ho9pl': {
+      'es': 'Consultar',
+      'en': '',
+    },
+  },
+  // ReportePedidosUsuario
+  {
+    'wtjwa8my': {
+      'es': 'Pedidos',
+      'en': '',
+    },
+    'xan4da87': {
+      'es': 'Reportes',
+      'en': '',
+    },
+    'cq10z57e': {
+      'es': 'Calendario de Pedidos',
+      'en': '',
+    },
+    'vcwl9vut': {
+      'es': 'Enero',
+      'en': '',
+    },
+    'ip25j9pg': {
+      'es': 'Febrero',
+      'en': '',
+    },
+    '0ehe8l60': {
+      'es': 'Marzo',
+      'en': '',
+    },
+    'ohc0vg7n': {
+      'es': 'Abril',
+      'en': '',
+    },
+    'nv43sq6g': {
+      'es': 'Mayo',
+      'en': '',
+    },
+    '5fjlddjb': {
+      'es': 'Junio',
+      'en': '',
+    },
+    '3x7m5s1h': {
+      'es': 'Julio',
+      'en': '',
+    },
+    'ff44cwte': {
+      'es': 'Agosto',
+      'en': '',
+    },
+    'va23mr97': {
+      'es': 'Septiembre',
+      'en': '',
+    },
+    'epu1h63a': {
+      'es': 'Octubre',
+      'en': '',
+    },
+    'bxpihw52': {
+      'es': 'Noviembre',
+      'en': '',
+    },
+    'f9ldbjgp': {
+      'es': 'Diciembre',
+      'en': '',
+    },
+    'xmq8u9k6': {
+      'es': 'Generar PDF',
+      'en': '',
+    },
+    'oz0tj9xg': {
+      'es': 'Consultar',
+      'en': '',
     },
   },
   // Miscellaneous

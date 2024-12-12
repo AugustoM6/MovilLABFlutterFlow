@@ -40,7 +40,10 @@ class _GuardarProductosListaWidgetState
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -67,26 +70,23 @@ class _GuardarProductosListaWidgetState
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 0.0),
-                child: Text(
-                  FFLocalizations.of(context).getText(
-                    'ztqvskpj' /* Lista de Deseos */,
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        fontSize: 24.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.w900,
-                      ),
+              Text(
+                FFLocalizations.of(context).getText(
+                  'ztqvskpj' /* Lista de Deseos */,
                 ),
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Readex Pro',
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      fontSize: 24.0,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.w900,
+                    ),
               ),
             ],
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
@@ -125,22 +125,33 @@ class _GuardarProductosListaWidgetState
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
                               width: 100.0,
                               height: 100.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x33000000),
+                                    offset: Offset(
+                                      0.0,
+                                      2.0,
+                                    ),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(10.0),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
-                                    'https://imageten.s3.amazonaws.com/uploads/landing_page_product_variant/image/90124/14750587_1147163935368672_6396186535540031488_n.jpg',
-                                    width: 201.0,
+                                    listViewFavoritosRecord.imagen,
+                                    width: 200.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,
                                   ),
@@ -157,16 +168,14 @@ class _GuardarProductosListaWidgetState
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'oldd4cuv' /* Coronas y Carillas EMAX */,
-                                      ),
+                                      listViewFavoritosRecord.nombre,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 13.0,
+                                            fontSize: 16.0,
                                             letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w800,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                     ),
                                   ),
@@ -177,12 +186,11 @@ class _GuardarProductosListaWidgetState
                               padding: const EdgeInsets.all(6.0),
                               child: FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
-                                borderRadius: 8.0,
+                                borderRadius: 30.0,
                                 buttonSize: 40.0,
-                                fillColor: const Color(0xFFFDFDFD),
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.favorite_border,
-                                  color: Color(0xFF0B0000),
+                                  color: FlutterFlowTheme.of(context).error,
                                   size: 24.0,
                                 ),
                                 onPressed: () {
@@ -285,7 +293,7 @@ class _GuardarProductosListaWidgetState
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(30.0),
                           ),
                         ),
                         FFButtonWidget(
@@ -337,7 +345,7 @@ class _GuardarProductosListaWidgetState
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(30.0),
                           ),
                         ),
                       ],

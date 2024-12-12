@@ -42,12 +42,6 @@ class FFAppState extends ChangeNotifier {
     _textSize = value;
   }
 
-  DocumentReference? _Pedidos;
-  DocumentReference? get Pedidos => _Pedidos;
-  set Pedidos(DocumentReference? value) {
-    _Pedidos = value;
-  }
-
   bool _mostrarTexto = false;
   bool get mostrarTexto => _mostrarTexto;
   set mostrarTexto(bool value) {
@@ -59,6 +53,12 @@ class FFAppState extends ChangeNotifier {
   set InvoiceNo(int value) {
     _InvoiceNo = value;
     prefs.setInt('ff_InvoiceNo', value);
+  }
+
+  DocumentReference? _Pedidos;
+  DocumentReference? get Pedidos => _Pedidos;
+  set Pedidos(DocumentReference? value) {
+    _Pedidos = value;
   }
 }
 

@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'ver_catalogo_widget.dart' show VerCatalogoWidget;
+import 'pruebscroll_widget.dart' show PruebscrollWidget;
 import 'package:flutter/material.dart';
 
-class VerCatalogoModel extends FlutterFlowModel<VerCatalogoWidget> {
+class PruebscrollModel extends FlutterFlowModel<PruebscrollWidget> {
   @override
   void initState(BuildContext context) {}
 

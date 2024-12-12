@@ -44,40 +44,50 @@ class _VerCatalogoPorCategoriaWidgetState
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              context.safePop();
-            },
-            child: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).secondary,
-              size: 40.0,
-            ),
-          ),
-          title: Text(
-            FFLocalizations.of(context).getText(
-              'hbtexowr' /* Catalogo de Productos */,
-            ),
-            textAlign: TextAlign.start,
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter',
-                  letterSpacing: 0.0,
-                  fontWeight: FontWeight.w900,
-                ),
-          ),
           actions: const [],
-          centerTitle: false,
+          flexibleSpace: FlexibleSpaceBar(
+            background: Container(
+              width: 100.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    FlutterFlowTheme.of(context).primary,
+                    FlutterFlowTheme.of(context).primaryBackground
+                  ],
+                  stops: const [0.0, 1.0],
+                  begin: const AlignmentDirectional(0.0, -1.0),
+                  end: const AlignmentDirectional(0, 1.0),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 0.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'svqa74bh' /* Catálogo de Productos */,
+                  ),
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                        fontFamily: 'Inter',
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w900,
+                      ),
+                ),
+              ),
+            ),
+          ),
+          centerTitle: true,
+          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
@@ -88,7 +98,7 @@ class _VerCatalogoPorCategoriaWidgetState
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FlutterFlowDropDown<String>(
                       controller: _model.dropDownValueController ??=
@@ -126,7 +136,7 @@ class _VerCatalogoPorCategoriaWidgetState
                                 letterSpacing: 0.0,
                               ),
                       hintText: FFLocalizations.of(context).getText(
-                        'idd4vmph' /* Select... */,
+                        'idd4vmph' /* Filtrar por categoría... */,
                       ),
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
@@ -136,9 +146,9 @@ class _VerCatalogoPorCategoriaWidgetState
                       fillColor:
                           FlutterFlowTheme.of(context).secondaryBackground,
                       elevation: 2.0,
-                      borderColor: Colors.transparent,
-                      borderWidth: 0.0,
-                      borderRadius: 8.0,
+                      borderColor: FlutterFlowTheme.of(context).tertiary,
+                      borderWidth: 1.0,
+                      borderRadius: 30.0,
                       margin:
                           const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       hidesUnderline: true,
@@ -146,24 +156,20 @@ class _VerCatalogoPorCategoriaWidgetState
                       isSearchable: false,
                       isMultiSelect: false,
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
-                      child: FlutterFlowIconButton(
-                        borderRadius: 8.0,
-                        buttonSize: 40.0,
-                        fillColor: FlutterFlowTheme.of(context).secondaryText,
-                        icon: Icon(
-                          Icons.replay_5,
-                          color: FlutterFlowTheme.of(context).info,
-                          size: 24.0,
-                        ),
-                        onPressed: () async {
-                          safeSetState(() {
-                            _model.dropDownValueController?.reset();
-                          });
-                        },
+                    FlutterFlowIconButton(
+                      borderRadius: 30.0,
+                      buttonSize: 40.0,
+                      fillColor: FlutterFlowTheme.of(context).tertiary,
+                      icon: Icon(
+                        Icons.replay_rounded,
+                        color: FlutterFlowTheme.of(context).info,
+                        size: 24.0,
                       ),
+                      onPressed: () async {
+                        safeSetState(() {
+                          _model.dropDownValueController?.reset();
+                        });
+                      },
                     ),
                   ],
                 ),
@@ -200,6 +206,7 @@ class _VerCatalogoPorCategoriaWidgetState
 
                       return Column(
                         mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: List.generate(columnProductoRecordList.length,
                             (columnIndex) {
                           final columnProductoRecord =
@@ -208,107 +215,102 @@ class _VerCatalogoPorCategoriaWidgetState
                             padding: const EdgeInsets.all(14.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
                                       child: Image.network(
                                         columnProductoRecord.imagen,
-                                        width: 111.0,
-                                        height: 76.0,
+                                        width: 100.0,
+                                        height: 100.0,
                                         fit: BoxFit.cover,
                                       ),
                                     ),
                                   ],
                                 ),
                                 Expanded(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(5.0),
-                                          child: Text(
-                                            valueOrDefault<String>(
-                                              columnProductoRecord.nombre,
-                                              'sin nombre',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        10.0, 0.0, 10.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          valueOrDefault<String>(
+                                            columnProductoRecord.nombre,
+                                            'Desconocido',
                                           ),
+                                          maxLines: 1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
-                                      ),
-                                      if (FFAppState().mostrarTexto)
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            valueOrDefault<String>(
-                                              columnProductoRecord.descripcion,
-                                              'sin descripcion',
+                                        if (FFAppState().mostrarTexto)
+                                          Align(
+                                            alignment:
+                                                const AlignmentDirectional(0.0, 0.0),
+                                            child: Text(
+                                              valueOrDefault<String>(
+                                                columnProductoRecord
+                                                    .descripcion,
+                                                'sin descripcion',
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .labelMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
                                           ),
-                                        ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   child: Align(
                                     alignment: const AlignmentDirectional(-1.0, 0.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        FFButtonWidget(
-                                          onPressed: () async {
-                                            FFAppState().mostrarTexto =
-                                                !(FFAppState().mostrarTexto ??
-                                                    true);
-                                            safeSetState(() {});
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'xx8g6euq' /* ▼ */,
-                                          ),
-                                          options: FFButtonOptions(
-                                            height: 40.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            textStyle:
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          30.0, 0.0, 10.0, 0.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          FlutterFlowIconButton(
+                                            borderRadius: 30.0,
+                                            buttonSize: 40.0,
+                                            fillColor:
                                                 FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
-                                                      color: Colors.white,
-                                                      letterSpacing: 0.0,
-                                                    ),
-                                            elevation: 0.0,
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
+                                                    .primary,
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .info,
+                                              size: 24.0,
+                                            ),
+                                            onPressed: () async {
+                                              FFAppState().mostrarTexto =
+                                                  !(FFAppState().mostrarTexto ??
+                                                      true);
+                                              safeSetState(() {});
+                                            },
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -348,7 +350,7 @@ class _VerCatalogoPorCategoriaWidgetState
                         context.safePop();
                       },
                       text: FFLocalizations.of(context).getText(
-                        'tswratf5' /* Atras */,
+                        'tswratf5' /* Atrás */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
@@ -364,7 +366,7 @@ class _VerCatalogoPorCategoriaWidgetState
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 0.0,
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(30.0),
                       ),
                     ),
                   ],

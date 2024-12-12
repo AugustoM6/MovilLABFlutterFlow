@@ -1,10 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'configuracion_cuenta_model.dart';
 export 'configuracion_cuenta_model.dart';
@@ -40,11 +42,15 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
         text: valueOrDefault(currentUserDocument?.direccion, ''));
     _model.txtDirrecionFocusNode ??= FocusNode();
 
-    _model.txtTelefonoTextController ??= TextEditingController(
-        text: valueOrDefault(currentUserDocument?.telefono, 0).toString());
+    _model.txtTelefonoTextController ??=
+        TextEditingController(text: currentPhoneNumber);
     _model.txtTelefonoFocusNode ??= FocusNode();
 
-    _model.tabBarController = TabController(
+    _model.txtCorreoTextController ??=
+        TextEditingController(text: currentUserEmail);
+    _model.txtCorreoFocusNode ??= FocusNode();
+
+    _model.tabGeneroController = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -62,7 +68,10 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -147,8 +156,62 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 color: FlutterFlowTheme.of(context).info,
                                 size: 21.0,
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
+                              onPressed: () async {
+                                final selectedMedia = await selectMedia(
+                                  maxWidth: 250.00,
+                                  maxHeight: 250.00,
+                                  mediaSource: MediaSource.photoGallery,
+                                  multiImage: false,
+                                );
+                                if (selectedMedia != null &&
+                                    selectedMedia.every((m) =>
+                                        validateFileFormat(
+                                            m.storagePath, context))) {
+                                  safeSetState(
+                                      () => _model.isDataUploading = true);
+                                  var selectedUploadedFiles =
+                                      <FFUploadedFile>[];
+
+                                  var downloadUrls = <String>[];
+                                  try {
+                                    selectedUploadedFiles = selectedMedia
+                                        .map((m) => FFUploadedFile(
+                                              name:
+                                                  m.storagePath.split('/').last,
+                                              bytes: m.bytes,
+                                              height: m.dimensions?.height,
+                                              width: m.dimensions?.width,
+                                              blurHash: m.blurHash,
+                                            ))
+                                        .toList();
+
+                                    downloadUrls = (await Future.wait(
+                                      selectedMedia.map(
+                                        (m) async => await uploadData(
+                                            m.storagePath, m.bytes),
+                                      ),
+                                    ))
+                                        .where((u) => u != null)
+                                        .map((u) => u!)
+                                        .toList();
+                                  } finally {
+                                    _model.isDataUploading = false;
+                                  }
+                                  if (selectedUploadedFiles.length ==
+                                          selectedMedia.length &&
+                                      downloadUrls.length ==
+                                          selectedMedia.length) {
+                                    safeSetState(() {
+                                      _model.uploadedLocalFile =
+                                          selectedUploadedFiles.first;
+                                      _model.uploadedFileUrl =
+                                          downloadUrls.first;
+                                    });
+                                  } else {
+                                    safeSetState(() {});
+                                    return;
+                                  }
+                                }
                               },
                             ),
                           ),
@@ -648,6 +711,109 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                     ),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: 60.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 16.0, 16.0, 16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Align(
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              child: SizedBox(
+                                width: 200.0,
+                                child: TextFormField(
+                                  controller: _model.txtCorreoTextController,
+                                  focusNode: _model.txtCorreoFocusNode,
+                                  autofocus: false,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    isDense: true,
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      '87d3z7rc' /* Correo electrónico */,
+                                    ),
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'ol3emgjz' /* TextField */,
+                                    ),
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    filled: true,
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model
+                                      .txtCorreoTextControllerValidator
+                                      .asValidator(context),
+                                ),
+                              ),
+                            ),
+                          ].divide(const SizedBox(height: 16.0)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    elevation: 2.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 75.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -664,7 +830,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                 children: [
                                   Expanded(
                                     child: TabBarView(
-                                      controller: _model.tabBarController,
+                                      controller: _model.tabGeneroController,
                                       children: const [
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -723,7 +889,7 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                                           ),
                                         ),
                                       ],
-                                      controller: _model.tabBarController,
+                                      controller: _model.tabGeneroController,
                                       onTap: (i) async {
                                         [
                                           () async {
@@ -754,8 +920,10 @@ class _ConfiguracionCuentaWidgetState extends State<ConfiguracionCuentaWidget>
                         displayName: _model.txtNombreTextController.text,
                         edad: int.tryParse(_model.txtEdadTextController.text),
                         direccion: _model.txtDirrecionTextController.text,
-                        telefono:
-                            int.tryParse(_model.txtTelefonoTextController.text),
+                        email: _model.txtCorreoTextController.text,
+                        photoUrl: _model.uploadedFileUrl,
+                        phoneNumber: currentPhoneNumber,
+                        genero: _model.tabGeneroCurrentIndex.toString(),
                       ));
 
                       context.pushNamed(

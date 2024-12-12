@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'promociones_model.dart';
 export 'promociones_model.dart';
 
@@ -36,7 +37,10 @@ class _PromocionesWidgetState extends State<PromocionesWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -172,8 +176,24 @@ class _PromocionesWidgetState extends State<PromocionesWidget> {
                                     children: [
                                       Expanded(
                                         child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            await launchUrl(Uri(
+                                                scheme: 'mailto',
+                                                path:
+                                                    'dentaldesignlab1718@gmail.com',
+                                                query: {
+                                                  'subject':
+                                                      columnPromocionesRecord
+                                                          .nombre,
+                                                  'body':
+                                                      'Me gustaría solicitar esta promoción para nuestro.',
+                                                }
+                                                    .entries
+                                                    .map((MapEntry<String,
+                                                                String>
+                                                            e) =>
+                                                        '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                                    .join('&')));
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(

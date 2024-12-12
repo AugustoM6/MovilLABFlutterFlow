@@ -35,43 +35,41 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
-          leading: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 1.0, 0.0, 10.0),
-            child: FlutterFlowIconButton(
-              borderRadius: 30.0,
-              borderWidth: 2.0,
-              buttonSize: 40.0,
-              icon: const Icon(
-                Icons.arrow_back_rounded,
-                color: Colors.white,
-                size: 25.0,
-              ),
-              onPressed: () async {
-                context.pop();
-              },
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
+            icon: const Icon(
+              Icons.arrow_back_rounded,
+              color: Colors.white,
+              size: 30.0,
             ),
+            onPressed: () async {
+              context.pop();
+            },
           ),
-          title: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
-            child: Text(
-              FFLocalizations.of(context).getText(
-                't3kjcbcc' /* ¡Contáctenos! */,
-              ),
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Readex Pro',
-                    color: const Color(0xFFFBFBFB),
-                    fontSize: 25.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.w900,
-                  ),
+          title: Text(
+            FFLocalizations.of(context).getText(
+              'ehg9x5s8' /* ¡Contáctenos! */,
             ),
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
+                  fontFamily: 'Inter',
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  letterSpacing: 0.0,
+                  fontWeight: FontWeight.w900,
+                ),
           ),
           actions: const [],
           centerTitle: true,

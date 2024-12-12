@@ -8,7 +8,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'formulario_model.dart';
 export 'formulario_model.dart';
@@ -73,7 +73,10 @@ class _FormularioWidgetState extends State<FormularioWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -106,10 +109,10 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'ovxe48tm' /* Formulario */,
+                        'ovxe48tm' /* Orden de Trabajo */,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
@@ -122,7 +125,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(70.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Container(
                       width: 100.0,
                       height: 100.0,
@@ -222,13 +225,13 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                   ],
                                 ),
                                 Text(
-                                  functions.factura().toString(),
+                                  random_data.randomInteger(2, 8).toString(),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
                                         color: FlutterFlowTheme.of(context)
-                                            .primary,
+                                            .tertiary,
                                         letterSpacing: 0.0,
                                       ),
                                 ),
