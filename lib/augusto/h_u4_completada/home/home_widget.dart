@@ -2,7 +2,6 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'home_model.dart';
 export 'home_model.dart';
@@ -105,7 +104,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: FlutterFlowTheme.of(context).accent2,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -561,7 +560,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Formulario');
+                                context.pushNamed(
+                                  'Formulario',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: const TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                      duration: Duration(milliseconds: 0),
+                                    ),
+                                  },
+                                );
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -725,9 +733,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          await FirebaseStorage.instance
-                              .refFromURL('')
-                              .delete();
+                          await authManager.deleteUser(context);
+
+                          context.goNamedAuth('Home', context.mounted);
                         },
                         text: FFLocalizations.of(context).getText(
                           'hmbufnz5' /* Eliminar Cuenta */,

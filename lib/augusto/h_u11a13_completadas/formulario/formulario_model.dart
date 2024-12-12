@@ -6,19 +6,52 @@ import 'package:flutter/material.dart';
 class FormularioModel extends FlutterFlowModel<FormularioWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final formKey = GlobalKey<FormState>();
   // State field(s) for txtNombreDoc widget.
   FocusNode? txtNombreDocFocusNode;
   TextEditingController? txtNombreDocTextController;
   String? Function(BuildContext, String?)? txtNombreDocTextControllerValidator;
+  String? _txtNombreDocTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'p6or509x' /* Ingres su nombre  */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtNombrePaciente widget.
   FocusNode? txtNombrePacienteFocusNode;
   TextEditingController? txtNombrePacienteTextController;
   String? Function(BuildContext, String?)?
       txtNombrePacienteTextControllerValidator;
+  String? _txtNombrePacienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '3xq6ydwz' /* Por favor ingrese e nombre del... */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtEdad widget.
   FocusNode? txtEdadFocusNode;
   TextEditingController? txtEdadTextController;
   String? Function(BuildContext, String?)? txtEdadTextControllerValidator;
+  String? _txtEdadTextControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'ukyk3wov' /* Ingrese la edad  */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for choiceGenero widget.
   FormFieldController<List<String>>? choiceGeneroValueController;
   String? get choiceGeneroValue =>
@@ -61,11 +94,32 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
   FocusNode? txtMarcaFocusNode;
   TextEditingController? txtMarcaTextController;
   String? Function(BuildContext, String?)? txtMarcaTextControllerValidator;
+  String? _txtMarcaTextControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '39mfg4a5' /* In  la  marca  */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtNumeroPlataforma widget.
   FocusNode? txtNumeroPlataformaFocusNode;
   TextEditingController? txtNumeroPlataformaTextController;
   String? Function(BuildContext, String?)?
       txtNumeroPlataformaTextControllerValidator;
+  String? _txtNumeroPlataformaTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'crwzc61o' /* Ingrese el numero de plataform... */,
+      );
+    }
+
+    return null;
+  }
+
   bool isDataUploading2 = false;
   FFUploadedFile uploadedLocalFile2 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -75,10 +129,32 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
   FocusNode? txtColorMuFocusNode;
   TextEditingController? txtColorMuTextController;
   String? Function(BuildContext, String?)? txtColorMuTextControllerValidator;
+  String? _txtColorMuTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'yv7cj1zb' /* Ingrese el color del Muñon */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtColorFinal widget.
   FocusNode? txtColorFinalFocusNode;
   TextEditingController? txtColorFinalTextController;
   String? Function(BuildContext, String?)? txtColorFinalTextControllerValidator;
+  String? _txtColorFinalTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'mirywcic' /* Ingrese el color final */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for ChoiceAcabado widget.
   FormFieldController<List<String>>? choiceAcabadoValueController;
   String? get choiceAcabadoValue =>
@@ -92,7 +168,18 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
       txtObservacionesFinalTextControllerValidator;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtNombreDocTextControllerValidator = _txtNombreDocTextControllerValidator;
+    txtNombrePacienteTextControllerValidator =
+        _txtNombrePacienteTextControllerValidator;
+    txtEdadTextControllerValidator = _txtEdadTextControllerValidator;
+    txtMarcaTextControllerValidator = _txtMarcaTextControllerValidator;
+    txtNumeroPlataformaTextControllerValidator =
+        _txtNumeroPlataformaTextControllerValidator;
+    txtColorMuTextControllerValidator = _txtColorMuTextControllerValidator;
+    txtColorFinalTextControllerValidator =
+        _txtColorFinalTextControllerValidator;
+  }
 
   @override
   void dispose() {

@@ -1122,181 +1122,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // Formulario
-  {
-    'ovxe48tm': {
-      'es': 'Orden de Trabajo',
-      'en': 'Form',
-    },
-    'g62ikowc': {
-      'es': 'Esencia Dental',
-      'en': 'Dental Essence',
-    },
-    'ajl5gxkd': {
-      'es': 'Tel: +506 2222-3333',
-      'en': 'Tel: +506 2222-3333',
-    },
-    '7c6z5tdi': {
-      'es': 'info@esenciadental.com',
-      'en': 'info@esenciadental.com',
-    },
-    '5wgim6yv': {
-      'es': 'Información del Paciente',
-      'en': 'Patient Information',
-    },
-    'fvqgfany': {
-      'es': 'Nombre del Doctor',
-      'en': 'Doctor\'s Name',
-    },
-    '6fzf829l': {
-      'es': 'Paciente',
-      'en': 'Patient',
-    },
-    'ecechkpb': {
-      'es': 'Edad',
-      'en': 'Age',
-    },
-    '5g05c2p3': {
-      'es': 'Masculino',
-      'en': 'Male',
-    },
-    'as6ecyhu': {
-      'es': 'Femenino',
-      'en': 'Female',
-    },
-    'uf3x8kvu': {
-      'es': 'Recursos',
-      'en': 'Resources',
-    },
-    'rhhumkx4': {
-      'es': 'Impresión superior',
-      'en': 'Top print',
-    },
-    'kwrowpfb': {
-      'es': 'Impresión inferior',
-      'en': 'Bottom print',
-    },
-    'j1q6xche': {
-      'es': 'Antagonista',
-      'en': 'Antagonist',
-    },
-    'x44xwurj': {
-      'es': 'Arco facial',
-      'en': 'Facebow',
-    },
-    '4q3ojsb5': {
-      'es': 'Pilares',
-      'en': 'Pillars',
-    },
-    'ioy1s60l': {
-      'es': 'Fotos',
-      'en': 'Photos',
-    },
-    '89zdbyt1': {
-      'es': 'Otros recursos',
-      'en': 'Other resources',
-    },
-    'nkwqnclm': {
-      'es': 'Tipo de Trabajo',
-      'en': 'Type of Work',
-    },
-    'y9vmg0ne': {
-      'es': 'Coronas',
-      'en': 'Crowns',
-    },
-    'yi6t80xd': {
-      'es': 'Incrutación',
-      'en': 'Embedding',
-    },
-    '1wp4rtzs': {
-      'es': 'Carillas',
-      'en': 'Veneers',
-    },
-    'll1rbqit': {
-      'es': 'Puentes',
-      'en': 'Bridges',
-    },
-    '4jxdk3vn': {
-      'es': 'Otros trabajos',
-      'en': 'Other works',
-    },
-    'vrtvwerd': {
-      'es': 'Material y Línea',
-      'en': 'Material and Line',
-    },
-    'pffq36d5': {
-      'es': 'Premium',
-      'en': 'Premium',
-    },
-    'kji6d5hm': {
-      'es': 'Estándar',
-      'en': 'Standard',
-    },
-    'ntvvsmf3': {
-      'es': 'Clasic',
-      'en': 'Classic',
-    },
-    'cagyp3ar': {
-      'es': 'Zr',
-      'en': 'Zr',
-    },
-    'rkxbnyor': {
-      'es': 'Metal Porcelana',
-      'en': 'Metal Porcelain',
-    },
-    'ihe1fsno': {
-      'es': 'Emax',
-      'en': 'Emax',
-    },
-    'u2n1ilfl': {
-      'es': 'Información de Implantes',
-      'en': 'Implant Information',
-    },
-    'pcrgoyhr': {
-      'es': 'Marca',
-      'en': 'Brand',
-    },
-    'huhaq26v': {
-      'es': 'Número de plataforma',
-      'en': 'Platform number',
-    },
-    '3prz14m5': {
-      'es': 'Color y Acabado',
-      'en': 'Color and Finish',
-    },
-    'rvb19ozq': {
-      'es': 'Color del muñón',
-      'en': 'Stump color',
-    },
-    '3fd8rj6v': {
-      'es': 'Color final',
-      'en': 'Final color',
-    },
-    'jf2scxfl': {
-      'es': 'Alta',
-      'en': 'High',
-    },
-    'rtrzf2bd': {
-      'es': 'Media',
-      'en': 'Average',
-    },
-    'sz7buawj': {
-      'es': 'Baja',
-      'en': 'Low',
-    },
-    '6ryalnr2': {
-      'es': 'Observaciones',
-      'en': 'Observations',
-    },
-    'zpb049pw': {
-      'es': 'Cancelar',
-      'en': 'Cancel',
-    },
-    'jcsgvi8x': {
-      'es': 'Enviar Solicitud',
-      'en': 'Send Request',
-    },
-  },
   // VerCatalogoOLD
   {
     'lanqvcgb': {
@@ -1580,6 +1405,261 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'oz0tj9xg': {
       'es': 'Consultar',
       'en': '',
+    },
+  },
+  // Formulario
+  {
+    '8m0wqcbr': {
+      'es': 'Esencia Dental',
+      'en': 'Dental Essence',
+    },
+    'q30uoq6u': {
+      'es': 'Tel: +506 2222-3333',
+      'en': 'Tel: +506 2222-3333',
+    },
+    'ph1ntrnm': {
+      'es': 'info@esenciadental.com',
+      'en': 'info@esenciadental.com',
+    },
+    'o5z9b2vr': {
+      'es': 'Información del Paciente',
+      'en': 'Patient Information',
+    },
+    'hvky9jy3': {
+      'es': 'Nombre del Doctor',
+      'en': 'Doctor\'s Name',
+    },
+    'mfxtkzn0': {
+      'es': 'Paciente',
+      'en': 'Patient',
+    },
+    'lzvlx2z8': {
+      'es': 'Edad',
+      'en': 'Age',
+    },
+    'oh3hwlpi': {
+      'es': 'Masculino',
+      'en': 'Male',
+    },
+    'hwzgcec1': {
+      'es': 'Femenino',
+      'en': 'Female',
+    },
+    'v2tpggij': {
+      'es': 'Recursos',
+      'en': 'Resources',
+    },
+    'wuru418b': {
+      'es': 'Impresión superior',
+      'en': 'Top print',
+    },
+    'tudpiur0': {
+      'es': 'Impresión inferior',
+      'en': 'Bottom print',
+    },
+    '3amplunc': {
+      'es': 'Antagonista',
+      'en': 'Antagonist',
+    },
+    'zthm14e8': {
+      'es': 'Arco facial',
+      'en': 'Facebow',
+    },
+    'bo2plh30': {
+      'es': 'Pilares',
+      'en': 'Pillars',
+    },
+    'ftyfy2ja': {
+      'es': 'Fotos',
+      'en': 'Photos',
+    },
+    '4akyi49b': {
+      'es': 'Otros recursos',
+      'en': 'Other resources',
+    },
+    '46tq3s3g': {
+      'es': 'Tipo de Trabajo',
+      'en': 'Type of Work',
+    },
+    'x2lecbiw': {
+      'es': 'Coronas',
+      'en': 'Crowns',
+    },
+    'tarllnh9': {
+      'es': 'Incrutación',
+      'en': 'Embedding',
+    },
+    '2xqoi400': {
+      'es': 'Carillas',
+      'en': 'Veneers',
+    },
+    '0ccuwgp3': {
+      'es': 'Puentes',
+      'en': 'Bridges',
+    },
+    'f4byjzvp': {
+      'es': 'Otros trabajos',
+      'en': 'Other works',
+    },
+    'mg2osepe': {
+      'es': 'Material y Línea',
+      'en': 'Material and Line',
+    },
+    'duyb9kn9': {
+      'es': 'Premium',
+      'en': 'Premium',
+    },
+    '33v4exl4': {
+      'es': 'Estándar',
+      'en': 'Standard',
+    },
+    '6jcnld9a': {
+      'es': 'Clasic',
+      'en': 'Classic',
+    },
+    '0dfrke26': {
+      'es': 'Zr',
+      'en': 'Zr',
+    },
+    '1koc6jio': {
+      'es': 'Metal Porcelana',
+      'en': 'Metal Porcelain',
+    },
+    '143lgrzg': {
+      'es': 'Emax',
+      'en': 'Emax',
+    },
+    '497wqjr7': {
+      'es': 'Información de Implantes',
+      'en': 'Implant Information',
+    },
+    'xvrtooxp': {
+      'es': 'Marca',
+      'en': 'Brand',
+    },
+    'c4g0su99': {
+      'es': 'Número de plataforma',
+      'en': 'Platform number',
+    },
+    'xobti20r': {
+      'es': 'Color y Acabado',
+      'en': 'Color and Finish',
+    },
+    'k741ld1x': {
+      'es': 'Color del muñón',
+      'en': 'Stump color',
+    },
+    '517bcdwx': {
+      'es': 'Color final',
+      'en': 'Final color',
+    },
+    'kbj27q8z': {
+      'es': 'Alta',
+      'en': 'High',
+    },
+    'va6ckhyt': {
+      'es': 'Media',
+      'en': 'Average',
+    },
+    '7x63q2lf': {
+      'es': 'Baja',
+      'en': 'Low',
+    },
+    '1dfvn0tk': {
+      'es': 'Observaciones',
+      'en': 'Observations',
+    },
+    'ciu64o05': {
+      'es': 'Cancelar',
+      'en': 'Cancel',
+    },
+    'ty0gzmg4': {
+      'es': 'Enviar Solicitud',
+      'en': 'Send Request',
+    },
+    'p6or509x': {
+      'es': 'Ingres su nombre ',
+      'en': '',
+    },
+    'brbhdb5a': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '3xq6ydwz': {
+      'es': 'Por favor ingrese e nombre del paciente',
+      'en': '',
+    },
+    '0ta7z86h': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ukyk3wov': {
+      'es': 'Ingrese la edad ',
+      'en': '',
+    },
+    't4lrd6f9': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'vudv8899': {
+      'es': 'Field is required',
+      'en': '',
+    },
+    'wyh6ngkl': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'skg6n834': {
+      'es': 'Field is required',
+      'en': '',
+    },
+    'anjsplv4': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '39mfg4a5': {
+      'es': 'In  la  marca ',
+      'en': '',
+    },
+    'i9fcu6h9': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'crwzc61o': {
+      'es': 'Ingrese el numero de plataforma ',
+      'en': '',
+    },
+    '3psqc737': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'yv7cj1zb': {
+      'es': 'Ingrese el color del Muñon',
+      'en': '',
+    },
+    'xzlt3u4g': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'mirywcic': {
+      'es': 'Ingrese el color final',
+      'en': '',
+    },
+    'm7ds6kus': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'fc5tah2x': {
+      'es': 'Field is required',
+      'en': '',
+    },
+    'p5ybi0gq': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ratptpzq': {
+      'es': 'Home',
+      'en': 'Home',
     },
   },
   // Miscellaneous

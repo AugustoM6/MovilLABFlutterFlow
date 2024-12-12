@@ -72,16 +72,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const ReportePedidosAdminWidget()
-          : const LoginWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const ReportePedidosAdminWidget()
-              : const LoginWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -255,11 +253,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AgregarEmpleadoWidget(),
         ),
         FFRoute(
-          name: 'Formulario',
-          path: '/formulario',
-          builder: (context, params) => const FormularioWidget(),
-        ),
-        FFRoute(
           name: 'VerCatalogoOLD',
           path: '/verCatalogoOLD',
           builder: (context, params) => const VerCatalogoOLDWidget(),
@@ -311,6 +304,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.DateTime,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Formulario',
+          path: '/formulario',
+          builder: (context, params) => const FormularioWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

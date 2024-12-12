@@ -426,8 +426,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               onTap: () async {
                                 await authManager.deleteUser(context);
 
-                                context.goNamedAuth(
-                                    'ReportePedidosAdmin', context.mounted);
+                                context.goNamedAuth('Home', context.mounted);
                               },
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -475,8 +474,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               false;
                                       await authManager.deleteUser(context);
 
-                                      context.goNamedAuth('ReportePedidosAdmin',
-                                          context.mounted);
+                                      context.goNamedAuth(
+                                          'Home', context.mounted);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,

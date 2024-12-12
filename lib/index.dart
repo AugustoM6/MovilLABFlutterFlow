@@ -52,8 +52,6 @@ export '/jimena/h_u26_mediocompletada/notificaciones/notificaciones_widget.dart'
     show NotificacionesWidget;
 export '/pablo/hu10/gestion_empleados/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;
-export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
-    show FormularioWidget;
 export '/milagro/u_h2_completa/ver_catalogo_o_l_d/ver_catalogo_o_l_d_widget.dart'
     show VerCatalogoOLDWidget;
 export '/milagro/u_h2_completa/ver_catalogo/ver_catalogo_widget.dart'
@@ -68,3 +66,5 @@ export '/milagro/u_h23_completa/reporte_pedidos_admin/reporte_pedidos_admin_widg
     show ReportePedidosAdminWidget;
 export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_widget.dart'
     show ReportePedidosUsuarioWidget;
+export '/augusto/h_u11a13_completadas/formulario/formulario_widget.dart'
+    show FormularioWidget;
