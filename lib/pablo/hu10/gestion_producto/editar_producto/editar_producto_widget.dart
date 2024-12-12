@@ -50,6 +50,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
     _model.txtFdCategoriaTextController ??=
         TextEditingController(text: widget.paramProductos?.categoria);
     _model.txtFdCategoriaFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -62,7 +64,10 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

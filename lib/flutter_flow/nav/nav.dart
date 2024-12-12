@@ -73,28 +73,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const ChaBotWidget() : const InfoLab1Widget(),
+          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const ChaBotWidget() : const InfoLab1Widget(),
+              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
           path: '/infoLab1',
           builder: (context, params) => const InfoLab1Widget(),
-        ),
-        FFRoute(
-          name: 'VerCatalogo',
-          path: '/verCatalogo',
-          builder: (context, params) => VerCatalogoWidget(
-            categoria: params.getParam(
-              'categoria',
-              ParamType.String,
-            ),
-          ),
         ),
         FFRoute(
           name: 'Contactenos',
@@ -107,21 +97,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GuardarProductosListaWidget(),
         ),
         FFRoute(
-          name: 'ReportePedidos',
-          path: '/reportePedidos',
-          builder: (context, params) => ReportePedidosWidget(
-            mes: params.getParam(
-              'mes',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
-          name: 'HistorialPedidos',
-          path: '/historialPedidos',
-          builder: (context, params) => HistorialPedidosWidget(
-            mes: params.getParam(
-              'mes',
+          name: 'HistorialPedidosFALTABOTONPDF',
+          path: '/historialPedidosFALTABOTONPDF',
+          builder: (context, params) => HistorialPedidosFALTABOTONPDFWidget(
+            selectedMonth: params.getParam(
+              'selectedMonth',
               ParamType.String,
             ),
           ),
@@ -157,9 +137,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const IndexProductoWidget(),
         ),
         FFRoute(
-          name: 'IniciSesion',
-          path: '/iniciSesion',
-          builder: (context, params) => const IniciSesionWidget(),
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'agregarProducto',
@@ -200,11 +180,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const IndexEmpleadosWidget(),
         ),
         FFRoute(
-          name: 'agregarEmpleado',
-          path: '/agregarEmpleado',
-          builder: (context, params) => const AgregarEmpleadoWidget(),
-        ),
-        FFRoute(
           name: 'detallesEmpleado',
           path: '/detallesEmpleado',
           asyncParams: {
@@ -239,11 +214,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomeWidget(),
         ),
         FFRoute(
-          name: 'Notificaciones',
-          path: '/notificaciones',
-          builder: (context, params) => const NotificacionesWidget(),
-        ),
-        FFRoute(
           name: 'ChaBot',
           path: '/chaBot',
           builder: (context, params) => const ChaBotWidget(),
@@ -266,6 +236,79 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Recordatorios',
+          path: '/recordatorios',
+          builder: (context, params) => const RecordatoriosWidget(),
+        ),
+        FFRoute(
+          name: 'Notificaciones',
+          path: '/notificaciones',
+          builder: (context, params) => const NotificacionesWidget(),
+        ),
+        FFRoute(
+          name: 'agregarEmpleado',
+          path: '/agregarEmpleado',
+          builder: (context, params) => const AgregarEmpleadoWidget(),
+        ),
+        FFRoute(
+          name: 'VerCatalogoOLD',
+          path: '/verCatalogoOLD',
+          builder: (context, params) => const VerCatalogoOLDWidget(),
+        ),
+        FFRoute(
+          name: 'VerCatalogo',
+          path: '/verCatalogo',
+          builder: (context, params) => const VerCatalogoWidget(),
+        ),
+        FFRoute(
+          name: 'VerCatalogoPorCategoria',
+          path: '/verCatalogoPorCategoria',
+          builder: (context, params) => const VerCatalogoPorCategoriaWidget(),
+        ),
+        FFRoute(
+          name: 'Promociones',
+          path: '/promociones',
+          builder: (context, params) => const PromocionesWidget(),
+        ),
+        FFRoute(
+          name: 'pruebscroll',
+          path: '/pruebscroll',
+          builder: (context, params) => const PruebscrollWidget(),
+        ),
+        FFRoute(
+          name: 'ReportePedidosAdmin',
+          path: '/reportePedidosAdmin',
+          builder: (context, params) => ReportePedidosAdminWidget(
+            fecha: params.getParam(
+              'fecha',
+              ParamType.DateTime,
+            ),
+            selectedMonth: params.getParam(
+              'selectedMonth',
+              ParamType.DateTime,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'ReportePedidosUsuario',
+          path: '/reportePedidosUsuario',
+          builder: (context, params) => ReportePedidosUsuarioWidget(
+            fecha: params.getParam(
+              'fecha',
+              ParamType.DateTime,
+            ),
+            selectedMonth: params.getParam(
+              'selectedMonth',
+              ParamType.DateTime,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'Formulario',
+          path: '/formulario',
+          builder: (context, params) => const FormularioWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -436,7 +479,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/infoLab1';
+            return '/login';
           }
           return null;
         },

@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,8 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AgregarEmpleadoModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -32,27 +35,48 @@ class _AgregarEmpleadoWidgetState extends State<AgregarEmpleadoWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: FlutterFlowIconButton(
+              borderColor: FlutterFlowTheme.of(context).secondary,
+              borderRadius: 100.0,
+              borderWidth: 1.0,
+              buttonSize: 48.0,
+              fillColor: FlutterFlowTheme.of(context).secondary,
+              icon: const Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.white,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.pop();
+              },
+            ),
+          ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'ehg9x5s8' /* Page Title */,
+              'rl79otd9' /* Gestion de Empleados */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter',
-                  color: Colors.white,
+                  color: FlutterFlowTheme.of(context).primaryText,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
                 ),
           ),
           actions: const [],
-          centerTitle: false,
-          elevation: 2.0,
+          centerTitle: true,
+          elevation: 0.0,
         ),
         body: const SafeArea(
           top: true,

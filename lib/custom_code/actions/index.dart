@@ -1,1 +1,1 @@
-export 'generar_p_d_f.dart' show generarPDF;
+export 'export_custom_data_to_pdf.dart' show exportCustomDataToPdf;

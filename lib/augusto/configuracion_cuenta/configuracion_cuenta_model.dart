@@ -6,6 +6,11 @@ class ConfiguracionCuentaModel
     extends FlutterFlowModel<ConfiguracionCuentaWidget> {
   ///  State fields for stateful widgets in this page.
 
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
   // State field(s) for txtNombre widget.
   FocusNode? txtNombreFocusNode;
   TextEditingController? txtNombreTextController;
@@ -22,10 +27,14 @@ class ConfiguracionCuentaModel
   FocusNode? txtTelefonoFocusNode;
   TextEditingController? txtTelefonoTextController;
   String? Function(BuildContext, String?)? txtTelefonoTextControllerValidator;
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
+  // State field(s) for txtCorreo widget.
+  FocusNode? txtCorreoFocusNode;
+  TextEditingController? txtCorreoTextController;
+  String? Function(BuildContext, String?)? txtCorreoTextControllerValidator;
+  // State field(s) for tabGenero widget.
+  TabController? tabGeneroController;
+  int get tabGeneroCurrentIndex =>
+      tabGeneroController != null ? tabGeneroController!.index : 0;
 
   @override
   void initState(BuildContext context) {}
@@ -44,6 +53,9 @@ class ConfiguracionCuentaModel
     txtTelefonoFocusNode?.dispose();
     txtTelefonoTextController?.dispose();
 
-    tabBarController?.dispose();
+    txtCorreoFocusNode?.dispose();
+    txtCorreoTextController?.dispose();
+
+    tabGeneroController?.dispose();
   }
 }

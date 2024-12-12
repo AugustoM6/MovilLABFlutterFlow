@@ -55,15 +55,15 @@ class UsersRecord extends FirestoreRecord {
   String get direccion => _direccion ?? '';
   bool hasDireccion() => _direccion != null;
 
-  // "telefono" field.
-  int? _telefono;
-  int get telefono => _telefono ?? 0;
-  bool hasTelefono() => _telefono != null;
-
   // "phone_number" field.
   String? _phoneNumber;
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
+
+  // "genero" field.
+  String? _genero;
+  String get genero => _genero ?? '';
+  bool hasGenero() => _genero != null;
 
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
@@ -74,8 +74,8 @@ class UsersRecord extends FirestoreRecord {
     _isAdmin = snapshotData['isAdmin'] as bool?;
     _edad = castToType<int>(snapshotData['edad']);
     _direccion = snapshotData['direccion'] as String?;
-    _telefono = castToType<int>(snapshotData['telefono']);
     _phoneNumber = snapshotData['phone_number'] as String?;
+    _genero = snapshotData['genero'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -120,8 +120,8 @@ Map<String, dynamic> createUsersRecordData({
   bool? isAdmin,
   int? edad,
   String? direccion,
-  int? telefono,
   String? phoneNumber,
+  String? genero,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -133,8 +133,8 @@ Map<String, dynamic> createUsersRecordData({
       'isAdmin': isAdmin,
       'edad': edad,
       'direccion': direccion,
-      'telefono': telefono,
       'phone_number': phoneNumber,
+      'genero': genero,
     }.withoutNulls,
   );
 
@@ -154,8 +154,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.isAdmin == e2?.isAdmin &&
         e1?.edad == e2?.edad &&
         e1?.direccion == e2?.direccion &&
-        e1?.telefono == e2?.telefono &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.phoneNumber == e2?.phoneNumber &&
+        e1?.genero == e2?.genero;
   }
 
   @override
@@ -168,8 +168,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.isAdmin,
         e?.edad,
         e?.direccion,
-        e?.telefono,
-        e?.phoneNumber
+        e?.phoneNumber,
+        e?.genero
       ]);
 
   @override

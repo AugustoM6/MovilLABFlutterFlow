@@ -20,6 +20,8 @@ class _EditarServicioWidgetState extends State<EditarServicioWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => EditarServicioModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -32,7 +34,10 @@ class _EditarServicioWidgetState extends State<EditarServicioWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

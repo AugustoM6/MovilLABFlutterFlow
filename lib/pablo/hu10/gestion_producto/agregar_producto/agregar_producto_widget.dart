@@ -40,6 +40,8 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
 
     _model.txtFdCategoriaTextController ??= TextEditingController();
     _model.txtFdCategoriaFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -52,7 +54,10 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -615,11 +620,11 @@ class _AgregarProductoWidgetState extends State<AgregarProductoWidget> {
                               nombre: _model.txtFdNombreTextController.text,
                               descripcion:
                                   _model.txtFdDescripTextController.text,
+                              categoria:
+                                  _model.txtFdCategoriaTextController.text,
                               departamento:
                                   _model.txtFdDepartamTextController.text,
                               tecnico: _model.txtFdTecnicoTextController.text,
-                              categoria:
-                                  _model.txtFdCategoriaTextController.text,
                               imagen: _model.uploadedFileUrl,
                             ));
                         safeSetState(() {
