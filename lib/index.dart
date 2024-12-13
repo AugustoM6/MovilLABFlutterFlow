@@ -13,7 +13,7 @@ export '/jimena/h_u7_completada/conozcanos/conozcanos_widget.dart'
     show ConozcanosWidget;
 export '/jimena/h_u9x19x30_compeletada/accesibilidad_e_idioma/accesibilidad_e_idioma_widget.dart'
     show AccesibilidadEIdiomaWidget;
-export '/jimena/h_u25x14x15_pendiente_fecha_y_estado/pedidos_recientes/pedidos_recientes_widget.dart'
+export '/jimena/h_u25x14x15_completada/pedidos_recientes/pedidos_recientes_widget.dart'
     show PedidosRecientesWidget;
 export '/augusto/h_u28_pendiente_garficas/menu_administrador/menu_administrador_widget.dart'
     show MenuAdministradorWidget;
@@ -57,12 +57,9 @@ export '/milagro/u_h21_completa/ver_catalogo_por_categoria/ver_catalogo_por_cate
     show VerCatalogoPorCategoriaWidget;
 export '/pablo/hu8/promociones/promociones/promociones_widget.dart'
     show PromocionesWidget;
-export '/milagro/u_h23_completa/reporte_pedidos_admin/reporte_pedidos_admin_widget.dart'
-    show ReportePedidosAdminWidget;
-export '/milagro/u_h23_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_widget.dart'
+export '/milagro/u_h24_completa/reporte_pedidos_usuario/reporte_pedidos_usuario_widget.dart'
     show ReportePedidosUsuarioWidget;
-export '/augusto/h_u11a13_completadas100/formulario/formulario_widget.dart'
-    show FormularioWidget;
+export '/augusto/formulario/formulario_widget.dart' show FormularioWidget;
 export '/pablo/h_u10_completo_f_a_l_t_a_f_l_u_j_o_i_n_d_e_x/gestion_empleados_c_o_m_p_l_e_t_a_d_o/agregar_empleado/agregar_empleado_widget.dart'
     show AgregarEmpleadoWidget;
 export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/index_pedidos/index_pedidos_widget.dart'
@@ -73,3 +70,5 @@ export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/agregar_pedido/agregar_pedido_widget.dar
     show AgregarPedidoWidget;
 export '/pablo/h_u16y17_c_o_m_p_l_e_t_o/detalles_pedido/detalles_pedido_widget.dart'
     show DetallesPedidoWidget;
+export '/milagro/u_h24_completa/reporte_pedidos_admin/reporte_pedidos_admin_widget.dart'
+    show ReportePedidosAdminWidget;

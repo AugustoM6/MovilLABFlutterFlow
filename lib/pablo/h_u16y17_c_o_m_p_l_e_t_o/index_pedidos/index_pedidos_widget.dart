@@ -98,7 +98,7 @@ class _IndexPedidosWidgetState extends State<IndexPedidosWidget> {
                           context.pushNamed('agregarPedido');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'ax02bkyu' /* AGREGAR */,
+                          'ax02bkyu' /* Agregar */,
                         ),
                         options: FFButtonOptions(
                           width: 100.0,

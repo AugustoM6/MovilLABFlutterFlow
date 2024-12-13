@@ -7,6 +7,10 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
+  // State field(s) for txtNumeroFac widget.
+  FocusNode? txtNumeroFacFocusNode;
+  TextEditingController? txtNumeroFacTextController;
+  String? Function(BuildContext, String?)? txtNumeroFacTextControllerValidator;
   // State field(s) for txtNombreDoc widget.
   FocusNode? txtNombreDocFocusNode;
   TextEditingController? txtNombreDocTextController;
@@ -68,6 +72,10 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
   List<FFUploadedFile> uploadedLocalFiles1 = [];
   List<String> uploadedFileUrls1 = [];
 
+  bool isDataUploading2 = false;
+  List<FFUploadedFile> uploadedLocalFiles2 = [];
+  List<String> uploadedFileUrls2 = [];
+
   // State field(s) for txOtrosRecursos widget.
   FocusNode? txOtrosRecursosFocusNode;
   TextEditingController? txOtrosRecursosTextController;
@@ -120,10 +128,10 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
     return null;
   }
 
-  bool isDataUploading2 = false;
-  FFUploadedFile uploadedLocalFile2 =
+  bool isDataUploading3 = false;
+  FFUploadedFile uploadedLocalFile3 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl2 = '';
+  String uploadedFileUrl3 = '';
 
   // State field(s) for txtColorMu widget.
   FocusNode? txtColorMuFocusNode;
@@ -183,6 +191,9 @@ class FormularioModel extends FlutterFlowModel<FormularioWidget> {
 
   @override
   void dispose() {
+    txtNumeroFacFocusNode?.dispose();
+    txtNumeroFacTextController?.dispose();
+
     txtNombreDocFocusNode?.dispose();
     txtNombreDocTextController?.dispose();
 

@@ -199,7 +199,7 @@ class _AgregarPedidoWidgetState extends State<AgregarPedidoWidget> {
                               Expanded(
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    '5enl868h' /* FECHA DE SOLICITUD DEL PEDIDO: */,
+                                    '5enl868h' /* Fecha de solicitud: */,
                                   ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)

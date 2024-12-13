@@ -6,11 +6,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'reporte_pedidos_usuario_model.dart';
-export 'reporte_pedidos_usuario_model.dart';
+import 'reporte_pedidos_admin_model.dart';
+export 'reporte_pedidos_admin_model.dart';
 
-class ReportePedidosUsuarioWidget extends StatefulWidget {
-  const ReportePedidosUsuarioWidget({
+class ReportePedidosAdminWidget extends StatefulWidget {
+  const ReportePedidosAdminWidget({
     super.key,
     this.fecha,
     this.selectedMonth,
@@ -20,20 +20,19 @@ class ReportePedidosUsuarioWidget extends StatefulWidget {
   final DateTime? selectedMonth;
 
   @override
-  State<ReportePedidosUsuarioWidget> createState() =>
-      _ReportePedidosUsuarioWidgetState();
+  State<ReportePedidosAdminWidget> createState() =>
+      _ReportePedidosAdminWidgetState();
 }
 
-class _ReportePedidosUsuarioWidgetState
-    extends State<ReportePedidosUsuarioWidget> {
-  late ReportePedidosUsuarioModel _model;
+class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
+  late ReportePedidosAdminModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ReportePedidosUsuarioModel());
+    _model = createModel(context, () => ReportePedidosAdminModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -175,7 +174,7 @@ class _ReportePedidosUsuarioWidgetState
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'wtjwa8my' /* Pedidos */,
+                                      '6x0i6vym' /* Pedidos */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -219,7 +218,7 @@ class _ReportePedidosUsuarioWidgetState
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'xan4da87' /* Reportes */,
+                                      '7q9hbnf9' /* Reportes */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -261,7 +260,7 @@ class _ReportePedidosUsuarioWidgetState
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'cq10z57e' /* Calendario de Pedidos */,
+                                  'xaidz1sd' /* Calendario de Pedidos */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
@@ -285,7 +284,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -330,8 +329,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -357,7 +356,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'vcwl9vut' /* Enero */,
+                                                    'okptb8fq' /* Enero */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -381,7 +380,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -426,8 +425,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -453,7 +452,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'ip25j9pg' /* Febrero */,
+                                                    'vlm2vo1j' /* Febrero */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -477,7 +476,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -522,8 +521,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -549,7 +548,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '0ehe8l60' /* Marzo */,
+                                                    'ccyo0k9p' /* Marzo */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -573,7 +572,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -618,8 +617,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -649,8 +648,8 @@ class _ReportePedidosUsuarioWidgetState
                                                   queryParameters: {
                                                     'selectedMonth':
                                                         serializeParam(
-                                                      'Enero',
-                                                      ParamType.String,
+                                                      widget.fecha,
+                                                      ParamType.DateTime,
                                                     ),
                                                   }.withoutNulls,
                                                 );
@@ -663,7 +662,7 @@ class _ReportePedidosUsuarioWidgetState
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'ohc0vg7n' /* Abril */,
+                                                      'nbodue2s' /* Abril */,
                                                     ),
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
@@ -688,7 +687,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -733,8 +732,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -760,7 +759,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'nv43sq6g' /* Mayo */,
+                                                    'v4y0k2zc' /* Mayo */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -784,7 +783,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -829,8 +828,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -856,7 +855,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '5fjlddjb' /* Junio */,
+                                                    '28z39386' /* Junio */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -880,7 +879,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -925,8 +924,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -952,7 +951,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '3x7m5s1h' /* Julio */,
+                                                    'q8q7v52w' /* Julio */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -976,7 +975,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1021,8 +1020,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1048,7 +1047,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'ff44cwte' /* Agosto */,
+                                                    'n7zc3z6e' /* Agosto */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -1072,7 +1071,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1117,8 +1116,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1144,7 +1143,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'va23mr97' /* Septiembre */,
+                                                    'mnhst42b' /* Septiembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1169,7 +1168,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1214,8 +1213,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1241,7 +1240,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'epu1h63a' /* Octubre */,
+                                                    'sccq3b5x' /* Octubre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -1265,7 +1264,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1310,8 +1309,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1337,7 +1336,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'bxpihw52' /* Noviembre */,
+                                                    'lj6y1thr' /* Noviembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1362,7 +1361,7 @@ class _ReportePedidosUsuarioWidgetState
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1407,8 +1406,8 @@ class _ReportePedidosUsuarioWidgetState
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Diciembre',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1434,7 +1433,7 @@ class _ReportePedidosUsuarioWidgetState
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'f9ldbjgp' /* Diciembre */,
+                                                    'y5bdca39' /* Diciembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1473,7 +1472,7 @@ class _ReportePedidosUsuarioWidgetState
                             await actions.exportCustomDataToPdf();
                           },
                           text: FFLocalizations.of(context).getText(
-                            'xmq8u9k6' /* Generar PDF */,
+                            '8yqxfou3' /* Generar PDF */,
                           ),
                           icon: const Icon(
                             Icons.picture_as_pdf,
@@ -1503,7 +1502,7 @@ class _ReportePedidosUsuarioWidgetState
                             print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
-                            'oz0tj9xg' /* Consultar */,
+                            '2qr791dw' /* Consultar */,
                           ),
                           icon: const Icon(
                             Icons.search,

@@ -232,90 +232,91 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '2de19b8k': {
       'es': '¡En Esencia Dental, te ayudamos \na que vuelvas a sonreír! ',
-      'en': '',
+      'en': 'At Esencia Dental, we help you\nsmile again!',
     },
     '91d6dpqw': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     'of6dta64': {
       'es': 'Eliminar',
-      'en': '',
+      'en': 'Eliminate',
     },
     'ztqvskpj': {
       'es': 'Lista de Deseos',
-      'en': '',
+      'en': 'Wish List',
     },
     'g5efq2fr': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // HistorialPedidosFALTABOTONPDF
   {
-    '5kbm5ihe': {
-      'es': '',
-      'en': 'NumPedido',
-    },
     'ifyuo4cn': {
       'es': 'Generar',
-      'en': '',
+      'en': 'Trigger',
     },
     'aukp8zhb': {
       'es': 'Consultar',
-      'en': '',
+      'en': 'Consult',
     },
     '79cepg43': {
       'es': 'Prueba',
+      'en': 'Proof',
+    },
+    'dtpbklik': {
+      'es': 'Back',
       'en': '',
     },
-    'tc7f0pk5': {
+    'iwahlqj4': {
       'es': 'Historial de pedidos',
       'en': '',
     },
     'nz4zsi0c': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // InfoLab2
   {
     '0fxrc1t6': {
       'es': 'Horario:\n',
-      'en': '',
+      'en': 'Schedule:',
     },
     'qb35yxqu': {
       'es': 'De Lunes a Viernes\n',
-      'en': '',
+      'en': 'Monday to Friday',
     },
     'p1jbevir': {
       'es': 'de 7am - 5pm',
-      'en': '',
+      'en': 'from 7am - 5pm',
     },
     'cu2cn03o': {
       'es': 'Para más \ninformación:\n',
-      'en': '',
+      'en': 'For more \ninformation:',
     },
     'kh3qmut8': {
       'es': 'Visite nuestras\nredes sociales.',
-      'en': '',
+      'en': 'Visit our\nsocial networks.',
     },
     '38lfftop': {
       'es': 'Sobre el laboratorio:\n',
-      'en': '',
+      'en': 'About the laboratory:',
     },
     '77ygfipw': {
       'es':
           'El Laboratorio Esencial Aligners es uno de nuestros socios, nuestra empresa hermana con la cual diseñamos alineadores dentales de altísima calidad. ',
-      'en': '',
+      'en':
+          'The Essential Aligners Laboratory is one of our partners, our sister company with which we design high-quality dental aligners.',
     },
     'ew5gdyo5': {
       'es': 'Laboratorio Asociado',
-      'en': '',
+      'en': 'Associated Laboratory',
     },
     'l2cyawv6': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Conozcanos
@@ -323,618 +324,593 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lwitu7il': {
       'es':
           'En Esencia Dental nos caracterizamos por ser más que un equipo de profesionales comprometidos y especializados en técnica dental, somos una familia que busca devolver la sonrisa a sus pacientes.',
-      'en': '',
+      'en':
+          'At Esencia Dental we are characterized by being more than a team of committed professionals specialized in dental techniques, we are a family that seeks to give our patients back their smiles.',
     },
     '5to7d89q': {
       'es':
           '\"Manos expertas y el mejor equipo humano y tecnológico nos permite asegurarles la mejor calidad y los mejores tiempos de entrega. Hoy estamos desarrollando el tercer año desde que empezamos con dicho proceso y en la actualidad contamos con 14 empleados y un laboratorio completo con la capacidad de abarcar desde el punto inicial del proceso, que se llama “el modelo” e implica la impresión que se le toma al paciente. En nuestro negocio somos capaces de desarrollar todas las técnicas.\"',
-      'en': '',
+      'en':
+          '\"Expert hands and the best human and technological team allow us to ensure the best quality and the best delivery times. Today we are developing the third year since we started with this process and we currently have 14 employees and a complete laboratory with the capacity to cover from the initial point of the process, which is called \"the model\" and involves the impression that is taken from the patient. In our business we are capable of developing all the techniques.\"',
     },
     '4u4wg6d2': {
       'es': 'Equipo Humano en Esencia Dental\n',
-      'en': '',
+      'en': 'Human Team at Esencia Dental',
     },
     'gwsabrpp': {
       'es': '#SomosUnEquipo ',
-      'en': '',
+      'en': '#WeAreATeam',
     },
     'bmrutvp9': {
       'es': '¡Conózcanos!',
-      'en': '',
+      'en': 'Get to know us!',
     },
     'pv4b85fj': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // AccesibilidadEIdioma
   {
     'oe9di57t': {
       'es': 'Tamaño de texto',
-      'en': '',
+      'en': 'Text size',
     },
     'sxaym312': {
       'es': 'Modo Claro / Oscuro',
-      'en': '',
+      'en': 'Light/Dark Mode',
     },
     've5gd7d4': {
       'es': 'Elige tu idioma',
-      'en': '',
+      'en': 'Choose your language',
     },
     'c2svg7c1': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'f01gbn7c': {
       'es': 'Guardar',
-      'en': '',
+      'en': 'Keep',
     },
     'f5cnme44': {
       'es': 'Accesibilidad e Idioma',
-      'en': '',
+      'en': 'Accessibility and Language',
     },
     't7ckvhdm': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // PedidosRecientes
   {
     'zhdi935y': {
       'es': 'Recientes',
-      'en': '',
+      'en': 'Recent',
     },
     '88q6ts4x': {
       'es': 'Número',
-      'en': '',
+      'en': 'Number',
     },
     'eb5znb43': {
       'es': 'Cliente',
-      'en': '',
+      'en': 'Customer',
     },
     'jlyi2sbo': {
       'es': 'Fecha',
-      'en': '',
+      'en': 'Date',
     },
     'shhto855': {
       'es': 'Estado',
-      'en': '',
+      'en': 'State',
     },
     'ech9ovxp': {
       'es': 'Actions',
-      'en': '',
-    },
-    'b9xigbbe': {
-      'es': 'Active',
-      'en': '',
+      'en': 'Actions',
     },
     '7ses1vnp': {
       'es': 'Pedidos',
-      'en': '',
+      'en': 'Orders',
     },
     't2gvr1ou': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // MenuAdministrador
   {
-    'craret79': {
-      'es': 'Resumen de Pedidos',
-      'en': '',
-    },
-    'dsikdemd': {
-      'es': '12',
-      'en': '',
-    },
-    'dracdyiu': {
-      'es': 'Pedidos Activos',
-      'en': '',
-    },
-    '7p0rf5nf': {
-      'es': '8',
-      'en': '',
-    },
-    'a9pq7wdh': {
-      'es': 'En Proceso',
-      'en': '',
-    },
-    'nt9wbt0h': {
-      'es': '4',
-      'en': '',
-    },
-    '0onryhrl': {
-      'es': 'Completados',
-      'en': '',
-    },
     'buukx6g2': {
-      'es': 'Pedidos del Mes',
-      'en': '',
-    },
-    'py18nru5': {
-      'es': 'Gestión de Pedidos',
-      'en': '',
+      'es': 'Menú administrador',
+      'en': 'Orders of the Month',
     },
     'dzmba3kz': {
       'es': 'Gestión de Productos',
-      'en': '',
+      'en': 'Product Management',
+    },
+    'py18nru5': {
+      'es': 'Gestión de Pedidos',
+      'en': 'Order Management',
     },
     'ogkzr7oh': {
+      'es': 'Empleados',
+      'en': 'Reports',
+    },
+    '263vtvce': {
       'es': 'Reportes',
-      'en': '',
+      'en': 'Reports',
+    },
+    'vkna2ake': {
+      'es': 'Servicios',
+      'en': 'Reports',
     },
     'nae33p8b': {
       'es': 'Cerrar Sesión',
-      'en': '',
-    },
-    '3wnrn19r': {
-      'es': 'Administrador',
-      'en': '',
+      'en': 'Close Session',
     },
   },
   // IndexProducto
   {
     'c790vstk': {
-      'es': 'AGREGAR',
-      'en': '',
+      'es': 'Agregar',
+      'en': 'Add',
     },
     'rr5wyjkj': {
       'es': 'Editar',
-      'en': '',
+      'en': 'Edit',
     },
     'vm2hm5a2': {
       'es': 'Eliminar',
-      'en': '',
+      'en': 'Eliminate',
     },
     '9cf3qptz': {
       'es': 'Gestion de Productos',
-      'en': '',
+      'en': 'Product Management',
     },
     '25whn5s9': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Login
   {
     'asutwzzz': {
       'es': 'Crear Cuenta',
-      'en': '',
+      'en': 'Create Account',
     },
     'oe7cf99x': {
       'es': 'Ingresa los siguientes datos.',
-      'en': '',
+      'en': 'Enter the following data.',
     },
     'cf7l9skg': {
       'es': 'Correo electrónico ',
-      'en': '',
+      'en': 'Email',
     },
     'oer6598o': {
       'es': 'Contraseña',
-      'en': '',
+      'en': 'Password',
     },
     'mxbl3zc2': {
       'es': 'Confirmación de contraseña',
-      'en': '',
+      'en': 'Password confirmation',
     },
     'r99603ni': {
       'es': 'Crear Cuenta',
-      'en': '',
+      'en': 'Create Account',
     },
     'vw0farqr': {
       'es': 'o crea la cuenta con',
-      'en': '',
+      'en': 'or create the account with',
     },
     'oes1qf72': {
       'es': 'Continua con google',
-      'en': '',
+      'en': 'Continue with google',
     },
     '6hqp99bw': {
       'es': 'Continua con apple',
-      'en': '',
+      'en': 'Continue with apple',
     },
     '1ddmng1v': {
       'es': 'Iniciar sesión',
-      'en': '',
+      'en': 'Login',
     },
     'xux8cifc': {
       'es': 'Bienvenido',
-      'en': '',
+      'en': 'Welcome',
     },
     'pqb495sf': {
       'es': 'Ingrese los siguientes datos',
-      'en': '',
+      'en': 'Enter the following data',
     },
     'ghcjay5s': {
       'es': 'Email',
-      'en': '',
+      'en': 'E-mail',
     },
     'xfwkf143': {
       'es': 'Password',
-      'en': '',
+      'en': 'Password',
     },
     'lhxfyxud': {
       'es': 'Iniciar sesión',
-      'en': '',
+      'en': 'Login',
     },
     'qm6yfpt5': {
-      'es': 'Or sign in with',
-      'en': '',
+      'es': 'o inicia sesión con',
+      'en': 'or log in with',
     },
     'w1q93owp': {
       'es': 'Continua con Google',
-      'en': '',
+      'en': 'Continue with Google',
     },
     'hmraj5tb': {
       'es': 'Continua con apple',
-      'en': '',
+      'en': 'Continue with apple',
     },
     '7mzl8npv': {
-      'es': 'Forgot Password?',
-      'en': '',
+      'es': 'Olvidaste tu contraseña?',
+      'en': 'Forgot your password?',
     },
     'h5y6xaci': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // agregarProducto
   {
     '3pkisd33': {
       'es': 'Cargar',
-      'en': '',
+      'en': 'Carry',
     },
     'rqrmxkew': {
       'es': 'Nombre del producto',
-      'en': '',
+      'en': 'Product name',
     },
     'tgjmz7ae': {
       'es': 'Descripcion',
-      'en': '',
+      'en': 'Description',
     },
     'cz2060vp': {
       'es': 'Departamento',
-      'en': '',
+      'en': 'Department',
     },
     '1t5cbmaq': {
       'es': 'Tecnico',
-      'en': '',
+      'en': 'Technical',
     },
     'uzvbrofj': {
       'es': 'Categoria',
-      'en': '',
+      'en': 'Category',
     },
     'fir9v5v1': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     '6ewiylw8': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     'hseykpb0': {
       'es': 'Gestion de Productos',
-      'en': '',
+      'en': 'Product Management',
     },
     '2018f8tq': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // PasswordOlvidado
   {
     'njflrfgf': {
-      'es': 'Back',
-      'en': '',
+      'es': 'Volver',
+      'en': 'Back',
     },
     'h35sncml': {
       'es': 'Olvidaste la contraseña',
-      'en': '',
+      'en': 'Forgot password?',
     },
     'vz2qurcn': {
       'es': 'Siempre mantén tu cuenta segura y no olvides actualizarla.',
-      'en': '',
+      'en': 'Always keep your account secure and don\'t forget to update it.',
     },
     'l1io98rq': {
       'es':
           'Le enviaremos un correo electrónico con un enlace para restablecer su contraseña, ingrese el correo electrónico asociado a su cuenta a continuación.  ',
-      'en': '',
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
     },
     '1qohuj5l': {
       'es': 'Su dirección de correo electrónico...',
-      'en': '',
+      'en': 'Your email address...',
     },
     '7lxncwqx': {
       'es': 'Ingrese su correo electrónico ',
-      'en': '',
+      'en': 'Enter your email',
     },
     'xnqwrvww': {
       'es': 'Eviar enlance ',
-      'en': '',
+      'en': 'Skip link',
     },
     'smg4rdq4': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Perfil
   {
     'b5rjwg5y': {
       'es': 'Editar cuenta',
-      'en': '',
+      'en': 'Edit account',
     },
     'yl305dol': {
       'es': 'Accesibilidad',
-      'en': '',
+      'en': 'Accessibility',
     },
     'miuzdowq': {
       'es': 'Notificaciones',
-      'en': '',
+      'en': 'Notifications',
     },
     'a3xpsv90': {
       'es': 'Lenguaje',
-      'en': '',
+      'en': 'Language',
     },
     'c43np712': {
       'es': 'Cerrar sesión',
-      'en': '',
+      'en': 'Log out',
     },
     '2mz78m8v': {
       'es': 'Eliminar cuenta',
-      'en': '',
+      'en': 'Delete account',
     },
   },
   // ConfiguracionCuenta
   {
     'o0krnwyp': {
       'es': 'Configuración de cuenta',
-      'en': '',
+      'en': 'Account Settings',
     },
     'u055erjx': {
       'es': 'Nombre',
-      'en': '',
+      'en': 'Name',
     },
     'it3c0yjz': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'iatoo8v4': {
       'es': 'Edad',
-      'en': '',
+      'en': 'Age',
     },
     'iaj30ie5': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'am29ttka': {
       'es': 'Dirrección',
-      'en': '',
+      'en': 'Address',
     },
     'giaxbqsa': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'yzguaehi': {
       'es': 'Teléfono',
-      'en': '',
+      'en': 'Phone',
     },
     'o1c8qk4j': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     '87d3z7rc': {
       'es': 'Correo electrónico',
-      'en': '',
+      'en': 'Email',
     },
     'ol3emgjz': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'chp0080i': {
       'es': 'Femenino',
-      'en': '',
+      'en': 'Female',
     },
     'kvew7m24': {
       'es': 'Masculino',
-      'en': '',
+      'en': 'Male',
     },
     'idkzd3pl': {
       'es': 'Actualizar',
-      'en': '',
+      'en': 'Update',
     },
     'rraf1i8d': {
       'es': 'Mi Cuenta',
-      'en': '',
+      'en': 'My Account',
     },
   },
   // editarProducto
   {
     'tkjymx2l': {
       'es': 'Nombre del producto',
-      'en': '',
+      'en': 'Product name',
     },
     'yl4ka7w4': {
       'es': 'Descripcion',
-      'en': '',
+      'en': 'Description',
     },
     '4p128i2b': {
       'es': 'Departamento',
-      'en': '',
+      'en': 'Department',
     },
     '4j13gluz': {
       'es': 'Tecnico',
-      'en': '',
+      'en': 'Technical',
     },
     'xf52zwxx': {
       'es': 'Categoria',
-      'en': '',
+      'en': 'Category',
     },
     'efdp40yt': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'gmcig2f1': {
       'es': 'Actualizar',
-      'en': '',
+      'en': 'Update',
     },
     'gr043whn': {
       'es': 'Gestion de Productos',
-      'en': '',
+      'en': 'Product Management',
     },
     'f1tkhdcu': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // indexEmpleados
   {
     'iv5ygj30': {
-      'es': 'AGREGAR',
-      'en': '',
+      'es': 'Agregar',
+      'en': 'Add',
     },
     'aldqorvp': {
       'es': 'Editar',
-      'en': '',
+      'en': 'Edit',
     },
     'qd968mjz': {
       'es': 'Eliminar',
-      'en': '',
+      'en': 'Eliminate',
     },
     'hg3vcouh': {
       'es': 'Gestion de Empleados',
-      'en': '',
+      'en': 'Employee Management',
     },
     'f1e2snq5': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // detallesEmpleado
   {
     '5bmt3f5x': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'q6rnnt0p': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'sdcafxkz': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'm8w560qh': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     '7bflktpz': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'qkn93dr4': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'mvyvyvam': {
       'es': 'Gestion de Empleados',
-      'en': '',
+      'en': 'Employee Management',
     },
     '2mrlgf3o': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // indexServicio
   {
     'pknmo7pc': {
-      'es': 'AGREGAR',
-      'en': '',
+      'es': 'Agregar',
+      'en': 'Add',
     },
     'c3l0r780': {
       'es': 'Editar',
-      'en': '',
+      'en': 'Edit',
     },
     'rcstd724': {
       'es': 'Eliminar',
-      'en': '',
+      'en': 'Eliminate',
     },
     'd3rs9u7p': {
       'es': 'Gestion de Servicios',
-      'en': '',
+      'en': 'Service Management',
     },
     'ceurpgo6': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // agregarServicios
   {
     'aefeefhq': {
       'es': 'Nombre del servicio',
-      'en': '',
+      'en': 'Name of the service',
     },
     'tuq7kp7b': {
       'es': 'Descripcion',
-      'en': '',
+      'en': 'Description',
     },
     'ry5fmrnm': {
       'es': 'Precio',
-      'en': '',
+      'en': 'Price',
     },
     'x389uit8': {
       'es': 'Empleado',
-      'en': '',
+      'en': 'Employee',
     },
     'e5qt4f29': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'y1t18ffa': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     'wed6e2sn': {
       'es': 'Gestion de Productos',
-      'en': '',
+      'en': 'Product Management',
     },
     'xc9knmhm': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // editarServicio
   {
     '7opge6uy': {
       'es': 'Nombre del servicio',
-      'en': '',
+      'en': 'Name of the service',
     },
     'hldjlpbh': {
       'es': 'Descripcion',
-      'en': '',
+      'en': 'Description',
     },
     '61h7mdzm': {
       'es': 'Precio',
-      'en': '',
+      'en': 'Price',
     },
     'z593rl94': {
       'es': 'Estado',
-      'en': '',
+      'en': 'State',
     },
     'o5kt3jm8': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'c66171sh': {
       'es': 'Actualizar',
-      'en': '',
+      'en': 'Update',
     },
     '875e40dx': {
       'es': 'Gestion de Servicios',
-      'en': '',
+      'en': 'Service Management',
     },
     '5ejx2ate': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Home
@@ -1003,43 +979,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'aicmdm3n': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'e62b5ca7': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'ghsjyjw0': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'coluhmyu': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'iovhfo2t': {
       'es': 'TextField',
-      'en': '',
+      'en': 'TextField',
     },
     'gy1070n5': {
-      'es': 'FECHA DE CONTRATACIÓN:',
-      'en': '',
+      'es': 'Fecha de contratación',
+      'en': 'Hiring date',
     },
     '5deafnss': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'ajx0bwod': {
       'es': 'Actualizar',
-      'en': '',
+      'en': 'Update',
     },
     'qkvhf8lc': {
       'es': 'Gestion de Empleados',
-      'en': '',
+      'en': 'Employee Management',
     },
     'e37r9jco': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Recordatorios
@@ -1144,274 +1120,203 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'lanqvcgb': {
       'es': 'Blanqueamiento',
-      'en': '',
+      'en': 'Whitening',
     },
     'k3clch6m': {
       'es': 'Coronas',
-      'en': '',
+      'en': 'Crowns',
     },
     'y5c70d15': {
       'es': 'Carillas',
-      'en': '',
+      'en': 'Veneers',
     },
     'hqfgsfaf': {
       'es': 'Solo modelos de resina',
-      'en': '',
+      'en': 'Resin models only',
     },
     'gbgd6e0n': {
       'es': 'Incrustacion',
-      'en': '',
+      'en': 'Incrustation',
     },
     '2n5p8uf2': {
       'es': 'Puentes',
-      'en': '',
+      'en': 'Bridges',
     },
     'k1qffbtq': {
       'es': 'Otros',
-      'en': '',
+      'en': 'Others',
     },
     'n7sy6b0z': {
       'es': 'Select...',
-      'en': '',
+      'en': 'Select...',
     },
     'a3jewg0o': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     'j0ztcb6r': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     '28xjl57h': {
       'es': 'Catalogo de Productos',
-      'en': '',
+      'en': 'Product Catalog',
     },
     '43ek9c10': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // VerCatalogo
   {
     '4ri87aj0': {
       'es': 'Catálogo de Productos',
-      'en': '',
+      'en': 'Product Catalog',
     },
     'i71hyqcu': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // VerCatalogoPorCategoria
   {
     '8z3v4kuz': {
       'es': 'Blanqueamiento',
-      'en': '',
+      'en': 'Whitening',
     },
     'o7dgge10': {
       'es': 'Coronas',
-      'en': '',
+      'en': 'Crowns',
     },
     'ulxsp3ab': {
       'es': 'Carillas',
-      'en': '',
+      'en': 'Veneers',
     },
     '1fgkb2l2': {
       'es': 'Solo modelos de resina',
-      'en': '',
+      'en': 'Resin models only',
     },
     '6qwb64fv': {
       'es': 'Incrustacion',
-      'en': '',
+      'en': 'Incrustation',
     },
     '54kf6w0z': {
       'es': 'Puentes',
-      'en': '',
+      'en': 'Bridges',
     },
     'd80h426l': {
       'es': 'Otros',
-      'en': '',
+      'en': 'Others',
     },
     'idd4vmph': {
       'es': 'Filtrar por categoría...',
-      'en': '',
+      'en': 'Filter by category...',
     },
     'dnm9b533': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     'pbz5fqby': {
       'es': '¡En Esencia Dental, te ayudaremos\na que vuelvas a sonreír!',
-      'en': '',
+      'en': 'At Esencia Dental, we will help you\nsmile again!',
     },
     'tswratf5': {
       'es': 'Atrás',
-      'en': '',
+      'en': 'Back',
     },
-    'svqa74bh': {
+    'itwlg9hk': {
       'es': 'Catálogo de Productos',
       'en': '',
     },
     'igy1qxlm': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Promociones
   {
     'mf6pkmmy': {
       'es': 'Aplicar',
-      'en': '',
+      'en': 'Apply',
     },
     's1dyllf5': {
       'es': 'Promociones',
-      'en': '',
+      'en': 'Promotions',
     },
     'i88qlbah': {
       'es': 'Home',
-      'en': '',
-    },
-  },
-  // ReportePedidosAdmin
-  {
-    '1av6m3gq': {
-      'es': 'Pedidos',
-      'en': '',
-    },
-    'h98myreq': {
-      'es': 'Reportes',
-      'en': '',
-    },
-    '90x5volh': {
-      'es': 'Calendario de Pedidos',
-      'en': '',
-    },
-    'x472t4ad': {
-      'es': 'Enero',
-      'en': '',
-    },
-    'sh5ldrrf': {
-      'es': 'Febrero',
-      'en': '',
-    },
-    'ddg9mxpq': {
-      'es': 'Marzo',
-      'en': '',
-    },
-    'j2hhjct0': {
-      'es': 'Abril',
-      'en': '',
-    },
-    'svb8gemn': {
-      'es': 'Mayo',
-      'en': '',
-    },
-    'xd5sr8y3': {
-      'es': 'Junio',
-      'en': '',
-    },
-    'xzv2u8ak': {
-      'es': 'Julio',
-      'en': '',
-    },
-    'xt4hwfha': {
-      'es': 'Agosto',
-      'en': '',
-    },
-    'kuylxsfc': {
-      'es': 'Septiembre',
-      'en': '',
-    },
-    'xhe1fku8': {
-      'es': 'Octubre',
-      'en': '',
-    },
-    'kkbo9xa1': {
-      'es': 'Noviembre',
-      'en': '',
-    },
-    'y6d16crb': {
-      'es': 'Diciembre',
-      'en': '',
-    },
-    'ah9d884r': {
-      'es': 'Generar PDF',
-      'en': '',
-    },
-    '0t6ho9pl': {
-      'es': 'Consultar',
-      'en': '',
+      'en': 'Home',
     },
   },
   // ReportePedidosUsuario
   {
     'wtjwa8my': {
       'es': 'Pedidos',
-      'en': '',
+      'en': 'Orders',
     },
     'xan4da87': {
       'es': 'Reportes',
-      'en': '',
+      'en': 'Reports',
     },
     'cq10z57e': {
       'es': 'Calendario de Pedidos',
-      'en': '',
+      'en': 'Order Calendar',
     },
     'vcwl9vut': {
       'es': 'Enero',
-      'en': '',
+      'en': 'January',
     },
     'ip25j9pg': {
       'es': 'Febrero',
-      'en': '',
+      'en': 'February',
     },
     '0ehe8l60': {
       'es': 'Marzo',
-      'en': '',
+      'en': 'March',
     },
     'ohc0vg7n': {
       'es': 'Abril',
-      'en': '',
+      'en': 'April',
     },
     'nv43sq6g': {
       'es': 'Mayo',
-      'en': '',
+      'en': 'May',
     },
     '5fjlddjb': {
       'es': 'Junio',
-      'en': '',
+      'en': 'June',
     },
     '3x7m5s1h': {
       'es': 'Julio',
-      'en': '',
+      'en': 'July',
     },
     'ff44cwte': {
       'es': 'Agosto',
-      'en': '',
+      'en': 'August',
     },
     'va23mr97': {
       'es': 'Septiembre',
-      'en': '',
+      'en': 'September',
     },
     'epu1h63a': {
       'es': 'Octubre',
-      'en': '',
+      'en': 'October',
     },
     'bxpihw52': {
       'es': 'Noviembre',
-      'en': '',
+      'en': 'November',
     },
     'f9ldbjgp': {
       'es': 'Diciembre',
-      'en': '',
+      'en': 'December',
     },
     'xmq8u9k6': {
       'es': 'Generar PDF',
-      'en': '',
+      'en': 'Generate PDF',
     },
     'oz0tj9xg': {
       'es': 'Consultar',
-      'en': '',
+      'en': 'Consult',
     },
   },
   // Formulario
@@ -1427,6 +1332,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ph1ntrnm': {
       'es': 'info@esenciadental.com',
       'en': 'info@esenciadental.com',
+    },
+    'zx9aflrl': {
+      'es': 'TextField',
+      'en': 'TextField',
     },
     'o5z9b2vr': {
       'es': 'Información del Paciente',
@@ -1586,83 +1495,83 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p6or509x': {
       'es': 'Ingres su nombre ',
-      'en': '',
+      'en': 'Enter your name',
     },
     'brbhdb5a': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '3xq6ydwz': {
       'es': 'Por favor ingrese e nombre del paciente',
-      'en': '',
+      'en': 'Please enter the patient\'s name',
     },
     '0ta7z86h': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'ukyk3wov': {
       'es': 'Ingrese la edad ',
-      'en': '',
+      'en': 'Enter age',
     },
     't4lrd6f9': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'vudv8899': {
       'es': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'wyh6ngkl': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'skg6n834': {
       'es': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'anjsplv4': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '39mfg4a5': {
       'es': 'In  la  marca ',
-      'en': '',
+      'en': 'On the brand',
     },
     'i9fcu6h9': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'crwzc61o': {
       'es': 'Ingrese el numero de plataforma ',
-      'en': '',
+      'en': 'Enter the platform number',
     },
     '3psqc737': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'yv7cj1zb': {
       'es': 'Ingrese el color del Muñon',
-      'en': '',
+      'en': 'Enter the color of the Stump',
     },
     'xzlt3u4g': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'mirywcic': {
       'es': 'Ingrese el color final',
-      'en': '',
+      'en': 'Enter the final color',
     },
     'm7ds6kus': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'fc5tah2x': {
       'es': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'p5ybi0gq': {
       'es': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'ratptpzq': {
       'es': 'Home',
@@ -1673,70 +1582,70 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'i0fpv439': {
       'es': 'Cargar',
-      'en': '',
+      'en': 'Carry',
     },
     'ayyep71y': {
       'es': 'Nombre ',
-      'en': '',
+      'en': 'Name',
     },
     'spca03ia': {
       'es': 'Email',
-      'en': '',
+      'en': 'E-mail',
     },
     'zqh81mpw': {
       'es': 'Telefono',
-      'en': '',
+      'en': 'Phone',
     },
     'sm67bomj': {
       'es': 'Departamento',
-      'en': '',
+      'en': 'Department',
     },
     'hxxz8hkh': {
       'es': 'Estado',
-      'en': '',
+      'en': 'State',
     },
     '8hv59a31': {
       'es': 'FECHA DE CONTRATACIÓN:',
-      'en': '',
+      'en': 'DATE OF HIRING:',
     },
     'wluhrhor': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     'ue4v7sbh': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     'cq6jouvp': {
       'es': 'Gestion de Empleados',
-      'en': '',
+      'en': 'Employee Management',
     },
     'uswtuqg0': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // indexPedidos
   {
     'ax02bkyu': {
-      'es': 'AGREGAR',
-      'en': '',
+      'es': 'Agregar',
+      'en': 'Add',
     },
     '4gj0y9zw': {
       'es': 'Editar',
-      'en': '',
+      'en': 'Edit',
     },
     'hg2724ap': {
       'es': 'Eliminar',
-      'en': '',
+      'en': 'Eliminate',
     },
     'ih7f86dm': {
       'es': 'Detalles',
-      'en': '',
+      'en': 'Details',
     },
     '7v306w4j': {
       'es': 'Gestion de Pedidos',
-      'en': '',
+      'en': 'Order Management',
     },
     'bnlslorb': {
       'es': 'Home',
@@ -1775,38 +1684,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'goli5z89': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // agregarPedido
   {
     '1ez1nrua': {
       'es': 'Nombre del pedido',
-      'en': '',
+      'en': 'Order name',
     },
     '5enl868h': {
-      'es': 'FECHA DE SOLICITUD DEL PEDIDO:',
-      'en': '',
+      'es': 'Fecha de solicitud:',
+      'en': 'Application date:',
     },
     'e1y33jo5': {
       'es': 'Tecnico',
-      'en': '',
+      'en': 'Technical',
     },
     'yban2dl4': {
       'es': 'Estado',
-      'en': '',
+      'en': 'State',
     },
     'tzjpzav3': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
     },
     '1iuhewgf': {
       'es': 'Agregar',
-      'en': '',
+      'en': 'Add',
     },
     '7ohah207': {
       'es': 'Gestion de Pedidos',
-      'en': '',
+      'en': 'Order Management',
     },
     '18iurgng': {
       'es': 'Home',
@@ -1817,38 +1726,113 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'caemf3ym': {
       'es': 'Nombre del pedido',
-      'en': '',
+      'en': 'Order name',
     },
     'b1osyd8h': {
       'es': 'Nombre del pedido',
-      'en': '',
+      'en': 'Order name',
     },
     'ht4dg9wz': {
       'es': 'Tecnico',
-      'en': '',
+      'en': 'Technical',
     },
     'r6pl1qrd': {
       'es': 'Estado',
-      'en': '',
+      'en': 'State',
     },
     'y9dmxhtk': {
       'es': 'Gestion de Pedidos',
-      'en': '',
+      'en': 'Order Management',
     },
     'c4vue3so': {
       'es': 'Home',
       'en': 'Home',
     },
   },
+  // ReportePedidosAdmin
+  {
+    '6x0i6vym': {
+      'es': 'Pedidos',
+      'en': 'Orders',
+    },
+    '7q9hbnf9': {
+      'es': 'Reportes',
+      'en': 'Reports',
+    },
+    'xaidz1sd': {
+      'es': 'Calendario de Pedidos',
+      'en': 'Order Calendar',
+    },
+    'okptb8fq': {
+      'es': 'Enero',
+      'en': 'January',
+    },
+    'vlm2vo1j': {
+      'es': 'Febrero',
+      'en': 'February',
+    },
+    'ccyo0k9p': {
+      'es': 'Marzo',
+      'en': 'March',
+    },
+    'nbodue2s': {
+      'es': 'Abril',
+      'en': 'April',
+    },
+    'v4y0k2zc': {
+      'es': 'Mayo',
+      'en': 'May',
+    },
+    '28z39386': {
+      'es': 'Junio',
+      'en': 'June',
+    },
+    'q8q7v52w': {
+      'es': 'Julio',
+      'en': 'July',
+    },
+    'n7zc3z6e': {
+      'es': 'Agosto',
+      'en': 'August',
+    },
+    'mnhst42b': {
+      'es': 'Septiembre',
+      'en': 'September',
+    },
+    'sccq3b5x': {
+      'es': 'Octubre',
+      'en': 'October',
+    },
+    'lj6y1thr': {
+      'es': 'Noviembre',
+      'en': 'November',
+    },
+    'y5bdca39': {
+      'es': 'Diciembre',
+      'en': 'December',
+    },
+    '8yqxfou3': {
+      'es': 'Generar PDF',
+      'en': 'Generate PDF',
+    },
+    '2qr791dw': {
+      'es': 'Consultar',
+      'en': 'Consult',
+    },
+  },
   // Miscellaneous
   {
     'pvbpctp9': {
-      'es': '',
-      'en': '',
+      'es':
+          'Para poder tomar fotos o videos, esta app requiere permisos para acceder a la camara',
+      'en':
+          'In order to take a picture or video, this app requires permission to access the camera.',
     },
     '5k09qpyc': {
-      'es': '',
-      'en': '',
+      'es':
+          'Para poder subir archivos, esta app requiere permisos para acceder a la galería',
+      'en':
+          'In order to upload data, this app requires permission to access the photo library.',
     },
     'mc7n40e9': {
       'es': '',

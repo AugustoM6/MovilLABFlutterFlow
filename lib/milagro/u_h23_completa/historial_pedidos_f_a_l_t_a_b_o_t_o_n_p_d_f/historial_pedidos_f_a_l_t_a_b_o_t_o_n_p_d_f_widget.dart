@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 export 'historial_pedidos_f_a_l_t_a_b_o_t_o_n_p_d_f_model.dart';
 
@@ -15,7 +14,7 @@ class HistorialPedidosFALTABOTONPDFWidget extends StatefulWidget {
     required this.selectedMonth,
   });
 
-  final String? selectedMonth;
+  final DateTime? selectedMonth;
 
   @override
   State<HistorialPedidosFALTABOTONPDFWidget> createState() =>
@@ -53,63 +52,88 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-          automaticallyImplyLeading: false,
-          actions: const [],
-          flexibleSpace: FlexibleSpaceBar(
-            background: Container(
-              width: 100.0,
-              height: 100.0,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    FlutterFlowTheme.of(context).primary,
-                    FlutterFlowTheme.of(context).primaryBackground
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(100.0),
+          child: AppBar(
+            backgroundColor: FlutterFlowTheme.of(context).primary,
+            automaticallyImplyLeading: false,
+            actions: const [],
+            flexibleSpace: FlexibleSpaceBar(
+              title: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 14.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 30.0,
+                              borderWidth: 1.0,
+                              buttonSize: 50.0,
+                              icon: const Icon(
+                                Icons.arrow_back_rounded,
+                                color: Colors.white,
+                                size: 30.0,
+                              ),
+                              onPressed: () async {
+                                context.pop();
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                4.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'dtpbklik' /* Back */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'iwahlqj4' /* Historial de pedidos */,
+                        ),
+                        style: FlutterFlowTheme.of(context)
+                            .headlineMedium
+                            .override(
+                              fontFamily: 'Inter',
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w900,
+                            ),
+                      ),
+                    ),
                   ],
-                  stops: const [0.0, 1.0],
-                  begin: const AlignmentDirectional(0.0, -1.0),
-                  end: const AlignmentDirectional(0, 1.0),
                 ),
               ),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FlutterFlowIconButton(
-                    borderRadius: 10.0,
-                    buttonSize: 40.0,
-                    fillColor: FlutterFlowTheme.of(context).primary,
-                    icon: FaIcon(
-                      FontAwesomeIcons.clipboardList,
-                      color: FlutterFlowTheme.of(context).info,
-                      size: 24.0,
-                    ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
-                    },
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'tc7f0pk5' /* Historial de pedidos */,
-                      ),
-                      style:
-                          FlutterFlowTheme.of(context).headlineMedium.override(
-                                fontFamily: 'Inter',
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.w900,
-                              ),
-                    ),
-                  ),
-                ],
-              ),
+              centerTitle: true,
+              expandedTitleScale: 1.0,
             ),
+            elevation: 2.0,
           ),
-          centerTitle: false,
-          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
@@ -176,9 +200,8 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
                                   Padding(
                                     padding: const EdgeInsets.all(2.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '5kbm5ihe' /*  */,
-                                      ),
+                                      listViewFormularioRecord.numeroFactura
+                                          .toString(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -206,7 +229,8 @@ class _HistorialPedidosFALTABOTONPDFWidgetState
                                     padding: const EdgeInsets.all(2.0),
                                     child: Text(
                                       valueOrDefault<String>(
-                                        listViewFormularioRecord.fecha,
+                                        listViewFormularioRecord.fecha
+                                            ?.toString(),
                                         '01/01/2024',
                                       ),
                                       style: FlutterFlowTheme.of(context)

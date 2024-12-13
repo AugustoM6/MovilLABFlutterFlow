@@ -135,7 +135,7 @@ class _PasswordOlvidadoWidgetState extends State<PasswordOlvidadoWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'njflrfgf' /* Back */,
+                                'njflrfgf' /* Volver */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

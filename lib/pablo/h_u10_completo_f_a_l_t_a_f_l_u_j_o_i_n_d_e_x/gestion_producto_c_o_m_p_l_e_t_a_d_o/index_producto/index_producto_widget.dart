@@ -97,7 +97,7 @@ class _IndexProductoWidgetState extends State<IndexProductoWidget> {
                           context.pushNamed('agregarProducto');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'c790vstk' /* AGREGAR */,
+                          'c790vstk' /* Agregar */,
                         ),
                         options: FFButtonOptions(
                           width: 100.0,

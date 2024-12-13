@@ -111,15 +111,15 @@ class FormularioRecord extends FirestoreRecord {
   double get numeroFactura => _numeroFactura ?? 0.0;
   bool hasNumeroFactura() => _numeroFactura != null;
 
-  // "fecha" field.
-  String? _fecha;
-  String get fecha => _fecha ?? '';
-  bool hasFecha() => _fecha != null;
-
   // "count" field.
-  double? _count;
-  double get count => _count ?? 0.0;
+  List<double>? _count;
+  List<double> get count => _count ?? const [];
   bool hasCount() => _count != null;
+
+  // "fecha" field.
+  DateTime? _fecha;
+  DateTime? get fecha => _fecha;
+  bool hasFecha() => _fecha != null;
 
   void _initializeFields() {
     _edad = castToType<int>(snapshotData['edad']);
@@ -141,8 +141,8 @@ class FormularioRecord extends FirestoreRecord {
     _imagenImplante = snapshotData['imagenImplante'] as String?;
     _imagenRecursos = getDataList(snapshotData['imagenRecursos']);
     _numeroFactura = castToType<double>(snapshotData['NumeroFactura']);
-    _fecha = snapshotData['fecha'] as String?;
-    _count = castToType<double>(snapshotData['count']);
+    _count = getDataList(snapshotData['count']);
+    _fecha = snapshotData['fecha'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -195,8 +195,7 @@ Map<String, dynamic> createFormularioRecordData({
   String? observacionesFinales,
   String? imagenImplante,
   double? numeroFactura,
-  String? fecha,
-  double? count,
+  DateTime? fecha,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -216,7 +215,6 @@ Map<String, dynamic> createFormularioRecordData({
       'imagenImplante': imagenImplante,
       'NumeroFactura': numeroFactura,
       'fecha': fecha,
-      'count': count,
     }.withoutNulls,
   );
 
@@ -248,8 +246,8 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e1?.imagenImplante == e2?.imagenImplante &&
         listEquality.equals(e1?.imagenRecursos, e2?.imagenRecursos) &&
         e1?.numeroFactura == e2?.numeroFactura &&
-        e1?.fecha == e2?.fecha &&
-        e1?.count == e2?.count;
+        listEquality.equals(e1?.count, e2?.count) &&
+        e1?.fecha == e2?.fecha;
   }
 
   @override
@@ -273,8 +271,8 @@ class FormularioRecordDocumentEquality implements Equality<FormularioRecord> {
         e?.imagenImplante,
         e?.imagenRecursos,
         e?.numeroFactura,
-        e?.fecha,
-        e?.count
+        e?.count,
+        e?.fecha
       ]);
 
   @override

@@ -30,6 +30,10 @@ class _FormularioWidgetState extends State<FormularioWidget> {
     super.initState();
     _model = createModel(context, () => FormularioModel());
 
+    _model.txtNumeroFacTextController ??= TextEditingController(
+        text: random_data.randomDouble(4.0, 10.0).toString());
+    _model.txtNumeroFacFocusNode ??= FocusNode();
+
     _model.txtNombreDocTextController ??= TextEditingController();
     _model.txtNombreDocFocusNode ??= FocusNode();
 
@@ -193,19 +197,103 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                             ),
                                           ],
                                         ),
-                                        Text(
-                                          random_data
-                                              .randomInteger(2, 8)
-                                              .toString(),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color:
+                                        Expanded(
+                                          child: SizedBox(
+                                            width: 200.0,
+                                            child: TextFormField(
+                                              controller: _model
+                                                  .txtNumeroFacTextController,
+                                              focusNode:
+                                                  _model.txtNumeroFacFocusNode,
+                                              autofocus: false,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                isDense: true,
+                                                labelStyle:
                                                     FlutterFlowTheme.of(context)
-                                                        .tertiary,
-                                                letterSpacing: 0.0,
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                hintText:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'zx9aflrl' /* TextField */,
+                                                ),
+                                                hintStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: const BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: const BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                errorBorder: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .error,
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                focusedErrorBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .error,
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                filled: true,
+                                                fillColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
                                               ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                              cursorColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              validator: _model
+                                                  .txtNumeroFacTextControllerValidator
+                                                  .asValidator(context),
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -662,66 +750,164 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                               children: [
                                                 Builder(
                                                   builder: (context) {
-                                                    final listaIma = _model
+                                                    final listaImagenes = _model
                                                         .uploadedFileUrls1
                                                         .map((e) => e)
+                                                        .toList()
+                                                        .take(10)
                                                         .toList();
 
-                                                    return Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: List.generate(
-                                                          listaIma.length,
-                                                          (listaImaIndex) {
-                                                        final listaImaItem =
-                                                            listaIma[
-                                                                listaImaIndex];
-                                                        return Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0),
-                                                          child: InkWell(
-                                                            splashColor: Colors
-                                                                .transparent,
-                                                            focusColor: Colors
-                                                                .transparent,
-                                                            hoverColor: Colors
-                                                                .transparent,
-                                                            highlightColor:
-                                                                Colors
+                                                    return InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        final selectedMedia =
+                                                            await selectMedia(
+                                                          mediaSource:
+                                                              MediaSource
+                                                                  .photoGallery,
+                                                          multiImage: true,
+                                                        );
+                                                        if (selectedMedia !=
+                                                                null &&
+                                                            selectedMedia.every((m) =>
+                                                                validateFileFormat(
+                                                                    m.storagePath,
+                                                                    context))) {
+                                                          safeSetState(() =>
+                                                              _model.isDataUploading1 =
+                                                                  true);
+                                                          var selectedUploadedFiles =
+                                                              <FFUploadedFile>[];
+
+                                                          var downloadUrls =
+                                                              <String>[];
+                                                          try {
+                                                            selectedUploadedFiles =
+                                                                selectedMedia
+                                                                    .map((m) =>
+                                                                        FFUploadedFile(
+                                                                          name: m
+                                                                              .storagePath
+                                                                              .split('/')
+                                                                              .last,
+                                                                          bytes:
+                                                                              m.bytes,
+                                                                          height: m
+                                                                              .dimensions
+                                                                              ?.height,
+                                                                          width: m
+                                                                              .dimensions
+                                                                              ?.width,
+                                                                          blurHash:
+                                                                              m.blurHash,
+                                                                        ))
+                                                                    .toList();
+
+                                                            downloadUrls =
+                                                                (await Future
+                                                                        .wait(
+                                                              selectedMedia.map(
+                                                                (m) async =>
+                                                                    await uploadData(
+                                                                        m.storagePath,
+                                                                        m.bytes),
+                                                              ),
+                                                            ))
+                                                                    .where((u) =>
+                                                                        u !=
+                                                                        null)
+                                                                    .map((u) =>
+                                                                        u!)
+                                                                    .toList();
+                                                          } finally {
+                                                            _model.isDataUploading1 =
+                                                                false;
+                                                          }
+                                                          if (selectedUploadedFiles
+                                                                      .length ==
+                                                                  selectedMedia
+                                                                      .length &&
+                                                              downloadUrls
+                                                                      .length ==
+                                                                  selectedMedia
+                                                                      .length) {
+                                                            safeSetState(() {
+                                                              _model.uploadedLocalFiles1 =
+                                                                  selectedUploadedFiles;
+                                                              _model.uploadedFileUrls1 =
+                                                                  downloadUrls;
+                                                            });
+                                                          } else {
+                                                            safeSetState(() {});
+                                                            return;
+                                                          }
+                                                        }
+                                                      },
+                                                      child:
+                                                          SingleChildScrollView(
+                                                        scrollDirection:
+                                                            Axis.horizontal,
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: List.generate(
+                                                              listaImagenes
+                                                                  .length,
+                                                              (listaImagenesIndex) {
+                                                            final listaImagenesItem =
+                                                                listaImagenes[
+                                                                    listaImagenesIndex];
+                                                            return Padding(
+                                                              padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          5.0,
+                                                                          0.0),
+                                                              child: InkWell(
+                                                                splashColor: Colors
                                                                     .transparent,
-                                                            onTap: () async {
-                                                              final selectedMedia =
-                                                                  await selectMedia(
-                                                                mediaSource:
-                                                                    MediaSource
-                                                                        .photoGallery,
-                                                                multiImage:
-                                                                    true,
-                                                              );
-                                                              if (selectedMedia !=
-                                                                      null &&
-                                                                  selectedMedia.every((m) =>
-                                                                      validateFileFormat(
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  final selectedMedia =
+                                                                      await selectMedia(
+                                                                    mediaSource:
+                                                                        MediaSource
+                                                                            .photoGallery,
+                                                                    multiImage:
+                                                                        true,
+                                                                  );
+                                                                  if (selectedMedia !=
+                                                                          null &&
+                                                                      selectedMedia.every((m) => validateFileFormat(
                                                                           m.storagePath,
                                                                           context))) {
-                                                                safeSetState(() =>
-                                                                    _model.isDataUploading1 =
-                                                                        true);
-                                                                var selectedUploadedFiles =
-                                                                    <FFUploadedFile>[];
+                                                                    safeSetState(() =>
+                                                                        _model.isDataUploading2 =
+                                                                            true);
+                                                                    var selectedUploadedFiles =
+                                                                        <FFUploadedFile>[];
 
-                                                                var downloadUrls =
-                                                                    <String>[];
-                                                                try {
-                                                                  selectedUploadedFiles =
-                                                                      selectedMedia
-                                                                          .map((m) =>
-                                                                              FFUploadedFile(
+                                                                    var downloadUrls =
+                                                                        <String>[];
+                                                                    try {
+                                                                      selectedUploadedFiles = selectedMedia
+                                                                          .map((m) => FFUploadedFile(
                                                                                 name: m.storagePath.split('/').last,
                                                                                 bytes: m.bytes,
                                                                                 height: m.dimensions?.height,
@@ -730,64 +916,66 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                                                               ))
                                                                           .toList();
 
-                                                                  downloadUrls = (await Future
-                                                                          .wait(
-                                                                    selectedMedia
-                                                                        .map(
-                                                                      (m) async => await uploadData(
-                                                                          m.storagePath,
-                                                                          m.bytes),
-                                                                    ),
-                                                                  ))
-                                                                      .where((u) =>
-                                                                          u !=
-                                                                          null)
-                                                                      .map((u) =>
-                                                                          u!)
-                                                                      .toList();
-                                                                } finally {
-                                                                  _model.isDataUploading1 =
-                                                                      false;
-                                                                }
-                                                                if (selectedUploadedFiles
-                                                                            .length ==
+                                                                      downloadUrls = (await Future
+                                                                              .wait(
                                                                         selectedMedia
-                                                                            .length &&
-                                                                    downloadUrls
-                                                                            .length ==
-                                                                        selectedMedia
-                                                                            .length) {
-                                                                  safeSetState(
-                                                                      () {
-                                                                    _model.uploadedLocalFiles1 =
-                                                                        selectedUploadedFiles;
-                                                                    _model.uploadedFileUrls1 =
-                                                                        downloadUrls;
-                                                                  });
-                                                                } else {
-                                                                  safeSetState(
-                                                                      () {});
-                                                                  return;
-                                                                }
-                                                              }
-                                                            },
-                                                            child: ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          8.0),
-                                                              child:
-                                                                  Image.network(
-                                                                'https://picsum.photos/seed/294/600',
-                                                                width: 250.0,
-                                                                height: 200.0,
-                                                                fit: BoxFit
-                                                                    .cover,
+                                                                            .map(
+                                                                          (m) async => await uploadData(
+                                                                              m.storagePath,
+                                                                              m.bytes),
+                                                                        ),
+                                                                      ))
+                                                                          .where((u) =>
+                                                                              u !=
+                                                                              null)
+                                                                          .map((u) =>
+                                                                              u!)
+                                                                          .toList();
+                                                                    } finally {
+                                                                      _model.isDataUploading2 =
+                                                                          false;
+                                                                    }
+                                                                    if (selectedUploadedFiles.length ==
+                                                                            selectedMedia
+                                                                                .length &&
+                                                                        downloadUrls.length ==
+                                                                            selectedMedia.length) {
+                                                                      safeSetState(
+                                                                          () {
+                                                                        _model.uploadedLocalFiles2 =
+                                                                            selectedUploadedFiles;
+                                                                        _model.uploadedFileUrls2 =
+                                                                            downloadUrls;
+                                                                      });
+                                                                    } else {
+                                                                      safeSetState(
+                                                                          () {});
+                                                                      return;
+                                                                    }
+                                                                  }
+                                                                },
+                                                                child:
+                                                                    ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                  child: Image
+                                                                      .network(
+                                                                    listaImagenesItem,
+                                                                    width:
+                                                                        250.0,
+                                                                    height:
+                                                                        200.0,
+                                                                    fit: BoxFit
+                                                                        .cover,
+                                                                  ),
+                                                                ),
                                                               ),
-                                                            ),
-                                                          ),
-                                                        );
-                                                      }),
+                                                            );
+                                                          }),
+                                                        ),
+                                                      ),
                                                     );
                                                   },
                                                 ),
@@ -1294,7 +1482,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                                                 m.storagePath,
                                                                 context))) {
                                                       safeSetState(() => _model
-                                                              .isDataUploading2 =
+                                                              .isDataUploading3 =
                                                           true);
                                                       var selectedUploadedFiles =
                                                           <FFUploadedFile>[];
@@ -1338,7 +1526,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                                                 .map((u) => u!)
                                                                 .toList();
                                                       } finally {
-                                                        _model.isDataUploading2 =
+                                                        _model.isDataUploading3 =
                                                             false;
                                                       }
                                                       if (selectedUploadedFiles
@@ -1349,10 +1537,10 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                                               selectedMedia
                                                                   .length) {
                                                         safeSetState(() {
-                                                          _model.uploadedLocalFile2 =
+                                                          _model.uploadedLocalFile3 =
                                                               selectedUploadedFiles
                                                                   .first;
-                                                          _model.uploadedFileUrl2 =
+                                                          _model.uploadedFileUrl3 =
                                                               downloadUrls
                                                                   .first;
                                                         });
@@ -1367,7 +1555,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                                         BorderRadius.circular(
                                                             8.0),
                                                     child: Image.network(
-                                                      _model.uploadedFileUrl2,
+                                                      _model.uploadedFileUrl3,
                                                       width: 200.0,
                                                       height: 150.0,
                                                       fit: BoxFit.cover,
@@ -1653,7 +1841,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                         .doc()
                                         .set({
                                       ...createFormularioRecordData(
-                                        fecha: getCurrentTimestamp.toString(),
+                                        fecha: getCurrentTimestamp,
                                         edad: int.tryParse(
                                             _model.txtEdadTextController.text),
                                         genero: _model.choiceGeneroValue,
@@ -1685,7 +1873,9 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                         observacionesFinales: _model
                                             .txtObservacionesFinalTextController
                                             .text,
-                                        imagenImplante: _model.uploadedFileUrl2,
+                                        imagenImplante: _model.uploadedFileUrl3,
+                                        numeroFactura: double.tryParse(_model
+                                            .txtNumeroFacTextController.text),
                                       ),
                                       ...mapToFirestore(
                                         {
@@ -1696,7 +1886,7 @@ class _FormularioWidgetState extends State<FormularioWidget> {
                                           'materialCheck':
                                               _model.checkMaterialValues,
                                           'imagenRecursos':
-                                              _model.uploadedFileUrls1,
+                                              _model.uploadedFileUrls2,
                                         },
                                       ),
                                     });

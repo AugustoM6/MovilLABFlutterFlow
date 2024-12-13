@@ -75,13 +75,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const IndexPedidosWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const IndexPedidosWidget() : const LoginWidget(),
+              appStateNotifier.loggedIn ? const HomeWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'InfoLab1',
@@ -104,7 +104,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => HistorialPedidosFALTABOTONPDFWidget(
             selectedMonth: params.getParam(
               'selectedMonth',
-              ParamType.String,
+              ParamType.DateTime,
             ),
           ),
         ),
@@ -274,20 +274,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PromocionesWidget(),
         ),
         FFRoute(
-          name: 'ReportePedidosAdmin',
-          path: '/reportePedidosAdmin',
-          builder: (context, params) => ReportePedidosAdminWidget(
-            fecha: params.getParam(
-              'fecha',
-              ParamType.DateTime,
-            ),
-            selectedMonth: params.getParam(
-              'selectedMonth',
-              ParamType.DateTime,
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'ReportePedidosUsuario',
           path: '/reportePedidosUsuario',
           builder: (context, params) => ReportePedidosUsuarioWidget(
@@ -344,6 +330,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             paramPedidos: params.getParam(
               'paramPedidos',
               ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'ReportePedidosAdmin',
+          path: '/reportePedidosAdmin',
+          builder: (context, params) => ReportePedidosAdminWidget(
+            fecha: params.getParam(
+              'fecha',
+              ParamType.DateTime,
+            ),
+            selectedMonth: params.getParam(
+              'selectedMonth',
+              ParamType.DateTime,
             ),
           ),
         )

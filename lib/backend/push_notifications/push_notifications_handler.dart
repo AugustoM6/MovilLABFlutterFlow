@@ -112,7 +112,7 @@ final parametersBuilderMap =
   'GuardarProductosLista': ParameterData.none(),
   'HistorialPedidosFALTABOTONPDF': (data) async => ParameterData(
         allParams: {
-          'selectedMonth': getParameter<String>(data, 'selectedMonth'),
+          'selectedMonth': getParameter<DateTime>(data, 'selectedMonth'),
         },
       ),
   'InfoLab2': ParameterData.none(),
@@ -161,12 +161,6 @@ final parametersBuilderMap =
   'VerCatalogo': ParameterData.none(),
   'VerCatalogoPorCategoria': ParameterData.none(),
   'Promociones': ParameterData.none(),
-  'ReportePedidosAdmin': (data) async => ParameterData(
-        allParams: {
-          'fecha': getParameter<DateTime>(data, 'fecha'),
-          'selectedMonth': getParameter<DateTime>(data, 'selectedMonth'),
-        },
-      ),
   'ReportePedidosUsuario': (data) async => ParameterData(
         allParams: {
           'fecha': getParameter<DateTime>(data, 'fecha'),
@@ -187,6 +181,12 @@ final parametersBuilderMap =
         allParams: {
           'paramPedidos': await getDocumentParameter<PedidosRecord>(
               data, 'paramPedidos', PedidosRecord.fromSnapshot),
+        },
+      ),
+  'ReportePedidosAdmin': (data) async => ParameterData(
+        allParams: {
+          'fecha': getParameter<DateTime>(data, 'fecha'),
+          'selectedMonth': getParameter<DateTime>(data, 'selectedMonth'),
         },
       ),
 };

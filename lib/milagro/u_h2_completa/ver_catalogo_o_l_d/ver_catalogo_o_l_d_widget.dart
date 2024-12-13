@@ -226,6 +226,8 @@ class _VerCatalogoOLDWidgetState extends State<VerCatalogoOLDWidget> {
                                 Expanded(
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Align(
                                         alignment:
@@ -237,6 +239,7 @@ class _VerCatalogoOLDWidgetState extends State<VerCatalogoOLDWidget> {
                                               columnProductoRecord.nombre,
                                               'Desconocido',
                                             ),
+                                            maxLines: 1,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -252,8 +255,9 @@ class _VerCatalogoOLDWidgetState extends State<VerCatalogoOLDWidget> {
                                         child: Text(
                                           valueOrDefault<String>(
                                             columnProductoRecord.descripcion,
-                                            'Sin descripción',
+                                            'Info',
                                           ),
+                                          maxLines: 1,
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(

@@ -645,7 +645,7 @@ class _EditarEmpleadoWidgetState extends State<EditarEmpleadoWidget> {
                               Expanded(
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'gy1070n5' /* FECHA DE CONTRATACIÓN: */,
+                                    'gy1070n5' /* Fecha de contratación */,
                                   ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)

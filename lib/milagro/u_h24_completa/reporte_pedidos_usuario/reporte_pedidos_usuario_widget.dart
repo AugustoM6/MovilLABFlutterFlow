@@ -6,11 +6,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'reporte_pedidos_admin_model.dart';
-export 'reporte_pedidos_admin_model.dart';
+import 'reporte_pedidos_usuario_model.dart';
+export 'reporte_pedidos_usuario_model.dart';
 
-class ReportePedidosAdminWidget extends StatefulWidget {
-  const ReportePedidosAdminWidget({
+class ReportePedidosUsuarioWidget extends StatefulWidget {
+  const ReportePedidosUsuarioWidget({
     super.key,
     this.fecha,
     this.selectedMonth,
@@ -20,19 +20,20 @@ class ReportePedidosAdminWidget extends StatefulWidget {
   final DateTime? selectedMonth;
 
   @override
-  State<ReportePedidosAdminWidget> createState() =>
-      _ReportePedidosAdminWidgetState();
+  State<ReportePedidosUsuarioWidget> createState() =>
+      _ReportePedidosUsuarioWidgetState();
 }
 
-class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
-  late ReportePedidosAdminModel _model;
+class _ReportePedidosUsuarioWidgetState
+    extends State<ReportePedidosUsuarioWidget> {
+  late ReportePedidosUsuarioModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ReportePedidosAdminModel());
+    _model = createModel(context, () => ReportePedidosUsuarioModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -71,7 +72,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
-                context.pop();
+                context.safePop();
               },
             ),
           ),
@@ -174,7 +175,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      '1av6m3gq' /* Pedidos */,
+                                      'wtjwa8my' /* Pedidos */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -218,7 +219,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'h98myreq' /* Reportes */,
+                                      'xan4da87' /* Reportes */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
@@ -260,7 +261,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '90x5volh' /* Calendario de Pedidos */,
+                                  'cq10z57e' /* Calendario de Pedidos */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
@@ -284,7 +285,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -329,8 +330,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.selectedMonth,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -356,7 +357,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'x472t4ad' /* Enero */,
+                                                    'vcwl9vut' /* Enero */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -380,7 +381,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -425,8 +426,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -452,7 +453,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'sh5ldrrf' /* Febrero */,
+                                                    'ip25j9pg' /* Febrero */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -476,7 +477,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -521,8 +522,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -548,7 +549,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'ddg9mxpq' /* Marzo */,
+                                                    '0ehe8l60' /* Marzo */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -572,7 +573,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -617,8 +618,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -648,8 +649,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                   queryParameters: {
                                                     'selectedMonth':
                                                         serializeParam(
-                                                      'Enero',
-                                                      ParamType.String,
+                                                      widget.fecha,
+                                                      ParamType.DateTime,
                                                     ),
                                                   }.withoutNulls,
                                                 );
@@ -662,7 +663,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'j2hhjct0' /* Abril */,
+                                                      'ohc0vg7n' /* Abril */,
                                                     ),
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
@@ -687,7 +688,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -732,8 +733,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -759,7 +760,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'svb8gemn' /* Mayo */,
+                                                    'nv43sq6g' /* Mayo */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -783,7 +784,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -828,8 +829,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -855,7 +856,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'xd5sr8y3' /* Junio */,
+                                                    '5fjlddjb' /* Junio */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -879,7 +880,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -924,8 +925,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -951,7 +952,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'xzv2u8ak' /* Julio */,
+                                                    '3x7m5s1h' /* Julio */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -975,7 +976,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1020,8 +1021,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1047,7 +1048,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'xt4hwfha' /* Agosto */,
+                                                    'ff44cwte' /* Agosto */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -1071,7 +1072,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1116,8 +1117,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1143,7 +1144,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'kuylxsfc' /* Septiembre */,
+                                                    'va23mr97' /* Septiembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1168,7 +1169,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1213,8 +1214,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1240,7 +1241,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'xhe1fku8' /* Octubre */,
+                                                    'epu1h63a' /* Octubre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
@@ -1264,7 +1265,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1309,8 +1310,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Enero',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1336,7 +1337,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'kkbo9xa1' /* Noviembre */,
+                                                    'bxpihw52' /* Noviembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1361,7 +1362,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                       queryBuilder: (formularioRecord) =>
                                           formularioRecord.where(
                                         'fecha',
-                                        isEqualTo: widget.fecha?.toString(),
+                                        isEqualTo: widget.fecha,
                                       ),
                                       singleRecord: true,
                                     ),
@@ -1406,8 +1407,8 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                             'HistorialPedidosFALTABOTONPDF',
                                             queryParameters: {
                                               'selectedMonth': serializeParam(
-                                                'Diciembre',
-                                                ParamType.String,
+                                                widget.fecha,
+                                                ParamType.DateTime,
                                               ),
                                             }.withoutNulls,
                                           );
@@ -1433,7 +1434,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'y6d16crb' /* Diciembre */,
+                                                    'f9ldbjgp' /* Diciembre */,
                                                   ),
                                                   textAlign: TextAlign.center,
                                                   maxLines: 1,
@@ -1472,7 +1473,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                             await actions.exportCustomDataToPdf();
                           },
                           text: FFLocalizations.of(context).getText(
-                            'ah9d884r' /* Generar PDF */,
+                            'xmq8u9k6' /* Generar PDF */,
                           ),
                           icon: const Icon(
                             Icons.picture_as_pdf,
@@ -1502,7 +1503,7 @@ class _ReportePedidosAdminWidgetState extends State<ReportePedidosAdminWidget> {
                             print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
-                            '0t6ho9pl' /* Consultar */,
+                            'oz0tj9xg' /* Consultar */,
                           ),
                           icon: const Icon(
                             Icons.search,

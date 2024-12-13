@@ -100,7 +100,7 @@ class _IndexEmpleadosWidgetState extends State<IndexEmpleadosWidget> {
                             context.pushNamed('agregarEmpleado');
                           },
                           text: FFLocalizations.of(context).getText(
-                            'iv5ygj30' /* AGREGAR */,
+                            'iv5ygj30' /* Agregar */,
                           ),
                           options: FFButtonOptions(
                             width: 100.0,

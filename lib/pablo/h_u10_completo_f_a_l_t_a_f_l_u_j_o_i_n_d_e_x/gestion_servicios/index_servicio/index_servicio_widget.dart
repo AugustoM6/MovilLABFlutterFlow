@@ -98,7 +98,7 @@ class _IndexServicioWidgetState extends State<IndexServicioWidget> {
                           context.pushNamed('agregarServicios');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'pknmo7pc' /* AGREGAR */,
+                          'pknmo7pc' /* Agregar */,
                         ),
                         options: FFButtonOptions(
                           width: 100.0,
